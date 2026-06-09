@@ -11,7 +11,7 @@ export default function DetailPage() {
       <div className="detail-page fade-in">
         <div className="detail-top-bar">
           <button className="back-btn" onClick={() => navigate('/')}>
-            ← Back to Diagram
+            ← Back to the Map
           </button>
         </div>
         <div style={{ padding: '60px 56px', color: '#999' }}>
