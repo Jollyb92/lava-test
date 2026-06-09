@@ -180,7 +180,7 @@ export default function DiagramPage() {
             const from = getNode(fromId);
             const to   = getNode(toId);
             if (!from || !to) return null;
-            const dash = connDash(to.layer);
+            const dash = to.id === 'worksafety' ? null : connDash(to.layer);
             const col  = connColor(to.layer);
             const op   = lineOpacity(fromId, toId);
             return (
