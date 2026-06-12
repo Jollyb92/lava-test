@@ -45,11 +45,16 @@ export default function TocPage() {
               {part.sections.map((sec, si) => {
                 const page = detailPages[sec.id];
                 const dotColor = page?.color || partColors[pi] || '#ccc';
+                const target = sec.id === 'ecosystem' ? '/'
+                  : sec.id === 'toc' ? '/toc'
+                  : sec.id === 'glossary' ? '/glossary'
+                  : sec.id === 'involved' ? '/involved'
+                  : `/detail/${sec.id}`;
                 return (
                   <div
                     className="toc-row"
                     key={si}
-                    onClick={() => navigate(`/detail/${sec.id}`)}
+                    onClick={() => navigate(target)}
                   >
                     <div className="toc-dot" style={{ background: dotColor }} />
                     <span>{sec.label}</span>

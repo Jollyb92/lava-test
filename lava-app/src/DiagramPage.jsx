@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useCallback, useMemo, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { nodes, connections, COLORS } from './data.js';
 
@@ -32,13 +32,11 @@ function connColor(toLayer) {
 
 // ── Progress ring helpers ──────────────────────────────────────────────────
 
-// Converts a 0–360 degree position (0 = 12 o'clock, clockwise) to SVG x,y on a circle of radius r
 function polarToXY(deg, r) {
   const rad = ((deg - 90) * Math.PI) / 180;
   return [r * Math.cos(rad), r * Math.sin(rad)];
 }
 
-// SVG arc path for one segment of the ring (center is 0,0)
 function arcSegment(r, startDeg, endDeg) {
   const [x1, y1] = polarToXY(startDeg, r);
   const [x2, y2] = polarToXY(endDeg, r);
@@ -47,12 +45,11 @@ function arcSegment(r, startDeg, endDeg) {
 }
 
 function progressColor(percent) {
-  if (percent >= 70) return '#22C55E';  // green
-  if (percent >= 30) return '#3B82F6';  // blue
-  return '#9CA3AF';                      // grey
+  if (percent >= 70) return '#22C55E';
+  if (percent >= 30) return '#3B82F6';
+  return '#9CA3AF';
 }
 
-// Flat-color progress ring drawn around a node (center = 0,0)
 function ProgressRing({ nodeRadius, percent, sw = 4 }) {
   if (percent === undefined || percent === null) return null;
 
@@ -86,6 +83,111 @@ function ProgressRing({ nodeRadius, percent, sw = 4 }) {
   );
 }
 
+// ── Memoized connection line — only re-renders when opacity changes ─────────
+
+const ConnectionLine = memo(function ConnectionLine({ x1, y1, x2, y2, col, op, dash }) {
+  return (
+    <line
+      x1={x1} y1={y1} x2={x2} y2={y2}
+      stroke={col}
+      strokeWidth={1.5}
+      strokeOpacity={op}
+      strokeDasharray={dash}
+      style={{ transition: 'stroke-opacity 0.2s' }}
+    />
+  );
+});
+
+// ── Memoized node group — only re-renders when its visual state changes ─────
+
+const NodeGroup = memo(function NodeGroup({ node, op, isHov, isSearchMatch, onMouseEnter, onMouseLeave, onClick }) {
+  const lines = node.label.split('\n');
+  const lineH = node.layer === 2 ? 12 : 15;
+  const totalH = lines.length * lineH;
+
+  return (
+    <g
+      transform={`translate(${node.x},${node.y})`}
+      style={{
+        cursor: node.clickTarget ? 'pointer' : 'default',
+        opacity: op,
+        transition: 'opacity 0.2s',
+      }}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onClick={onClick}
+    >
+      {node.readiness !== undefined && (
+        <ProgressRing
+          nodeRadius={node.radius}
+          percent={node.readiness}
+          sw={node.layer === 2 ? 3 : 4}
+        />
+      )}
+
+      {isHov && (
+        <circle
+          r={node.radius + (node.readiness !== undefined ? 16 : 8)}
+          fill="none"
+          stroke={node.color}
+          strokeWidth={2.5}
+          opacity={0.5}
+          filter={`url(#glow-${node.id})`}
+        />
+      )}
+
+      {isSearchMatch && !isHov && (
+        <circle
+          r={node.radius + (node.readiness !== undefined ? 14 : 6)}
+          fill="none"
+          stroke="#B3F400"
+          strokeWidth={2.5}
+          opacity={0.9}
+        />
+      )}
+
+      <circle
+        r={node.radius}
+        fill={node.color}
+        stroke={node.id === 'center' ? COLORS.centerStroke : 'none'}
+        strokeWidth={node.id === 'center' ? 2 : 0}
+      />
+
+      <text
+        textAnchor="middle"
+        dominantBaseline="middle"
+        fill={node.textColor || COLORS.white}
+        fontSize={node.layer === 2 ? 8 : node.layer === 0 ? 12 : 11}
+        fontWeight="700"
+        fontFamily="'Inter','Helvetica Neue',Arial,sans-serif"
+        letterSpacing="0.04em"
+        style={{ userSelect: 'none', pointerEvents: 'none' }}
+      >
+        {lines.map((l, i) => (
+          <tspan key={i} x={0} dy={i === 0 ? -(totalH / 2 - lineH / 2) : lineH}>
+            {l}
+          </tspan>
+        ))}
+      </text>
+
+      {node.sublabel && node.layer !== 2 && (
+        <text
+          textAnchor="middle"
+          fill={node.textColor || COLORS.white}
+          fontSize={node.layer === 0 ? 6 : 7.5}
+          fontFamily="'Inter','Helvetica Neue',Arial,sans-serif"
+          opacity={0.7}
+          style={{ userSelect: 'none', pointerEvents: 'none' }}
+        >
+          {node.sublabel.split('\n').map((l, i) => (
+            <tspan key={i} x={0} dy={i === 0 ? totalH / 2 + 8 : 10}>{l}</tspan>
+          ))}
+        </text>
+      )}
+    </g>
+  );
+});
+
 // ──────────────────────────────────────────────────────────────────────────
 
 export default function DiagramPage() {
@@ -95,7 +197,7 @@ export default function DiagramPage() {
   const [search, setSearch]     = useState('');
   const svgRef = useRef(null);
 
-  const matchSet = (() => {
+  const matchSet = useMemo(() => {
     if (!search.trim()) return null;
     const q = search.toLowerCase();
     return new Set(
@@ -103,9 +205,9 @@ export default function DiagramPage() {
         .filter(n => n.label.toLowerCase().includes(q) || (n.sublabel || '').toLowerCase().includes(q))
         .map(n => n.id)
     );
-  })();
+  }, [search]);
 
-  const neighborSet = hovered ? getNeighbors(hovered) : null;
+  const neighborSet = useMemo(() => hovered ? getNeighbors(hovered) : null, [hovered]);
 
   function nodeOpacity(id) {
     if (matchSet)     return matchSet.has(id) ? 1 : 0.2;
@@ -119,18 +221,22 @@ export default function DiagramPage() {
     return neighborSet.has(a) && neighborSet.has(b) ? 1 : 0.07;
   }
 
-  function handleMouseEnter(e, node) {
+  const handleMouseEnterNode = useCallback((e, node) => {
     setHovered(node.id);
     setTooltip({ visible: true, x: e.clientX + 14, y: e.clientY - 10, text: node.label.replace('\n', ' ') });
-  }
+  }, []);
+
+  const handleMouseLeaveNode = useCallback(() => {
+    setHovered(null);
+    setTooltip(t => ({ ...t, visible: false }));
+  }, []);
+
+  const handleNodeClick = useCallback((clickTarget) => {
+    if (clickTarget) navigate(clickTarget);
+  }, [navigate]);
 
   function handleMouseMove(e) {
     if (tooltip.visible) setTooltip(t => ({ ...t, x: e.clientX + 14, y: e.clientY - 10 }));
-  }
-
-  function handleMouseLeave() {
-    setHovered(null);
-    setTooltip(t => ({ ...t, visible: false }));
   }
 
   return (
@@ -175,7 +281,6 @@ export default function DiagramPage() {
             ))}
           </defs>
 
-          {/* Connections */}
           {connections.map(([fromId, toId], i) => {
             const from = getNode(fromId);
             const to   = getNode(toId);
@@ -184,115 +289,30 @@ export default function DiagramPage() {
             const col  = connColor(to.layer);
             const op   = lineOpacity(fromId, toId);
             return (
-              <line
+              <ConnectionLine
                 key={i}
                 x1={from.x} y1={from.y}
                 x2={to.x}   y2={to.y}
-                stroke={col}
-                strokeWidth={1.5}
-                strokeOpacity={op}
-                strokeDasharray={dash}
-                style={{ transition: 'stroke-opacity 0.2s' }}
+                col={col} op={op} dash={dash}
               />
             );
           })}
 
-          {/* Nodes */}
           {nodes.map(node => {
-            const op    = nodeOpacity(node.id);
-            const isHov = hovered === node.id;
-            const isSearchMatch = matchSet?.has(node.id);
-            const lines = node.label.split('\n');
-            const lineH = node.layer === 2 ? 12 : 15;
-            const totalH = lines.length * lineH;
-
+            const op           = nodeOpacity(node.id);
+            const isHov        = hovered === node.id;
+            const isSearchMatch = matchSet?.has(node.id) ?? false;
             return (
-              <g
+              <NodeGroup
                 key={node.id}
-                transform={`translate(${node.x},${node.y})`}
-                style={{
-                  cursor: node.clickTarget ? 'pointer' : 'default',
-                  opacity: op,
-                  transition: 'opacity 0.2s',
-                }}
-                onMouseEnter={e => handleMouseEnter(e, node)}
-                onMouseLeave={handleMouseLeave}
-                onClick={() => node.clickTarget && navigate(node.clickTarget)}
-              >
-                {/* Progress ring (drawn first, behind glow) */}
-                {node.readiness !== undefined && (
-                  <ProgressRing
-                    nodeRadius={node.radius}
-                    percent={node.readiness}
-                    sw={node.layer === 2 ? 3 : 4}
-                  />
-                )}
-
-                {/* Hover glow ring */}
-                {isHov && (
-                  <circle
-                    r={node.radius + (node.readiness !== undefined ? 16 : 8)}
-                    fill="none"
-                    stroke={node.color}
-                    strokeWidth={2.5}
-                    opacity={0.5}
-                    filter={`url(#glow-${node.id})`}
-                  />
-                )}
-
-                {/* Search highlight */}
-                {isSearchMatch && !isHov && (
-                  <circle
-                    r={node.radius + (node.readiness !== undefined ? 14 : 6)}
-                    fill="none"
-                    stroke="#B3F400"
-                    strokeWidth={2.5}
-                    opacity={0.9}
-                  />
-                )}
-
-                {/* Main filled circle */}
-                <circle
-                  r={node.radius}
-                  fill={node.color}
-                  stroke={node.id === 'center' ? COLORS.centerStroke : 'none'}
-                  strokeWidth={node.id === 'center' ? 2 : 0}
-                />
-
-                {/* Label */}
-                <text
-                  textAnchor="middle"
-                  dominantBaseline="middle"
-                  fill={node.textColor || COLORS.white}
-                  fontSize={node.layer === 2 ? 8 : node.layer === 0 ? 12 : 11}
-                  fontWeight="700"
-                  fontFamily="'Inter','Helvetica Neue',Arial,sans-serif"
-                  letterSpacing="0.04em"
-                  style={{ userSelect: 'none', pointerEvents: 'none' }}
-                >
-                  {lines.map((l, i) => (
-                    <tspan key={i} x={0} dy={i === 0 ? -(totalH / 2 - lineH / 2) : lineH}>
-                      {l}
-                    </tspan>
-                  ))}
-                </text>
-
-                {/* Sub-label */}
-                {node.sublabel && node.layer !== 2 && (
-                  <text
-                    textAnchor="middle"
-                    fill={node.textColor || COLORS.white}
-                    fontSize={node.layer === 0 ? 6 : 7.5}
-                    fontFamily="'Inter','Helvetica Neue',Arial,sans-serif"
-                    opacity={0.7}
-                    style={{ userSelect: 'none', pointerEvents: 'none' }}
-                  >
-                    {node.sublabel.split('\n').map((l, i) => (
-                      <tspan key={i} x={0} dy={i === 0 ? totalH / 2 + 8 : 10}>{l}</tspan>
-                    ))}
-                  </text>
-                )}
-              </g>
+                node={node}
+                op={op}
+                isHov={isHov}
+                isSearchMatch={isSearchMatch}
+                onMouseEnter={e => handleMouseEnterNode(e, node)}
+                onMouseLeave={handleMouseLeaveNode}
+                onClick={() => handleNodeClick(node.clickTarget)}
+              />
             );
           })}
         </svg>
