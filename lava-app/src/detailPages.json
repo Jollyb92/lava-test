@@ -6,13 +6,27 @@
     "isoTag": "ISO 9001/14001 §4 — Context",
     "breadcrumb": "Cultural Manual",
     "topics": [
-      "Our History",
-      "Core Values",
-      "Design Philosophy",
-      "Team Structure",
-      "Growth & Mentorship"
+      "LAVA Story & History — founded 2007, studios, the vision",
+      "Knowledge Sharing — open culture, ask questions, share freely",
+      "Team Ethics & Ground Rules — equality, respect, collaboration over competition",
+      "Studio Culture & Rituals — Monday Meeting, Friday Academy, team events"
     ],
     "linkedSources": "→ Office Manual · QEMS §4 · §5"
+  },
+  "design": {
+    "id": "design",
+    "colorKey": "design",
+    "title": "Design Manual",
+    "isoTag": "ISO 9001 §8.3 — Design Development",
+    "breadcrumb": "Design Manual",
+    "topics": [
+      "Design Workflow — Concept → Schematic → DD → Documentation → Delivery",
+      "Design Philosophy in Practice — 'More with less', 'What if?', the 6 themes",
+      "Templates & Standards — key files, where to find, how to use",
+      "Graphic Approach — diagram standards, layout conventions, drawing directions",
+      "Competition Guidelines — entry process, brief reading, submission standards"
+    ],
+    "linkedSources": "→ Office Manual · QEMS §8 · E.1 · E.8"
   },
   "bidding": {
     "id": "bidding",
@@ -21,12 +35,28 @@
     "isoTag": "ISO 9001 §8.3 — Design Development",
     "breadcrumb": "Bidding Manual",
     "topics": [
-      "Proposal Template",
-      "Scope & Pricing",
-      "Client Engagement",
-      "Team Assignments"
+      "Proposal Process — brief review, team assembly, timeline",
+      "Templates & Components — bid deck, cover letter, project sheets",
+      "Scope & Fee — fee calculation, scope writing, negotiation",
+      "Client Engagement — communication style, presentation, follow-up"
     ],
-    "linkedSources": "→ Office Manual · Project Manual · PPM"
+    "linkedSources": "→ Office Manual · PPM · E.5 Templates Register"
+  },
+  "communication": {
+    "id": "communication",
+    "colorKey": "communication",
+    "title": "Communication Manual",
+    "isoTag": "ISO 9001 §7.4 — Communication",
+    "breadcrumb": "Communication Manual",
+    "topics": [
+      "Doc & Pres. Templates — standard files for documents and presentations",
+      "External Comm. Standards — tone of voice, email, correspondence rules",
+      "Layout Conventions — grid, spacing and margin rules for LAVA documents",
+      "Colour Rules — primary and secondary palette, usage guidelines",
+      "Graphic Approach — diagram style, imagery, visual consistency",
+      "Fonts — approved typefaces, sizing hierarchy, usage rules"
+    ],
+    "linkedSources": "→ Office Manual · E.8 Graphic Identity · E.5 Templates Register"
   },
   "project": {
     "id": "project",
@@ -68,10 +98,11 @@
     "isoTag": "ISO 9001 §7.5 / §8.1",
     "breadcrumb": "Project Processes Manual (PPM)",
     "topics": [
+      "SOP Lifecycle — WIP → Review → Published → Obsolete",
+      "Server Governance — L:\\ structure, access, naming conventions",
       "Templates Register — Standards, Bidding, Knowledge Mgmt, Planning, Reports, Coordination",
-      "Project folder standards",
-      "Server governance",
-      "SOP lifecycle — WIP → Review → Published → Obsolete"
+      "Project Phases — Concept, Schematic, DD, Construction, Post-occupancy",
+      "File Management — naming conventions, version control, archiving"
     ],
     "linkedSources": "→ E.2 · E.3 · E.4"
   },
@@ -82,11 +113,11 @@
     "isoTag": "ISO 9001 §7.1.4 / 14001 §8.2 — Emergency Preparedness",
     "breadcrumb": "Work Safety Manual",
     "topics": [
-      "Safety roles — Sicherheitsfachkraft, Brandschutzhelfer, Ersthelfer",
-      "Emergency procedures — call 112",
-      "Hazard register",
-      "Incident reporting",
-      "FabLab authorisation & training"
+      "Safety Roles — Sicherheitsfachkraft, Brandschutzhelfer, Ersthelfer assignments",
+      "Emergency Procedures — call 112, assembly point, fire & medical response",
+      "Hazard Register — ongoing log of identified workplace hazards",
+      "Incident Reporting — when and how to report, forms, follow-up",
+      "FabLab Authorisation — tool training, sign-off process, safety rules"
     ],
     "linkedSources": "→ D.1 · D.3"
   },
@@ -98,15 +129,10 @@
     "isoTag": "ISO 14001 §6.2 / §9.1",
     "breadcrumb": "Guides & Registers",
     "topics": [
-      "App. A — LAVA Zero objectives",
-      "App. B — Legal register (Rechtskataster)",
-      "App. C — Environmental aspect & impact matrix",
-      "App. E — Waste separation guide",
-      "App. F — Electricity conservation guide",
-      "App. G — Stoßlüften ventilation guide",
-      "App. J — Environmental incidents register",
-      "App. K — Kitchen Duty Roster",
-      "App. M — ISO 14001 KPIs"
+      "Appendices A–M",
+      "Legal & Environmental",
+      "KPIs & Incidents",
+      "Energy & Waste Tracking"
     ],
     "linkedSources": "→ D.2 · D.3 · C.2"
   },

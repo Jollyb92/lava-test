@@ -2,8 +2,8 @@ import { useState, useRef, useCallback, useMemo, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { nodes, connections, COLORS } from './data.js';
 
-const VW = 1000;
-const VH = 720;
+const VW = 1200;
+const VH = 780;
 
 function getNode(id) {
   return nodes.find(n => n.id === id);
@@ -285,7 +285,7 @@ export default function DiagramPage() {
             const from = getNode(fromId);
             const to   = getNode(toId);
             if (!from || !to) return null;
-            const dash = to.id === 'worksafety' ? null : connDash(to.layer);
+            const dash = connDash(to.layer);
             const col  = connColor(to.layer);
             const op   = lineOpacity(fromId, toId);
             return (
