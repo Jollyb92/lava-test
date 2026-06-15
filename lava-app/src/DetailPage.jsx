@@ -1,10 +1,70 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { detailPages, COLORS } from './data.js';
 import OnboardingChecklist from './OnboardingChecklist.jsx';
 import SlidePanel from './SlidePanel.jsx';
 
 const CHECKLIST_TRIGGER = 'Digital Onboarding Checklist — tracked by HR';
+
+const MANUAL_IDS = new Set([
+  'cultural', 'design', 'bidding', 'communication',
+  'qems', 'ppm', 'worksafety', 'guides', 'live', 'project',
+]);
+
+const CHAPTER_IDS = new Set([
+  'toc', 'doc-control', 'intro', 'ecosystem',
+  'a1', 'a2',
+  'b1', 'b2', 'b3', 'b4', 'b5', 'b6',
+  'c1', 'c2', 'c3',
+  'd1', 'd2', 'd3',
+  'e1', 'e2', 'e3', 'e4', 'e5', 'e6', 'e7', 'e8',
+  'f1', 'g1',
+]);
+
+function linkCategory(id) {
+  if (MANUAL_IDS.has(id)) return 'manuals';
+  if (CHAPTER_IDS.has(id)) return 'chapters';
+  return 'others';
+}
+
+function LinkedNav({ links, navigate }) {
+  const manuals  = links.filter(l => linkCategory(l.id) === 'manuals');
+  const chapters = links.filter(l => linkCategory(l.id) === 'chapters');
+  const others   = links.filter(l => linkCategory(l.id) === 'others');
+
+  const groups = [
+    { key: 'manuals',  label: 'Manuals',  items: manuals },
+    { key: 'chapters', label: 'Chapters', items: chapters },
+    { key: 'others',   label: 'Others',   items: others },
+  ].filter(g => g.items.length > 0);
+
+  if (groups.length === 0) return null;
+
+  return (
+    <div className="linked-nav">
+      <span className="linked-nav-label">See also</span>
+      {groups.map(group => (
+        <div key={group.key} className="linked-nav-group">
+          <span className="linked-nav-group-label">{group.label}</span>
+          <div className="linked-nav-chips">
+            {group.items.map(link => (
+              <button
+                key={link.id}
+                className="linked-nav-chip"
+                onClick={() => navigate(`/detail/${link.id}`)}
+              >
+                {link.label}
+                <svg width="9" height="9" viewBox="0 0 9 9" fill="none">
+                  <path d="M2 7L7 2M7 2H3.5M7 2V5.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 function TopicLabel({ text }) {
   const sep = text.indexOf(' — ');
@@ -17,11 +77,77 @@ function TopicLabel({ text }) {
   );
 }
 
+function SubchapterLabel({ text }) {
+  const sep = text.indexOf(' — ');
+  if (sep === -1) return <span className="subch-title">{text}</span>;
+  return (
+    <>
+      <span className="subch-title">{text.slice(0, sep)}</span>
+      <span className="subch-sub"> — {text.slice(sep + 3)}</span>
+    </>
+  );
+}
+
+function ChaptersView({ chapters, accentColor, onLinksChange }) {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  function toggle(i, ch) {
+    const next = openIndex === i ? null : i;
+    setOpenIndex(next);
+    onLinksChange(next !== null && ch.links?.length ? ch.links : null);
+  }
+
+  return (
+    <ul className="chapters-list">
+      {chapters.map((ch, i) => {
+        const isOpen = openIndex === i;
+        return (
+          <li key={i} className={`chapter-bubble${isOpen ? ' chapter-bubble--open' : ''}`}
+            style={isOpen ? { borderColor: accentColor } : {}}>
+            <button
+              className="chapter-bubble-btn"
+              onClick={() => toggle(i, ch)}
+              style={isOpen ? { background: accentColor, color: accentColor === '#B3F400' ? '#1a1a1a' : '#fff' } : {}}
+            >
+              <span className="chapter-bubble-num"
+                style={isOpen ? { background: 'rgba(0,0,0,0.18)', color: 'inherit' } : { background: accentColor, color: accentColor === '#B3F400' ? '#1a1a1a' : '#fff' }}>
+                {i + 1}
+              </span>
+              <span className="chapter-bubble-title">{ch.title}</span>
+              <svg className="chapter-bubble-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d={isOpen ? 'M2 8L6 4L10 8' : 'M2 4L6 8L10 4'}
+                  stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            {isOpen && (
+              <ul className="subchapter-pills">
+                {ch.subchapters.map((sub, j) => (
+                  <li key={j} className="subch-pill">
+                    <SubchapterLabel text={sub} />
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 export default function DetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [checklistOpen, setChecklistOpen] = useState(false);
   const [selectedSlide, setSelectedSlide] = useState(null);
+  const [chapterLinks, setChapterLinks] = useState(null);
+
+  // Reset per-item link overrides when navigating to a different page
+  useEffect(() => {
+    setChapterLinks(null);
+    setSelectedSlide(null);
+    setChecklistOpen(false);
+  }, [id]);
 
   const page = detailPages[id];
 
@@ -45,6 +171,10 @@ export default function DetailPage() {
   const numColor    = accentColor;
   const slideOpen   = selectedSlide !== null;
   const panelOpen   = checklistOpen || slideOpen;
+
+  // Active links: per-topic > per-chapter > page-level
+  const topicSpecific = selectedSlide !== null ? (page.topicLinks?.[selectedSlide] ?? null) : null;
+  const activeLinks = (topicSpecific?.length ? topicSpecific : null) || chapterLinks || page.links || null;
 
   const bodyClass = [
     'detail-body',
@@ -78,57 +208,64 @@ export default function DetailPage() {
           <div className="detail-title">{page.title}</div>
           {page.subtitle && <div className="detail-subtitle">{page.subtitle}</div>}
 
-          <ul className="topics-list">
-            {page.topics.map((topic, i) => (
-              <li key={i} className={`topic-card${selectedSlide === i ? ' topic-card--active' : ''}`}
-                style={selectedSlide === i ? { borderLeftColor: accentColor } : {}}>
-                <div
-                  className="topic-num"
-                  style={{ background: numColor, color: page.textColor === '#1a1a1a' ? '#1a1a1a' : '#fff' }}
-                >
-                  {i + 1}
-                </div>
+          {page.chapters ? (
+            <ChaptersView chapters={page.chapters} accentColor={accentColor} onLinksChange={setChapterLinks} />
+          ) : (
+            <ul className="topics-list">
+              {page.topics.map((topic, i) => (
+                <li key={i} className={`topic-card${selectedSlide === i ? ' topic-card--active' : ''}`}
+                  style={selectedSlide === i ? { borderLeftColor: accentColor } : {}}>
+                  <div
+                    className="topic-num"
+                    style={{ background: numColor, color: page.textColor === '#1a1a1a' ? '#1a1a1a' : '#fff' }}
+                  >
+                    {i + 1}
+                  </div>
 
-                {topic === CHECKLIST_TRIGGER ? (
-                  <button
-                    className="topic-checklist-btn"
-                    onClick={() => { setChecklistOpen(o => !o); setSelectedSlide(null); }}
-                  >
-                    <span className="topic-text"><TopicLabel text={topic} /></span>
-                    <span className={`topic-checklist-badge${checklistOpen ? ' topic-checklist-badge--open' : ''}`}>
-                      {checklistOpen ? 'Close' : 'Open checklist'}
-                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                        <path d={checklistOpen ? 'M2 6L5 3L8 6' : 'M2 4L5 7L8 4'}
-                          stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </span>
-                  </button>
-                ) : (
-                  <button
-                    className="topic-slide-btn"
-                    onClick={() => {
-                      setSelectedSlide(prev => prev === i ? null : i);
-                      setChecklistOpen(false);
-                    }}
-                  >
-                    <span className="topic-text"><TopicLabel text={topic} /></span>
-                    <span
-                      className="topic-slide-badge"
-                      style={selectedSlide === i ? { background: accentColor, color: accentColor === '#B3F400' ? '#1a1a1a' : '#fff' } : {}}
+                  {topic === CHECKLIST_TRIGGER ? (
+                    <button
+                      className="topic-checklist-btn"
+                      onClick={() => { setChecklistOpen(o => !o); setSelectedSlide(null); }}
                     >
-                      {selectedSlide === i ? 'Close' : 'View'}
-                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                        <path d={selectedSlide === i ? 'M2 6L5 3L8 6' : 'M2 4L5 7L8 4'}
-                          stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </span>
-                  </button>
-                )}
-              </li>
-            ))}
-          </ul>
+                      <span className="topic-text"><TopicLabel text={topic} /></span>
+                      <span className={`topic-checklist-badge${checklistOpen ? ' topic-checklist-badge--open' : ''}`}>
+                        {checklistOpen ? 'Close' : 'Open checklist'}
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                          <path d={checklistOpen ? 'M2 6L5 3L8 6' : 'M2 4L5 7L8 4'}
+                            stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </span>
+                    </button>
+                  ) : (
+                    <button
+                      className="topic-slide-btn"
+                      onClick={() => {
+                        setSelectedSlide(prev => prev === i ? null : i);
+                        setChecklistOpen(false);
+                        setChapterLinks(null);
+                      }}
+                    >
+                      <span className="topic-text"><TopicLabel text={topic} /></span>
+                      <span
+                        className="topic-slide-badge"
+                        style={selectedSlide === i ? { background: accentColor, color: accentColor === '#B3F400' ? '#1a1a1a' : '#fff' } : {}}
+                      >
+                        {selectedSlide === i ? 'Close' : 'View'}
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                          <path d={selectedSlide === i ? 'M2 6L5 3L8 6' : 'M2 4L5 7L8 4'}
+                            stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </span>
+                    </button>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
 
-          {page.linkedSources && <div className="linked-sources">{page.linkedSources}</div>}
+          {activeLinks && activeLinks.length > 0 && (
+            <LinkedNav links={activeLinks} navigate={navigate} />
+          )}
         </div>
 
         {/* Checklist panel (B.1) */}
@@ -136,8 +273,8 @@ export default function DetailPage() {
           <OnboardingChecklist onClose={() => setChecklistOpen(false)} />
         )}
 
-        {/* Generic slide panel for any topic */}
-        {slideOpen && (
+        {/* Generic slide panel for any topic (not used for chapter-based pages) */}
+        {slideOpen && page.topics && (
           <SlidePanel
             topic={page.topics[selectedSlide]}
             topicIndex={selectedSlide}

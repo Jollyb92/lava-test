@@ -47,7 +47,6 @@ export const nodes = [
   {
     id: 'center',
     label: 'OFFICE MANUAL\nBERLIN 2026',
-    sublabel: 'Who We Are · Working Here · Office Environment\nSafety & Environment · How We Work\nConnections · Knowledge & Growth',
     color: COLORS.center,
     textColor: COLORS.dark,
     strokeColor: COLORS.centerStroke,
@@ -209,11 +208,11 @@ export const nodes = [
   { id: 'ppm-files',     label: 'File\nManagement',    color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 858, y: 371, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm', connectionType: 'dotted' },
 
   // ── Work Safety sub-nodes — r=110, fan below WorkSafety(600,585) ─────────
-  { id: 'ws-roles',     label: 'Safety\nRoles',             color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 703, y: 623, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
+  { id: 'ws-roles',     label: 'Contacts\n& Roles',         color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 703, y: 623, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
   { id: 'ws-emergency', label: 'Emergency\nProcedures',     color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 663, y: 675, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
-  { id: 'ws-hazard',    label: 'Hazard\nRegister',          color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 600, y: 695, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
-  { id: 'ws-incident',  label: 'Incident\nReporting',       color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 537, y: 675, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
-  { id: 'ws-fablab',    label: 'FabLab\nAuthorisation',     color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 497, y: 623, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
+  { id: 'ws-hazard',    label: 'Hazards &\nPrevention',     color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 600, y: 695, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
+  { id: 'ws-incident',  label: 'Wellbeing\nat Work',        color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 537, y: 675, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
+  { id: 'ws-fablab',    label: 'Your\nWorkspace',           color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 497, y: 623, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
 ];
 
 // Connections: [fromId, toId]
@@ -357,7 +356,7 @@ export const tocData = {
       label: 'Supporting Systems',
       sections: [
         { id: 'qems', label: 'QEMS' },
-        { id: 'ppm', label: 'Project Processes Manual (PPM)' },
+        { id: 'ppm', label: 'Project Management Manual (PPM)' },
         { id: 'worksafety', label: 'Work Safety Manual' },
         { id: 'guides', label: 'Guides & Registers (Appendices A–M)' },
         { id: 'live', label: 'Live Systems & Tools' },
@@ -372,7 +371,7 @@ export const glossaryData = {
     { term: 'CM', def: 'Cultural Manual (values, history, design philosophy)' },
     { term: 'BM', def: 'Bidding Manual (proposals, templates, client engagement)' },
     { term: 'PM', def: 'Project Manual (design process, quality, delivery)' },
-    { term: 'PPM', def: 'Project Processes Manual (templates register, folder structure, server governance)' },
+    { term: 'PPM', def: 'Project Management Manual (templates register, folder structure, server governance)' },
     { term: 'WSM', def: 'Work Safety Manual (safety roles, emergency procedures, hazard register)' },
   ],
   managementSystems: [

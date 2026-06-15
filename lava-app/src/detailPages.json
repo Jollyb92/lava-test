@@ -11,7 +11,18 @@
       "Team Ethics & Ground Rules — equality, respect, collaboration over competition",
       "Studio Culture & Rituals — Monday Meeting, Friday Academy, team events"
     ],
-    "linkedSources": "→ Office Manual · QEMS §4 · §5"
+    "topicLinks": [
+      [{"label": "A.1 LAVA World", "id": "a1"}],
+      [{"label": "G.1 Knowledge & Growth", "id": "g1"}, {"label": "A.2 Values & General Rules", "id": "a2"}],
+      [{"label": "A.2 Values & General Rules", "id": "a2"}, {"label": "QEMS", "id": "qems"}],
+      [{"label": "C.3 Spaces & Facilities", "id": "c3"}, {"label": "G.1 Knowledge & Growth", "id": "g1"}]
+    ],
+    "links": [
+      { "label": "A.1 LAVA World", "id": "a1" },
+      { "label": "A.2 Values & General Rules", "id": "a2" },
+      { "label": "QEMS", "id": "qems" },
+      { "label": "G.1 Knowledge & Growth", "id": "g1" }
+    ]
   },
   "design": {
     "id": "design",
@@ -26,7 +37,19 @@
       "Graphic Approach — diagram standards, layout conventions, drawing directions",
       "Competition Guidelines — entry process, brief reading, submission standards"
     ],
-    "linkedSources": "→ Office Manual · QEMS §8 · E.1 · E.8"
+    "topicLinks": [
+      [{"label": "E.1 Design Manual at a Glance", "id": "e1"}, {"label": "E.2 Project Management at a Glance", "id": "e2"}],
+      [{"label": "A.1 LAVA World", "id": "a1"}, {"label": "A.2 Values & General Rules", "id": "a2"}],
+      [{"label": "E.5 Templates & Standards Register", "id": "e5"}, {"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
+      [{"label": "E.8 Graphic Identity in Practice", "id": "e8"}, {"label": "E.5 Templates & Standards Register", "id": "e5"}],
+      [{"label": "Bidding Manual", "id": "bidding"}, {"label": "E.2 Project Management at a Glance", "id": "e2"}]
+    ],
+    "links": [
+      { "label": "E.1 Design Manual at a Glance", "id": "e1" },
+      { "label": "E.8 Graphic Identity in Practice", "id": "e8" },
+      { "label": "E.5 Templates & Standards Register", "id": "e5" },
+      { "label": "QEMS", "id": "qems" }
+    ]
   },
   "bidding": {
     "id": "bidding",
@@ -40,7 +63,17 @@
       "Scope & Fee — fee calculation, scope writing, negotiation",
       "Client Engagement — communication style, presentation, follow-up"
     ],
-    "linkedSources": "→ Office Manual · PPM · E.5 Templates Register"
+    "topicLinks": [
+      [{"label": "E.2 Project Management at a Glance", "id": "e2"}, {"label": "E.3 SOPs", "id": "e3"}],
+      [{"label": "E.5 Templates & Standards Register", "id": "e5"}, {"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
+      [{"label": "E.2 Project Management at a Glance", "id": "e2"}],
+      [{"label": "E.8 Graphic Identity in Practice", "id": "e8"}]
+    ],
+    "links": [
+      { "label": "E.2 Project Management at a Glance", "id": "e2" },
+      { "label": "E.5 Templates & Standards Register", "id": "e5" },
+      { "label": "E.8 Graphic Identity in Practice", "id": "e8" }
+    ]
   },
   "communication": {
     "id": "communication",
@@ -56,7 +89,19 @@
       "Graphic Approach — diagram style, imagery, visual consistency",
       "Fonts — approved typefaces, sizing hierarchy, usage rules"
     ],
-    "linkedSources": "→ Office Manual · E.8 Graphic Identity · E.5 Templates Register"
+    "topicLinks": [
+      [{"label": "E.5 Templates & Standards Register", "id": "e5"}, {"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
+      [{"label": "E.8 Graphic Identity in Practice", "id": "e8"}, {"label": "E.1 Design Manual at a Glance", "id": "e1"}],
+      [{"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
+      [{"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
+      [{"label": "E.1 Design Manual at a Glance", "id": "e1"}, {"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
+      [{"label": "E.8 Graphic Identity in Practice", "id": "e8"}, {"label": "E.5 Templates & Standards Register", "id": "e5"}]
+    ],
+    "links": [
+      { "label": "E.8 Graphic Identity in Practice", "id": "e8" },
+      { "label": "E.5 Templates & Standards Register", "id": "e5" },
+      { "label": "E.1 Design Manual at a Glance", "id": "e1" }
+    ]
   },
   "project": {
     "id": "project",
@@ -71,7 +116,11 @@
       "File Management",
       "Lessons Learned"
     ],
-    "linkedSources": "→ Office Manual · Project Processes Manual · QEMS"
+    "links": [
+      { "label": "E.2 Project Management at a Glance", "id": "e2" },
+      { "label": "QEMS", "id": "qems" },
+      { "label": "E.1 Design Manual at a Glance", "id": "e1" }
+    ]
   },
   "qems": {
     "id": "qems",
@@ -88,15 +137,28 @@
       "Environmental Management System — ISO 14001",
       "Document control §7.5"
     ],
-    "linkedSources": "→ D.2 · D.3 · E.6"
+    "topicLinks": [
+      [{"label": "F.1 Cross-References", "id": "f1"}],
+      [{"label": "Guides & Registers", "id": "guides"}, {"label": "D.2 Environmental Practice", "id": "d2"}],
+      [{"label": "B.5 Performance & Growth", "id": "b5"}, {"label": "B.1 Onboarding & First Days", "id": "b1"}],
+      [{"label": "E.3 SOPs", "id": "e3"}, {"label": "E.7 Document Control", "id": "e7"}],
+      [{"label": "D.2 Environmental Practice", "id": "d2"}, {"label": "D.3 Environmental Preparedness", "id": "d3"}],
+      [{"label": "E.7 Document Control", "id": "e7"}, {"label": "E.3 SOPs", "id": "e3"}]
+    ],
+    "links": [
+      { "label": "D.2 Environmental Practice", "id": "d2" },
+      { "label": "D.3 Environmental Preparedness", "id": "d3" },
+      { "label": "E.6 IT, Servers & Poolarserver", "id": "e6" },
+      { "label": "E.7 Document Control", "id": "e7" }
+    ]
   },
   "ppm": {
     "id": "ppm",
     "colorKey": "ppm",
-    "title": "Project Processes Manual",
+    "title": "Project Management Manual",
     "subtitle": "PPM",
     "isoTag": "ISO 9001 §7.5 / §8.1",
-    "breadcrumb": "Project Processes Manual (PPM)",
+    "breadcrumb": "Project Management Manual (PPM)",
     "topics": [
       "SOP Lifecycle — WIP → Review → Published → Obsolete",
       "Server Governance — L:\\ structure, access, naming conventions",
@@ -104,7 +166,19 @@
       "Project Phases — Concept, Schematic, DD, Construction, Post-occupancy",
       "File Management — naming conventions, version control, archiving"
     ],
-    "linkedSources": "→ E.2 · E.3 · E.4"
+    "topicLinks": [
+      [{"label": "E.3 SOPs", "id": "e3"}, {"label": "QEMS", "id": "qems"}],
+      [{"label": "E.4 Project Folder Structure", "id": "e4"}, {"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}],
+      [{"label": "E.5 Templates & Standards Register", "id": "e5"}, {"label": "Bidding Manual", "id": "bidding"}],
+      [{"label": "E.2 Project Management at a Glance", "id": "e2"}, {"label": "E.1 Design Manual at a Glance", "id": "e1"}],
+      [{"label": "E.4 Project Folder Structure", "id": "e4"}, {"label": "E.7 Document Control", "id": "e7"}]
+    ],
+    "links": [
+      { "label": "E.2 Project Management at a Glance", "id": "e2" },
+      { "label": "E.3 SOPs", "id": "e3" },
+      { "label": "E.4 Project Folder Structure", "id": "e4" },
+      { "label": "E.5 Templates & Standards Register", "id": "e5" }
+    ]
   },
   "worksafety": {
     "id": "worksafety",
@@ -112,14 +186,84 @@
     "title": "Work Safety Manual",
     "isoTag": "ISO 9001 §7.1.4 / 14001 §8.2 — Emergency Preparedness",
     "breadcrumb": "Work Safety Manual",
-    "topics": [
-      "Safety Roles — Sicherheitsfachkraft, Brandschutzhelfer, Ersthelfer assignments",
-      "Emergency Procedures — call 112, assembly point, fire & medical response",
-      "Hazard Register — ongoing log of identified workplace hazards",
-      "Incident Reporting — when and how to report, forms, follow-up",
-      "FabLab Authorisation — tool training, sign-off process, safety rules"
+    "chapters": [
+      {
+        "title": "Your Workspace",
+        "links": [
+          {"label": "C.1 Berlin Office Rules", "id": "c1"},
+          {"label": "D.2 Environmental Practice", "id": "d2"},
+          {"label": "C.3 Spaces & Facilities", "id": "c3"}
+        ],
+        "subchapters": [
+          "Ergonomic setup — chair, desk, screen distance",
+          "Lighting — room lights, blinds, screen glare",
+          "Air quality — Stoßlüften ventilation",
+          "Noise — calls, kitchen, focus environment"
+        ]
+      },
+      {
+        "title": "Hazards & Prevention",
+        "links": [
+          {"label": "D.3 Environmental Preparedness", "id": "d3"},
+          {"label": "C.3 Spaces & Facilities", "id": "c3"},
+          {"label": "D.1 Work Safety", "id": "d1"}
+        ],
+        "subchapters": [
+          "Trip hazards — cables, drawers, chairs",
+          "Electrical safety — devices, no daisy-chaining",
+          "Fire prevention — Brandschutzhelfer contacts"
+        ]
+      },
+      {
+        "title": "Emergency Procedures",
+        "links": [
+          {"label": "D.1 Work Safety", "id": "d1"},
+          {"label": "D.3 Environmental Preparedness", "id": "d3"},
+          {"label": "C.3 Spaces & Facilities", "id": "c3"}
+        ],
+        "subchapters": [
+          "Safety plans — escape routes map, symbols legend",
+          "First aid — kit location, what to do, logging",
+          "Fire extinguisher — location, when to act",
+          "Escape routes — main and alternative exit, assembly point"
+        ]
+      },
+      {
+        "title": "Wellbeing at Work",
+        "links": [
+          {"label": "B.2 A Standard Day at LAVA", "id": "b2"},
+          {"label": "B.3 Time Off & Absence", "id": "b3"},
+          {"label": "B.5 Performance & Growth", "id": "b5"}
+        ],
+        "subchapters": [
+          "Breaks & self-care",
+          "Hand care",
+          "Stress & mental health — speak up early",
+          "Pregnancy & breastfeeding — notification process"
+        ]
+      },
+      {
+        "title": "Contacts & Roles",
+        "links": [
+          {"label": "D.1 Work Safety", "id": "d1"},
+          {"label": "QEMS", "id": "qems"},
+          {"label": "B.1 Onboarding & First Days", "id": "b1"}
+        ],
+        "subchapters": [
+          "Safety Representative (Sicherheitsbeauftragte) — Felix Heppert, Daniel Podrasa",
+          "First Aiders (Ersthelfer) — full list with emails",
+          "Fire Safety Assistants (Brandschutzhelfer) — full list with emails",
+          "Safety Officer (Sicherheitsfachkraft) — Renard Lehmann",
+          "Office Doctor (Betriebsarzt) — Judith Maria Wohlleben"
+        ]
+      }
     ],
-    "linkedSources": "→ D.1 · D.3"
+    "links": [
+      { "label": "D.1 Work Safety", "id": "d1" },
+      { "label": "D.3 Environmental Preparedness", "id": "d3" },
+      { "label": "C.3 Spaces & Facilities", "id": "c3" },
+      { "label": "QEMS", "id": "qems" }
+    ]
   },
   "guides": {
     "id": "guides",
@@ -134,7 +278,11 @@
       "KPIs & Incidents",
       "Energy & Waste Tracking"
     ],
-    "linkedSources": "→ D.2 · D.3 · C.2"
+    "links": [
+      { "label": "D.2 Environmental Practice", "id": "d2" },
+      { "label": "D.3 Environmental Preparedness", "id": "d3" },
+      { "label": "C.2 Housekeeping", "id": "c2" }
+    ]
   },
   "live": {
     "id": "live",
@@ -150,7 +298,18 @@
       "Server L:\\ — BER Projects, Library, Temp, _SCANS",
       "Software licenses — M365, Adobe CC, Rhino, Autodesk, Enscape"
     ],
-    "linkedSources": "→ E.5"
+    "topicLinks": [
+      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}],
+      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "B.2 A Standard Day at LAVA", "id": "b2"}],
+      [{"label": "C.3 Spaces & Facilities", "id": "c3"}],
+      [{"label": "E.4 Project Folder Structure", "id": "e4"}, {"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}],
+      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}]
+    ],
+    "links": [
+      { "label": "E.6 IT, Servers & Poolarserver", "id": "e6" },
+      { "label": "E.4 Project Folder Structure", "id": "e4" },
+      { "label": "E.5 Templates & Standards Register", "id": "e5" }
+    ]
   },
   "ecosystem": {
     "id": "ecosystem",
@@ -165,7 +324,17 @@
       "QEMS, PPM, Work Safety Manual, Guides & Live Systems in the outer ring",
       "Use the diagram to navigate relationships between documents"
     ],
-    "linkedSources": "→ All manuals · All systems"
+    "links": [
+      { "label": "Cultural Manual", "id": "cultural" },
+      { "label": "Design Manual", "id": "design" },
+      { "label": "Bidding Manual", "id": "bidding" },
+      { "label": "Communication Manual", "id": "communication" },
+      { "label": "QEMS", "id": "qems" },
+      { "label": "Project Management Manual", "id": "ppm" },
+      { "label": "Work Safety Manual", "id": "worksafety" },
+      { "label": "Guides & Registers", "id": "guides" },
+      { "label": "Live Systems & Tools", "id": "live" }
+    ]
   },
   "toc": {
     "id": "toc",
@@ -184,7 +353,25 @@
       "Part F — Connections",
       "Part G — Knowledge & Growth"
     ],
-    "linkedSources": "→ All parts"
+    "topicLinks": [
+      [{"label": "Document Control", "id": "doc-control"}, {"label": "Ecosystem Diagram", "id": "ecosystem"}],
+      [{"label": "A.1 LAVA World", "id": "a1"}, {"label": "A.2 Values & General Rules", "id": "a2"}],
+      [{"label": "B.1 Onboarding & First Days", "id": "b1"}, {"label": "B.5 Performance & Growth", "id": "b5"}],
+      [{"label": "C.1 Berlin Office Rules", "id": "c1"}, {"label": "C.3 Spaces & Facilities", "id": "c3"}],
+      [{"label": "D.1 Work Safety", "id": "d1"}, {"label": "D.3 Environmental Preparedness", "id": "d3"}],
+      [{"label": "E.1 Design Manual at a Glance", "id": "e1"}, {"label": "E.5 Templates & Standards Register", "id": "e5"}],
+      [{"label": "F.1 Cross-References", "id": "f1"}],
+      [{"label": "G.1 Knowledge & Growth", "id": "g1"}]
+    ],
+    "links": [
+      { "label": "A.1 LAVA World", "id": "a1" },
+      { "label": "B.1 Onboarding & First Days", "id": "b1" },
+      { "label": "C.1 Berlin Office Rules", "id": "c1" },
+      { "label": "D.1 Work Safety", "id": "d1" },
+      { "label": "E.1 Design Manual at a Glance", "id": "e1" },
+      { "label": "F.1 Cross-References", "id": "f1" },
+      { "label": "G.1 Knowledge & Growth", "id": "g1" }
+    ]
   },
   "doc-control": {
     "id": "doc-control",
@@ -200,7 +387,10 @@
       "Approver: Directors | Review cycle: Annual",
       "Revision history — version · date · description · author"
     ],
-    "linkedSources": "→ QEMS §7.5 · E.6 Document Control"
+    "links": [
+      { "label": "QEMS", "id": "qems" },
+      { "label": "E.7 Document Control", "id": "e7" }
+    ]
   },
   "intro": {
     "id": "intro",
@@ -217,7 +407,21 @@
       "Bidding Manual is optional for interns & junior architects — available to all for transparency",
       "Use the Ecosystem Diagram to navigate relationships between manuals"
     ],
-    "linkedSources": "→ Cultural Manual · Project Manual · Bidding Manual · QEMS"
+    "topicLinks": [
+      [{"label": "Table of Contents", "id": "toc"}],
+      [{"label": "A.1 LAVA World", "id": "a1"}, {"label": "A.2 Values & General Rules", "id": "a2"}],
+      [{"label": "E.1 Design Manual at a Glance", "id": "e1"}, {"label": "E.2 Project Management at a Glance", "id": "e2"}],
+      [{"label": "Bidding Manual", "id": "bidding"}, {"label": "E.5 Templates & Standards Register", "id": "e5"}],
+      [{"label": "Bidding Manual", "id": "bidding"}],
+      [{"label": "Ecosystem Diagram", "id": "ecosystem"}]
+    ],
+    "links": [
+      { "label": "A.1 LAVA World", "id": "a1" },
+      { "label": "E.1 Design Manual at a Glance", "id": "e1" },
+      { "label": "Bidding Manual", "id": "bidding" },
+      { "label": "QEMS", "id": "qems" },
+      { "label": "Ecosystem Diagram", "id": "ecosystem" }
+    ]
   },
   "a1": {
     "id": "a1",
@@ -232,7 +436,18 @@
       "Our design philosophy — \"More with less\", \"What if?\"",
       "The 6 main themes"
     ],
-    "linkedSources": "→ Cultural Manual · QEMS §4"
+    "topicLinks": [
+      [{"label": "A.2 Values & General Rules", "id": "a2"}],
+      [{"label": "C.1 Berlin Office Rules", "id": "c1"}, {"label": "C.3 Spaces & Facilities", "id": "c3"}],
+      [{"label": "C.1 Berlin Office Rules", "id": "c1"}],
+      [{"label": "E.1 Design Manual at a Glance", "id": "e1"}, {"label": "A.2 Values & General Rules", "id": "a2"}],
+      [{"label": "A.2 Values & General Rules", "id": "a2"}, {"label": "E.1 Design Manual at a Glance", "id": "e1"}]
+    ],
+    "links": [
+      { "label": "A.2 Values & General Rules", "id": "a2" },
+      { "label": "QEMS", "id": "qems" },
+      { "label": "G.1 Knowledge & Growth", "id": "g1" }
+    ]
   },
   "a2": {
     "id": "a2",
@@ -247,7 +462,18 @@
       "Knowledge sharing — ask questions, share freely",
       "Office as community — FabLab, VR-Room, Library, Monday Meeting"
     ],
-    "linkedSources": "→ Cultural Manual · QEMS §5"
+    "topicLinks": [
+      [{"label": "A.1 LAVA World", "id": "a1"}],
+      [{"label": "QEMS", "id": "qems"}],
+      [{"label": "A.1 LAVA World", "id": "a1"}],
+      [{"label": "G.1 Knowledge & Growth", "id": "g1"}],
+      [{"label": "C.3 Spaces & Facilities", "id": "c3"}]
+    ],
+    "links": [
+      { "label": "A.1 LAVA World", "id": "a1" },
+      { "label": "QEMS", "id": "qems" },
+      { "label": "G.1 Knowledge & Growth", "id": "g1" }
+    ]
   },
   "b1": {
     "id": "b1",
@@ -263,7 +489,21 @@
       "Buddy & mentor assignment",
       "Payslips, DateV systems, requests to HR and forms in digital"
     ],
-    "linkedSources": "→ HR & Personnel · B.4 Mentoring & Buddy"
+    "topicLinks": [
+      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}],
+      [{"label": "B.4 Mentoring & Buddy System", "id": "b4"}, {"label": "C.1 Berlin Office Rules", "id": "c1"}],
+      [{"label": "D.1 Work Safety", "id": "d1"}, {"label": "QEMS", "id": "qems"}],
+      [{"label": "B.4 Mentoring & Buddy System", "id": "b4"}, {"label": "QEMS", "id": "qems"}],
+      [{"label": "B.4 Mentoring & Buddy System", "id": "b4"}, {"label": "B.5 Performance & Growth", "id": "b5"}],
+      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}]
+    ],
+    "links": [
+      { "label": "B.4 Mentoring & Buddy System", "id": "b4" },
+      { "label": "D.1 Work Safety", "id": "d1" },
+      { "label": "E.6 IT, Servers & Poolarserver", "id": "e6" },
+      { "label": "Live Systems & Tools", "id": "live" },
+      { "label": "QEMS", "id": "qems" }
+    ]
   },
   "b2": {
     "id": "b2",
@@ -278,7 +518,19 @@
       "Overtime, late hours & weekends",
       "Time logging — Poolarserver"
     ],
-    "linkedSources": "→ E.5 IT & Poolarserver"
+    "topicLinks": [
+      [{"label": "B.3 Time Off & Absence", "id": "b3"}],
+      [{"label": "C.3 Spaces & Facilities", "id": "c3"}, {"label": "A.2 Values & General Rules", "id": "a2"}],
+      [{"label": "B.3 Time Off & Absence", "id": "b3"}],
+      [{"label": "B.3 Time Off & Absence", "id": "b3"}],
+      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}]
+    ],
+    "links": [
+      { "label": "E.6 IT, Servers & Poolarserver", "id": "e6" },
+      { "label": "Live Systems & Tools", "id": "live" },
+      { "label": "C.1 Berlin Office Rules", "id": "c1" },
+      { "label": "B.3 Time Off & Absence", "id": "b3" }
+    ]
   },
   "b3": {
     "id": "b3",
@@ -294,7 +546,10 @@
       "Sickness & doctor's notes",
       "Overtime perks — dinner, taxi"
     ],
-    "linkedSources": "→ HR & Personnel · Public Holidays register"
+    "links": [
+      { "label": "Guides & Registers", "id": "guides" },
+      { "label": "B.5 Performance & Growth", "id": "b5" }
+    ]
   },
   "b4": {
     "id": "b4",
@@ -310,7 +565,19 @@
       "Why participate — what the buddy gains",
       "Why participate — what the mentor gains"
     ],
-    "linkedSources": "→ B.1 Onboarding · B.5 Performance & Growth"
+    "topicLinks": [
+      [{"label": "B.1 Onboarding & First Days", "id": "b1"}],
+      [{"label": "B.5 Performance & Growth", "id": "b5"}],
+      [{"label": "B.1 Onboarding & First Days", "id": "b1"}],
+      [{"label": "B.1 Onboarding & First Days", "id": "b1"}, {"label": "B.5 Performance & Growth", "id": "b5"}],
+      [{"label": "G.1 Knowledge & Growth", "id": "g1"}],
+      [{"label": "G.1 Knowledge & Growth", "id": "g1"}, {"label": "B.5 Performance & Growth", "id": "b5"}]
+    ],
+    "links": [
+      { "label": "B.1 Onboarding & First Days", "id": "b1" },
+      { "label": "B.5 Performance & Growth", "id": "b5" },
+      { "label": "G.1 Knowledge & Growth", "id": "g1" }
+    ]
   },
   "b5": {
     "id": "b5",
@@ -325,7 +592,18 @@
       "Competence evaluation matrix",
       "Training & development — internal and external"
     ],
-    "linkedSources": "→ QEMS HR & Personnel Management"
+    "topicLinks": [
+      [{"label": "B.4 Mentoring & Buddy System", "id": "b4"}],
+      [{"label": "QEMS", "id": "qems"}],
+      [{"label": "QEMS", "id": "qems"}, {"label": "B.4 Mentoring & Buddy System", "id": "b4"}],
+      [{"label": "QEMS", "id": "qems"}],
+      [{"label": "G.1 Knowledge & Growth", "id": "g1"}]
+    ],
+    "links": [
+      { "label": "QEMS", "id": "qems" },
+      { "label": "B.4 Mentoring & Buddy System", "id": "b4" },
+      { "label": "G.1 Knowledge & Growth", "id": "g1" }
+    ]
   },
   "b6": {
     "id": "b6",
@@ -340,7 +618,19 @@
       "Equipment & access return",
       "Final timesheet, settlement & reference"
     ],
-    "linkedSources": "→ QEMS HR & Personnel Management"
+    "topicLinks": [
+      [{"label": "QEMS", "id": "qems"}],
+      [{"label": "E.4 Project Folder Structure", "id": "e4"}, {"label": "E.7 Document Control", "id": "e7"}],
+      [{"label": "G.1 Knowledge & Growth", "id": "g1"}],
+      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}],
+      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}, {"label": "QEMS", "id": "qems"}]
+    ],
+    "links": [
+      { "label": "QEMS", "id": "qems" },
+      { "label": "E.4 Project Folder Structure", "id": "e4" },
+      { "label": "E.7 Document Control", "id": "e7" },
+      { "label": "Live Systems & Tools", "id": "live" }
+    ]
   },
   "c1": {
     "id": "c1",
@@ -358,7 +648,21 @@
       "Post & packages",
       "Check-in / check-out system — shared resources & equipment"
     ],
-    "linkedSources": "→ C.2 Housekeeping"
+    "topicLinks": [
+      [{"label": "D.1 Work Safety", "id": "d1"}],
+      [{"label": "C.2 Housekeeping", "id": "c2"}],
+      [{"label": "D.1 Work Safety", "id": "d1"}],
+      [{"label": "C.2 Housekeeping", "id": "c2"}],
+      [{"label": "D.2 Environmental Practice", "id": "d2"}],
+      [{"label": "B.2 A Standard Day at LAVA", "id": "b2"}],
+      [],
+      [{"label": "C.3 Spaces & Facilities", "id": "c3"}]
+    ],
+    "links": [
+      { "label": "C.2 Housekeeping", "id": "c2" },
+      { "label": "C.3 Spaces & Facilities", "id": "c3" },
+      { "label": "D.1 Work Safety", "id": "d1" }
+    ]
   },
   "c2": {
     "id": "c2",
@@ -374,7 +678,19 @@
       "Reporting broken items",
       "Waste & Bokashi"
     ],
-    "linkedSources": "→ D.2 Environmental Practice · App. K Kitchen Roster"
+    "topicLinks": [
+      [],
+      [{"label": "C.1 Berlin Office Rules", "id": "c1"}],
+      [{"label": "Guides & Registers", "id": "guides"}],
+      [],
+      [{"label": "D.3 Environmental Preparedness", "id": "d3"}],
+      [{"label": "D.2 Environmental Practice", "id": "d2"}, {"label": "Guides & Registers", "id": "guides"}]
+    ],
+    "links": [
+      { "label": "D.2 Environmental Practice", "id": "d2" },
+      { "label": "Guides & Registers", "id": "guides" },
+      { "label": "C.1 Berlin Office Rules", "id": "c1" }
+    ]
   },
   "c3": {
     "id": "c3",
@@ -390,7 +706,20 @@
       "Meeting rooms — booking via Office Calendar / printed form in the room",
       "Friday Academy & Lunch Presentations"
     ],
-    "linkedSources": "→ D.1 Work Safety · Library guide"
+    "topicLinks": [
+      [{"label": "Guides & Registers", "id": "guides"}],
+      [{"label": "D.1 Work Safety", "id": "d1"}],
+      [],
+      [],
+      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}],
+      [{"label": "G.1 Knowledge & Growth", "id": "g1"}]
+    ],
+    "links": [
+      { "label": "D.1 Work Safety", "id": "d1" },
+      { "label": "G.1 Knowledge & Growth", "id": "g1" },
+      { "label": "E.6 IT, Servers & Poolarserver", "id": "e6" },
+      { "label": "Live Systems & Tools", "id": "live" }
+    ]
   },
   "d1": {
     "id": "d1",
@@ -405,7 +734,19 @@
       "Reporting hazards & damage",
       "FabLab authorisation & training"
     ],
-    "linkedSources": "→ QEMS Org Chart · Work Safety Manual"
+    "topicLinks": [
+      [{"label": "Work Safety Manual", "id": "worksafety"}, {"label": "QEMS", "id": "qems"}],
+      [{"label": "Work Safety Manual", "id": "worksafety"}, {"label": "D.3 Environmental Preparedness", "id": "d3"}],
+      [{"label": "Work Safety Manual", "id": "worksafety"}, {"label": "C.3 Spaces & Facilities", "id": "c3"}],
+      [{"label": "QEMS", "id": "qems"}, {"label": "D.3 Environmental Preparedness", "id": "d3"}],
+      [{"label": "C.3 Spaces & Facilities", "id": "c3"}, {"label": "Work Safety Manual", "id": "worksafety"}]
+    ],
+    "links": [
+      { "label": "Work Safety Manual", "id": "worksafety" },
+      { "label": "QEMS", "id": "qems" },
+      { "label": "C.3 Spaces & Facilities", "id": "c3" },
+      { "label": "D.3 Environmental Preparedness", "id": "d3" }
+    ]
   },
   "d2": {
     "id": "d2",
@@ -421,7 +762,19 @@
       "Sustainable mobility",
       "Monitoring & KPIs — paper, CO₂"
     ],
-    "linkedSources": "→ EMS · Apps. E, F, G, I"
+    "topicLinks": [
+      [{"label": "QEMS", "id": "qems"}, {"label": "Guides & Registers", "id": "guides"}],
+      [{"label": "C.2 Housekeeping", "id": "c2"}, {"label": "Guides & Registers", "id": "guides"}],
+      [{"label": "C.2 Housekeeping", "id": "c2"}],
+      [{"label": "D.1 Work Safety", "id": "d1"}],
+      [],
+      [{"label": "QEMS", "id": "qems"}, {"label": "Guides & Registers", "id": "guides"}]
+    ],
+    "links": [
+      { "label": "QEMS", "id": "qems" },
+      { "label": "Guides & Registers", "id": "guides" },
+      { "label": "C.2 Housekeeping", "id": "c2" }
+    ]
   },
   "d3": {
     "id": "d3",
@@ -437,7 +790,20 @@
       "Transport accidents",
       "Incident register & reporting"
     ],
-    "linkedSources": "→ EMS · App. J Incidents Register"
+    "topicLinks": [
+      [{"label": "D.1 Work Safety", "id": "d1"}, {"label": "Work Safety Manual", "id": "worksafety"}],
+      [{"label": "Work Safety Manual", "id": "worksafety"}],
+      [{"label": "C.2 Housekeeping", "id": "c2"}, {"label": "Work Safety Manual", "id": "worksafety"}],
+      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}],
+      [],
+      [{"label": "QEMS", "id": "qems"}, {"label": "Guides & Registers", "id": "guides"}]
+    ],
+    "links": [
+      { "label": "QEMS", "id": "qems" },
+      { "label": "Guides & Registers", "id": "guides" },
+      { "label": "Work Safety Manual", "id": "worksafety" },
+      { "label": "D.1 Work Safety", "id": "d1" }
+    ]
   },
   "e1": {
     "id": "e1",
@@ -451,7 +817,17 @@
       "Core design process — Concept → Schematic → DD → Documentation → Delivery",
       "File naming convention"
     ],
-    "linkedSources": "→ Project Manual · E.8 Graphic Identity · E.5 Templates Register"
+    "topicLinks": [
+      [{"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
+      [{"label": "E.5 Templates & Standards Register", "id": "e5"}, {"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
+      [{"label": "E.2 Project Management at a Glance", "id": "e2"}],
+      [{"label": "E.7 Document Control", "id": "e7"}, {"label": "E.4 Project Folder Structure", "id": "e4"}]
+    ],
+    "links": [
+      { "label": "E.8 Graphic Identity in Practice", "id": "e8" },
+      { "label": "E.5 Templates & Standards Register", "id": "e5" },
+      { "label": "E.2 Project Management at a Glance", "id": "e2" }
+    ]
   },
   "e2": {
     "id": "e2",
@@ -466,7 +842,19 @@
       "Project Directory & Deliverables List",
       "Issues Tracker & MoMs"
     ],
-    "linkedSources": "→ Project Manual · Project Processes Manual"
+    "topicLinks": [
+      [{"label": "E.5 Templates & Standards Register", "id": "e5"}, {"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}],
+      [{"label": "E.4 Project Folder Structure", "id": "e4"}],
+      [{"label": "E.4 Project Folder Structure", "id": "e4"}],
+      [{"label": "E.4 Project Folder Structure", "id": "e4"}, {"label": "E.7 Document Control", "id": "e7"}],
+      [{"label": "E.7 Document Control", "id": "e7"}]
+    ],
+    "links": [
+      { "label": "E.3 SOPs", "id": "e3" },
+      { "label": "E.4 Project Folder Structure", "id": "e4" },
+      { "label": "E.5 Templates & Standards Register", "id": "e5" },
+      { "label": "Live Systems & Tools", "id": "live" }
+    ]
   },
   "e3": {
     "id": "e3",
@@ -477,7 +865,11 @@
     "topics": [
       "Responsibility table — name, process, responsible person, link to SOP"
     ],
-    "linkedSources": "→ QEMS · PPM"
+    "links": [
+      { "label": "QEMS", "id": "qems" },
+      { "label": "E.2 Project Management at a Glance", "id": "e2" },
+      { "label": "E.7 Document Control", "id": "e7" }
+    ]
   },
   "e4": {
     "id": "e4",
@@ -493,7 +885,20 @@
       "Library vs Library Workplace",
       "Archiving rules"
     ],
-    "linkedSources": "→ L:\\ Folder Structure · Project Processes Manual"
+    "topicLinks": [
+      [{"label": "E.2 Project Management at a Glance", "id": "e2"}],
+      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}],
+      [{"label": "E.5 Templates & Standards Register", "id": "e5"}],
+      [{"label": "E.2 Project Management at a Glance", "id": "e2"}],
+      [],
+      [{"label": "E.7 Document Control", "id": "e7"}]
+    ],
+    "links": [
+      { "label": "E.2 Project Management at a Glance", "id": "e2" },
+      { "label": "E.6 IT, Servers & Poolarserver", "id": "e6" },
+      { "label": "Live Systems & Tools", "id": "live" },
+      { "label": "E.7 Document Control", "id": "e7" }
+    ]
   },
   "e5": {
     "id": "e5",
@@ -507,7 +912,17 @@
       "Maintenance & ownership",
       "How to use templates"
     ],
-    "linkedSources": "→ PPM §1.2 Templates Register"
+    "topicLinks": [
+      [{"label": "Bidding Manual", "id": "bidding"}, {"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
+      [{"label": "E.7 Document Control", "id": "e7"}],
+      [{"label": "E.7 Document Control", "id": "e7"}],
+      [{"label": "E.8 Graphic Identity in Practice", "id": "e8"}]
+    ],
+    "links": [
+      { "label": "E.2 Project Management at a Glance", "id": "e2" },
+      { "label": "E.8 Graphic Identity in Practice", "id": "e8" },
+      { "label": "Bidding Manual", "id": "bidding" }
+    ]
   },
   "e6": {
     "id": "e6",
@@ -522,7 +937,18 @@
       "Remote access — VPN, AnyDesk (emergency only)",
       "WLAN access"
     ],
-    "linkedSources": "→ IT Wiki"
+    "topicLinks": [
+      [{"label": "B.2 A Standard Day at LAVA", "id": "b2"}],
+      [{"label": "E.4 Project Folder Structure", "id": "e4"}],
+      [{"label": "E.5 Templates & Standards Register", "id": "e5"}],
+      [],
+      []
+    ],
+    "links": [
+      { "label": "E.4 Project Folder Structure", "id": "e4" },
+      { "label": "E.5 Templates & Standards Register", "id": "e5" },
+      { "label": "B.2 A Standard Day at LAVA", "id": "b2" }
+    ]
   },
   "e7": {
     "id": "e7",
@@ -536,7 +962,18 @@
       "Version control for reports & drawings",
       "File locations & accessibility (server vs SharePoint)"
     ],
-    "linkedSources": "→ Archiving & deletion policy · QEMS §2 · PPM"
+    "topicLinks": [
+      [{"label": "E.3 SOPs", "id": "e3"}, {"label": "QEMS", "id": "qems"}],
+      [{"label": "E.4 Project Folder Structure", "id": "e4"}],
+      [{"label": "E.4 Project Folder Structure", "id": "e4"}],
+      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}, {"label": "E.4 Project Folder Structure", "id": "e4"}]
+    ],
+    "links": [
+      { "label": "QEMS", "id": "qems" },
+      { "label": "E.3 SOPs", "id": "e3" },
+      { "label": "E.4 Project Folder Structure", "id": "e4" },
+      { "label": "Live Systems & Tools", "id": "live" }
+    ]
   },
   "e8": {
     "id": "e8",
@@ -550,7 +987,17 @@
       "Drawing examples & directions (to be decided: which ones)",
       "Template setup files — where to find them"
     ],
-    "linkedSources": "→ E.5 Templates Register · IT Wiki"
+    "topicLinks": [
+      [{"label": "E.1 Design Manual at a Glance", "id": "e1"}],
+      [{"label": "E.1 Design Manual at a Glance", "id": "e1"}],
+      [{"label": "E.1 Design Manual at a Glance", "id": "e1"}],
+      [{"label": "E.5 Templates & Standards Register", "id": "e5"}, {"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}]
+    ],
+    "links": [
+      { "label": "E.5 Templates & Standards Register", "id": "e5" },
+      { "label": "E.1 Design Manual at a Glance", "id": "e1" },
+      { "label": "E.6 IT, Servers & Poolarserver", "id": "e6" }
+    ]
   },
   "f1": {
     "id": "f1",
@@ -564,7 +1011,23 @@
       "Guides & Registers: Appendices A–M",
       "Live locations: IT Wiki · Server L:\\ · Poolarserver · Office Calendar"
     ],
-    "linkedSources": "→ All manuals · All systems"
+    "topicLinks": [
+      [{"label": "Cultural Manual", "id": "cultural"}, {"label": "Design Manual", "id": "design"}, {"label": "Bidding Manual", "id": "bidding"}, {"label": "Communication Manual", "id": "communication"}],
+      [{"label": "QEMS", "id": "qems"}, {"label": "Project Management Manual", "id": "ppm"}, {"label": "Work Safety Manual", "id": "worksafety"}],
+      [{"label": "Guides & Registers", "id": "guides"}],
+      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}]
+    ],
+    "links": [
+      { "label": "Cultural Manual", "id": "cultural" },
+      { "label": "Design Manual", "id": "design" },
+      { "label": "Bidding Manual", "id": "bidding" },
+      { "label": "Communication Manual", "id": "communication" },
+      { "label": "QEMS", "id": "qems" },
+      { "label": "Project Management Manual", "id": "ppm" },
+      { "label": "Work Safety Manual", "id": "worksafety" },
+      { "label": "Guides & Registers", "id": "guides" },
+      { "label": "Live Systems & Tools", "id": "live" }
+    ]
   },
   "g1": {
     "id": "g1",
@@ -578,6 +1041,16 @@
       "External training & Architektenkammer",
       "Internal knowledge sharing — pin-up culture, project reviews"
     ],
-    "linkedSources": "→ C.3 Spaces & Facilities · B.5 Performance & Growth"
+    "topicLinks": [
+      [{"label": "C.3 Spaces & Facilities", "id": "c3"}, {"label": "A.2 Values & General Rules", "id": "a2"}],
+      [{"label": "C.3 Spaces & Facilities", "id": "c3"}],
+      [{"label": "B.5 Performance & Growth", "id": "b5"}],
+      [{"label": "A.2 Values & General Rules", "id": "a2"}, {"label": "B.5 Performance & Growth", "id": "b5"}]
+    ],
+    "links": [
+      { "label": "C.3 Spaces & Facilities", "id": "c3" },
+      { "label": "B.5 Performance & Growth", "id": "b5" },
+      { "label": "A.2 Values & General Rules", "id": "a2" }
+    ]
   }
 }
