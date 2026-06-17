@@ -186,77 +186,19 @@
     "title": "Work Safety Manual",
     "isoTag": "ISO 9001 §7.1.4 / 14001 §8.2 — Emergency Preparedness",
     "breadcrumb": "Work Safety Manual",
-    "chapters": [
-      {
-        "title": "Your Workspace",
-        "links": [
-          {"label": "C.1 Berlin Office Rules", "id": "c1"},
-          {"label": "D.2 Environmental Practice", "id": "d2"},
-          {"label": "C.3 Spaces & Facilities", "id": "c3"}
-        ],
-        "subchapters": [
-          "Ergonomic setup — chair, desk, screen distance",
-          "Lighting — room lights, blinds, screen glare",
-          "Air quality — Stoßlüften ventilation",
-          "Noise — calls, kitchen, focus environment"
-        ]
-      },
-      {
-        "title": "Hazards & Prevention",
-        "links": [
-          {"label": "D.3 Environmental Preparedness", "id": "d3"},
-          {"label": "C.3 Spaces & Facilities", "id": "c3"},
-          {"label": "D.1 Work Safety", "id": "d1"}
-        ],
-        "subchapters": [
-          "Trip hazards — cables, drawers, chairs",
-          "Electrical safety — devices, no daisy-chaining",
-          "Fire prevention — Brandschutzhelfer contacts"
-        ]
-      },
-      {
-        "title": "Emergency Procedures",
-        "links": [
-          {"label": "D.1 Work Safety", "id": "d1"},
-          {"label": "D.3 Environmental Preparedness", "id": "d3"},
-          {"label": "C.3 Spaces & Facilities", "id": "c3"}
-        ],
-        "subchapters": [
-          "Safety plans — escape routes map, symbols legend",
-          "First aid — kit location, what to do, logging",
-          "Fire extinguisher — location, when to act",
-          "Escape routes — main and alternative exit, assembly point"
-        ]
-      },
-      {
-        "title": "Wellbeing at Work",
-        "links": [
-          {"label": "B.2 A Standard Day at LAVA", "id": "b2"},
-          {"label": "B.3 Time Off & Absence", "id": "b3"},
-          {"label": "B.5 Performance & Growth", "id": "b5"}
-        ],
-        "subchapters": [
-          "Breaks & self-care",
-          "Hand care",
-          "Stress & mental health — speak up early",
-          "Pregnancy & breastfeeding — notification process"
-        ]
-      },
-      {
-        "title": "Contacts & Roles",
-        "links": [
-          {"label": "D.1 Work Safety", "id": "d1"},
-          {"label": "QEMS", "id": "qems"},
-          {"label": "B.1 Onboarding & First Days", "id": "b1"}
-        ],
-        "subchapters": [
-          "Safety Representative (Sicherheitsbeauftragte) — Felix Heppert, Daniel Podrasa",
-          "First Aiders (Ersthelfer) — full list with emails",
-          "Fire Safety Assistants (Brandschutzhelfer) — full list with emails",
-          "Safety Officer (Sicherheitsfachkraft) — Renard Lehmann",
-          "Office Doctor (Betriebsarzt) — Judith Maria Wohlleben"
-        ]
-      }
+    "topics": [
+      "Your Workspace — ergonomics, lighting, air quality, noise",
+      "Hazards & Prevention — trip hazards, electrical safety, fire prevention",
+      "Emergency Procedures — safety plans, first aid, fire extinguisher, escape routes",
+      "Wellbeing at Work — breaks, stress, mental health, pregnancy & breastfeeding",
+      "Contacts & Roles — safety representative, first aiders, fire safety assistants"
+    ],
+    "topicLinks": [
+      [{"label": "C.1 Berlin Office Rules", "id": "c1"}, {"label": "C.3 Spaces & Facilities", "id": "c3"}],
+      [{"label": "D.3 Environmental Preparedness", "id": "d3"}, {"label": "D.1 Work Safety", "id": "d1"}],
+      [{"label": "D.1 Work Safety", "id": "d1"}, {"label": "D.3 Environmental Preparedness", "id": "d3"}],
+      [{"label": "B.2 A Standard Day at LAVA", "id": "b2"}, {"label": "B.5 Performance & Growth", "id": "b5"}],
+      [{"label": "D.1 Work Safety", "id": "d1"}, {"label": "QEMS", "id": "qems"}]
     ],
     "links": [
       { "label": "D.1 Work Safety", "id": "d1" },
@@ -311,31 +253,6 @@
       { "label": "E.5 Templates & Standards Register", "id": "e5" }
     ]
   },
-  "ecosystem": {
-    "id": "ecosystem",
-    "colorKey": "center",
-    "textColorKey": "dark",
-    "title": "Ecosystem Diagram",
-    "isoTag": "ISO 9001/14001 §4.4 — Quality Management System",
-    "breadcrumb": "Front Matter > Ecosystem Diagram",
-    "topics": [
-      "Visual map of the manual family and supporting systems",
-      "Office Manual at the centre — sibling manuals in the inner ring",
-      "QEMS, PPM, Work Safety Manual, Guides & Live Systems in the outer ring",
-      "Use the diagram to navigate relationships between documents"
-    ],
-    "links": [
-      { "label": "Cultural Manual", "id": "cultural" },
-      { "label": "Design Manual", "id": "design" },
-      { "label": "Bidding Manual", "id": "bidding" },
-      { "label": "Communication Manual", "id": "communication" },
-      { "label": "QEMS", "id": "qems" },
-      { "label": "Project Management Manual", "id": "ppm" },
-      { "label": "Work Safety Manual", "id": "worksafety" },
-      { "label": "Guides & Registers", "id": "guides" },
-      { "label": "Live Systems & Tools", "id": "live" }
-    ]
-  },
   "toc": {
     "id": "toc",
     "colorKey": "center",
@@ -344,7 +261,7 @@
     "isoTag": "ISO 9001 §7.5 — Documented Information",
     "breadcrumb": "Front Matter > Table of Contents",
     "topics": [
-      "Front Matter — Document Control, Ecosystem Diagram, Involved Parties, Glossary, Introduction",
+      "Front Matter — Document Control, Involved Parties, Glossary, Introduction",
       "Part A — Who We Are",
       "Part B — Working Here",
       "Part C — The Office Environment",
@@ -354,7 +271,7 @@
       "Part G — Knowledge & Growth"
     ],
     "topicLinks": [
-      [{"label": "Document Control", "id": "doc-control"}, {"label": "Ecosystem Diagram", "id": "ecosystem"}],
+      [{"label": "Document Control", "id": "doc-control"}],
       [{"label": "A.1 LAVA World", "id": "a1"}, {"label": "A.2 Values & General Rules", "id": "a2"}],
       [{"label": "B.1 Onboarding & First Days", "id": "b1"}, {"label": "B.5 Performance & Growth", "id": "b5"}],
       [{"label": "C.1 Berlin Office Rules", "id": "c1"}, {"label": "C.3 Spaces & Facilities", "id": "c3"}],
@@ -402,25 +319,33 @@
     "topics": [
       "Office Manual — daily life, all staff, always",
       "Cultural Manual — values & identity, onboarding & reference",
-      "Project Manual — design delivery, designers & project managers",
-      "Bidding Manual — proposals & procurement, senior leadership & PR",
+      "Design Manual — design delivery, designers & project managers",
       "Bidding Manual is optional for interns & junior architects — available to all for transparency",
-      "Use the Ecosystem Diagram to navigate relationships between manuals"
+      "Project Management Manual — project execution, project managers & leads",
+      "Work Safety Manual — hazards, emergency procedures, wellbeing"
+    ],
+    "topicColors": [
+      "#B3F400",
+      "#1D9E75",
+      "#5B3A8A",
+      "#D4652F",
+      "#8B3F1C",
+      "#8B2D2D"
     ],
     "topicLinks": [
       [{"label": "Table of Contents", "id": "toc"}],
-      [{"label": "A.1 LAVA World", "id": "a1"}, {"label": "A.2 Values & General Rules", "id": "a2"}],
-      [{"label": "E.1 Design Manual at a Glance", "id": "e1"}, {"label": "E.2 Project Management at a Glance", "id": "e2"}],
-      [{"label": "Bidding Manual", "id": "bidding"}, {"label": "E.5 Templates & Standards Register", "id": "e5"}],
+      [{"label": "Cultural Manual", "id": "cultural"}],
+      [{"label": "Design Manual", "id": "design"}, {"label": "E.1 Design Manual at a Glance", "id": "e1"}],
       [{"label": "Bidding Manual", "id": "bidding"}],
-      [{"label": "Ecosystem Diagram", "id": "ecosystem"}]
+      [{"label": "Project Management Manual", "id": "ppm"}],
+      [{"label": "Work Safety Manual", "id": "worksafety"}]
     ],
     "links": [
-      { "label": "A.1 LAVA World", "id": "a1" },
-      { "label": "E.1 Design Manual at a Glance", "id": "e1" },
+      { "label": "Cultural Manual", "id": "cultural" },
+      { "label": "Design Manual", "id": "design" },
       { "label": "Bidding Manual", "id": "bidding" },
-      { "label": "QEMS", "id": "qems" },
-      { "label": "Ecosystem Diagram", "id": "ecosystem" }
+      { "label": "Project Management Manual", "id": "ppm" },
+      { "label": "Work Safety Manual", "id": "worksafety" }
     ]
   },
   "a1": {
@@ -489,6 +414,22 @@
       "Buddy & mentor assignment",
       "Payslips, DateV systems, requests to HR and forms in digital"
     ],
+    "slideData": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "type": "links",
+        "items": [
+          { "label": "Vacation Request",      "desc": "Submit annual leave and holiday requests to HR",          "url": "#", "icon": "calendar" },
+          { "label": "Compensation Request",  "desc": "Overtime compensation and time-off-in-lieu forms",       "url": "#", "icon": "coins"    },
+          { "label": "DATEV",                 "desc": "Payslips, payroll documents and DateV employee portal",  "url": "https://apps.datev.de", "icon": "datev", "external": true },
+          { "label": "IT Request",            "desc": "Hardware, software and IT support requests",             "url": "#", "icon": "computer" }
+        ]
+      }
+    ],
     "topicLinks": [
       [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}],
       [{"label": "B.4 Mentoring & Buddy System", "id": "b4"}, {"label": "C.1 Berlin Office Rules", "id": "c1"}],
@@ -545,6 +486,72 @@
       "Public holidays — Berlin",
       "Sickness & doctor's notes",
       "Overtime perks — dinner, taxi"
+    ],
+    "slideData": [
+      null,
+      {
+        "type": "form",
+        "title": "Vacation Request",
+        "subtitle": "Submit annual or special leave to HR",
+        "icon": "calendar",
+        "fields": [
+          { "id": "name",     "label": "Full Name",     "type": "text",     "placeholder": "Your full name",        "required": true },
+          { "id": "position", "label": "Position",      "type": "text",     "placeholder": "Your job title" },
+          { "id": "from",     "label": "From",          "type": "date",                                             "required": true },
+          { "id": "to",       "label": "To",            "type": "date",                                             "required": true },
+          { "id": "type",     "label": "Leave Type",    "type": "select",   "options": ["Annual Leave", "Special Leave (Sonderurlaub)", "Unpaid Leave"], "required": true },
+          { "id": "notes",    "label": "Notes",         "type": "textarea", "placeholder": "Any additional context for HR" }
+        ],
+        "submitLabel": "Submit Vacation Request",
+        "confirmMessage": "Your vacation request has been submitted. HR will confirm within 2 business days."
+      },
+      {
+        "type": "form",
+        "title": "Compensation Days Request",
+        "subtitle": "Request time off in lieu of extra days worked",
+        "icon": "swap",
+        "fields": [
+          { "id": "name",        "label": "Full Name",          "type": "text",     "placeholder": "Your full name",   "required": true },
+          { "id": "worked_date", "label": "Day(s) Worked Extra","type": "text",     "placeholder": "e.g. 15.03.2026, weekend / public holiday", "required": true },
+          { "id": "comp_date",   "label": "Requested Day(s) Off","type": "text",    "placeholder": "e.g. 22.03.2026", "required": true },
+          { "id": "hours",       "label": "Extra Hours Worked", "type": "text",     "placeholder": "e.g. 8h" },
+          { "id": "reason",      "label": "Reason",             "type": "textarea", "placeholder": "Project name or deadline context" }
+        ],
+        "submitLabel": "Submit Compensation Request",
+        "confirmMessage": "Your compensation days request has been submitted. Your lead and HR will confirm within 3 business days."
+      },
+      null,
+      {
+        "type": "form",
+        "title": "Sick Leave Notification",
+        "subtitle": "Notify HR and upload your doctor's note",
+        "icon": "health",
+        "fields": [
+          { "id": "name",     "label": "Full Name",          "type": "text",  "placeholder": "Your full name",   "required": true },
+          { "id": "from",     "label": "Absent From",        "type": "date",                                     "required": true },
+          { "id": "to",       "label": "Expected Return",    "type": "date" },
+          { "id": "note",     "label": "Doctor's Note",      "type": "upload","placeholder": "Upload AU-Bescheinigung (PDF or image)" },
+          { "id": "comments", "label": "Additional Info",    "type": "textarea", "placeholder": "Optional — e.g. if partial capacity on return" }
+        ],
+        "submitLabel": "Submit Sick Leave Notification",
+        "confirmMessage": "Your sick leave notification has been received by HR. Get well soon."
+      },
+      {
+        "type": "form",
+        "title": "Overtime Compensation Request",
+        "subtitle": "Claim dinner allowance, taxi or time-off in lieu for overtime",
+        "icon": "clock",
+        "fields": [
+          { "id": "name",      "label": "Full Name",           "type": "text",   "placeholder": "Your full name",  "required": true },
+          { "id": "date",      "label": "Date of Overtime",    "type": "date",                                     "required": true },
+          { "id": "hours",     "label": "Hours Worked Late",   "type": "text",   "placeholder": "e.g. 3h (from 19:00)", "required": true },
+          { "id": "type",      "label": "Compensation Type",   "type": "select", "options": ["Dinner Allowance", "Taxi Reimbursement", "Time Off in Lieu"], "required": true },
+          { "id": "project",   "label": "Project / Reason",    "type": "text",   "placeholder": "Project name or deadline" },
+          { "id": "receipt",   "label": "Receipt (if any)",    "type": "upload", "placeholder": "Upload receipt (PDF or image)" }
+        ],
+        "submitLabel": "Submit Overtime Request",
+        "confirmMessage": "Your overtime compensation request has been submitted to HR. Reimbursements are processed with the next payroll."
+      }
     ],
     "links": [
       { "label": "Guides & Registers", "id": "guides" },
@@ -647,6 +654,40 @@
       "Telephone etiquette",
       "Post & packages",
       "Check-in / check-out system — shared resources & equipment"
+    ],
+    "slideData": [
+      null,
+      null,
+      {
+        "type": "checklist",
+        "sections": [
+          {
+            "title": "Entering the Office",
+            "color": "#22C55E",
+            "steps": [
+              "Open the door",
+              "Switch off the alarm"
+            ]
+          },
+          {
+            "title": "Leaving the Office",
+            "color": "#EF4444",
+            "steps": [
+              "Switch alarm on",
+              "Take the magnet key",
+              "Touch the alarm panel",
+              "Put the key back",
+              "Go out",
+              "Lock the door"
+            ]
+          }
+        ]
+      },
+      null,
+      null,
+      null,
+      null,
+      null
     ],
     "topicLinks": [
       [{"label": "D.1 Work Safety", "id": "d1"}],
@@ -864,6 +905,24 @@
     "breadcrumb": "Part E — How We Work > E.3 SOPs",
     "topics": [
       "Responsibility table — name, process, responsible person, link to SOP"
+    ],
+    "slideData": [
+      {
+        "type": "table",
+        "columns": ["Process", "Short Description", "Process Owner", "Responsible for Implementation"],
+        "rows": [
+          ["Global Processes", "QEMS Scope, Policy and Objectives, Org Chart, Compliance Requirements, Document Control", "Senior Leadership", "All LAVA Staff"],
+          ["Sales / Business Acquisition", "Handling customer inquiries, preparing offers, contract conclusion, order acceptance", "Senior Leadership", "Directors, Project Leads"],
+          ["Project Management / Project Execution", "Planning, design, construction supervision, project approvals, milestones, schedule control", "Project Management", "Directors, Project Leads, Project Staff"],
+          ["Design and Development Processes", "Concept development, design reviews, approvals, change management", "Senior Leadership", "Directors, Project Leads, Project Staff"],
+          ["Procurement / Supplier Management", "Supplier selection, evaluation, ordering, verification of delivered goods/services", "Head of Finance", "Directors, Project Leads"],
+          ["Human Resources / Personnel Management", "Recruiting, onboarding, training, qualification management, workforce planning", "Head of HR", "All LAVA Staff"],
+          ["Complaint Management / Customer Feedback", "Handling complaints, root cause analysis, corrective actions", "Senior Leadership", "Directors, Project Leads"],
+          ["Waste and Emissions Management", "Separation, disposal, reduction of waste and emissions", "Admin / LAVA Zero", "All LAVA Staff"],
+          ["Risk and Opportunity Management", "Identification of project and environmental risks, planning of measures", "Senior Leadership", "CEO, Directors"],
+          ["Work Safety", "Hazard identification, Health Safety, Fire Protection, First Aid, Training", "Sicherheitsfachkraft (Safety Officer)", "Sicherheitsbeauftragte (Safety Representatives)"]
+        ]
+      }
     ],
     "links": [
       { "label": "QEMS", "id": "qems" },

@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { tocData, detailPages, COLORS } from './data.js';
+import { SearchButton } from './GlobalSearch.jsx';
 
 const partColors = [
   COLORS.cultural,
@@ -12,7 +13,7 @@ const partColors = [
   COLORS.dark,
 ];
 
-export default function TocPage() {
+export default function TocPage({ onSearchOpen }) {
   const navigate = useNavigate();
 
   return (
@@ -25,6 +26,7 @@ export default function TocPage() {
           Back to the Map
         </button>
         <span className="top-bar-logo">LAVA Office Manual Berlin 2026</span>
+        <SearchButton onClick={onSearchOpen} />
       </div>
 
       <div className="detail-body">
@@ -45,8 +47,7 @@ export default function TocPage() {
               {part.sections.map((sec, si) => {
                 const page = detailPages[sec.id];
                 const dotColor = page?.color || partColors[pi] || '#ccc';
-                const target = sec.id === 'ecosystem' ? '/'
-                  : sec.id === 'toc' ? '/toc'
+                const target = sec.id === 'toc' ? '/toc'
                   : sec.id === 'glossary' ? '/glossary'
                   : sec.id === 'involved' ? '/involved'
                   : `/detail/${sec.id}`;

@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback, useMemo, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { nodes, connections, COLORS } from './data.js';
+import { SearchButton } from './GlobalSearch.jsx';
 
 const VW = 1200;
 const VH = 780;
@@ -190,7 +191,7 @@ const NodeGroup = memo(function NodeGroup({ node, op, isHov, isSearchMatch, onMo
 
 // ──────────────────────────────────────────────────────────────────────────
 
-export default function DiagramPage() {
+export default function DiagramPage({ onSearchOpen }) {
   const navigate = useNavigate();
   const [hovered, setHovered]   = useState(null);
   const [tooltip, setTooltip]   = useState({ visible: false, x: 0, y: 0, text: '' });
@@ -247,13 +248,7 @@ export default function DiagramPage() {
           Office Manual Berlin 2026
         </div>
         <div className="search-wrap">
-          <input
-            className="search-input"
-            type="text"
-            placeholder="Search nodes…"
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-          />
+          <SearchButton onClick={onSearchOpen} />
           <div className="header-btns">
             <button className="hbtn" onClick={() => navigate('/toc')}>Table of Contents</button>
             <button className="hbtn" onClick={() => navigate('/glossary')}>Glossary</button>

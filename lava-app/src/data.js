@@ -286,7 +286,6 @@ export const tocData = {
       label: 'Front Matter',
       sections: [
         { id: 'doc-control', label: 'Document Control' },
-        { id: 'ecosystem', label: 'Ecosystem Diagram' },
         { id: 'involved', label: 'Involved Parties' },
         { id: 'glossary', label: 'Glossary' },
         { id: 'intro', label: 'Introduction — How to Use This Manual Family' },

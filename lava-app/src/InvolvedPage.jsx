@@ -1,19 +1,21 @@
 import { useNavigate } from 'react-router-dom';
 import { involvedPartiesData, COLORS } from './data.js';
+import { SearchButton } from './GlobalSearch.jsx';
 
-export default function InvolvedPage() {
+export default function InvolvedPage({ onSearchOpen }) {
   const navigate = useNavigate();
 
   return (
     <div className="detail-page fade-in">
       <div className="detail-top-bar">
-        <button className="back-btn" onClick={() => navigate('/')}>
+        <button className="back-btn" onClick={() => navigate('/toc')}>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M9 2L4 7L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          Back to the Map
+          Back
         </button>
         <span className="top-bar-logo">LAVA Office Manual Berlin 2026</span>
+        <SearchButton onClick={onSearchOpen} />
         <div className="iso-tag">ISO 9001 §5 — Leadership</div>
       </div>
 

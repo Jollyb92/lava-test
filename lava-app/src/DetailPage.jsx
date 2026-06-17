@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { detailPages, COLORS } from './data.js';
 import OnboardingChecklist from './OnboardingChecklist.jsx';
 import SlidePanel from './SlidePanel.jsx';
+import { SearchButton } from './GlobalSearch.jsx';
 
-const CHECKLIST_TRIGGER = 'Digital Onboarding Checklist — tracked by HR';
+const CHECKLIST_TRIGGER = 'Digital Onboarding Checklist';
 
 const MANUAL_IDS = new Set([
   'cultural', 'design', 'bidding', 'communication',
   'qems', 'ppm', 'worksafety', 'guides', 'live', 'project',
 ]);
+
+const FRONT_MATTER_IDS = new Set(['doc-control', 'intro']);
 
 const CHAPTER_IDS = new Set([
   'toc', 'doc-control', 'intro', 'ecosystem',
@@ -135,19 +138,22 @@ function ChaptersView({ chapters, accentColor, onLinksChange }) {
   );
 }
 
-export default function DetailPage() {
+export default function DetailPage({ onSearchOpen }) {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [checklistOpen, setChecklistOpen] = useState(false);
   const [selectedSlide, setSelectedSlide] = useState(null);
   const [chapterLinks, setChapterLinks] = useState(null);
 
   // Reset per-item link overrides when navigating to a different page
+  // Also auto-open slide from ?slide= param (from global search)
   useEffect(() => {
     setChapterLinks(null);
-    setSelectedSlide(null);
     setChecklistOpen(false);
-  }, [id]);
+    const slide = searchParams.get('slide');
+    setSelectedSlide(slide !== null ? parseInt(slide, 10) : null);
+  }, [id, searchParams]);
 
   const page = detailPages[id];
 
@@ -186,13 +192,14 @@ export default function DetailPage() {
     <div className="detail-page fade-in">
       {/* Top bar */}
       <div className="detail-top-bar">
-        <button className="back-btn" onClick={() => navigate(-1)}>
+        <button className="back-btn" onClick={() => FRONT_MATTER_IDS.has(id) ? navigate('/toc') : navigate(-1)}>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M9 2L4 7L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
           Back
         </button>
         <span className="top-bar-logo">LAVA Office Manual Berlin 2026</span>
+        <SearchButton onClick={onSearchOpen} />
         {page.isoTag && <div className="iso-tag">{page.isoTag}</div>}
       </div>
 
@@ -217,7 +224,10 @@ export default function DetailPage() {
                   style={selectedSlide === i ? { borderLeftColor: accentColor } : {}}>
                   <div
                     className="topic-num"
-                    style={{ background: numColor, color: page.textColor === '#1a1a1a' ? '#1a1a1a' : '#fff' }}
+                    style={{
+                      background: page.topicColors?.[i] ?? numColor,
+                      color: (page.topicColors?.[i] ?? numColor) === '#B3F400' ? '#1a1a1a' : '#fff',
+                    }}
                   >
                     {i + 1}
                   </div>
@@ -282,6 +292,7 @@ export default function DetailPage() {
             pageTitle={page.title}
             pageId={id}
             accentColor={accentColor}
+            slideData={page.slideData?.[selectedSlide] ?? null}
             onSelect={setSelectedSlide}
             onClose={() => setSelectedSlide(null)}
           />
