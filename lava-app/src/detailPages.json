@@ -656,7 +656,24 @@
       "Check-in / check-out system — shared resources & equipment"
     ],
     "slideData": [
-      null,
+      {
+        "type": "office-map",
+        "desks": [
+          { "id": "A1", "name": "Anna K.",   "zone": "window" },
+          { "id": "A2", "name": "Ben F.",    "zone": "window" },
+          { "id": "A3", "name": "Clara V.",  "zone": "window" },
+          { "id": "A4", "name": "David R.",  "zone": "window" },
+          { "id": "B1", "name": "Eva M.",    "zone": "left"   },
+          { "id": "B2", "name": "Felix S.",  "zone": "left"   },
+          { "id": "C1", "name": "Greta H.",  "zone": "center" },
+          { "id": "C2", "name": "Hugo T.",   "zone": "center" },
+          { "id": "C3", "name": "Irene N.",  "zone": "center" },
+          { "id": "C4", "name": "Jonas B.",  "zone": "center" },
+          { "id": "H1", "name": "Hot Desk",  "zone": "hub"    },
+          { "id": "H2", "name": "Hot Desk",  "zone": "hub"    },
+          { "id": "H3", "name": "Hot Desk",  "zone": "hub"    }
+        ]
+      },
       null,
       {
         "type": "checklist",
@@ -683,11 +700,187 @@
           }
         ]
       },
+      {
+        "type": "locker-map",
+        "rows": 5,
+        "cols": 10,
+        "freePositions": [2, 7, 11, 16, 20, 25, 28, 33, 37, 41, 44, 48, 3, 38]
+      },
       null,
       null,
       null,
-      null,
-      null
+      {
+        "type": "checkout",
+        "categories": [
+          {
+            "id": "equipment",
+            "label": "Equipment",
+            "color": "#3B82F6",
+            "icon": "equipment",
+            "subcategories": [
+              {
+                "label": "FabLab",
+                "items": [
+                  "Laser Cutter — Trotec Speedy 360",
+                  "Vinyl Cutter — Roland GS-24",
+                  "Large Format Printer — HP DesignJet",
+                  "Vacuum Former",
+                  "CNC Router — Shopbot",
+                  "Plotter — A0 Format"
+                ]
+              },
+              {
+                "label": "Workshop",
+                "items": [
+                  "Circular Saw",
+                  "Jigsaw",
+                  "Belt Sander",
+                  "Drill Press",
+                  "Hot Wire Cutter",
+                  "Scroll Saw",
+                  "Heat Gun",
+                  "Spray Booth — Station A"
+                ]
+              },
+              {
+                "label": "Digital",
+                "items": [
+                  "3D Printer — Station A (FDM)",
+                  "3D Printer — Station B (FDM)",
+                  "3D Printer — Station C (Resin)",
+                  "Projector — Portable Epson",
+                  "Camera Kit — Canon EOS",
+                  "360° Camera — Ricoh Theta",
+                  "iPad Pro + Apple Pencil",
+                  "Wacom Tablet — Large"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "books",
+            "label": "Library",
+            "color": "#8B5CF6",
+            "icon": "book",
+            "subcategories": [
+              {
+                "label": "Magazines",
+                "items": [
+                  "Detail — Structures & Engineering",
+                  "Detail — Façades & Envelopes",
+                  "Architectural Review — Jan 2024",
+                  "Architectural Review — Apr 2024",
+                  "A+U Architecture and Urbanism",
+                  "Domus — Contemporary Architecture",
+                  "Mark Magazine — Another Architecture",
+                  "Dezeen Print Edition 2023",
+                  "Azure — Design & Architecture"
+                ]
+              },
+              {
+                "label": "Monographs",
+                "items": [
+                  "Zaha Hadid — Complete Works",
+                  "Herzog & de Meuron 1978–2002",
+                  "MVRDV — Works and Projects",
+                  "BIG: Hot to Cold",
+                  "Snøhetta — Works",
+                  "Peter Zumthor — Works (rev. ed.)",
+                  "David Chipperfield — Recent Work",
+                  "Kengo Kuma — Complete Works",
+                  "Renzo Piano Building Workshop",
+                  "Jean Nouvel — Complete Works"
+                ]
+              },
+              {
+                "label": "Collections",
+                "items": [
+                  "Phaidon Atlas of Contemporary Architecture",
+                  "Taschen Architecture Vol. 1–5",
+                  "LAVA Project Archive 2007–2024",
+                  "Material Samples Binder A–F",
+                  "Material Samples Binder G–Z",
+                  "Pantone Colour Guide — Coated",
+                  "Pantone Colour Guide — Uncoated",
+                  "Neufert Architects' Data (4th ed.)",
+                  "Technical Drawing Standards DIN",
+                  "Detail Green — Sustainable Building"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "materials",
+            "label": "Materials",
+            "color": "#F59E0B",
+            "icon": "materials",
+            "subcategories": [
+              {
+                "label": "Model Making",
+                "items": [
+                  "Foam Board A1 — White",
+                  "Foam Board A2 — White",
+                  "Foam Board A1 — Black",
+                  "Balsa Wood Pack — 1mm",
+                  "Balsa Wood Pack — 3mm",
+                  "Balsa Wood Pack — 5mm",
+                  "Cardboard Roll — 1mm",
+                  "Cardboard Roll — 2mm",
+                  "Wire & Mesh Pack",
+                  "Hot Glue Gun + Sticks",
+                  "Model Making Knife Set",
+                  "Metal Ruler 50cm",
+                  "Cutting Mat A1",
+                  "Spray Paint Set — Neutral",
+                  "Spray Paint Set — Colour",
+                  "Sandpaper Assortment"
+                ]
+              },
+              {
+                "label": "Material Samples",
+                "items": [
+                  "Acrylic Sheets — Clear 3mm",
+                  "Acrylic Sheets — Frosted 5mm",
+                  "Acrylic Sheets — Coloured",
+                  "Timber Veneer Samples A–F",
+                  "Timber Veneer Samples G–Z",
+                  "Stone & Tile Samples Binder",
+                  "Fabric & Textile Samples",
+                  "Metal Sheet Samples",
+                  "Concrete & Render Samples",
+                  "Glass & Glazing Samples",
+                  "Insulation Material Samples",
+                  "Membrane & Waterproofing Samples"
+                ]
+              },
+              {
+                "label": "3D Printing",
+                "items": [
+                  "PLA Filament — White 1kg",
+                  "PLA Filament — Black 1kg",
+                  "PLA Filament — Grey 1kg",
+                  "PLA Filament — Transparent",
+                  "PETG Filament — White",
+                  "TPU Filament — Flexible",
+                  "Resin — Standard Clear 1L",
+                  "Resin — Standard Grey 1L",
+                  "Resin — Tough White 1L",
+                  "Isopropyl Alcohol — Wash Station",
+                  "Spatulas & Removal Tools",
+                  "Print Bed Adhesive Spray"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "keys",
+            "label": "Keys & Cards",
+            "color": "#EF4444",
+            "icon": "key",
+            "items": ["Storage Room Key", "Roof Access Key", "Photo Studio Card", "Van Keys", "Workshop Key"]
+          }
+        ]
+      }
     ],
     "topicLinks": [
       [{"label": "D.1 Work Safety", "id": "d1"}],

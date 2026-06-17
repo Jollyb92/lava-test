@@ -384,6 +384,642 @@ function FormSlide({ data, accentColor }) {
   );
 }
 
+function OfficeMapSlide({ data }) {
+  const [hov, setHov] = useState(null);
+
+  const ZONE_COLORS  = { window:'#3B82F6', left:'#F59E0B', center:'#8B5CF6', hub:'#22C55E' };
+  const ZONE_LABELS  = { window:'Window Row', left:'Left Wall', center:'Center Island', hub:'Hub · Hot Desks' };
+
+  const DW = 72, DH = 44, CR = 11;
+
+  // All desk positions are fixed to this floor-plan layout (SVG viewBox 530×390)
+  const LAYOUT = {
+    A1:{x:32, y:45, cs:'below'}, A2:{x:120,y:45, cs:'below'},
+    A3:{x:208,y:45, cs:'below'}, A4:{x:296,y:45, cs:'below'},
+    B1:{x:20, y:150,cs:'right'}, B2:{x:20, y:220,cs:'right'},
+    C1:{x:168,y:143,cs:'above'}, C2:{x:256,y:143,cs:'above'},
+    C3:{x:168,y:217,cs:'below'}, C4:{x:256,y:217,cs:'below'},
+    H1:{x:86, y:318,cs:'above'}, H2:{x:176,y:318,cs:'above'}, H3:{x:266,y:318,cs:'above'},
+  };
+
+  const byId = {};
+  data.desks.forEach(d => { byId[d.id] = d; });
+
+  function chairPos({ x, y, cs }) {
+    if (cs === 'below') return [x + DW/2, y + DH + CR + 2];
+    if (cs === 'above') return [x + DW/2, y - CR - 2];
+    if (cs === 'right') return [x + DW + CR + 2, y + DH/2];
+    return [x - CR - 2, y + DH/2];
+  }
+
+  const hovDesk = hov ? byId[hov] : null;
+
+  return (
+    <div className="spom-wrap">
+      <svg viewBox="0 0 530 390" className="spom-svg"
+        style={{ fontFamily: "'Inter','Helvetica Neue',Arial,sans-serif" }}>
+
+        {/* ── Floor ── */}
+        <rect x={15} y={15} width={500} height={360} fill="#F9FAFB" />
+
+        {/* ── Kitchen fill & label ── */}
+        <rect x={385} y={15} width={130} height={85} fill="#F3F4F6" />
+        <text x={450} y={54} textAnchor="middle" fontSize={8} fill="#9CA3AF" fontWeight="700">KITCHEN</text>
+        <rect x={416} y={60} width={22} height={18} rx={2} fill="none" stroke="#D1D5DB" strokeWidth={1.2}/>
+        <rect x={444} y={60} width={22} height={18} rx={2} fill="none" stroke="#D1D5DB" strokeWidth={1.2}/>
+        <circle cx={421} cy={71} r={4} fill="none" stroke="#D1D5DB" strokeWidth={1}/>
+        <circle cx={449} cy={71} r={4} fill="none" stroke="#D1D5DB" strokeWidth={1}/>
+
+        {/* ── Meeting table ── */}
+        <ellipse cx={447} cy={232} rx={46} ry={66} fill="#E5E7EB" stroke="#D1D5DB" strokeWidth={1.5}/>
+        <text x={447} y={229} textAnchor="middle" fontSize={7.5} fill="#9CA3AF" fontWeight="700">MEETING</text>
+        <text x={447} y={240} textAnchor="middle" fontSize={7.5} fill="#9CA3AF" fontWeight="700">TABLE</text>
+        {[[447,158],[498,180],[498,284],[447,306],[396,284],[396,180]].map(([cx,cy],i)=>(
+          <circle key={i} cx={cx} cy={cy} r={9} fill="#E5E7EB" stroke="#D1D5DB" strokeWidth={1.2}/>
+        ))}
+
+        {/* ── Zone labels ── */}
+        <text x={218} y={32} textAnchor="middle" fontSize={7} fill="#3B82F6" fontWeight="700" opacity={0.55}>WINDOW ROW</text>
+        <text x={218} y={131} textAnchor="middle" fontSize={7} fill="#8B5CF6" fontWeight="700" opacity={0.55}>CENTER ISLAND</text>
+        <text x={218} y={307} textAnchor="middle" fontSize={7} fill="#22C55E" fontWeight="700" opacity={0.55}>HUB — HOT DESKS</text>
+
+        {/* ── Outer walls ── */}
+        {/* Top wall with window punches */}
+        <line x1={15} y1={19} x2={30}  y2={19} stroke="#374151" strokeWidth={8}/>
+        <rect x={30}  y={11} width={80} height={16} fill="#F9FAFB"/>
+        <rect x={30}  y={12} width={80} height={14} fill="#BFDBFE" rx={1}/>
+        <line x1={110} y1={19} x2={118} y2={19} stroke="#374151" strokeWidth={8}/>
+        <rect x={118} y={11} width={72} height={16} fill="#F9FAFB"/>
+        <rect x={118} y={12} width={72} height={14} fill="#BFDBFE" rx={1}/>
+        <line x1={190} y1={19} x2={206} y2={19} stroke="#374151" strokeWidth={8}/>
+        <rect x={206} y={11} width={78} height={16} fill="#F9FAFB"/>
+        <rect x={206} y={12} width={78} height={14} fill="#BFDBFE" rx={1}/>
+        <line x1={284} y1={19} x2={383} y2={19} stroke="#374151" strokeWidth={8}/>
+        {/* Left & right walls */}
+        <line x1={19} y1={15} x2={19}  y2={375} stroke="#374151" strokeWidth={8}/>
+        <line x1={511} y1={15} x2={511} y2={375} stroke="#374151" strokeWidth={8}/>
+        {/* Bottom wall with door gap */}
+        <line x1={15}  y1={371} x2={42}  y2={371} stroke="#374151" strokeWidth={8}/>
+        <line x1={102} y1={371} x2={515} y2={371} stroke="#374151" strokeWidth={8}/>
+
+        {/* ── Door ── */}
+        <rect x={42} y={363} width={60} height={16} fill="#F9FAFB"/>
+        <line x1={42} y1={371} x2={42}  y2={311} stroke="#9CA3AF" strokeWidth={1.8}/>
+        <path d="M 102 371 A 60 60 0 0 0 42 311" fill="none" stroke="#D1D5DB" strokeWidth={1} strokeDasharray="3,2"/>
+        <text x={72} y={388} textAnchor="middle" fontSize={7} fill="#9CA3AF">ENTRANCE</text>
+
+        {/* ── Kitchen internal walls ── */}
+        <line x1={385} y1={15}  x2={385} y2={100} stroke="#374151" strokeWidth={5}/>
+        <line x1={385} y1={100} x2={515} y2={100} stroke="#374151" strokeWidth={5}/>
+
+        {/* ── Desks ── */}
+        {Object.entries(LAYOUT).map(([id, l]) => {
+          const desk = byId[id];
+          if (!desk) return null;
+          const color = ZONE_COLORS[desk.zone] || '#6B7280';
+          const isHov  = hov === id;
+          const isHot  = desk.name === 'Hot Desk';
+          const [cx, cy] = chairPos(l);
+          return (
+            <g key={id} style={{ cursor:'pointer' }}
+              onMouseEnter={() => setHov(id)} onMouseLeave={() => setHov(null)}>
+              {/* Chair */}
+              <circle cx={cx} cy={cy} r={CR}
+                fill={isHot ? '#DCFCE7' : `${color}22`}
+                stroke={isHot ? '#22C55E88' : `${color}88`} strokeWidth={1.3}/>
+              {/* Desk body */}
+              <rect x={l.x} y={l.y} width={DW} height={DH} rx={3}
+                fill={isHov ? `${color}28` : (isHot ? '#F0FDF4' : `${color}14`)}
+                stroke={isHov ? color : (isHot ? '#22C55E99' : `${color}AA`)}
+                strokeWidth={isHov ? 2 : 1.5}/>
+              {/* ID badge */}
+              <rect x={l.x+3} y={l.y+3} width={18} height={11} rx={2} fill={isHot ? '#22C55E' : color}/>
+              <text x={l.x+12} y={l.y+12} textAnchor="middle" fontSize={7} fill="#fff" fontWeight="800">{id}</text>
+              {/* Name */}
+              <text x={l.x+DW/2} y={l.y+DH/2+6} textAnchor="middle"
+                fontSize={isHot ? 7.5 : 8.5} fontWeight={isHov ? '700' : '600'}
+                fill={isHot ? '#15803D' : '#1F2937'} fontStyle={isHot ? 'italic' : 'normal'}>
+                {isHot ? 'open' : desk.name}
+              </text>
+            </g>
+          );
+        })}
+
+        {/* ── Compass ── */}
+        <text x={506} y={388} textAnchor="middle" fontSize={7} fill="#9CA3AF">↑ N</text>
+      </svg>
+
+      {/* Legend */}
+      <div className="spom-legend">
+        {Object.entries(ZONE_COLORS).map(([zone, color]) => (
+          <div key={zone} className="spom-legend-item">
+            <div className="spom-legend-dot" style={{ background: color }}/>
+            <span>{ZONE_LABELS[zone]}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Hover info bar */}
+      {hovDesk ? (
+        <div className="spom-info">
+          <strong>{hovDesk.id}</strong>
+          <span>{hovDesk.name === 'Hot Desk' ? 'Available hot desk' : hovDesk.name}</span>
+          <span className="spom-info-zone" style={{ color: ZONE_COLORS[hovDesk.zone] }}>
+            {ZONE_LABELS[hovDesk.zone]}
+          </span>
+        </div>
+      ) : (
+        <div className="spom-hint">Hover a desk to see details</div>
+      )}
+    </div>
+  );
+}
+
+const CAT_ICONS = {
+  equipment: <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><rect x="1" y="4" width="13" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.3"/><path d="M4 4V3C4 2.45 4.45 2 5 2H10C10.55 2 11 2.45 11 3V4" stroke="currentColor" strokeWidth="1.3"/><circle cx="7.5" cy="8" r="1.5" stroke="currentColor" strokeWidth="1.2"/></svg>,
+  book:      <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 2H10C10.55 2 11 2.45 11 3V12C11 12.55 10.55 13 10 13H3C2.45 13 2 12.55 2 12V3C2 2.45 2.45 2 3 2Z" stroke="currentColor" strokeWidth="1.3"/><path d="M5 5H9M5 7.5H9M5 10H7.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/><path d="M11 4H12C12.55 4 13 4.45 13 5V13" stroke="currentColor" strokeWidth="1.3"/></svg>,
+  materials: <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2 11L7.5 3L13 11H2Z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/><path d="M5 11V13M10 11V13" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>,
+  key:       <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><circle cx="5.5" cy="6" r="3" stroke="currentColor" strokeWidth="1.3"/><path d="M8 8.5L13 13M10.5 11L12 12.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>,
+};
+
+function CheckoutSlide({ data, accentColor }) {
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeSubcat, setActiveSubcat]     = useState(null);
+  const [checkouts, setCheckouts]           = useState({});
+  const [selected, setSelected]             = useState(new Set());
+  const [form, setForm]                     = useState(null); // { keys:[], catColor }
+  const [formName, setFormName]             = useState('');
+  const [formReturn, setFormReturn]         = useState('');
+  const [search, setSearch]                 = useState('');
+  const [showHistory, setShowHistory]       = useState(false);
+  const [history, setHistory]               = useState([]);
+
+  const today = new Date().toISOString().split('T')[0];
+
+  const allItems = data.categories.flatMap(cat => {
+    if (cat.subcategories) {
+      return cat.subcategories.flatMap(sub =>
+        sub.items.map(item => ({ key: `${cat.id}::${item}`, item, cat, subcat: sub.label }))
+      );
+    }
+    return (cat.items || []).map(item => ({ key: `${cat.id}::${item}`, item, cat, subcat: null }));
+  });
+
+  const activeCat = data.categories.find(c => c.id === activeCategory);
+
+  function switchCategory(id) {
+    setActiveCategory(id);
+    setActiveSubcat(null);
+    setSearch('');
+  }
+
+  const filtered = allItems.filter(({ cat, item, subcat }) => {
+    const matchCat    = activeCategory === 'all' || cat.id === activeCategory;
+    const matchSub    = !activeSubcat || subcat === activeSubcat;
+    const matchSearch = !search.trim() || item.toLowerCase().includes(search.toLowerCase());
+    return matchCat && matchSub && matchSearch;
+  });
+
+  const showGrouped   = activeCat?.subcategories && !search.trim() && !activeSubcat;
+  const groupedDisplay = showGrouped
+    ? activeCat.subcategories.map(sub => ({
+        sub,
+        items: allItems.filter(i => i.cat.id === activeCat.id && i.subcat === sub.label)
+      }))
+    : null;
+
+  const checkedOutCount = Object.keys(checkouts).length;
+  const availSelected   = [...selected].filter(k => !checkouts[k]);
+
+  // ── selection ──────────────────────────────────────────────
+  function toggleSelect(key) {
+    setSelected(prev => {
+      const next = new Set(prev);
+      next.has(key) ? next.delete(key) : next.add(key);
+      return next;
+    });
+  }
+
+  function selectAllVisible() {
+    const availKeys = filtered.filter(i => !checkouts[i.key]).map(i => i.key);
+    setSelected(prev => {
+      const next = new Set(prev);
+      availKeys.forEach(k => next.add(k));
+      return next;
+    });
+  }
+
+  function clearSelection() { setSelected(new Set()); }
+
+  // ── checkout ────────────────────────────────────────────────
+  function openSingle(key, cat) {
+    setForm({ keys: [key], catColor: cat.color });
+    setFormName(''); setFormReturn('');
+  }
+
+  function openBatch() {
+    if (availSelected.length === 0) return;
+    const firstCat = data.categories.find(c => availSelected[0].startsWith(c.id + '::'));
+    setForm({ keys: availSelected, catColor: firstCat?.color || accentColor });
+    setFormName(''); setFormReturn('');
+  }
+
+  function confirmCheckout() {
+    if (!formName.trim()) return;
+    const entry = { name: formName.trim(), checkoutDate: today, returnDate: formReturn || null };
+    setCheckouts(prev => {
+      const next = { ...prev };
+      form.keys.forEach(k => { next[k] = entry; });
+      return next;
+    });
+    setSelected(prev => {
+      const next = new Set(prev);
+      form.keys.forEach(k => next.delete(k));
+      return next;
+    });
+    setForm(null);
+  }
+
+  function doReturn(key) {
+    const co = checkouts[key];
+    const [, item] = key.split('::');
+    const cat = data.categories.find(c => key.startsWith(c.id + '::'));
+    setHistory(prev => [...prev, {
+      item, catLabel: cat?.label || '', name: co.name,
+      checkedOut: co.checkoutDate, returned: today
+    }]);
+    setCheckouts(prev => { const n = { ...prev }; delete n[key]; return n; });
+    setSelected(prev => { const n = new Set(prev); n.delete(key); return n; });
+  }
+
+  function formatDate(d) {
+    if (!d) return '—';
+    const [y, m, day] = d.split('-');
+    return `${day}.${m}.${y}`;
+  }
+
+  const isLight = accentColor === '#B3F400';
+
+  function renderItem({ key, item, cat, subcat }) {
+    const co     = checkouts[key];
+    const isOut  = Boolean(co);
+    const isSel  = selected.has(key);
+    return (
+      <div key={key}
+        className={`spco-item${isOut ? ' spco-item--out' : ''}${isSel ? ' spco-item--selected' : ''}`}
+        onClick={!isOut ? () => toggleSelect(key) : undefined}
+        style={{ cursor: isOut ? 'default' : 'pointer' }}>
+
+        {/* Checkbox */}
+        {!isOut && (
+          <div className={`spco-cb${isSel ? ' spco-cb--on' : ''}`}
+            style={isSel ? { background: cat.color, borderColor: cat.color } : {}}>
+            {isSel && (
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none">
+                <path d="M1 3L3 5L7 1" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            )}
+          </div>
+        )}
+        {isOut && <div className="spco-cb spco-cb--disabled" />}
+
+        <div className="spco-item-left">
+          <div className="spco-item-info">
+            <div className="spco-item-name">{item}</div>
+            <div className="spco-item-cat" style={{ color: isOut ? '#9CA3AF' : cat.color }}>
+              {CAT_ICONS[cat.icon]}
+              {subcat || cat.label}
+              {isOut && co.returnDate && (
+                <span className="spco-item-due"> · due {formatDate(co.returnDate)}</span>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Borrower tag */}
+        {isOut && (
+          <div className="spco-tag">
+            <div className="spco-tag-avatar">
+              {co.name.split(' ').map(p => p[0]).join('').slice(0, 2).toUpperCase()}
+            </div>
+            <div className="spco-tag-body">
+              <span className="spco-tag-name">{co.name}</span>
+              <span className="spco-tag-date">{formatDate(co.checkoutDate)}</span>
+            </div>
+          </div>
+        )}
+
+        <div className="spco-item-action" onClick={e => e.stopPropagation()}>
+          {isOut ? (
+            <button className="spco-btn spco-btn--return" onClick={() => doReturn(key)}>Return</button>
+          ) : (
+            <button className="spco-btn spco-btn--checkout"
+              style={{ background: cat.color }}
+              onClick={() => openSingle(key, cat)}>
+              Check out
+            </button>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="spco-wrap">
+      {/* Stats */}
+      <div className="spco-stats">
+        <span className="spco-stat">
+          <span className="spco-stat-num" style={{ color: accentColor }}>{checkedOutCount}</span>
+          checked out
+        </span>
+        <span className="spco-stat">
+          <span className="spco-stat-num">{allItems.length - checkedOutCount}</span>
+          available
+        </span>
+        <button className="spco-history-btn" onClick={() => setShowHistory(v => !v)}>
+          {showHistory ? 'Hide history' : `History (${history.length})`}
+        </button>
+      </div>
+
+      {showHistory && (
+        <div className="spco-history">
+          {history.length === 0
+            ? <div className="spco-history-empty">No returns yet this session.</div>
+            : history.slice().reverse().map((h, i) => (
+              <div key={i} className="spco-history-row">
+                <span className="spco-history-item">{h.item}</span>
+                <span className="spco-history-meta">{h.name} · returned {formatDate(h.returned)}</span>
+              </div>
+            ))
+          }
+        </div>
+      )}
+
+      {/* Search */}
+      <div className="spco-search-row">
+        <div className="spco-search">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <circle cx="5" cy="5" r="3.5" stroke="#9CA3AF" strokeWidth="1.3"/>
+            <path d="M8 8L10.5 10.5" stroke="#9CA3AF" strokeWidth="1.3" strokeLinecap="round"/>
+          </svg>
+          <input className="spco-search-input" placeholder="Search items…"
+            value={search} onChange={e => { setSearch(e.target.value); setActiveSubcat(null); }} />
+          {search && <button className="spco-search-clear" onClick={() => setSearch('')}>✕</button>}
+        </div>
+      </div>
+
+      {/* Category tabs */}
+      <div className="spco-tabs">
+        <button className={`spco-tab${activeCategory === 'all' ? ' spco-tab--active' : ''}`}
+          style={activeCategory === 'all' ? { background: accentColor, color: isLight ? '#1a1a1a' : '#fff', borderColor: accentColor } : {}}
+          onClick={() => switchCategory('all')}>All</button>
+        {data.categories.map(cat => (
+          <button key={cat.id}
+            className={`spco-tab${activeCategory === cat.id ? ' spco-tab--active' : ''}`}
+            style={activeCategory === cat.id ? { background: cat.color, color: '#fff', borderColor: cat.color } : {}}
+            onClick={() => switchCategory(cat.id)}>
+            <span className="spco-tab-icon" style={{ color: activeCategory === cat.id ? '#fff' : cat.color }}>
+              {CAT_ICONS[cat.icon]}
+            </span>
+            {cat.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Subcategory pills */}
+      {activeCat?.subcategories && !search.trim() && (
+        <div className="spco-subcats">
+          <button className={`spco-subcat${!activeSubcat ? ' spco-subcat--active' : ''}`}
+            style={!activeSubcat ? { borderColor: activeCat.color, color: activeCat.color, background: `${activeCat.color}12` } : {}}
+            onClick={() => setActiveSubcat(null)}>All</button>
+          {activeCat.subcategories.map(sub => (
+            <button key={sub.label}
+              className={`spco-subcat${activeSubcat === sub.label ? ' spco-subcat--active' : ''}`}
+              style={activeSubcat === sub.label ? { borderColor: activeCat.color, color: activeCat.color, background: `${activeCat.color}12` } : {}}
+              onClick={() => setActiveSubcat(sub.label)}>
+              {sub.label}
+              <span className="spco-subcat-count">{sub.items.length}</span>
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Select-all hint row */}
+      <div className="spco-sel-row">
+        <button className="spco-sel-all" onClick={selectAllVisible}>
+          Select all visible
+        </button>
+        {selected.size > 0 && (
+          <button className="spco-sel-clear" onClick={clearSelection}>
+            Clear ({selected.size})
+          </button>
+        )}
+      </div>
+
+      {/* Item list */}
+      <div className="spco-list">
+        {groupedDisplay ? (
+          groupedDisplay.map(({ sub, items }) => (
+            <div key={sub.label} className="spco-group">
+              <div className="spco-group-header">
+                <span className="spco-group-label" style={{ color: activeCat.color }}>{sub.label}</span>
+                <span className="spco-group-count">{items.length} items</span>
+              </div>
+              {items.map(renderItem)}
+            </div>
+          ))
+        ) : (
+          <>
+            {filtered.length === 0 && <div className="spco-empty">No items match your search.</div>}
+            {filtered.map(renderItem)}
+          </>
+        )}
+      </div>
+
+      {/* Batch action bar */}
+      {availSelected.length > 0 && (
+        <div className="spco-batch-bar">
+          <div className="spco-batch-info">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <rect x="1" y="1" width="12" height="12" rx="2.5" stroke="currentColor" strokeWidth="1.4"/>
+              <path d="M3.5 7L5.5 9L10.5 4.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <strong>{availSelected.length}</strong> item{availSelected.length > 1 ? 's' : ''} selected
+          </div>
+          <button className="spco-batch-btn"
+            style={{ background: accentColor, color: isLight ? '#1a1a1a' : '#fff' }}
+            onClick={openBatch}>
+            Check out all
+          </button>
+        </div>
+      )}
+
+      {/* Checkout form overlay */}
+      {form && (
+        <div className="spco-overlay">
+          <div className="spco-form">
+            <div className="spco-form-title">
+              {form.keys.length > 1 ? `Check out ${form.keys.length} items` : 'Check out'}
+            </div>
+            <div className="spco-form-items">
+              {form.keys.length <= 4
+                ? form.keys.map(k => (
+                    <div key={k} className="spco-form-item">{k.split('::')[1]}</div>
+                  ))
+                : <>
+                    {form.keys.slice(0, 3).map(k => (
+                      <div key={k} className="spco-form-item">{k.split('::')[1]}</div>
+                    ))}
+                    <div className="spco-form-item spco-form-item--more">
+                      +{form.keys.length - 3} more items
+                    </div>
+                  </>
+              }
+            </div>
+            <label className="spco-form-label">Your name *</label>
+            <input className="spco-form-input" placeholder="Full name…"
+              value={formName} onChange={e => setFormName(e.target.value)}
+              onKeyDown={e => { if (e.key === 'Enter') confirmCheckout(); if (e.key === 'Escape') setForm(null); }}
+              autoFocus />
+            <label className="spco-form-label">Expected return date</label>
+            <input className="spco-form-input spco-form-input--date" type="date"
+              min={today} value={formReturn} onChange={e => setFormReturn(e.target.value)} />
+            <div className="spco-form-actions">
+              <button className="spco-form-cancel" onClick={() => setForm(null)}>Cancel</button>
+              <button className="spco-form-confirm"
+                style={{ background: form.catColor, color: '#fff' }}
+                onClick={confirmCheckout} disabled={!formName.trim()}>
+                Confirm {form.keys.length > 1 ? `(${form.keys.length})` : ''}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function LockerMapSlide({ data, accentColor }) {
+  const { rows, cols, freePositions } = data;
+  const initFreeSet = new Set(freePositions);
+
+  // booked: Map of idx → name (user-booked free lockers)
+  const [booked, setBooked] = useState(new Map());
+  // selecting: which free locker is being booked
+  const [selecting, setSelecting] = useState(null);
+  const [nameInput, setNameInput] = useState('');
+
+  // build cells: label occupied lockers Name 1..N, free stay free
+  let occ = 1;
+  const cells = [];
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      const idx = r * cols + c;
+      const isFree = initFreeSet.has(idx);
+      cells.push({ idx, label: isFree ? null : `Name ${occ++}`, free: isFree });
+    }
+  }
+
+  const totalFree = freePositions.length;
+  const bookedCount = booked.size;
+
+  function handleFreeClick(idx) {
+    if (booked.has(idx)) return; // already booked, no action
+    setSelecting(idx);
+    setNameInput('');
+  }
+
+  function confirmBooking() {
+    const name = nameInput.trim();
+    if (!name) return;
+    setBooked(prev => new Map(prev).set(selecting, name));
+    setSelecting(null);
+    setNameInput('');
+  }
+
+  function cancelBooking() {
+    setSelecting(null);
+    setNameInput('');
+  }
+
+  function releaseLocker(idx) {
+    setBooked(prev => { const m = new Map(prev); m.delete(idx); return m; });
+  }
+
+  return (
+    <div className="splm-wrap">
+      <div className="splm-stats">
+        <span className="splm-stat splm-stat--occ">
+          <span className="splm-swatch splm-swatch--occ" />
+          {cells.length - totalFree + bookedCount} occupied
+        </span>
+        <span className="splm-stat splm-stat--free">
+          <span className="splm-swatch splm-swatch--free" />
+          {totalFree - bookedCount} available
+        </span>
+      </div>
+
+      <div className="splm-grid-scroll"><div className="splm-grid" style={{ '--cols': cols }}>
+        {cells.map(cell => {
+          const bookedName = booked.get(cell.idx);
+          const isSelecting = selecting === cell.idx;
+
+          if (!cell.free) {
+            return (
+              <div key={cell.idx} className="splm-cell splm-cell--occ" title={cell.label}>
+                <span>{cell.label}</span>
+              </div>
+            );
+          }
+          if (bookedName) {
+            return (
+              <div key={cell.idx} className="splm-cell splm-cell--booked" title={`Booked by ${bookedName}`}
+                onClick={() => releaseLocker(cell.idx)}>
+                <span>{bookedName}</span>
+                <span className="splm-cell-release">✕</span>
+              </div>
+            );
+          }
+          return (
+            <div key={cell.idx}
+              className={`splm-cell splm-cell--free${isSelecting ? ' splm-cell--selecting' : ''}`}
+              title="Click to book"
+              onClick={() => handleFreeClick(cell.idx)}>
+              <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+                <path d="M1 4.5L3 6.5L7 2" stroke="#166534" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+          );
+        })}
+      </div></div>
+
+      {selecting !== null && (
+        <div className="splm-booking">
+          <div className="splm-booking-label">Book locker #{selecting + 1}</div>
+          <input
+            className="splm-booking-input"
+            placeholder="Your name…"
+            value={nameInput}
+            onChange={e => setNameInput(e.target.value)}
+            onKeyDown={e => { if (e.key === 'Enter') confirmBooking(); if (e.key === 'Escape') cancelBooking(); }}
+            autoFocus
+          />
+          <div className="splm-booking-actions">
+            <button className="splm-booking-cancel" onClick={cancelBooking}>Cancel</button>
+            <button className="splm-booking-confirm"
+              style={{ background: accentColor, color: accentColor === '#B3F400' ? '#1a1a1a' : '#fff' }}
+              onClick={confirmBooking} disabled={!nameInput.trim()}>
+              Book
+            </button>
+          </div>
+        </div>
+      )}
+
+      <div className="splm-note">Click green to book · Click booked to release</div>
+    </div>
+  );
+}
+
 function TableSlide({ data, accentColor }) {
   return (
     <div className="sp-table-wrap">
@@ -474,6 +1110,12 @@ export default function SlidePanel({
           <FormSlide data={slideData} accentColor={accentColor} />
         ) : slideData?.type === 'checklist' ? (
           <ChecklistSlide data={slideData} accentColor={accentColor} />
+        ) : slideData?.type === 'office-map' ? (
+          <OfficeMapSlide data={slideData} accentColor={accentColor} />
+        ) : slideData?.type === 'checkout' ? (
+          <CheckoutSlide data={slideData} accentColor={accentColor} />
+        ) : slideData?.type === 'locker-map' ? (
+          <LockerMapSlide data={slideData} accentColor={accentColor} />
         ) : (
           <div className="sp-placeholder">
             <div className="sp-placeholder-inner">
