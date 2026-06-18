@@ -247,13 +247,13 @@ export default function DiagramPage({ onSearchOpen }) {
           <span className="logo-badge">LAVA</span>
           Office Manual Berlin 2026
         </div>
-        <div className="search-wrap">
+        <div className="diagram-search-center">
           <SearchButton onClick={onSearchOpen} />
-          <div className="header-btns">
-            <button className="hbtn" onClick={() => navigate('/toc')}>Table of Contents</button>
-            <button className="hbtn" onClick={() => navigate('/glossary')}>Glossary</button>
-            <button className="hbtn" onClick={() => navigate('/involved')}>Involved Parties</button>
-          </div>
+        </div>
+        <div className="header-btns">
+          <button className="hbtn" onClick={() => navigate('/toc')}>Table of Contents</button>
+          <button className="hbtn" onClick={() => navigate('/glossary')}>Glossary</button>
+          <button className="hbtn" onClick={() => navigate('/involved')}>Involved Parties</button>
         </div>
       </div>
 

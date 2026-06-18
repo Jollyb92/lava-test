@@ -361,6 +361,61 @@
       "Our design philosophy — \"More with less\", \"What if?\"",
       "The 6 main themes"
     ],
+    "slideData": [
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"LAVA was founded in 2007 by Tobias Wallisser, Alexander Rieck and Chris Bosse in Germany and Australia. Today more than 80 people work on projects across Europe, the Middle East, China and Australia."},
+          {"t":"para","text":"The practice has developed a specific approach across a wide range of projects of various sizes, cultures and typologies — always driven by intensive dialogue with the client and a commitment to visionary, technology-forward design."},
+          {"t":"note","text":"\"LAVA is always ready for the next breakthrough!\" — Tobias Wallisser, Alexander Rieck, Chris Bosse"}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"kv","items":[
+            {"k":"Berlin (HQ)","v":"Saarbrücker Strasse 24, Haus D · 10405 Berlin · +49 30 473 747 180 · wallisser@l-a-v-a.com"},
+            {"k":"Stuttgart","v":"Wolframstrasse 20b · 70191 Stuttgart · +49 711 722 329 01 · rieck@l-a-v-a.com"},
+            {"k":"Sydney","v":"88 Oxford Street, Paddington NSW 2021 · +61 02 935 681 79 · bosse@l-a-v-a.net"},
+            {"k":"Ho Chi Minh","v":"Alley 3/27A Quoc Huong, Thao Dien, Dist. 2 · +84 8 2228 8273 · lava.vietnam@l-a-v-a.net"}
+          ]}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"kv","items":[
+            {"k":"Address","v":"Saarbrücker Strasse 24, Haus D · 10405 Berlin, Germany"},
+            {"k":"Phone","v":"+49 30 473 747 180"},
+            {"k":"Email","v":"office.ber@l-a-v-a.com"}
+          ]},
+          {"t":"para","text":"Having diverse international perspectives allows for a uniquely strategic approach in masterplanning large-scale developments. High-quality design results from the continuity of the process and intensive dialogue with the client."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"h","text":"\"More with Less\""},
+          {"t":"para","text":"LAVA believes in achieving better quality and better architecture with less material and resources. Every project, in every budget range, incorporates that special, unique LAVA feature — born from ongoing experimentation with materials, technical solutions and methods of production."},
+          {"t":"h","text":"\"What If?\""},
+          {"t":"para","text":"At LAVA we ask \"What if?\" Our practice specialises in finding the core of the client's problem and turning it into a unique advantage. We challenge the perception of architecture as the production of square metres — unifying structure, space and architectural expression to create unique experiences."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"LAVA's work is organised around six evolving themes, each framed as an open question:"},
+          {"t":"bullets","items":[
+            "Designed to Connect — What if architecture can enhance a new togetherness of social interaction, lifelong learning and meaningful debate?",
+            "Digitizing the Process — What if architecture could gain new relevance by harnessing automation to fight today's housing crisis?",
+            "Energy Transition — What if architecture could communicate the abstract nature of energy while being a symbol for a greener future?",
+            "Creativity at Work — What if work could be life-improving: making us feel connected, inspired, smarter and more productive?",
+            "Future Cities — What if planetary challenges like the climate crisis required new concepts and methods for the architectural profession?",
+            "Planning with Nature — What if a single building can be akin to a forest with a highly balanced indoor microbiome to support all species?"
+          ]}
+        ]
+      }
+    ],
     "topicLinks": [
       [{"label": "A.2 Values & General Rules", "id": "a2"}],
       [{"label": "C.1 Berlin Office Rules", "id": "c1"}, {"label": "C.3 Spaces & Facilities", "id": "c3"}],
@@ -386,6 +441,64 @@
       "Collaboration over competition",
       "Knowledge sharing — ask questions, share freely",
       "Office as community — FabLab, VR-Room, Library, Monday Meeting"
+    ],
+    "slideData": [
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"Office culture is built by the small interactions. Consider the impact that your decisions may have on others."},
+          {"t":"note","text":"\"The way you do anything is the way you do everything\""},
+          {"t":"para","text":"It is important that we apply our beliefs to our projects in addition to our office environment. The same values that guide our architecture guide how we work together every day."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"Everyone's equality is independent of gender, race or position. Value colleagues and treat them the way you would want to be treated."},
+          {"t":"bullets","items":[
+            "Treat everyone with equal respect regardless of seniority",
+            "Be forward about sharing knowledge and open when you need input",
+            "Encourage and accept constructive feedback from anyone"
+          ]}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"At LAVA we collaborate instead of compete. We encourage sharing constructive feedback and helping each other grow."},
+          {"t":"bullets","items":[
+            "Share knowledge openly — don't hoard expertise",
+            "Ask questions when you need input, and welcome questions directed at you",
+            "Give and receive constructive feedback as a normal part of work",
+            "Support colleagues across teams and disciplines"
+          ]}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"Knowledge sharing is one of LAVA's core values. The whole practice improves when individuals share what they know and learn openly."},
+          {"t":"bullets","items":[
+            "Be proactive about sharing knowledge with colleagues",
+            "Ask questions openly — don't struggle alone with a problem",
+            "Contribute to Friday Academy and Lunch Presentations",
+            "Document project learnings on the server for future teams"
+          ]}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"It is important for LAVA to support healthy engagement, both in creative work and in how we come together as a community."},
+          {"t":"bullets","items":[
+            "Fabrication Lab — hands-on making and prototyping",
+            "VR-Room — immersive design review and exploration",
+            "Library — research, reference and inspiration",
+            "Monday Morning Meeting — weekly whole-office gathering for connection"
+          ]},
+          {"t":"note","text":"These spaces and rituals make LAVA a community, not just a workplace. Make use of them."}
+        ]
+      }
     ],
     "topicLinks": [
       [{"label": "A.1 LAVA World", "id": "a1"}],
@@ -459,6 +572,69 @@
       "Overtime, late hours & weekends",
       "Time logging — Poolarserver"
     ],
+    "slideData": [
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"kv","items":[
+            {"k":"Core hours","v":"09:30 – 17:00"},
+            {"k":"Typical arrival","v":"Between 08:30 and 09:30"},
+            {"k":"Working day","v":"8 hours (lunch break does not count as working time)"},
+            {"k":"Flexibility","v":"Earlier start or later finish is allowed; coordinate any changes with your team lead"}
+          ]},
+          {"t":"note","text":"On Mondays the whole office meets at 09:30 sharp — no exceptions on that day."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"kv","items":[
+            {"k":"When","v":"Every Monday, 09:30 – 10:00"},
+            {"k":"Where","v":"Green room"},
+            {"k":"What","v":"Round-table talk and small breakfast together"}
+          ]},
+          {"t":"para","text":"The Monday Morning Meeting is important for socialising and building community — not on a project basis, but on a personal level. It helps everyone get to know each other better and keeps up a good group dynamic."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"You are required to notify your project lead or administration if you anticipate being late. Inform the office before 9:00 am."},
+          {"t":"kv","items":[
+            {"k":"Phone","v":"+49 30 473 747 180"},
+            {"k":"Email","v":"office.ber@l-a-v-a.com"}
+          ]},
+          {"t":"note","text":"If you worked very late the night before, exceptions are made as long as they have been agreed with the Project Architect in advance."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"Saturdays and Sundays are free in principle. Overtime may be required in the final phases of competitions or for project deadlines — always discuss with your Project Lead and Director first."},
+          {"t":"h","text":"Late-night perks"},
+          {"t":"bullets","items":[
+            "Dinner reimbursement: up to €15 when working late, at the discretion of the Project Architect",
+            "Taxi home: covered if you work past the last regular bus or U-Bahn",
+            "Compensation days: accrued for overtime and must be taken within the following week"
+          ]},
+          {"t":"note","text":"Claim dinner and taxi via the monthly expenses sheet with receipts — submit to admin at end of month."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"It is mandatory for everyone to log their working hours in Poolarserver. This allows the office to track time spent on every project and phase."},
+          {"t":"h","text":"How to log time"},
+          {"t":"bullets","items":[
+            "Click on the day for which you want to enter your time-sheet",
+            "Fill in the project number and the phase (you can set a default project)",
+            "Highlight when you arrived and when you left",
+            "Lunch time is excluded — it does not count as working time",
+            "Submit sick days via Poolarserver as well"
+          ]}
+        ]
+      }
+    ],
     "topicLinks": [
       [{"label": "B.3 Time Off & Absence", "id": "b3"}],
       [{"label": "C.3 Spaces & Facilities", "id": "c3"}, {"label": "A.2 Values & General Rules", "id": "a2"}],
@@ -488,7 +664,19 @@
       "Overtime perks — dinner, taxi"
     ],
     "slideData": [
-      null,
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"The holiday year runs from 1 January to 31 December. For the year of joining and for part-time employees, entitlement is calculated on a pro-rata basis."},
+          {"t":"bullets","items":[
+            "Holiday must be taken in periods of no less than half a day",
+            "Coordinate leave with your Project Lead first, then with Administration",
+            "Long holidays: submit the Urlaubsantrag at least 1 month in advance",
+            "Extended weekends or 1 day off: submit at least 2 weeks in advance"
+          ]},
+          {"t":"note","text":"There is no holiday entitlement during the trial period. The Urlaubsantrag form is available in the IT Wiki."}
+        ]
+      },
       {
         "type": "form",
         "title": "Vacation Request",
@@ -520,7 +708,24 @@
         "submitLabel": "Submit Compensation Request",
         "confirmMessage": "Your compensation days request has been submitted. Your lead and HR will confirm within 3 business days."
       },
-      null,
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"Berlin public holidays — these are non-working days in addition to your annual leave entitlement:"},
+          {"t":"bullets","items":[
+            "01 January — Neujahr / New Year's Day",
+            "08 March — Internationaler Frauentag / International Women's Day",
+            "Friday before Easter — Karfreitag / Good Friday",
+            "Monday after Easter — Ostermontag / Easter Monday",
+            "01 May — Tag der Arbeit / Labour Day",
+            "39 days after Easter — Christi Himmelfahrt / Ascension Day",
+            "50 days after Easter — Pfingstmontag / Whit Monday",
+            "03 October — Tag der Deutschen Einheit / German Unity Day",
+            "25 December — 1. Weihnachtsfeiertag / Christmas Day",
+            "26 December — 2. Weihnachtsfeiertag / Boxing Day"
+          ]}
+        ]
+      },
       {
         "type": "form",
         "title": "Sick Leave Notification",
@@ -599,6 +804,106 @@
       "Competence evaluation matrix",
       "Training & development — internal and external"
     ],
+    "slideData": [
+      null,
+      null,
+      null,
+      {
+        "type": "eval-matrix",
+        "ratings": [
+          {"label": "Red",    "desc": "Not meeting expectations", "color": "#EF4444"},
+          {"label": "Yellow", "desc": "Meeting expectations",     "color": "#F59E0B"},
+          {"label": "Green",  "desc": "Exceeding expectations",   "color": "#22C55E"}
+        ],
+        "categories": [
+          {
+            "label": "Results & Project Performance",
+            "color": "#1D9E75",
+            "criteria": [
+              {
+                "name": "Interpretation & implementation of project requirements",
+                "plus": "Correctly translates the brief and constraints into project deliverables. Requests clarification when requirements are unclear. Integrates changes consistently and in a timely manner.",
+                "minus": "Misinterpretation of brief or constraints. Recurrent corrections needed due to incomplete understanding. Late or inconsistent integration of updated requirements."
+              },
+              {
+                "name": "Planning, execution & adherence to agreed deadlines",
+                "plus": "Tasks are delivered within agreed timelines. Work is planned realistically according to project phases. Delays are anticipated and communicated early.",
+                "minus": "Deadlines are frequently missed. Planning does not reflect actual workload or priorities. Delays are communicated late or not at all."
+              },
+              {
+                "name": "Level of independent task execution",
+                "plus": "Assigned tasks are completed independently within role scope. Appropriate escalation when issues exceed responsibility. Limited supervision required.",
+                "minus": "Tasks require frequent follow-up or rework. Difficulty progressing without close supervision. Issues not escalated in time."
+              }
+            ]
+          },
+          {
+            "label": "Skills & Technical Expertise",
+            "color": "#5B3A8A",
+            "criteria": [
+              {
+                "name": "Design Quality",
+                "plus": "Design output meets project objectives and office standards. Proposals are coherent, buildable, and appropriate to context. Design decisions are clearly articulated.",
+                "minus": "Design output lacks consistency or clarity. Solutions do not fully respond to constraints. Frequent revisions required to reach expected quality."
+              },
+              {
+                "name": "Technical Knowledge, codes & standards",
+                "plus": "Applies relevant technical principles and regulations correctly. Anticipates technical implications of design decisions. Knows when to consult specialists.",
+                "minus": "Gaps in technical understanding affect project quality. Recurrent errors related to codes or standards. Technical risks not identified early."
+              },
+              {
+                "name": "Tools",
+                "plus": "Uses required tools efficiently and according to office standards. Files are structured, coordinated, and reusable. Keeps up with required tool updates.",
+                "minus": "Inefficient or inconsistent use of tools. Non-compliance with file or documentation standards. Work requires technical correction by others."
+              }
+            ]
+          },
+          {
+            "label": "Collaboration & Initiative",
+            "color": "#D4652F",
+            "criteria": [
+              {
+                "name": "Communication & coordination",
+                "plus": "Information is communicated clearly and in a timely manner. Coordination with team members and consultants is effective. Feedback is integrated appropriately.",
+                "minus": "Information gaps or misunderstandings affect coordination. Feedback is integrated late or incompletely. Communication causes avoidable rework."
+              },
+              {
+                "name": "Participation in assigned project activities",
+                "plus": "Participates in required meetings and coordination activities. Follows up on agreed actions. Contributes constructively within assigned scope.",
+                "minus": "Inconsistent participation in required activities. Follow-up on actions is incomplete. Responsibilities are not fully carried through."
+              },
+              {
+                "name": "Proactive contribution within role scope",
+                "plus": "Identifies issues related to own tasks early. Proposes solutions or alternatives within role scope. Supports smooth project progress.",
+                "minus": "Issues are addressed only after escalation. Limited anticipation of project needs. Opportunities for improvement are not communicated."
+              }
+            ]
+          },
+          {
+            "label": "Professional Conduct in the Work Context",
+            "color": "#1B4080",
+            "criteria": [
+              {
+                "name": "Compliance with professional standards",
+                "plus": "Adheres to internal rules, procedures and professional norms. Conduct in work situations is appropriate and consistent. Represents the office professionally.",
+                "minus": "Inconsistent adherence to procedures or standards. Professional conduct requires repeated clarification. Misalignment with office working practices."
+              },
+              {
+                "name": "Availability during agreed working hours",
+                "plus": "Is reachable during agreed working hours (9:30–18:00). Participates in required meetings. Responds within reasonable timeframes.",
+                "minus": "Availability is inconsistent with agreed arrangements. Delayed responses impact coordination. Missed meetings without adequate communication."
+              },
+              {
+                "name": "Continuity of project work",
+                "plus": "Work continuity is ensured through documentation and handover. Unavailability is communicated in advance when possible. Projects progress smoothly despite absences.",
+                "minus": "Lack of handover affects project progress. Information gaps arise during unavailability. Continuity relies excessively on others stepping in."
+              }
+            ]
+          }
+        ]
+      },
+      null
+    ],
     "topicLinks": [
       [{"label": "B.4 Mentoring & Buddy System", "id": "b4"}],
       [{"label": "QEMS", "id": "qems"}],
@@ -674,7 +979,13 @@
           { "id": "H3", "name": "Hot Desk",  "zone": "hub"    }
         ]
       },
-      null,
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"The Hub has wooden drawers stocked with cables, webcams and other tech devices. Stationery and office supplies can be found in the closets by administration."},
+          {"t":"note","text":"Ask administration if you need anything — they are the first point of contact for all office supplies and equipment."}
+        ]
+      },
       {
         "type": "checklist",
         "sections": [
@@ -706,9 +1017,32 @@
         "cols": 10,
         "freePositions": [2, 7, 11, 16, 20, 25, 28, 33, 37, 41, 44, 48, 3, 38]
       },
-      null,
-      null,
-      null,
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"Each team is responsible for the windows along their \"island\". The last team member — not the last person to leave the office — closes these windows."},
+          {"t":"note","text":"If the last person in the office has to close a window that belongs to another team, take a snapshot — that team buys a drink!"},
+          {"t":"para","text":"All other windows (green room, meeting rooms etc.) must be closed by the last user when they leave. These windows should never be left open when nobody is in the room."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"It is everyone's duty to answer the phone. Introduce yourself professionally: say \"LAVA Berlin\" and your name. If you take a message, write down the caller's name and company and forward it promptly."},
+          {"t":"kv","items":[
+            {"k":"Berlin","v":"+49 30 473 747 180"},
+            {"k":"Stuttgart","v":"+49 711 722 329 01"},
+            {"k":"Sydney","v":"+61 02 935 68 179"}
+          ]}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"If you accept a package at the door, either bring it directly to the addressed person or deliver it to Administration so that it can be forwarded correctly."},
+          {"t":"note","text":"Never leave packages unattended at the entrance."}
+        ]
+      },
       {
         "type": "checkout",
         "categories": [
@@ -912,6 +1246,82 @@
       "Reporting broken items",
       "Waste & Bokashi"
     ],
+    "slideData": [
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"A cleaning service comes to the office twice per week. On top of this, everyone is expected to keep their workspace tidy and act proactively."},
+          {"t":"bullets","items":[
+            "Do not leave things on the floor before the cleaning service visits",
+            "Leave workstations in the state you found them — including cables and peripherals",
+            "Tidy and clean your desk every Friday before leaving",
+            "Replace shared items (like hand towels) when you finish them — don't leave it for the next person"
+          ]}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"There is one dishwasher. Put all glasses, cups, plates and cutlery straight into the dishwasher throughout the day. Turn it on when full; unload when the cycle completes."},
+          {"t":"bullets","items":[
+            "If you have a meeting with consultants or clients: clean the table and do the washing up immediately after — do not leave anything for others",
+            "Do not leave dirty dishes in the sink",
+            "Keep the fridge presentable and clear out old food"
+          ]},
+          {"t":"note","text":"The kitchen is a shared space — leave it at least as clean as you found it."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"There is a rotating weekly list of Kitchen Duty responsibilities. Check the planning to know when it is your week."},
+          {"t":"h","text":"Weekly duties include:"},
+          {"t":"bullets","items":[
+            "Loading and unloading the dishwasher",
+            "Briefly wiping down kitchen surfaces before signing off for the day",
+            "Making sure the fridge is presentable"
+          ]}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"LAVA supports bringing fruit or snacks to leave in public areas, and will reimburse you for office purchases."},
+          {"t":"h","text":"Reimbursement process:"},
+          {"t":"bullets","items":[
+            "Send an email to admin with the filled-out reimbursement form and a copy of receipts",
+            "Submit physical receipts to admin for record keeping",
+            "Admin will pay you back"
+          ]},
+          {"t":"note","text":"The reimbursement form is available in the IT Wiki: Teams > BER > Office Management > IT Wiki"}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"Have a forward-thinking approach to maintaining the office. If you notice something that needs attention, take care of it or report it."},
+          {"t":"bullets","items":[
+            "Report broken, missing or needed items to administration immediately",
+            "If you take the last snack or finish the coffee pot, take care of the empty dish",
+            "If you see something that should be taken care of and don't know how, reach out to admin"
+          ]}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"There are four bins in the kitchen. Please use them correctly for waste separation:"},
+          {"t":"kv","items":[
+            {"k":"General recycling","v":"Restmüll — general waste"},
+            {"k":"Plastic / Packaging","v":"Gelber Sack — plastics, cartons, packaging"},
+            {"k":"Paper","v":"Papiertonne — paper, cardboard, newspapers"},
+            {"k":"Organic","v":"Small organic bin in the kitchen — food scraps only"}
+          ]},
+          {"t":"h","text":"Bokashi Composting"},
+          {"t":"para","text":"As part of LAVA's sustainability initiative, we use Bokashi composting — an airtight fermentation process. Do not open the Bokashi bins (they smell due to rapid decomposition). Use the small organic bin instead; admin handles the transfer to the Bokashi container."}
+        ]
+      }
+    ],
     "topicLinks": [
       [],
       [{"label": "C.1 Berlin Office Rules", "id": "c1"}],
@@ -940,6 +1350,81 @@
       "Meeting rooms — booking via Office Calendar / printed form in the room",
       "Friday Academy & Lunch Presentations"
     ],
+    "slideData": [
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"LAVA's library contains books and the most important architecture and design magazines. Research is a core part of the creative design process — books offer better quality information than a quick internet search."},
+          {"t":"h","text":"Library categories"},
+          {"t":"bullets","items":[
+            "Monographs",
+            "Programme & Typologies",
+            "Interior Design",
+            "Concepts & Experimentations",
+            "Projects & Collections (World, Asia, Europe, Germany, Berlin)",
+            "Construction (Regulations, Structure, Materials)",
+            "LAVA projects & publications",
+            "Green"
+          ]},
+          {"t":"h","text":"Current periodicals"},
+          {"t":"bullets","items":[
+            "Detail · AIT · Interior/Fashion · Der Architekt · DAB",
+            "Cube · Journal · Xia Intelligente Architektur"
+          ]},
+          {"t":"note","text":"To borrow a book: fill out the Book Borrowing form with your name and the book title, and give it to the Office Manager so others can find it."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"h","text":"Safety First"},
+          {"t":"para","text":"Always prioritise safety in the Fabrication Lab. A First Aid Kit is always nearby — find it before you start work. Wear appropriate protective gear (gloves, safety goggles, air-purifying masks)."},
+          {"t":"h","text":"General rules"},
+          {"t":"bullets","items":[
+            "Treat all tools, equipment and machines with care and respect",
+            "Always clean up after finishing and return tools and materials to their designated places",
+            "Certain machines require authorisation and training — never use them without prior approval or without an authorised person present",
+            "Report any damage, malfunction or burnt smell to Office Management immediately",
+            "Always use scrap materials before opening new stock",
+            "Log used materials on the online list provided by Office Management"
+          ]},
+          {"t":"note","text":"In case of injury: call 112. In case of fire: use the extinguisher and call 112 if needed. Never use equipment you have not been trained on."}
+        ]
+      },
+      null,
+      null,
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"Meeting rooms are available for internal design meetings and external consultations. The person who arranges the meeting is responsible for preparing the room."},
+          {"t":"h","text":"Room booking"},
+          {"t":"bullets","items":[
+            "Book via the Office Calendar in Outlook — specify Meeting Room 1 or Meeting Room 2",
+            "This ensures other meetings can be scheduled around free slots",
+            "Ask IT for help with Outlook calendar booking if needed"
+          ]},
+          {"t":"h","text":"Hosting a meeting"},
+          {"t":"bullets","items":[
+            "Prepare laptop and screen yourself before guests arrive",
+            "Set up coffee, tea and water with glasses",
+            "After the meeting: clear and tidy the room for the next guests"
+          ]}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"h","text":"Friday Academy"},
+          {"t":"para","text":"On some Friday afternoons, time is set aside from ongoing projects to work, share and learn as a small group — for example: learning a software tool, developing an office standard, or writing a shared script."},
+          {"t":"para","text":"Think about what skill or knowledge you have and would like to share with others."},
+          {"t":"h","text":"Friday Lunch Presentations"},
+          {"t":"para","text":"On some Fridays, a colleague presents over lunch — a competition debrief, a project phase review, or a specific technical or research topic."},
+          {"t":"para","text":"The goal is not just to present a project, but to share learning: LAVA's design strategy, competition booklet development, drawing techniques, research approaches."},
+          {"t":"h","text":"Pin-up"},
+          {"t":"para","text":"Pin-up panels in the Flex Room display projects in progress. LAVA encourages teams to pin up in-progress material to share their work with the whole office. There is no fixed format — it rotates as projects evolve."}
+        ]
+      }
+    ],
     "topicLinks": [
       [{"label": "Guides & Registers", "id": "guides"}],
       [{"label": "D.1 Work Safety", "id": "d1"}],
@@ -967,6 +1452,69 @@
       "First aid kit & extinguisher locations",
       "Reporting hazards & damage",
       "FabLab authorisation & training"
+    ],
+    "slideData": [
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"LAVA maintains designated safety roles in the Berlin office, as required by German occupational safety law (Arbeitssicherheitsgesetz):"},
+          {"t":"kv","items":[
+            {"k":"Sicherheitsfachkraft","v":"Safety specialist — responsible for occupational health and safety oversight"},
+            {"k":"Sicherheitsbeauftragte","v":"Safety officer — practical safety representative in the office"},
+            {"k":"Brandschutzhelfer","v":"Fire protection helper — trained in fire evacuation procedures"},
+            {"k":"Ersthelfer","v":"First aider — trained in first aid and emergency response"}
+          ]},
+          {"t":"note","text":"Names and contact details for current role holders are available from Office Management."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"note","text":"In any emergency — call 112 (police, fire brigade, ambulance)"},
+          {"t":"kv","items":[
+            {"k":"Injury","v":"Ask colleagues for help. Use the First Aid Kit. If the kit is not sufficient, call 112 immediately."},
+            {"k":"Fire","v":"Locate the nearest fire extinguisher and use it if safe to do so. Evacuate. Call 112 for a large fire."},
+            {"k":"Other","v":"Notify Office Management and your Project Lead immediately, and log the incident."}
+          ]}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"A First Aid Kit is always nearby in the Fabrication Lab. Locate it before starting work so you know exactly where it is in case of need."},
+          {"t":"bullets","items":[
+            "First Aid Kit — located in the Fabrication Lab",
+            "Fire Extinguisher — located near the Fabrication Lab entrance",
+            "Emergency number — 112 (ambulance, fire brigade, police)"
+          ]},
+          {"t":"note","text":"Familiarise yourself with the location of safety equipment on your first visit to the FabLab."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"If you notice any hazard, damage or malfunction anywhere in the office or Fabrication Lab, report it to Office Management immediately. Do not wait, and do not continue to use damaged equipment."},
+          {"t":"bullets","items":[
+            "Damaged tools or machines — stop use immediately and report to Office Management",
+            "Burnt smell or unusual noise from equipment — stop use and report",
+            "Trip hazards, spills or structural issues — report immediately",
+            "Broken safety equipment (First Aid Kit, extinguisher) — report to Office Management"
+          ]}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"Certain tools and machines in the Fabrication Lab require prior training and authorisation before use. Never operate these machines without approval or without an authorised person present."},
+          {"t":"bullets","items":[
+            "A training workshop will be provided with clear instructions on setup, calibration and operation",
+            "For specific tools requiring experience: follow the guidelines document or request assistance from an authorised colleague",
+            "3D Printers — trained users only; training workshop will be organised by Office Management",
+            "Hot Wire Cutter — safety guidelines and material restrictions apply; do not use without training"
+          ]},
+          {"t":"note","text":"Training and authorisation status is tracked by Office Management. Always ask before using any unfamiliar machine."}
+        ]
+      }
     ],
     "topicLinks": [
       [{"label": "Work Safety Manual", "id": "worksafety"}, {"label": "QEMS", "id": "qems"}],
@@ -1137,6 +1685,60 @@
       "Library vs Library Workplace",
       "Archiving rules"
     ],
+    "slideData": [
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"The Berlin server follows a standardised folder structure shared with the Stuttgart office. Familiarise yourself with the layout and consult the PowerPoint folder structure guide."},
+          {"t":"kv","items":[
+            {"k":"Guide location","v":"L:\\1_LAVA\\LAVA STANDARDS\\FOLDER STRUCTURE"}
+          ]},
+          {"t":"note","text":"LAVA has released a new unified folder structure. All new projects in both Berlin and Stuttgart must use this structure from now on."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"The Berlin server (L:\\) is divided into the following main zones:"},
+          {"t":"kv","items":[
+            {"k":"BER PROJECTS","v":"All ongoing and recent Berlin projects — categorised by number and abbreviation. DO NOT MOVE OR DELETE FILES."},
+            {"k":"BER LIBRARY","v":"Reference materials, standards and resources accessible to everyone. DO NOT MOVE OR DELETE FILES."},
+            {"k":"BER TEMP","v":"Temporary files only — emptied regularly. Do not store anything important here."},
+            {"k":"T:\\_SCANS","v":"Scanned documents from the printer. Delete your scans from this folder after use."}
+          ]},
+          {"t":"h","text":"BER LIBRARY sub-folders"},
+          {"t":"bullets","items":[
+            "1. LAVA — logos, office manual, standards and project structure guides",
+            "2. FUNDAMENTALS — readings, guidelines, regulations and references",
+            "3. RESOURCES — software tools, fonts and tutorials",
+            "4. PRODUCTS — supplier catalogues and product references (add new ones as you use them)"
+          ]}
+        ]
+      },
+      null,
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"Each project on the server is saved under a unique number with an abbreviation as its name. All projects share the same standardised internal folder structure."},
+          {"t":"note","text":"Project numbers are created by the Project Lead at the start of a project. New project numbers are decided and coordinated exclusively during the Monday Morning Meeting — also coordinated with Stuttgart."}
+        ]
+      },
+      null,
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"The Project Database stores only key files for the website, publications and portfolio — not the full project archive. All relevant information must be saved there before taking compensation days, going on holiday or starting a new project."},
+          {"t":"h","text":"Steps for archiving a project phase"},
+          {"t":"bullets","items":[
+            "Create a folder with the phase name",
+            "Original Files: save final presentation as packaged InDesign or PPT; include original AI, PS, JPEG, PDF, movie files and physical model photos",
+            "Publication: save ONLY the most relevant images, plans and diagrams in JPEG or PDF — curated selection, not everything",
+            "In Publication > Text folder: use the Card template to enter all project info"
+          ]},
+          {"t":"note","text":"No Rhino, Revit or other raw working files belong in the database. Only final, publication-quality content."}
+        ]
+      }
+    ],
     "topicLinks": [
       [{"label": "E.2 Project Management at a Glance", "id": "e2"}],
       [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}],
@@ -1188,6 +1790,72 @@
       "Software licences — M365, Adobe CC, Rhino, Autodesk, Enscape",
       "Remote access — VPN, AnyDesk (emergency only)",
       "WLAN access"
+    ],
+    "slideData": [
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"Poolarserver is the LAVA intranet platform where you log working hours, access project information and send large files securely. Your login username and password will be provided by admin."},
+          {"t":"kv","items":[
+            {"k":"Login","v":"https://lava.poolarserver.com/login.aspx"},
+            {"k":"Timesheets","v":"Mandatory — fill in daily working times per project and phase"},
+            {"k":"Poolarmail","v":"Send files up to 2 GB securely, internally and externally"},
+            {"k":"Project list","v":"Contact details, team members and project information"}
+          ]},
+          {"t":"note","text":"Individual file size on Poolarmail must not exceed 2 GB — exceeding this will cause the transfer to fail at a late stage."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"IT resources and instructions are available in the IT Wiki: Teams > BER > Office Management > IT Wiki. Check there for forms, login contacts and guides."},
+          {"t":"kv","items":[
+            {"k":"IT Support","v":"Provided remotely by Jürgen Fischer"},
+            {"k":"Emergency IT","v":"jfischer@pcs-neuffen.com · 07025/5140"},
+            {"k":"Day-to-day","v":"Contact Harry, Sibel or Veronika V. for hardware, software installs and IT support"}
+          ]},
+          {"t":"note","text":"For VPN setup or complex IT issues, plan ahead and make an online appointment with Mr. Fischer."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"LAVA provides licences for the following software. All hardware requests and software installations go through Harry, Sibel or Veronika V."},
+          {"t":"bullets","items":[
+            "Microsoft 365 (M365) — Office suite, Teams, Outlook",
+            "Adobe Creative Cloud (CC)",
+            "Rhino 7",
+            "Autodesk suite — Revit, Civil 3D, AutoCAD, InfraWorks, Navisworks Manage",
+            "Enscape (NScape)"
+          ]},
+          {"t":"note","text":"Current licence information — available seats and responsible person — is on Poolarserver / Wiki."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"VPN is used for remote server connection only from office computers or LAVA laptops. If you work from a personal computer, coordinate with your team to get files from the server instead."},
+          {"t":"bullets","items":[
+            "To set up VPN on an office computer: request VPN files and instructions from Sibel",
+            "Two AnyDesk licences are available — for emergency remote access to an office desktop only",
+            "All files from your personal computer must be regularly saved on the server"
+          ]},
+          {"t":"note","text":"AnyDesk is for emergency situations only — do not use it as a regular remote work tool."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"The WLAN password is available from Sibel. Request it directly from her on your first day or whenever you need it."},
+          {"t":"h","text":"Scanning"},
+          {"t":"bullets","items":[
+            "Select 'Workflow Scanning' on the printer",
+            "Select the 'Scan_2020' option",
+            "Your scans will appear at T:\\_SCANS",
+            "Delete your scans from the folder after you are done"
+          ]}
+        ]
+      }
     ],
     "topicLinks": [
       [{"label": "B.2 A Standard Day at LAVA", "id": "b2"}],
@@ -1292,6 +1960,34 @@
       "Lunch & Learn",
       "External training & Architektenkammer",
       "Internal knowledge sharing — pin-up culture, project reviews"
+    ],
+    "slideData": [
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"On some Friday afternoons, time is set aside from ongoing projects to work, share and learn as a small group. This can be regular — for example: learning a software, developing an office standard, or building a shared script."},
+          {"t":"para","text":"Think about what skill or expertise you have and would like to share with others. Everyone has something to contribute."},
+          {"t":"note","text":"Friday Academy is a community investment — the whole office improves when individuals share what they know."}
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"para","text":"On some Fridays, colleagues present a topic over lunch — a competition debrief after submission, a project phase review, a specific technical subject, or a research area."},
+          {"t":"para","text":"The goal is not simply to present a project, but to share learning: how LAVA develops a design strategy, how we put together a competition booklet, how we draw a detail, how we push research on a topic."},
+          {"t":"note","text":"Lunch Presentations give the whole team access to the thinking behind the work — not just the result."}
+        ]
+      },
+      null,
+      {
+        "type": "text",
+        "blocks": [
+          {"t":"h","text":"Pin-up"},
+          {"t":"para","text":"The Flex Room has Pin-up panels displaying projects in progress. LAVA encourages all teams to pin up in-progress material to share current development with the wider office."},
+          {"t":"para","text":"There is no fixed format. It rotates naturally as projects evolve — new material replaces older work. If your project is at an interesting stage, put it up."},
+          {"t":"note","text":"Pin-up culture is a direct expression of LAVA's belief in knowledge sharing and open studio practice."}
+        ]
+      }
     ],
     "topicLinks": [
       [{"label": "C.3 Spaces & Facilities", "id": "c3"}, {"label": "A.2 Values & General Rules", "id": "a2"}],

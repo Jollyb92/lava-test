@@ -1020,6 +1020,98 @@ function LockerMapSlide({ data, accentColor }) {
   );
 }
 
+function EvalMatrixSlide({ data }) {
+  const [openCat, setOpenCat] = useState(null);
+
+  return (
+    <div className="spev-wrap">
+      {/* Categories */}
+      {data.categories.map((cat, ci) => {
+        const isOpen = openCat === ci;
+        return (
+          <div key={ci} className="spev-cat">
+            <button
+              className={`spev-cat-header${isOpen ? ' spev-cat-header--open' : ''}`}
+              style={{ borderLeftColor: cat.color, background: isOpen ? `${cat.color}14` : '#fafafa' }}
+              onClick={() => setOpenCat(isOpen ? null : ci)}
+            >
+              <span className="spev-cat-dot" style={{ background: cat.color }} />
+              <span className="spev-cat-label">{cat.label}</span>
+              <span className="spev-cat-count">{cat.criteria.length}</span>
+              <svg className="spev-chevron" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                <path d={isOpen ? 'M1.5 7L5.5 3L9.5 7' : 'M1.5 4L5.5 8L9.5 4'}
+                  stroke={cat.color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+
+            {isOpen && (
+              <div className="spev-criteria">
+                {cat.criteria.map((crit, ki) => (
+                  <div key={ki} className="spev-criterion">
+                    <div className="spev-crit-name" style={{ borderLeftColor: cat.color }}>
+                      {crit.name}
+                    </div>
+                    <div className="spev-crit-plus">
+                      <span className="spev-sign spev-sign--plus">+</span>
+                      <span>{crit.plus}</span>
+                    </div>
+                    <div className="spev-crit-minus">
+                      <span className="spev-sign spev-sign--minus">−</span>
+                      <span>{crit.minus}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function TextSlide({ data, accentColor }) {
+  return (
+    <div className="sptx-wrap">
+      {(data.blocks || []).map((block, i) => {
+        if (block.t === 'h')
+          return <div key={i} className="sptx-h" style={{ color: accentColor }}>{block.text}</div>;
+        if (block.t === 'para')
+          return <p key={i} className="sptx-para">{block.text}</p>;
+        if (block.t === 'bullets')
+          return (
+            <ul key={i} className="sptx-bullets">
+              {block.items.map((item, j) => (
+                <li key={j} className="sptx-bullet-item">
+                  <span className="sptx-dot" style={{ background: accentColor }} />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          );
+        if (block.t === 'kv')
+          return (
+            <dl key={i} className="sptx-kv">
+              {block.items.map((item, j) => (
+                <div key={j} className="sptx-kv-row">
+                  <dt className="sptx-kv-key" style={{ color: accentColor }}>{item.k}</dt>
+                  <dd className="sptx-kv-val">{item.v}</dd>
+                </div>
+              ))}
+            </dl>
+          );
+        if (block.t === 'note')
+          return (
+            <div key={i} className="sptx-note" style={{ borderLeftColor: accentColor, background: `${accentColor}18` }}>
+              {block.text}
+            </div>
+          );
+        return null;
+      })}
+    </div>
+  );
+}
+
 function TableSlide({ data, accentColor }) {
   return (
     <div className="sp-table-wrap">
@@ -1116,6 +1208,10 @@ export default function SlidePanel({
           <CheckoutSlide data={slideData} accentColor={accentColor} />
         ) : slideData?.type === 'locker-map' ? (
           <LockerMapSlide data={slideData} accentColor={accentColor} />
+        ) : slideData?.type === 'text' ? (
+          <TextSlide data={slideData} accentColor={accentColor} />
+        ) : slideData?.type === 'eval-matrix' ? (
+          <EvalMatrixSlide data={slideData} accentColor={accentColor} />
         ) : (
           <div className="sp-placeholder">
             <div className="sp-placeholder-inner">
