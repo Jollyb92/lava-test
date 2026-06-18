@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { useScrollRestore } from './useScrollRestore.js';
 import { detailPages, COLORS } from './data.js';
 import OnboardingChecklist from './OnboardingChecklist.jsx';
 import SlidePanel from './SlidePanel.jsx';
@@ -138,6 +139,95 @@ function ChaptersView({ chapters, accentColor, onLinksChange }) {
   );
 }
 
+function renderSlideBlocksHtml(blocks, accentColor) {
+  return (blocks || []).map(block => {
+    if (block.t === 'h')
+      return `<div class="ph">${block.text}</div>`;
+    if (block.t === 'para')
+      return `<p class="pp">${block.text}</p>`;
+    if (block.t === 'note')
+      return `<div class="pn">${block.text}</div>`;
+    if (block.t === 'bullets')
+      return `<ul class="pbl">${block.items.map(it => `<li>${it}</li>`).join('')}</ul>`;
+    if (block.t === 'kv')
+      return `<dl class="pkv">${block.items.map(it => `<dt>${it.k}</dt><dd>${it.v}</dd>`).join('')}</dl>`;
+    return '';
+  }).join('');
+}
+
+function buildSectionPrintHtml(page) {
+  const accent = page.color || '#1a1a1a';
+  const topics = page.topics || [];
+  const slides = page.slideData || [];
+
+  const topicHtml = topics.map((topic, i) => {
+    const slide = slides[i];
+    let content = '';
+    if (slide?.type === 'text') {
+      content = renderSlideBlocksHtml(slide.blocks, accent);
+    } else if (slide?.type === 'table') {
+      const header = slide.columns.map(c => `<th>${c}</th>`).join('');
+      const rows = slide.rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('');
+      content = `<table class="ptbl"><thead><tr>${header}</tr></thead><tbody>${rows}</tbody></table>`;
+    } else if (slide) {
+      content = `<p class="pp" style="color:#9CA3AF;font-style:italic;">[Interactive content — view in app]</p>`;
+    }
+    return `
+      <div class="ptopic">
+        <div class="ptopic-num" style="background:${accent}">${i + 1}</div>
+        <div class="ptopic-body">
+          <div class="ptopic-title">${topic}</div>
+          ${content}
+        </div>
+      </div>`;
+  }).join('');
+
+  return `<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>${page.title} — LAVA Berlin 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #111; padding: 28px 40px; }
+  .phdr { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 14px; border-bottom: 3px solid ${accent}; margin-bottom: 8px; }
+  .phdr-left { display: flex; flex-direction: column; gap: 4px; }
+  .phdr-title { font-size: 20px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; }
+  .phdr-bc { font-size: 9px; color: #888; text-transform: uppercase; letter-spacing: .04em; }
+  .phdr-iso { font-size: 9px; color: #888; font-style: italic; }
+  .phdr-meta { text-align: right; font-size: 9px; color: #888; }
+  .ptopic { display: flex; gap: 14px; margin-top: 18px; page-break-inside: avoid; }
+  .ptopic-num { width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; color: #fff; flex-shrink: 0; margin-top: 2px; }
+  .ptopic-body { flex: 1; border-bottom: 1px solid #E5E7EB; padding-bottom: 14px; }
+  .ptopic-title { font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+  .pp { font-size: 11px; color: #374151; line-height: 1.6; margin-bottom: 7px; }
+  .ph { font-size: 12px; font-weight: 700; color: ${accent}; margin-bottom: 6px; }
+  .pn { background: ${accent}18; border-left: 3px solid ${accent}; padding: 8px 12px; font-size: 10.5px; color: #374151; font-style: italic; margin-bottom: 7px; }
+  .pbl { list-style: none; margin-bottom: 7px; display: flex; flex-direction: column; gap: 4px; }
+  .pbl li::before { content: '·'; color: ${accent}; font-weight: 800; margin-right: 6px; }
+  .pbl li { font-size: 11px; color: #374151; display: flex; }
+  .pkv dt { font-size: 9.5px; font-weight: 700; text-transform: uppercase; color: ${accent}; }
+  .pkv dd { font-size: 11px; color: #374151; margin-bottom: 5px; }
+  .ptbl { width: 100%; border-collapse: collapse; font-size: 10px; margin-bottom: 7px; }
+  .ptbl th { background: ${accent}; color: #fff; padding: 6px 10px; text-align: left; font-weight: 700; }
+  .ptbl td { padding: 5px 10px; border-bottom: 1px solid #E5E7EB; }
+  .ptbl tr:nth-child(even) td { background: #F9FAFB; }
+  .pfooter { margin-top: 28px; padding-top: 10px; border-top: 1px solid #E5E7EB; font-size: 9px; color: #9CA3AF; display: flex; justify-content: space-between; }
+  @page { margin: 14mm; }
+</style></head><body>
+<div class="phdr">
+  <div class="phdr-left">
+    <div class="phdr-bc">LAVA Office Manual Berlin 2026 › ${page.breadcrumb || page.title}</div>
+    <div class="phdr-title">${page.title}</div>
+    ${page.isoTag ? `<div class="phdr-iso">${page.isoTag}</div>` : ''}
+  </div>
+  <div class="phdr-meta">LAVA Berlin 2026<br/>Office Manual v4 — Draft<br/>Printed: ${new Date().toLocaleDateString('en-GB')}</div>
+</div>
+${topicHtml}
+<div class="pfooter">
+  <span>LAVA Berlin 2026 — Office Manual v4 — Draft</span>
+  <span>${page.title}</span>
+</div>
+</body></html>`;
+}
+
 export default function DetailPage({ onSearchOpen }) {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -145,6 +235,7 @@ export default function DetailPage({ onSearchOpen }) {
   const [checklistOpen, setChecklistOpen] = useState(false);
   const [selectedSlide, setSelectedSlide] = useState(null);
   const [chapterLinks, setChapterLinks] = useState(null);
+  const scrollRef = useScrollRestore();
 
   // Reset per-item link overrides when navigating to a different page
   // Also auto-open slide from ?slide= param (from global search)
@@ -156,6 +247,15 @@ export default function DetailPage({ onSearchOpen }) {
   }, [id, searchParams]);
 
   const page = detailPages[id];
+
+  function handlePrintSection() {
+    const html = buildSectionPrintHtml(page);
+    const w = window.open('', '_blank', 'width=900,height=700');
+    w.document.write(html);
+    w.document.close();
+    w.focus();
+    setTimeout(() => w.print(), 400);
+  }
 
   if (!page) {
     return (
@@ -200,6 +300,17 @@ export default function DetailPage({ onSearchOpen }) {
         </button>
         <span className="top-bar-logo">LAVA Office Manual Berlin 2026</span>
         <SearchButton onClick={onSearchOpen} />
+        {page.topics && (
+          <button className="print-section-btn" onClick={handlePrintSection} title="Print section as PDF">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+              <rect x="2" y="1" width="9" height="5" rx="0.5" stroke="currentColor" strokeWidth="1.2"/>
+              <rect x="2" y="7.5" width="9" height="4" rx="0.5" stroke="currentColor" strokeWidth="1.2"/>
+              <path d="M2 5.5H11V8.5H2V5.5Z" stroke="currentColor" strokeWidth="1.2"/>
+              <circle cx="9" cy="7" r="0.6" fill="currentColor"/>
+            </svg>
+            Print PDF
+          </button>
+        )}
         {page.isoTag && <div className="iso-tag">{page.isoTag}</div>}
       </div>
 
@@ -207,7 +318,7 @@ export default function DetailPage({ onSearchOpen }) {
       <div className={bodyClass}>
         <div className="accent-bar" style={{ background: accentColor }} />
 
-        <div className="detail-content">
+        <div className="detail-content" ref={scrollRef}>
           <div className="breadcrumb">
             LAVA Office Manual Berlin 2026 &rsaquo; <span>{page.breadcrumb}</span>
           </div>

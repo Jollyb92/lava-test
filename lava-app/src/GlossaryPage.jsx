@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { glossaryData, COLORS } from './data.js';
 import { SearchButton } from './GlobalSearch.jsx';
+import { useScrollRestore } from './useScrollRestore.js';
 
 const GROUPS = [
   { label: 'Manual Family',      key: 'manualFamily' },
@@ -12,6 +13,7 @@ const GROUPS = [
 
 export default function GlossaryPage({ onSearchOpen }) {
   const navigate = useNavigate();
+  const scrollRef = useScrollRestore();
 
   return (
     <div className="detail-page fade-in">
@@ -29,7 +31,7 @@ export default function GlossaryPage({ onSearchOpen }) {
 
       <div className="detail-body">
         <div className="accent-bar" style={{ background: COLORS.center }} />
-        <div className="special-content">
+        <div className="special-content" ref={scrollRef}>
           <div className="breadcrumb">LAVA Office Manual Berlin 2026 &rsaquo; <span>Glossary</span></div>
           <div className="special-title">Glossary</div>
           <div className="special-meta">Abbreviations, terms, and German words used in the manual family.</div>

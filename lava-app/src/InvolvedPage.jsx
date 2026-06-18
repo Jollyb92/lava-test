@@ -1,9 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import { involvedPartiesData, COLORS } from './data.js';
 import { SearchButton } from './GlobalSearch.jsx';
+import { useScrollRestore } from './useScrollRestore.js';
 
 export default function InvolvedPage({ onSearchOpen }) {
   const navigate = useNavigate();
+  const scrollRef = useScrollRestore();
 
   return (
     <div className="detail-page fade-in">
@@ -21,7 +23,7 @@ export default function InvolvedPage({ onSearchOpen }) {
 
       <div className="detail-body">
         <div className="accent-bar" style={{ background: COLORS.center }} />
-        <div className="special-content">
+        <div className="special-content" ref={scrollRef}>
           <div className="breadcrumb">LAVA Office Manual Berlin 2026 &rsaquo; <span>Involved Parties</span></div>
           <div className="special-title">Involved Parties</div>
           <div className="special-meta">Who owns, drafts, and reviews each document in the manual family.</div>

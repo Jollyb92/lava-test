@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { tocData, detailPages, COLORS } from './data.js';
 import { SearchButton } from './GlobalSearch.jsx';
+import { useScrollRestore } from './useScrollRestore.js';
 
 const partColors = [
   COLORS.cultural,
@@ -15,6 +16,7 @@ const partColors = [
 
 export default function TocPage({ onSearchOpen }) {
   const navigate = useNavigate();
+  const scrollRef = useScrollRestore();
 
   return (
     <div className="detail-page fade-in">
@@ -31,7 +33,7 @@ export default function TocPage({ onSearchOpen }) {
 
       <div className="detail-body">
         <div className="accent-bar" style={{ background: COLORS.center }} />
-        <div className="toc-content">
+        <div className="toc-content" ref={scrollRef}>
           <div className="breadcrumb">LAVA Office Manual Berlin 2026 &rsaquo; <span>Table of Contents</span></div>
           <div className="toc-title">Table of Contents</div>
           <div className="toc-meta">Office Manual Berlin 2026 — v3.2 · Draft · Annual review</div>
