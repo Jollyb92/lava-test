@@ -92,7 +92,7 @@ function SubchapterLabel({ text }) {
   );
 }
 
-function ChaptersView({ chapters, accentColor, onLinksChange }) {
+function ChaptersView({ chapters, accentColor, onLinksChange, selectedSubch, onSubchapterSelect }) {
   const [openIndex, setOpenIndex] = useState(null);
 
   function toggle(i, ch) {
@@ -125,11 +125,27 @@ function ChaptersView({ chapters, accentColor, onLinksChange }) {
             </button>
             {isOpen && (
               <ul className="subchapter-pills">
-                {ch.subchapters.map((sub, j) => (
-                  <li key={j} className="subch-pill">
-                    <SubchapterLabel text={sub} />
-                  </li>
-                ))}
+                {ch.subchapters.map((sub, j) => {
+                  const isActive = selectedSubch?.ch === i && selectedSubch?.sub === j;
+                  return (
+                    <li key={j} className={`subch-pill subch-pill--btn${isActive ? ' subch-pill--active' : ''}`}>
+                      <button
+                        className="subch-pill-btn"
+                        style={isActive ? { borderColor: accentColor, background: `${accentColor}18` } : {}}
+                        onClick={() => onSubchapterSelect(i, j)}
+                      >
+                        <SubchapterLabel text={sub} />
+                        <span className="subch-pill-view" style={isActive ? { color: accentColor } : {}}>
+                          {isActive ? 'Close' : 'View'}
+                          <svg width="9" height="9" viewBox="0 0 9 9" fill="none">
+                            <path d={isActive ? 'M2 6L5 3L8 6' : 'M2 4L5 7L8 4'}
+                              stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </span>
+                      </button>
+                    </li>
+                  );
+                })}
               </ul>
             )}
           </li>
@@ -234,6 +250,7 @@ export default function DetailPage({ onSearchOpen }) {
   const [searchParams] = useSearchParams();
   const [checklistOpen, setChecklistOpen] = useState(false);
   const [selectedSlide, setSelectedSlide] = useState(null);
+  const [selectedSubch, setSelectedSubch] = useState(null);
   const [chapterLinks, setChapterLinks] = useState(null);
   const scrollRef = useScrollRestore();
 
@@ -242,6 +259,7 @@ export default function DetailPage({ onSearchOpen }) {
   useEffect(() => {
     setChapterLinks(null);
     setChecklistOpen(false);
+    setSelectedSubch(null);
     const slide = searchParams.get('slide');
     setSelectedSlide(slide !== null ? parseInt(slide, 10) : null);
   }, [id, searchParams]);
@@ -276,16 +294,18 @@ export default function DetailPage({ onSearchOpen }) {
   const accentColor = page.color || COLORS.center;
   const numColor    = accentColor;
   const slideOpen   = selectedSlide !== null;
-  const panelOpen   = checklistOpen || slideOpen;
+  const subchOpen   = selectedSubch !== null;
+  const panelOpen   = checklistOpen || slideOpen || subchOpen;
 
-  // Active links: per-topic > per-chapter > page-level
+  // Active links: per-topic > subchapter chapter > per-chapter > page-level
   const topicSpecific = selectedSlide !== null ? (page.topicLinks?.[selectedSlide] ?? null) : null;
-  const activeLinks = (topicSpecific?.length ? topicSpecific : null) || chapterLinks || page.links || null;
+  const subchLinks = subchOpen ? (page.chapters?.[selectedSubch.ch]?.links ?? null) : null;
+  const activeLinks = (topicSpecific?.length ? topicSpecific : null) || subchLinks || chapterLinks || page.links || null;
 
   const bodyClass = [
     'detail-body',
-    checklistOpen ? 'detail-body--panel' : '',
-    slideOpen     ? 'detail-body--slide' : '',
+    checklistOpen         ? 'detail-body--panel' : '',
+    slideOpen || subchOpen ? 'detail-body--slide' : '',
   ].filter(Boolean).join(' ');
 
   return (
@@ -327,7 +347,15 @@ export default function DetailPage({ onSearchOpen }) {
           {page.subtitle && <div className="detail-subtitle">{page.subtitle}</div>}
 
           {page.chapters ? (
-            <ChaptersView chapters={page.chapters} accentColor={accentColor} onLinksChange={setChapterLinks} />
+            <ChaptersView
+              chapters={page.chapters}
+              accentColor={accentColor}
+              onLinksChange={setChapterLinks}
+              selectedSubch={selectedSubch}
+              onSubchapterSelect={(ch, sub) => setSelectedSubch(prev =>
+                prev?.ch === ch && prev?.sub === sub ? null : { ch, sub }
+              )}
+            />
           ) : (
             <ul className="topics-list">
               {page.topics.map((topic, i) => (
@@ -408,6 +436,28 @@ export default function DetailPage({ onSearchOpen }) {
             onClose={() => setSelectedSlide(null)}
           />
         )}
+
+        {/* Slide panel for chapter subchapters */}
+        {subchOpen && page.chapters && (() => {
+          const ch = page.chapters[selectedSubch.ch];
+          return (
+            <SlidePanel
+              topic={ch.subchapters[selectedSubch.sub]}
+              topicIndex={selectedSubch.sub}
+              totalTopics={ch.subchapters.length}
+              pageTitle={ch.title}
+              pageId={id}
+              accentColor={accentColor}
+              slideData={ch.slideData?.[selectedSubch.sub] ?? null}
+              allSlideData={ch.slideData ?? null}
+              pdfPath={ch.pdfPath ?? undefined}
+              pagesPath={ch.pagesPath ?? undefined}
+              pagePad={ch.pagePad ?? undefined}
+              onSelect={(sub) => setSelectedSubch({ ch: selectedSubch.ch, sub })}
+              onClose={() => setSelectedSubch(null)}
+            />
+          );
+        })()}
       </div>
 
       <div className="page-footer">LAVA Berlin 2026 — Office Manual v4 — Draft</div>

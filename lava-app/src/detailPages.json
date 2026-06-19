@@ -159,19 +159,138 @@
     "subtitle": "PPM",
     "isoTag": "ISO 9001 §7.5 / §8.1",
     "breadcrumb": "Project Management Manual (PPM)",
-    "topics": [
-      "SOP Lifecycle — WIP → Review → Published → Obsolete",
-      "Server Governance — L:\\ structure, access, naming conventions",
-      "Templates Register — Standards, Bidding, Knowledge Mgmt, Planning, Reports, Coordination",
-      "Project Phases — Concept, Schematic, DD, Construction, Post-occupancy",
-      "File Management — naming conventions, version control, archiving"
-    ],
-    "topicLinks": [
-      [{"label": "E.3 SOPs", "id": "e3"}, {"label": "QEMS", "id": "qems"}],
-      [{"label": "E.4 Project Folder Structure", "id": "e4"}, {"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}],
-      [{"label": "E.5 Templates & Standards Register", "id": "e5"}, {"label": "Bidding Manual", "id": "bidding"}],
-      [{"label": "E.2 Project Management at a Glance", "id": "e2"}, {"label": "E.1 Design Manual at a Glance", "id": "e1"}],
-      [{"label": "E.4 Project Folder Structure", "id": "e4"}, {"label": "E.7 Document Control", "id": "e7"}]
+    "chapters": [
+      {
+        "title": "01 Introduction",
+        "pdfPath": "/MANUALS/PROJECT%20MANAGEMENT%20MANUAL/250919_Project%20Processes%20Manual_v0.1.pdf",
+        "subchapters": [
+          "1.1 Project Processes Overview",
+          "1.2 Templates Register",
+          "1.3 Project Definition",
+          "1.4 Types of Projects at LAVA",
+          "1.5 Core Processes & Kit of Parts",
+          "1.6 Project Process Groups",
+          "1.7 Project Competencies",
+          "1.8 Project Processes Framework"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 4 },
+          { "type": "pdf-page", "page": 6 },
+          { "type": "pdf-page", "page": 8 },
+          { "type": "pdf-page", "page": 12 },
+          { "type": "pdf-page", "page": 13 },
+          { "type": "pdf-page", "page": 15 },
+          { "type": "pdf-page", "page": 17 },
+          { "type": "pdf-page", "page": 18 }
+        ],
+        "links": [
+          { "label": "E.2 Project Management at a Glance", "id": "e2" },
+          { "label": "E.5 Templates & Standards Register", "id": "e5" }
+        ]
+      },
+      {
+        "title": "02 Before the Project",
+        "pdfPath": "/MANUALS/PROJECT%20MANAGEMENT%20MANUAL/250919_Project%20Processes%20Manual_v0.1.pdf",
+        "subchapters": [
+          "2.1 Bidding",
+          "2.1.1 Bidding Code",
+          "2.1.2 Technical Proposal",
+          "2.1.3 Company Information",
+          "2.1.4 Portfolio & Selected Projects",
+          "2.1.5 CVs",
+          "2.1.6 External Coordination",
+          "2.1.7 Confidentiality & NDAs",
+          "2.2 Project Checklist",
+          "2.2.2 Document Checklist",
+          "2.2.3 Process Checklist"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 23 },
+          { "type": "pdf-page", "page": 24 },
+          { "type": "pdf-page", "page": 26 },
+          { "type": "pdf-page", "page": 30 },
+          { "type": "pdf-page", "page": 31 },
+          { "type": "pdf-page", "page": 32 },
+          { "type": "pdf-page", "page": 33 },
+          { "type": "pdf-page", "page": 35 },
+          { "type": "pdf-page", "page": 36 },
+          { "type": "pdf-page", "page": 37 },
+          { "type": "pdf-page", "page": 38 }
+        ],
+        "links": [
+          { "label": "Bidding Manual", "id": "bidding" },
+          { "label": "E.5 Templates & Standards Register", "id": "e5" }
+        ]
+      },
+      {
+        "title": "03 During the Project",
+        "pdfPath": "/MANUALS/PROJECT%20MANAGEMENT%20MANUAL/250919_Project%20Processes%20Manual_v0.1.pdf",
+        "subchapters": [
+          "3.1 Knowledge Management",
+          "3.1.1 Project Code",
+          "3.1.2 Folder Structure",
+          "3.1.3 Digital Collaboration",
+          "3.1.4 File Naming Conventions",
+          "3.2 Planning",
+          "3.2.1 Project Leadership & Roles",
+          "3.2.2 Timeline",
+          "3.2.3 Resourcing",
+          "3.2.4 Deliverables List",
+          "3.2.5 Scope & Responsibilities",
+          "3.2.6 Project Directory",
+          "3.3 Execution",
+          "3.3.1 Internal Kick-Off",
+          "3.3.2 Tasks & Activities",
+          "3.3.3 Design Direction",
+          "3.3.4 Coordination",
+          "3.3.5 Reporting",
+          "3.3.6 Quality Control"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 44 },
+          { "type": "pdf-page", "page": 45 },
+          { "type": "pdf-page", "page": 46 },
+          { "type": "pdf-page", "page": 49 },
+          { "type": "pdf-page", "page": 61 },
+          { "type": "pdf-page", "page": 63 },
+          { "type": "pdf-page", "page": 67 },
+          { "type": "pdf-page", "page": 68 },
+          { "type": "pdf-page", "page": 73 },
+          { "type": "pdf-page", "page": 74 },
+          { "type": "pdf-page", "page": 75 },
+          { "type": "pdf-page", "page": 76 },
+          { "type": "pdf-page", "page": 77 },
+          { "type": "pdf-page", "page": 78 },
+          { "type": "pdf-page", "page": 80 },
+          { "type": "pdf-page", "page": 81 },
+          { "type": "pdf-page", "page": 86 },
+          { "type": "pdf-page", "page": 88 },
+          { "type": "pdf-page", "page": 93 }
+        ],
+        "links": [
+          { "label": "E.4 Project Folder Structure", "id": "e4" },
+          { "label": "E.5 Templates & Standards Register", "id": "e5" },
+          { "label": "QEMS", "id": "qems" }
+        ]
+      },
+      {
+        "title": "04 After the Project",
+        "pdfPath": "/MANUALS/PROJECT%20MANAGEMENT%20MANUAL/250919_Project%20Processes%20Manual_v0.1.pdf",
+        "subchapters": [
+          "4.1.1 Archiving",
+          "4.1.2 PR Content",
+          "4.1.3 Project Fact Sheet"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 100 },
+          { "type": "pdf-page", "page": 101 },
+          { "type": "pdf-page", "page": 102 }
+        ],
+        "links": [
+          { "label": "E.4 Project Folder Structure", "id": "e4" },
+          { "label": "E.7 Document Control", "id": "e7" }
+        ]
+      }
     ],
     "links": [
       { "label": "E.2 Project Management at a Glance", "id": "e2" },
@@ -186,19 +305,103 @@
     "title": "Work Safety Manual",
     "isoTag": "ISO 9001 §7.1.4 / 14001 §8.2 — Emergency Preparedness",
     "breadcrumb": "Work Safety Manual",
-    "topics": [
-      "Your Workspace — ergonomics, lighting, air quality, noise",
-      "Hazards & Prevention — trip hazards, electrical safety, fire prevention",
-      "Emergency Procedures — safety plans, first aid, fire extinguisher, escape routes",
-      "Wellbeing at Work — breaks, stress, mental health, pregnancy & breastfeeding",
-      "Contacts & Roles — safety representative, first aiders, fire safety assistants"
-    ],
-    "topicLinks": [
-      [{"label": "C.1 Berlin Office Rules", "id": "c1"}, {"label": "C.3 Spaces & Facilities", "id": "c3"}],
-      [{"label": "D.3 Environmental Preparedness", "id": "d3"}, {"label": "D.1 Work Safety", "id": "d1"}],
-      [{"label": "D.1 Work Safety", "id": "d1"}, {"label": "D.3 Environmental Preparedness", "id": "d3"}],
-      [{"label": "B.2 A Standard Day at LAVA", "id": "b2"}, {"label": "B.5 Performance & Growth", "id": "b5"}],
-      [{"label": "D.1 Work Safety", "id": "d1"}, {"label": "QEMS", "id": "qems"}]
+    "chapters": [
+      {
+        "title": "Your Workspace",
+        "pdfPath": "/MANUALS/SAFETY%20MANUAL/SAFETY%20MANUAL.pdf",
+        "subchapters": [
+          "YOUR SPACE — Set Up Your Environment",
+          "LIGHT — Ideal Sight Conditions",
+          "AIR — Ventilate",
+          "NOISE — Be Considerate"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 3 },
+          { "type": "pdf-page", "page": 4 },
+          { "type": "pdf-page", "page": 5 },
+          { "type": "pdf-page", "page": 6 }
+        ],
+        "links": [
+          { "label": "C.1 Berlin Office Rules", "id": "c1" },
+          { "label": "C.3 Spaces & Facilities", "id": "c3" }
+        ]
+      },
+      {
+        "title": "Hazards & Prevention",
+        "pdfPath": "/MANUALS/SAFETY%20MANUAL/SAFETY%20MANUAL.pdf",
+        "subchapters": [
+          "TRIP HAZARDS — Stay Safe, Keep the Environment Safe",
+          "ELECTRICITY — Electrical Devices"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 7 },
+          { "type": "pdf-page", "page": 8 }
+        ],
+        "links": [
+          { "label": "D.1 Work Safety", "id": "d1" },
+          { "label": "D.3 Environmental Preparedness", "id": "d3" }
+        ]
+      },
+      {
+        "title": "Emergency Procedures",
+        "pdfPath": "/MANUALS/SAFETY%20MANUAL/SAFETY%20MANUAL.pdf",
+        "subchapters": [
+          "SAFETY PLANS — Fluchtweg / Escape Route",
+          "FIRST AID — Help and Assist",
+          "FIRE EXTINGUISHER — Help and Assist",
+          "ESCAPE ROUTES — Help and Assist"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 9 },
+          { "type": "pdf-page", "page": 10 },
+          { "type": "pdf-page", "page": 11 },
+          { "type": "pdf-page", "page": 12 }
+        ],
+        "links": [
+          { "label": "D.1 Work Safety", "id": "d1" },
+          { "label": "D.3 Environmental Preparedness", "id": "d3" }
+        ]
+      },
+      {
+        "title": "Wellbeing at Work",
+        "pdfPath": "/MANUALS/SAFETY%20MANUAL/SAFETY%20MANUAL.pdf",
+        "subchapters": [
+          "YOUR HANDS — Care is Important",
+          "TAKING BREAKS — Self Care is Important",
+          "TALK ABOUT ISSUES — Stress Prevention",
+          "PREGNANT? BREASTFEEDING? — Protection & Support"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 13 },
+          { "type": "pdf-page", "page": 14 },
+          { "type": "pdf-page", "page": 15 },
+          { "type": "pdf-page", "page": 16 }
+        ],
+        "links": [
+          { "label": "B.2 A Standard Day at LAVA", "id": "b2" },
+          { "label": "B.5 Performance & Growth", "id": "b5" }
+        ]
+      },
+      {
+        "title": "Contacts & Roles",
+        "pdfPath": "/MANUALS/SAFETY%20MANUAL/SAFETY%20MANUAL.pdf",
+        "subchapters": [
+          "SAFETY REPRESENTATIVE — Sicherheitsbeauftragte",
+          "FIRST AID — Ersthelfer",
+          "FIRE PREVENTION — Brandhelfer",
+          "PROFESSIONAL SUPPORT — Sicherheitsfachkraft / Betriebsarzt"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 17 },
+          { "type": "pdf-page", "page": 18 },
+          { "type": "pdf-page", "page": 19 },
+          { "type": "pdf-page", "page": 20 }
+        ],
+        "links": [
+          { "label": "D.1 Work Safety", "id": "d1" },
+          { "label": "QEMS", "id": "qems" }
+        ]
+      }
     ],
     "links": [
       { "label": "D.1 Work Safety", "id": "d1" },

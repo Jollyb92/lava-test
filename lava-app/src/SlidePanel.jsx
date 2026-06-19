@@ -1,4 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { Document, Page, pdfjs } from 'react-pdf';
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+import 'react-pdf/dist/Page/TextLayer.css';
+
+pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
 
 function ChevronIcon({ dir }) {
   return (
@@ -1139,6 +1144,136 @@ function TableSlide({ data, accentColor }) {
   );
 }
 
+function PdfPageSlide({ data, allSlideData, topicIndex, onSelect, pdfPath, pagesPath, pagePad }) {
+  const scrollRef = useRef(null);
+  const progScroll = useRef(false);
+  const [pageSize, setPageSize] = useState({ w: 0, h: 0 });
+  const [zoom, setZoom] = useState(1);
+  const [pan, setPan] = useState({ x: 0, y: 0 });
+  const dragRef = useRef(false);
+  const lastPosRef = useRef({ x: 0, y: 0 });
+
+  const pages = (allSlideData ?? [data]).filter(s => s?.type === 'pdf-page');
+  const basePath = pagesPath ?? '/MANUALS/SAFETY%20MANUAL/safety-pages/';
+  const digits = pagePad ?? 2;
+
+  useEffect(() => {
+    const el = scrollRef.current?.children[topicIndex];
+    if (!el) return;
+    progScroll.current = true;
+    el.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    setTimeout(() => { progScroll.current = false; }, 600);
+  }, [topicIndex]);
+
+  // Reset pan when switching pages
+  useEffect(() => { setPan({ x: 0, y: 0 }); }, [topicIndex]);
+
+  function handleScroll() {
+    if (progScroll.current || zoom > 1) return;
+    const c = scrollRef.current;
+    if (!c) return;
+    const idx = Math.round(c.scrollLeft / c.clientWidth);
+    if (idx !== topicIndex) onSelect(idx);
+  }
+
+  function handlePointerDown(e) {
+    if (zoom <= 1) return;
+    e.currentTarget.setPointerCapture(e.pointerId);
+    lastPosRef.current = { x: e.clientX, y: e.clientY };
+    dragRef.current = true;
+  }
+  function handlePointerMove(e) {
+    if (!dragRef.current) return;
+    const dx = e.clientX - lastPosRef.current.x;
+    const dy = e.clientY - lastPosRef.current.y;
+    lastPosRef.current = { x: e.clientX, y: e.clientY };
+    setPan(p => ({ x: p.x + dx, y: p.y + dy }));
+  }
+  function handlePointerUp() { dragRef.current = false; }
+
+  function zoomIn()  { setZoom(z => Math.min(4, +(z + 0.25).toFixed(2))); }
+  function zoomOut() { setZoom(z => { const next = Math.max(0.5, +(z - 0.25).toFixed(2)); if (next <= 1) setPan({ x: 0, y: 0 }); return next; }); }
+  function zoomReset() { setZoom(1); setPan({ x: 0, y: 0 }); }
+
+  // Measure the wrap container so PDF page fills it without scrolling
+  const wrapRef = useRef(null);
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(([entry]) => {
+      const { width, height } = entry.contentRect;
+      setPageSize({ w: Math.floor(width - 64), h: Math.floor(height - 64) });
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  if (pdfPath) {
+    return (
+      <div ref={wrapRef} className="sp-pdf-outer">
+        <Document
+          file={pdfPath}
+          loading={<div className="sp-pdf-loading">Loading PDF…</div>}
+          error={<div className="sp-pdf-loading">Failed to load PDF.</div>}
+        >
+          <div className="sp-pdf-wrap" ref={scrollRef} onScroll={handleScroll}>
+            {pages.map((slide, i) => (
+              <div
+                key={i}
+                className="sp-pdf-page"
+                style={{ cursor: zoom > 1 ? 'grab' : 'default' }}
+                onPointerDown={handlePointerDown}
+                onPointerMove={handlePointerMove}
+                onPointerUp={handlePointerUp}
+                onPointerCancel={handlePointerUp}
+              >
+                <div style={{
+                  transform: `translate(${pan.x}px, ${pan.y}px)`,
+                  willChange: 'transform',
+                }}>
+                  {pageSize.h > 0 && (
+                    <Page
+                      pageNumber={slide.page}
+                      renderTextLayer={false}
+                      renderAnnotationLayer={false}
+                      height={Math.round(pageSize.h * zoom)}
+                    />
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Document>
+        <div className="sp-zoom-controls">
+          <button className="sp-zoom-btn" onClick={zoomOut}>−</button>
+          <span className="sp-zoom-label">{Math.round(zoom * 100)}%</span>
+          <button className="sp-zoom-btn" onClick={zoomIn}>+</button>
+          {zoom !== 1 && (
+            <button className="sp-zoom-btn sp-zoom-reset" onClick={zoomReset} title="Reset">↺</button>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="sp-pdf-wrap" ref={scrollRef} onScroll={handleScroll}>
+      {pages.map((slide, i) => {
+        const n = String(slide.page).padStart(digits, '0');
+        return (
+          <div key={i} className="sp-pdf-page">
+            <img
+              src={`${basePath}page-${n}.png`}
+              alt={`Page ${slide.page}`}
+              className="sp-pdf-canvas"
+            />
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function SlidePanel({
   topic,
   topicIndex,
@@ -1147,6 +1282,10 @@ export default function SlidePanel({
   pageId,
   accentColor,
   slideData,
+  allSlideData,
+  pdfPath,
+  pagesPath,
+  pagePad,
   onSelect,
   onClose,
 }) {
@@ -1212,6 +1351,8 @@ export default function SlidePanel({
           <TextSlide data={slideData} accentColor={accentColor} />
         ) : slideData?.type === 'eval-matrix' ? (
           <EvalMatrixSlide data={slideData} accentColor={accentColor} />
+        ) : slideData?.type === 'pdf-page' ? (
+          <PdfPageSlide data={slideData} allSlideData={allSlideData} topicIndex={topicIndex} onSelect={onSelect} pdfPath={pdfPath} pagesPath={pagesPath} pagePad={pagePad} />
         ) : (
           <div className="sp-placeholder">
             <div className="sp-placeholder-inner">
