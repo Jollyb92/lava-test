@@ -28,7 +28,7 @@ export const COLORS = {
 };
 
 export const READINESS = {
-  qems: 100,
+  qems: 80,
   ppm: 80,
   safety: 100,
   office: 65,

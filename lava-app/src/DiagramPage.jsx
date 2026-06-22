@@ -32,59 +32,6 @@ function connColor(toLayer) {
   return '#999';
 }
 
-// ── Progress ring helpers ──────────────────────────────────────────────────
-
-function polarToXY(deg, r) {
-  const rad = ((deg - 90) * Math.PI) / 180;
-  return [r * Math.cos(rad), r * Math.sin(rad)];
-}
-
-function arcSegment(r, startDeg, endDeg) {
-  const [x1, y1] = polarToXY(startDeg, r);
-  const [x2, y2] = polarToXY(endDeg, r);
-  const large = endDeg - startDeg > 180 ? 1 : 0;
-  return `M ${x1.toFixed(3)} ${y1.toFixed(3)} A ${r} ${r} 0 ${large} 1 ${x2.toFixed(3)} ${y2.toFixed(3)}`;
-}
-
-function progressColor(percent) {
-  if (percent >= 70) return '#22C55E';
-  if (percent >= 30) return '#3B82F6';
-  return '#9CA3AF';
-}
-
-function ProgressRing({ nodeRadius, percent, sw = 4 }) {
-  if (percent === undefined || percent === null) return null;
-
-  const r     = nodeRadius + (nodeRadius >= 50 ? 9 : 6);
-  const color = progressColor(percent);
-
-  const arcEl = percent >= 100
-    ? <circle r={r} fill="none" stroke={color} strokeWidth={sw} />
-    : percent > 0
-      ? <path d={arcSegment(r, 0, (percent / 100) * 360)} stroke={color} strokeWidth={sw} fill="none" strokeLinecap="round" />
-      : null;
-
-  return (
-    <>
-      <circle r={r} fill="none" stroke="#d8d8d8" strokeWidth={sw} opacity={0.5} />
-      {arcEl}
-      <text
-        x={0}
-        y={nodeRadius + (nodeRadius >= 50 ? 22 : 16)}
-        textAnchor="middle"
-        fill="#555"
-        fontSize={nodeRadius >= 50 ? 9 : 8}
-        fontWeight="700"
-        fontFamily="'Inter','Helvetica Neue',Arial,sans-serif"
-        letterSpacing="0.04em"
-        style={{ userSelect: 'none', pointerEvents: 'none' }}
-      >
-        {percent}%
-      </text>
-    </>
-  );
-}
-
 // ── Memoized connection line — only re-renders when opacity changes ─────────
 
 const ConnectionLine = memo(function ConnectionLine({ x1, y1, x2, y2, col, op, dash }) {
@@ -119,17 +66,9 @@ const NodeGroup = memo(function NodeGroup({ node, op, isHov, isSearchMatch, onMo
       onMouseLeave={onMouseLeave}
       onClick={onClick}
     >
-      {node.readiness !== undefined && (
-        <ProgressRing
-          nodeRadius={node.radius}
-          percent={node.readiness}
-          sw={node.layer === 2 ? 3 : 4}
-        />
-      )}
-
       {isHov && (
         <circle
-          r={node.radius + (node.readiness !== undefined ? 16 : 8)}
+          r={node.radius + 8}
           fill="none"
           stroke={node.color}
           strokeWidth={2.5}
@@ -140,7 +79,7 @@ const NodeGroup = memo(function NodeGroup({ node, op, isHov, isSearchMatch, onMo
 
       {isSearchMatch && !isHov && (
         <circle
-          r={node.radius + (node.readiness !== undefined ? 14 : 6)}
+          r={node.radius + 6}
           fill="none"
           stroke="#B3F400"
           strokeWidth={2.5}
