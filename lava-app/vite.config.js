@@ -6,7 +6,16 @@ import { fileURLToPath } from 'url'
 export default defineConfig(({ mode }) => ({
   plugins: [react(), viteSingleFile()],
   base: './',
-  server: { host: true },
+  server: {
+    host: true,
+    proxy: {
+      '/pdf-server': {
+        target: 'http://10.1.0.138:3000',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/pdf-server/, ''),
+      },
+    },
+  },
   resolve: {
     alias: {
       '#pdf-sources': fileURLToPath(
