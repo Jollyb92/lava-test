@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { Document, Page, pdfjs } from 'react-pdf';
-import { resolvePdfPath } from './pdfResolver.js';
+import { resolvePdfPath, resolveFallbackPath } from './pdfResolver.js';
 import { useScrollRestore } from './useScrollRestore.js';
 import { detailPages, COLORS } from './data.js';
 import OnboardingChecklist from './OnboardingChecklist.jsx';
@@ -13,6 +13,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
 function CoverPanel({ pdfPath }) {
   const wrapRef = useRef(null);
   const [height, setHeight] = useState(0);
+  const [useFallback, setUseFallback] = useState(false);
 
   useEffect(() => {
     const el = wrapRef.current;
@@ -22,9 +23,20 @@ function CoverPanel({ pdfPath }) {
     return () => ro.disconnect();
   }, []);
 
+  useEffect(() => { setUseFallback(false); }, [pdfPath]);
+
+  const src = useFallback ? resolveFallbackPath(pdfPath) : resolvePdfPath(pdfPath);
+
   return (
     <div ref={wrapRef} className="cover-panel">
-      <Document file={resolvePdfPath(pdfPath)} loading={null} error={null}>
+      <Document
+        file={src}
+        loading={null}
+        error={null}
+        onLoadError={() => {
+          if (!useFallback && resolveFallbackPath(pdfPath)) setUseFallback(true);
+        }}
+      >
         {height > 0 && (
           <Page
             pageNumber={1}

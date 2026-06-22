@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
-import { resolvePdfPath } from './pdfResolver.js';
+import { resolvePdfPath, resolveFallbackPath } from './pdfResolver.js';
 
 pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
 
@@ -1151,6 +1151,7 @@ function PdfPageSlide({ data, allSlideData, topicIndex, onSelect, pdfPath, pages
   const [pageSize, setPageSize] = useState({ w: 0, h: 0 });
   const [zoom, setZoom] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
+  const [useFallback, setUseFallback] = useState(false);
   const dragRef = useRef(false);
   const lastPosRef = useRef({ x: 0, y: 0 });
 
@@ -1210,12 +1211,16 @@ function PdfPageSlide({ data, allSlideData, topicIndex, onSelect, pdfPath, pages
   }, []);
 
   if (pdfPath) {
+    const pdfSrc = useFallback ? resolveFallbackPath(pdfPath) : resolvePdfPath(pdfPath);
     return (
       <div ref={wrapRef} className="sp-pdf-outer">
         <Document
-          file={resolvePdfPath(pdfPath)}
+          file={pdfSrc}
           loading={<div className="sp-pdf-loading">Loading PDF…</div>}
           error={<div className="sp-pdf-loading">Failed to load PDF.</div>}
+          onLoadError={() => {
+            if (!useFallback && resolveFallbackPath(pdfPath)) setUseFallback(true);
+          }}
         >
           <div className="sp-pdf-wrap" ref={scrollRef} onScroll={handleScroll}>
             {pages.map((slide, i) => (
