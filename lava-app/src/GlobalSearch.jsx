@@ -21,10 +21,10 @@ function buildIndex() {
     });
 
     // Chapter-based pages
-    page.chapters?.forEach(ch => {
-      entries.push({ ...base, text: ch.title, type: 'chapter', nav: pageNav(id) });
-      ch.subchapters?.forEach(sub => {
-        entries.push({ ...base, text: sub, type: 'subchapter', nav: pageNav(id) });
+    page.chapters?.forEach((ch, ci) => {
+      entries.push({ ...base, text: ch.title, type: 'chapter', nav: pageNav(id, undefined, ci) });
+      ch.subchapters?.forEach((sub, si) => {
+        entries.push({ ...base, text: sub, type: 'subchapter', nav: pageNav(id, undefined, ci, si) });
       });
     });
   }
@@ -42,12 +42,15 @@ function buildIndex() {
   return entries;
 }
 
-function pageNav(id, topicIndex) {
+function pageNav(id, topicIndex, chIndex, subIndex) {
   if (id === 'toc')      return '/toc';
   if (id === 'glossary') return '/glossary';
   if (id === 'involved') return '/involved';
   const base = `/detail/${id}`;
-  return topicIndex !== undefined ? `${base}?slide=${topicIndex}` : base;
+  if (topicIndex !== undefined) return `${base}?slide=${topicIndex}`;
+  if (chIndex !== undefined && subIndex !== undefined) return `${base}?chapter=${chIndex}&sub=${subIndex}`;
+  if (chIndex !== undefined) return `${base}?chapter=${chIndex}`;
+  return base;
 }
 
 const INDEX = buildIndex();

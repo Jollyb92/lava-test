@@ -124,12 +124,10 @@ function SubchapterLabel({ text }) {
   );
 }
 
-function ChaptersView({ chapters, accentColor, onLinksChange, selectedSubch, onSubchapterSelect }) {
-  const [openIndex, setOpenIndex] = useState(null);
-
+function ChaptersView({ chapters, accentColor, onLinksChange, selectedSubch, onSubchapterSelect, openIndex, onOpenChange }) {
   function toggle(i, ch) {
     const next = openIndex === i ? null : i;
-    setOpenIndex(next);
+    onOpenChange(next);
     onLinksChange(next !== null && ch.links?.length ? ch.links : null);
   }
 
@@ -138,7 +136,7 @@ function ChaptersView({ chapters, accentColor, onLinksChange, selectedSubch, onS
       {chapters.map((ch, i) => {
         const isOpen = openIndex === i;
         return (
-          <li key={i} className={`chapter-bubble${isOpen ? ' chapter-bubble--open' : ''}`}
+          <li key={i} data-chapter-index={i} className={`chapter-bubble${isOpen ? ' chapter-bubble--open' : ''}`}
             style={isOpen ? { borderColor: accentColor } : {}}>
             <button
               className="chapter-bubble-btn"
@@ -284,17 +282,36 @@ export default function DetailPage({ onSearchOpen }) {
   const [selectedSlide, setSelectedSlide] = useState(null);
   const [selectedSubch, setSelectedSubch] = useState(null);
   const [chapterLinks, setChapterLinks] = useState(null);
+  const [chapterOpen, setChapterOpen] = useState(null);
   const scrollRef = useScrollRestore();
 
-  // Reset per-item link overrides when navigating to a different page
-  // Also auto-open slide from ?slide= param (from global search)
+  // Reset state on navigation; handle ?slide=, ?chapter=, ?sub= from search
   useEffect(() => {
     setChapterLinks(null);
     setChecklistOpen(false);
-    setSelectedSubch(null);
-    const slide = searchParams.get('slide');
+    const slide   = searchParams.get('slide');
+    const chapter = searchParams.get('chapter');
+    const sub     = searchParams.get('sub');
     setSelectedSlide(slide !== null ? parseInt(slide, 10) : null);
+    if (chapter !== null) {
+      const chIdx = parseInt(chapter, 10);
+      setChapterOpen(chIdx);
+      setSelectedSubch(sub !== null ? { ch: chIdx, sub: parseInt(sub, 10) } : null);
+    } else {
+      setChapterOpen(null);
+      setSelectedSubch(null);
+    }
   }, [id, searchParams]);
+
+  // Scroll to the opened chapter after render
+  useEffect(() => {
+    if (chapterOpen === null) return;
+    const frame = requestAnimationFrame(() => {
+      const el = scrollRef.current?.querySelector(`[data-chapter-index="${chapterOpen}"]`);
+      if (el) el.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [chapterOpen]);
 
   const page = detailPages[id];
 
@@ -384,9 +401,14 @@ export default function DetailPage({ onSearchOpen }) {
               accentColor={accentColor}
               onLinksChange={setChapterLinks}
               selectedSubch={selectedSubch}
-              onSubchapterSelect={(ch, sub) => setSelectedSubch(prev =>
-                prev?.ch === ch && prev?.sub === sub ? null : { ch, sub }
-              )}
+              openIndex={chapterOpen}
+              onOpenChange={setChapterOpen}
+              onSubchapterSelect={(ch, sub) => {
+                setChapterOpen(ch);
+                setSelectedSubch(prev =>
+                  prev?.ch === ch && prev?.sub === sub ? null : { ch, sub }
+                );
+              }}
             />
           ) : (
             <ul className="topics-list">
