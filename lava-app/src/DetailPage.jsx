@@ -1,10 +1,42 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { Document, Page, pdfjs } from 'react-pdf';
+import { resolvePdfPath } from './pdfResolver.js';
 import { useScrollRestore } from './useScrollRestore.js';
 import { detailPages, COLORS } from './data.js';
 import OnboardingChecklist from './OnboardingChecklist.jsx';
 import SlidePanel from './SlidePanel.jsx';
 import { SearchButton } from './GlobalSearch.jsx';
+
+pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
+
+function CoverPanel({ pdfPath }) {
+  const wrapRef = useRef(null);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(([e]) => setHeight(Math.floor(e.contentRect.height - 64)));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  return (
+    <div ref={wrapRef} className="cover-panel">
+      <Document file={resolvePdfPath(pdfPath)} loading={null} error={null}>
+        {height > 0 && (
+          <Page
+            pageNumber={1}
+            renderTextLayer={false}
+            renderAnnotationLayer={false}
+            height={height}
+          />
+        )}
+      </Document>
+    </div>
+  );
+}
 
 const CHECKLIST_TRIGGER = 'Digital Onboarding Checklist';
 
@@ -416,6 +448,11 @@ export default function DetailPage({ onSearchOpen }) {
             <LinkedNav links={activeLinks} navigate={navigate} />
           )}
         </div>
+
+        {/* Cover page shown when no panel is open */}
+        {!panelOpen && page.coverPdfPath && (
+          <CoverPanel pdfPath={page.coverPdfPath} />
+        )}
 
         {/* Checklist panel (B.1) */}
         {checklistOpen && (

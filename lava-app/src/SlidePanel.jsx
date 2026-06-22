@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
+import { resolvePdfPath } from './pdfResolver.js';
 
 pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
 
@@ -1212,7 +1213,7 @@ function PdfPageSlide({ data, allSlideData, topicIndex, onSelect, pdfPath, pages
     return (
       <div ref={wrapRef} className="sp-pdf-outer">
         <Document
-          file={pdfPath}
+          file={resolvePdfPath(pdfPath)}
           loading={<div className="sp-pdf-loading">Loading PDF…</div>}
           error={<div className="sp-pdf-loading">Failed to load PDF.</div>}
         >

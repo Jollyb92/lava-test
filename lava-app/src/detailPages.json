@@ -159,6 +159,7 @@
     "subtitle": "PPM",
     "isoTag": "ISO 9001 §7.5 / §8.1",
     "breadcrumb": "Project Management Manual (PPM)",
+    "coverPdfPath": "/MANUALS/PROJECT%20MANAGEMENT%20MANUAL/250919_Project%20Processes%20Manual_v0.1.pdf",
     "chapters": [
       {
         "title": "01 Introduction",
@@ -305,6 +306,7 @@
     "title": "Work Safety Manual",
     "isoTag": "ISO 9001 §7.1.4 / 14001 §8.2 — Emergency Preparedness",
     "breadcrumb": "Work Safety Manual",
+    "coverPdfPath": "/MANUALS/SAFETY%20MANUAL/SAFETY%20MANUAL.pdf",
     "chapters": [
       {
         "title": "Your Workspace",
