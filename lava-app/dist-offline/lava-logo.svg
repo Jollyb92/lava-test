@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 260" fill="none">
+  <!-- L -->
+  <rect x="0" y="0" width="60" height="260" fill="#00FF00"/>
+  <rect x="0" y="202" width="190" height="58" fill="#00FF00"/>
+  <!-- A (first) -->
+  <!-- left stroke: diagonal bar -->
+  <polygon points="250,0 310,0 380,260 320,260" fill="#00FF00"/>
+  <!-- right stroke: diagonal bar -->
+  <polygon points="370,0 430,0 500,260 440,260" fill="#00FF00"/>
+  <!-- V -->
+  <polygon points="520,0 580,0 650,202 590,202" fill="#00FF00"/>
+  <polygon points="640,0 700,0 650,202 590,202" fill="#00FF00"/>
+  <!-- A (second) -->
+  <polygon points="720,0 780,0 850,260 790,260" fill="#00FF00"/>
+  <polygon points="840,0 900,0 920,260 860,260" fill="#00FF00"/>
+</svg>
