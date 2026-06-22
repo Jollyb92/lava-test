@@ -2,6 +2,7 @@ import { useState, useRef, useCallback, useMemo, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { nodes, connections, COLORS } from './data.js';
 import { SearchButton } from './GlobalSearch.jsx';
+import StatusTable from './StatusTable.jsx';
 
 const VW = 1200;
 const VH = 780;
@@ -193,9 +194,10 @@ const NodeGroup = memo(function NodeGroup({ node, op, isHov, isSearchMatch, onMo
 
 export default function DiagramPage({ onSearchOpen }) {
   const navigate = useNavigate();
-  const [hovered, setHovered]   = useState(null);
-  const [tooltip, setTooltip]   = useState({ visible: false, x: 0, y: 0, text: '' });
-  const [search, setSearch]     = useState('');
+  const [hovered, setHovered]       = useState(null);
+  const [tooltip, setTooltip]       = useState({ visible: false, x: 0, y: 0, text: '' });
+  const [search, setSearch]         = useState('');
+  const [statusOpen, setStatusOpen] = useState(false);
   const svgRef = useRef(null);
 
   const matchSet = useMemo(() => {
@@ -257,6 +259,8 @@ export default function DiagramPage({ onSearchOpen }) {
         </div>
       </div>
 
+      <StatusTable open={statusOpen} onClose={() => setStatusOpen(false)} />
+
       <div className="diagram-canvas-wrap" onMouseMove={handleMouseMove}>
         <svg
           ref={svgRef}
@@ -317,6 +321,15 @@ export default function DiagramPage({ onSearchOpen }) {
             {tooltip.text}
           </div>
         )}
+
+        <button className="st-open-btn" onClick={() => setStatusOpen(true)}>
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+            <rect x="1" y="1" width="11" height="2.5" rx="0.5" fill="currentColor" opacity="0.7"/>
+            <rect x="1" y="5.25" width="11" height="2.5" rx="0.5" fill="currentColor" opacity="0.5"/>
+            <rect x="1" y="9.5" width="7" height="2.5" rx="0.5" fill="currentColor" opacity="0.35"/>
+          </svg>
+          Status Overview
+        </button>
       </div>
 
       <div className="page-footer">LAVA Berlin 2026 — Office Manual v4 — Draft</div>

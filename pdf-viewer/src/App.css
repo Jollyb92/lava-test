@@ -1,0 +1,80 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #1a1a1a;
+  color: #eee;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  outline: none;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: #111;
+  border-bottom: 1px solid #333;
+  flex-shrink: 0;
+}
+
+.file-btn {
+  background: #2a7fff;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  user-select: none;
+}
+.file-btn:hover { background: #1a6ee0; }
+
+button {
+  background: #2c2c2c;
+  color: #eee;
+  border: 1px solid #444;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+button:hover:not(:disabled) { background: #3a3a3a; }
+button:disabled { opacity: 0.35; cursor: default; }
+
+.page-info {
+  font-size: 14px;
+  color: #aaa;
+  min-width: 80px;
+  text-align: center;
+}
+
+.viewer {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px;
+  background: #222;
+}
+
+.react-pdf__Page {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+}
+
+.msg {
+  color: #888;
+  font-size: 16px;
+  margin: auto;
+  align-self: center;
+}
+.msg.error { color: #f87171; }

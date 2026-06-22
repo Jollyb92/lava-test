@@ -3020,3 +3020,267 @@ a { color: inherit; text-decoration: none; }
   padding: 4px 0;
   flex-shrink: 0;
 }
+
+/* ── Status Table ─────────────────────────────────────────────────────────── */
+.st-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.15s ease-out both;
+}
+
+.st-sheet {
+  width: min(960px, calc(100vw - 40px));
+  height: min(85vh, 820px);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.22);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.st-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #eee;
+  flex-shrink: 0;
+}
+
+.st-title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+
+.st-subtitle {
+  font-size: 12px;
+  color: #9CA3AF;
+  margin-left: 4px;
+}
+
+.st-close {
+  margin-left: auto;
+  background: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #666;
+  transition: background 0.15s;
+}
+.st-close:hover { background: #f5f5f5; }
+
+.st-export-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 13px;
+  background: #1a1a1a;
+  color: #B3F400;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.st-export-btn:hover { background: #333; }
+
+.st-scroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.st-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.st-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #f9fafb;
+}
+
+.st-table th {
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6b7280;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.st-th-name    { width: 26%; }
+.st-th-resp    { width: 20%; }
+.st-th-prog    { width: 16%; }
+.st-th-comment { width: 38%; }
+
+.st-cell-comment {
+  padding: 8px 20px;
+  vertical-align: middle;
+  color: #6b7280;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* Manual rows */
+.st-row-manual {
+  background: #fafafa;
+  cursor: pointer;
+  border-top: 2px solid #e5e7eb;
+  transition: background 0.1s;
+}
+.st-row-manual:hover { background: #f3f4f6; }
+
+.st-cell-manual {
+  padding: 11px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.st-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.st-manual-name {
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 13px;
+}
+
+.st-chevron {
+  font-size: 11px;
+  color: #9CA3AF;
+  margin-left: 4px;
+}
+
+/* Section rows */
+.st-row-section {
+  background: #fff;
+  border-top: 1px solid #f3f4f6;
+  transition: background 0.1s;
+}
+.st-row-section:hover { background: #fafafa; }
+
+.st-cell-section {
+  padding: 8px 20px 8px 36px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #374151;
+  font-size: 12.5px;
+}
+
+.st-section-indent {
+  width: 3px;
+  height: 14px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
+.st-cell-resp {
+  padding: 8px 20px;
+  color: #374151;
+  vertical-align: middle;
+}
+
+.st-cell-prog {
+  padding: 8px 20px;
+  vertical-align: middle;
+}
+
+.st-dim {
+  color: #9CA3AF;
+  font-size: 12px;
+}
+
+/* Progress bar */
+.st-prog {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.st-prog-track {
+  flex: 1;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+  max-width: 100px;
+}
+
+.st-prog-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.st-prog-label {
+  font-size: 12px;
+  font-weight: 700;
+  min-width: 32px;
+  text-align: right;
+}
+
+.st-footer {
+  padding: 10px 24px;
+  font-size: 11px;
+  color: #9CA3AF;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-top: 1px solid #eee;
+  flex-shrink: 0;
+}
+
+/* Button on diagram canvas */
+.st-open-btn {
+  position: absolute;
+  left: 20px;
+  bottom: 16px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #444;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.15s, box-shadow 0.15s;
+  z-index: 5;
+}
+.st-open-btn:hover {
+  background: #f5f5f5;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.13);
+}

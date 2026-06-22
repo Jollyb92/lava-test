@@ -29,15 +29,15 @@ export const COLORS = {
 
 export const READINESS = {
   qems: 100,
-  ppm: 100,
+  ppm: 80,
   safety: 100,
-  office: 100,
+  office: 65,
   cultural: 20,
-  design: 60,
-  bidding: 80,
+  design: 30,
+  bidding: 50,
   communication: 40,
   guides: 20,
-  live: 10,
+  live: 60,
 };
 
 // Diagram node definitions
