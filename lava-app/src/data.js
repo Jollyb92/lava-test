@@ -20,6 +20,7 @@ export const COLORS = {
   safetySub: '#C07878',
   guides: '#3D3D3D',
   live: '#1B3B6B',
+  officeSub: '#C8F040',
   white: '#FFFFFF',
   dark: '#1a1a1a',
   isoGreen: '#00FF00',
@@ -55,6 +56,16 @@ export const nodes = [
     clickTarget: '/toc',
     layer: 0,
   },
+
+  // ── Office Manual sub-nodes (Parts A–G) r=135 from center (600,390) ────────
+  // Distributed at 15°,50°,120°,160°,200°,305°,340° — avoids Design(270°) & WorkSafety(90°) zones
+  { id: 'off-a', label: 'Who We\nAre',        color: COLORS.officeSub, textColor: COLORS.dark, radius: 28, x: 732, y: 472, layer: 2, parent: 'center', clickTarget: '/toc#part-a', connectionType: 'dotted' },
+  { id: 'off-b', label: 'Working\nHere',      color: COLORS.officeSub, textColor: COLORS.dark, radius: 28, x: 655, y: 500, layer: 2, parent: 'center', clickTarget: '/toc#part-b', connectionType: 'dotted' },
+  { id: 'off-c', label: 'The\nOffice',        color: COLORS.officeSub, textColor: COLORS.dark, radius: 28, x: 533, y: 507, layer: 2, parent: 'center', clickTarget: '/toc#part-c', connectionType: 'dotted' },
+  { id: 'off-d', label: 'Safety &\nEnviron.', color: COLORS.officeSub, textColor: COLORS.dark, radius: 28, x: 470, y: 397, layer: 2, parent: 'center', clickTarget: '/toc#part-d', connectionType: 'dotted' },
+  { id: 'off-e', label: 'How We\nWork',       color: COLORS.officeSub, textColor: COLORS.dark, radius: 28, x: 535, y: 277, layer: 2, parent: 'center', clickTarget: '/toc#part-e', connectionType: 'dotted' },
+  { id: 'off-f', label: 'Connect',            color: COLORS.officeSub, textColor: COLORS.dark, radius: 28, x: 677, y: 279, layer: 2, parent: 'center', clickTarget: '/toc#part-f', connectionType: 'dotted' },
+  { id: 'off-g', label: 'Knowledge\n& Growth', color: COLORS.officeSub, textColor: COLORS.dark, radius: 28, x: 733, y: 367, layer: 2, parent: 'center', clickTarget: '/toc#part-g', connectionType: 'dotted' },
 
   // ── Tier 1: Sibling Manuals (solid lines to center) ─────────────────────
   {
@@ -200,12 +211,11 @@ export const nodes = [
     connectionType: 'dashed',
   },
 
-  // ── PPM sub-nodes — r=110, angles 295°→75° ───────────────────────────────
-  { id: 'ppm-sop',       label: 'SOP\nLifecycle',      color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 876, y: 165, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm', connectionType: 'dotted' },
-  { id: 'ppm-server',    label: 'Server\nGovernance',  color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 925, y: 210, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm', connectionType: 'dotted' },
-  { id: 'ppm-templates', label: 'Templates\nRegister', color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 940, y: 275, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm', connectionType: 'dotted' },
-  { id: 'ppm-phases',    label: 'Project\nPhases',     color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 914, y: 336, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm', connectionType: 'dotted' },
-  { id: 'ppm-files',     label: 'File\nManagement',    color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 858, y: 371, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm', connectionType: 'dotted' },
+  // ── PPM sub-nodes — 4 chapters, r=110, angles 295°→75° ──────────────────
+  { id: 'ppm-intro',    label: 'Introduction',          color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 877, y: 165, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm', connectionType: 'dotted' },
+  { id: 'ppm-before',   label: 'Before the\nProject',  color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 935, y: 231, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm', connectionType: 'dotted' },
+  { id: 'ppm-during',   label: 'During the\nProject',  color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 927, y: 317, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm', connectionType: 'dotted' },
+  { id: 'ppm-after',    label: 'After the\nProject',   color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 859, y: 371, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm', connectionType: 'dotted' },
 
   // ── Work Safety sub-nodes — r=110, fan below WorkSafety(600,585) ─────────
   { id: 'ws-roles',     label: 'Contacts\n& Roles',         color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 703, y: 623, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
@@ -217,6 +227,14 @@ export const nodes = [
 
 // Connections: [fromId, toId]
 export const connections = [
+  // Office Manual sub-nodes (dotted)
+  ['center', 'off-a'],
+  ['center', 'off-b'],
+  ['center', 'off-c'],
+  ['center', 'off-d'],
+  ['center', 'off-e'],
+  ['center', 'off-f'],
+  ['center', 'off-g'],
   // Center to Tier 1 (solid)
   ['center', 'cultural'],
   ['center', 'design'],
@@ -252,11 +270,10 @@ export const connections = [
   ['center', 'guides'],
   ['center', 'live'],
   // PPM sub-nodes (dotted)
-  ['ppm', 'ppm-templates'],
-  ['ppm', 'ppm-phases'],
-  ['ppm', 'ppm-files'],
-  ['ppm', 'ppm-server'],
-  ['ppm', 'ppm-sop'],
+  ['ppm', 'ppm-intro'],
+  ['ppm', 'ppm-before'],
+  ['ppm', 'ppm-during'],
+  ['ppm', 'ppm-after'],
   // Work Safety sub-nodes (dotted)
   ['worksafety', 'ws-roles'],
   ['worksafety', 'ws-emergency'],

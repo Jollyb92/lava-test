@@ -1,4 +1,5 @@
-import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { tocData, detailPages, COLORS } from './data.js';
 import { SearchButton } from './GlobalSearch.jsx';
 import { useScrollRestore } from './useScrollRestore.js';
@@ -16,7 +17,15 @@ const partColors = [
 
 export default function TocPage({ onSearchOpen }) {
   const navigate = useNavigate();
+  const location = useLocation();
   const scrollRef = useScrollRestore();
+
+  useEffect(() => {
+    const hash = location.hash.slice(1);
+    if (!hash || !scrollRef.current) return;
+    const target = scrollRef.current.querySelector(`#${hash}`);
+    if (target) target.scrollIntoView({ block: 'start' });
+  }, [location.hash]);
 
   return (
     <div className="detail-page fade-in">
@@ -38,8 +47,10 @@ export default function TocPage({ onSearchOpen }) {
           <div className="toc-title">Table of Contents</div>
           <div className="toc-meta">Office Manual Berlin 2026 — v3.2 · Draft · Annual review</div>
 
-          {tocData.parts.map((part, pi) => (
-            <div className="toc-part" key={pi}>
+          {tocData.parts.map((part, pi) => {
+            const partLetter = part.label.match(/^Part ([A-G])/)?.[1]?.toLowerCase();
+            return (
+            <div className="toc-part" key={pi} id={partLetter ? `part-${partLetter}` : undefined}>
               <div className="toc-part-label">{part.label}</div>
               {part.sections.length === 0 && (
                 <div style={{ fontSize: 13, color: '#bbb', paddingLeft: 10, paddingBottom: 4 }}>
@@ -65,7 +76,8 @@ export default function TocPage({ onSearchOpen }) {
                 );
               })}
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
