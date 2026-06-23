@@ -824,6 +824,25 @@ a { color: inherit; text-decoration: none; }
   border-color: #bbb;
 }
 
+.server-link-copied {
+  margin-left: 6px;
+  padding: 2px 7px;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  animation: fade-in-out 1.2s ease forwards;
+}
+
+@keyframes fade-in-out {
+  0%   { opacity: 0; transform: translateY(-3px); }
+  15%  { opacity: 1; transform: translateY(0); }
+  75%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 .linked-sources {
   font-style: italic;
   color: var(--linked-green);
