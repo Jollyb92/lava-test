@@ -121,31 +121,31 @@ export const nodes = [
   },
 
   // ── Cultural sub-nodes — r=110, angles 175°→274° ─────────────────────────
-  { id: 'cult-history',   label: 'LAVA Story\n& History',        color: COLORS.culturalSub, textColor: COLORS.dark, radius: 28, x: 260, y: 275, layer: 2, parent: 'cultural', clickTarget: '/detail/cultural', connectionType: 'dotted' },
-  { id: 'cult-knowledge', label: 'Knowledge\nSharing',           color: COLORS.culturalSub, textColor: COLORS.dark, radius: 28, x: 273, y: 213, layer: 2, parent: 'cultural', clickTarget: '/detail/cultural', connectionType: 'dotted' },
-  { id: 'cult-ethics',    label: 'Team Ethics\n& Ground\nRules', color: COLORS.culturalSub, textColor: COLORS.dark, radius: 28, x: 317, y: 169, layer: 2, parent: 'cultural', clickTarget: '/detail/cultural', connectionType: 'dotted' },
-  { id: 'cult-studio',    label: 'Studio\nCulture\n& Rituals',   color: COLORS.culturalSub, textColor: COLORS.dark, radius: 28, x: 378, y: 155, layer: 2, parent: 'cultural', clickTarget: '/detail/cultural', connectionType: 'dotted' },
+  { id: 'cult-history',   label: 'LAVA Story\n& History',        color: COLORS.culturalSub, textColor: COLORS.dark, radius: 28, x: 260, y: 275, layer: 2, parent: 'cultural', clickTarget: '/detail/cultural?slide=0', connectionType: 'dotted' },
+  { id: 'cult-knowledge', label: 'Knowledge\nSharing',           color: COLORS.culturalSub, textColor: COLORS.dark, radius: 28, x: 273, y: 213, layer: 2, parent: 'cultural', clickTarget: '/detail/cultural?slide=1', connectionType: 'dotted' },
+  { id: 'cult-ethics',    label: 'Team Ethics\n& Ground\nRules', color: COLORS.culturalSub, textColor: COLORS.dark, radius: 28, x: 317, y: 169, layer: 2, parent: 'cultural', clickTarget: '/detail/cultural?slide=2', connectionType: 'dotted' },
+  { id: 'cult-studio',    label: 'Studio\nCulture\n& Rituals',   color: COLORS.culturalSub, textColor: COLORS.dark, radius: 28, x: 378, y: 155, layer: 2, parent: 'cultural', clickTarget: '/detail/cultural?slide=3', connectionType: 'dotted' },
 
   // ── Design sub-nodes — r=110, angles 214°→346° ───────────────────────────
-  { id: 'des-workflow',    label: 'Design\nWorkflow',               color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 509, y: 133, layer: 2, parent: 'design', clickTarget: '/detail/design', connectionType: 'dotted' },
-  { id: 'des-philosophy',  label: 'Design\nPhilosophy\nin Practice',color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 557, y: 94,  layer: 2, parent: 'design', clickTarget: '/detail/design', connectionType: 'dotted' },
-  { id: 'des-templates',   label: 'Templates\n& Standards',        color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 619, y: 87,  layer: 2, parent: 'design', clickTarget: '/detail/design', connectionType: 'dotted' },
-  { id: 'des-graphic',     label: 'Graphic\nApproach',             color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 675, y: 115, layer: 2, parent: 'design', clickTarget: '/detail/design', connectionType: 'dotted' },
-  { id: 'des-competition', label: 'Competition\nGuidelines',       color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 707, y: 168, layer: 2, parent: 'design', clickTarget: '/detail/design', connectionType: 'dotted' },
+  { id: 'des-workflow',    label: 'Design\nWorkflow',               color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 509, y: 133, layer: 2, parent: 'design', clickTarget: '/detail/design?slide=0', connectionType: 'dotted' },
+  { id: 'des-philosophy',  label: 'Design\nPhilosophy\nin Practice',color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 557, y: 94,  layer: 2, parent: 'design', clickTarget: '/detail/design?slide=1', connectionType: 'dotted' },
+  { id: 'des-templates',   label: 'Templates\n& Standards',        color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 619, y: 87,  layer: 2, parent: 'design', clickTarget: '/detail/design?slide=2', connectionType: 'dotted' },
+  { id: 'des-graphic',     label: 'Graphic\nApproach',             color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 675, y: 115, layer: 2, parent: 'design', clickTarget: '/detail/design?slide=3', connectionType: 'dotted' },
+  { id: 'des-competition', label: 'Competition\nGuidelines',       color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 707, y: 168, layer: 2, parent: 'design', clickTarget: '/detail/design?slide=4', connectionType: 'dotted' },
 
   // ── Bidding sub-nodes — r=110, angles 350°→86° ───────────────────────────
-  { id: 'bid-proposal',  label: 'Proposal\nProcess',       color: COLORS.biddingSub, textColor: COLORS.dark, radius: 28, x: 948, y: 456, layer: 2, parent: 'bidding', clickTarget: '/detail/bidding', connectionType: 'dotted' },
-  { id: 'bid-templates', label: 'Templates\n& Components', color: COLORS.biddingSub, textColor: COLORS.dark, radius: 28, x: 942, y: 516, layer: 2, parent: 'bidding', clickTarget: '/detail/bidding', connectionType: 'dotted' },
-  { id: 'bid-scope',     label: 'Scope\n& Fee',            color: COLORS.biddingSub, textColor: COLORS.dark, radius: 28, x: 905, y: 564, layer: 2, parent: 'bidding', clickTarget: '/detail/bidding', connectionType: 'dotted' },
-  { id: 'bid-client',    label: 'Client\nEngagement',      color: COLORS.biddingSub, textColor: COLORS.dark, radius: 28, x: 848, y: 585, layer: 2, parent: 'bidding', clickTarget: '/detail/bidding', connectionType: 'dotted' },
+  { id: 'bid-proposal',  label: 'Proposal\nProcess',       color: COLORS.biddingSub, textColor: COLORS.dark, radius: 28, x: 948, y: 456, layer: 2, parent: 'bidding', clickTarget: '/detail/bidding?slide=0', connectionType: 'dotted' },
+  { id: 'bid-templates', label: 'Templates\n& Components', color: COLORS.biddingSub, textColor: COLORS.dark, radius: 28, x: 942, y: 516, layer: 2, parent: 'bidding', clickTarget: '/detail/bidding?slide=1', connectionType: 'dotted' },
+  { id: 'bid-scope',     label: 'Scope\n& Fee',            color: COLORS.biddingSub, textColor: COLORS.dark, radius: 28, x: 905, y: 564, layer: 2, parent: 'bidding', clickTarget: '/detail/bidding?slide=2', connectionType: 'dotted' },
+  { id: 'bid-client',    label: 'Client\nEngagement',      color: COLORS.biddingSub, textColor: COLORS.dark, radius: 28, x: 848, y: 585, layer: 2, parent: 'bidding', clickTarget: '/detail/bidding?slide=3', connectionType: 'dotted' },
 
   // ── Communication sub-nodes — r=110, angles 100°→260° ────────────────────
-  { id: 'comm-document', label: 'Style\n& Hub',      color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 296, y: 588, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
-  { id: 'comm-external', label: 'LAVA\nLocations',   color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 241, y: 562, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
-  { id: 'comm-layout',   label: 'Themes',            color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 209, y: 510, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
-  { id: 'comm-colour',   label: 'LAVA\nNarrative',   color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 209, y: 450, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
-  { id: 'comm-graphic',  label: 'Font &\nColor',     color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 241, y: 398, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
-  { id: 'comm-fonts',    label: 'Logo',              color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 296, y: 372, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
+  { id: 'comm-document', label: 'Style\n& Hub',      color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 296, y: 588, layer: 2, parent: 'communication', clickTarget: '/detail/communication?chapter=5', connectionType: 'dotted' },
+  { id: 'comm-external', label: 'LAVA\nLocations',   color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 241, y: 562, layer: 2, parent: 'communication', clickTarget: '/detail/communication?chapter=4', connectionType: 'dotted' },
+  { id: 'comm-layout',   label: 'Themes',            color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 209, y: 510, layer: 2, parent: 'communication', clickTarget: '/detail/communication?chapter=3', connectionType: 'dotted' },
+  { id: 'comm-colour',   label: 'LAVA\nNarrative',   color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 209, y: 450, layer: 2, parent: 'communication', clickTarget: '/detail/communication?chapter=2', connectionType: 'dotted' },
+  { id: 'comm-graphic',  label: 'Font &\nColor',     color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 241, y: 398, layer: 2, parent: 'communication', clickTarget: '/detail/communication?chapter=1', connectionType: 'dotted' },
+  { id: 'comm-fonts',    label: 'Logo',              color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 296, y: 372, layer: 2, parent: 'communication', clickTarget: '/detail/communication?chapter=0', connectionType: 'dotted' },
 
   // ── Tier 3: External Systems ─────────────────────────────────────────────
   {
@@ -215,10 +215,10 @@ export const nodes = [
   },
 
   // ── PPM sub-nodes — 4 chapters, r=110, angles 295°→75° ──────────────────
-  { id: 'ppm-intro',    label: 'Introduction',          color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 877, y: 165, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm', connectionType: 'dotted' },
-  { id: 'ppm-before',   label: 'Before the\nProject',  color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 935, y: 231, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm', connectionType: 'dotted' },
-  { id: 'ppm-during',   label: 'During the\nProject',  color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 927, y: 317, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm', connectionType: 'dotted' },
-  { id: 'ppm-after',    label: 'After the\nProject',   color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 859, y: 371, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm', connectionType: 'dotted' },
+  { id: 'ppm-intro',    label: 'Introduction',          color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 877, y: 165, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm?chapter=0', connectionType: 'dotted' },
+  { id: 'ppm-before',   label: 'Before the\nProject',  color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 935, y: 231, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm?chapter=1', connectionType: 'dotted' },
+  { id: 'ppm-during',   label: 'During the\nProject',  color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 927, y: 317, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm?chapter=2', connectionType: 'dotted' },
+  { id: 'ppm-after',    label: 'After the\nProject',   color: COLORS.ppmSub, textColor: COLORS.dark, radius: 28, x: 859, y: 371, layer: 2, parent: 'ppm', clickTarget: '/detail/ppm?chapter=3', connectionType: 'dotted' },
 
   // ── LAVA Zero — between Communication(315,480) and WorkSafety(600,585) ────
   {
@@ -235,11 +235,11 @@ export const nodes = [
   },
 
   // ── Work Safety sub-nodes — r=110, fan below WorkSafety(600,585) ─────────
-  { id: 'ws-roles',     label: 'Contacts\n& Roles',         color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 703, y: 623, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
-  { id: 'ws-emergency', label: 'Emergency\nProcedures',     color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 663, y: 675, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
-  { id: 'ws-hazard',    label: 'Hazards &\nPrevention',     color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 600, y: 695, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
-  { id: 'ws-incident',  label: 'Wellbeing\nat Work',        color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 537, y: 675, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
-  { id: 'ws-fablab',    label: 'Your\nWorkspace',           color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 497, y: 623, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
+  { id: 'ws-roles',     label: 'Contacts\n& Roles',         color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 703, y: 623, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety?chapter=4', connectionType: 'dotted' },
+  { id: 'ws-emergency', label: 'Emergency\nProcedures',     color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 663, y: 675, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety?chapter=2', connectionType: 'dotted' },
+  { id: 'ws-hazard',    label: 'Hazards &\nPrevention',     color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 600, y: 695, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety?chapter=1', connectionType: 'dotted' },
+  { id: 'ws-incident',  label: 'Wellbeing\nat Work',        color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 537, y: 675, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety?chapter=3', connectionType: 'dotted' },
+  { id: 'ws-fablab',    label: 'Your\nWorkspace',           color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 497, y: 623, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety?chapter=0', connectionType: 'dotted' },
 ];
 
 // Connections: [fromId, toId]
