@@ -109,6 +109,8 @@ function CommentCell({ value, onChange }) {
     el.style.height = el.scrollHeight + 'px';
   }
 
+  useEffect(() => { autoResize(); }, [value]);
+
   return (
     <textarea
       ref={ref}
@@ -116,7 +118,6 @@ function CommentCell({ value, onChange }) {
       value={value}
       rows={1}
       onChange={e => { onChange(e.target.value); autoResize(); }}
-      onFocus={autoResize}
       onClick={e => e.stopPropagation()}
     />
   );
