@@ -171,7 +171,7 @@ export const nodes = [
     clickTarget: '/detail/ppm',
     layer: 3,
     readiness: READINESS.ppm,
-    connectionType: 'dashed',
+    connectionType: 'solid',
   },
   // Work Safety — bottom-center, mirroring Design above center
   {
