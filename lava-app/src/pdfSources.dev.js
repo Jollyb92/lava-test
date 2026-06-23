@@ -2,3 +2,5 @@ export const PDF_SAFETY          = '/MANUALS/SAFETY%20MANUAL/SAFETY%20MANUAL.pdf
 export const PDF_SAFETY_FALLBACK = '/pdf-server/6_MANUALS_TEST/5_SAFETY%20MANUAL/SAFETY%20MANUAL.pdf';
 export const PDF_PPM             = '/MANUALS/PROJECT%20MANAGEMENT%20MANUAL/250919_Project%20Processes%20Manual_v0.1.pdf';
 export const PDF_PPM_FALLBACK    = '/pdf-server/6_MANUALS_TEST/3_PROJECT%20MANAGEMENT%20MANUAL/250919_Project%20Processes%20Manual_v0.1.pdf';
+export const PDF_COMM            = '/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf';
+export const PDF_COMM_FALLBACK   = '/pdf-server/6_MANUALS_TEST/6_COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf';

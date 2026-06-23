@@ -78,24 +78,134 @@
   "communication": {
     "id": "communication",
     "colorKey": "communication",
-    "title": "Communication Manual",
+    "title": "CI + Communications Manual",
+    "subtitle": "Corporate Identity & Communications",
     "isoTag": "ISO 9001 §7.4 — Communication",
-    "breadcrumb": "Communication Manual",
-    "topics": [
-      "Doc & Pres. Templates — standard files for documents and presentations",
-      "External Comm. Standards — tone of voice, email, correspondence rules",
-      "Layout Conventions — grid, spacing and margin rules for LAVA documents",
-      "Colour Rules — primary and secondary palette, usage guidelines",
-      "Graphic Approach — diagram style, imagery, visual consistency",
-      "Fonts — approved typefaces, sizing hierarchy, usage rules"
-    ],
-    "topicLinks": [
-      [{"label": "E.5 Templates & Standards Register", "id": "e5"}, {"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
-      [{"label": "E.8 Graphic Identity in Practice", "id": "e8"}, {"label": "E.1 Design Manual at a Glance", "id": "e1"}],
-      [{"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
-      [{"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
-      [{"label": "E.1 Design Manual at a Glance", "id": "e1"}, {"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
-      [{"label": "E.8 Graphic Identity in Practice", "id": "e8"}, {"label": "E.5 Templates & Standards Register", "id": "e5"}]
+    "breadcrumb": "CI + Communications Manual",
+    "coverPdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
+    "chapters": [
+      {
+        "title": "01 Logo",
+        "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
+        "subchapters": [
+          "Logo Design & The Slash",
+          "Color Usage — Green, Black, White",
+          "Main Logo Green",
+          "Logo Variants — Presentations & Monochrome",
+          "Email Signature & Long Logo",
+          "Clearspace Rules"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 4 },
+          { "type": "pdf-page", "page": 5 },
+          { "type": "pdf-page", "page": 6 },
+          { "type": "pdf-page", "page": 7 },
+          { "type": "pdf-page", "page": 8 },
+          { "type": "pdf-page", "page": 9 }
+        ]
+      },
+      {
+        "title": "02 Font",
+        "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
+        "subchapters": [
+          "ABC Walter Neue (Mittel)"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 11 }
+        ]
+      },
+      {
+        "title": "03 Color",
+        "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
+        "subchapters": [
+          "Primary Colors — Green, Black, White",
+          "Theme Color Accents",
+          "Additional Color Accents"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 13 },
+          { "type": "pdf-page", "page": 14 },
+          { "type": "pdf-page", "page": 15 }
+        ]
+      },
+      {
+        "title": "04 LAVA Narrative + What if + LAB",
+        "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
+        "subchapters": [
+          "About LAVA",
+          "Mission, Vision, Process & Purpose",
+          "Key Aspects — 5 Communication Pillars",
+          "Key Question & Punchline",
+          "What if — Book",
+          "LAB Platform"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 17 },
+          { "type": "pdf-page", "page": 18 },
+          { "type": "pdf-page", "page": 19 },
+          { "type": "pdf-page", "page": 20 },
+          { "type": "pdf-page", "page": 21 },
+          { "type": "pdf-page", "page": 22 }
+        ]
+      },
+      {
+        "title": "05 Themes",
+        "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
+        "subchapters": [
+          "Theme-Driven Approach — Overview",
+          "Future Cities",
+          "Cognitive Workscapes",
+          "Hybrid Realms",
+          "Regenerative Design",
+          "Vivid Living",
+          "Collective Spaces",
+          "Digital Processes",
+          "Conceptual Explorations"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 23 },
+          { "type": "pdf-page", "page": 25 },
+          { "type": "pdf-page", "page": 26 },
+          { "type": "pdf-page", "page": 27 },
+          { "type": "pdf-page", "page": 28 },
+          { "type": "pdf-page", "page": 29 },
+          { "type": "pdf-page", "page": 30 },
+          { "type": "pdf-page", "page": 31 },
+          { "type": "pdf-page", "page": 32 }
+        ]
+      },
+      {
+        "title": "06 LAVA Locations",
+        "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
+        "subchapters": [
+          "Studios — Berlin, HCMC, Stuttgart, Sydney",
+          "Satellites & Global Reach"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 33 },
+          { "type": "pdf-page", "page": 34 }
+        ]
+      },
+      {
+        "title": "07 Style Notes",
+        "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
+        "subchapters": [
+          "Writing Style & Conventions"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 35 }
+        ]
+      },
+      {
+        "title": "08 Material Hub",
+        "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
+        "subchapters": [
+          "CI + Visual Assets Hub"
+        ],
+        "slideData": [
+          { "type": "pdf-page", "page": 36 }
+        ]
+      }
     ],
     "links": [
       { "label": "E.8 Graphic Identity in Practice", "id": "e8" },
