@@ -1152,8 +1152,12 @@ function PdfPageSlide({ data, allSlideData, topicIndex, onSelect, pdfPath, pages
   const [zoom, setZoom] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [useFallback, setUseFallback] = useState(false);
+  const [pdfLoaded, setPdfLoaded] = useState(false);
   const dragRef = useRef(false);
   const lastPosRef = useRef({ x: 0, y: 0 });
+
+  // Reset when the PDF file changes so the load event re-triggers the scroll
+  useEffect(() => { if (pdfPath) setPdfLoaded(false); }, [pdfPath, useFallback]);
 
   const pages = (allSlideData ?? [data]).filter(s => s?.type === 'pdf-page');
   const basePath = pagesPath ?? '/MANUALS/SAFETY%20MANUAL/safety-pages/';
@@ -1168,7 +1172,9 @@ function PdfPageSlide({ data, allSlideData, topicIndex, onSelect, pdfPath, pages
       requestAnimationFrame(() => { progScroll.current = false; });
     });
     return () => cancelAnimationFrame(frame);
-  }, [topicIndex]);
+  // pdfLoaded triggers a re-scroll after react-pdf's Document mounts the scroll container
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [topicIndex, pdfLoaded]);
 
   // Reset pan when switching pages
   useEffect(() => { setPan({ x: 0, y: 0 }); }, [topicIndex]);
@@ -1221,6 +1227,7 @@ function PdfPageSlide({ data, allSlideData, topicIndex, onSelect, pdfPath, pages
           file={pdfSrc}
           loading={<div className="sp-pdf-loading">Loading PDF…</div>}
           error={<div className="sp-pdf-loading">Failed to load PDF.</div>}
+          onLoadSuccess={() => setPdfLoaded(true)}
           onLoadError={() => {
             if (!useFallback && resolveFallbackPath(pdfPath)) setUseFallback(true);
           }}

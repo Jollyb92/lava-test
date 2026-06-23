@@ -1,5 +1,5 @@
 # lava-test
-test for the manual and checklists in online eas
+test for the manual and checklists
 
 
 git add .
@@ -23,3 +23,9 @@ git restore
 
 
 http://10.1.0.138:5173/
+
+
+
+
+cd lava-app
+npm run dev
