@@ -185,7 +185,7 @@ function ChaptersView({ chapters, accentColor, onLinksChange, selectedSubch, onS
             >
               <span className="chapter-bubble-num"
                 style={isOpen ? { background: 'rgba(0,0,0,0.18)', color: 'inherit' } : { background: accentColor, color: accentColor === '#B3F400' ? '#1a1a1a' : '#fff' }}>
-                {i + 1}
+                {ch.num ?? i + 1}
               </span>
               <span className="chapter-bubble-title">{ch.title}</span>
               <svg className="chapter-bubble-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">

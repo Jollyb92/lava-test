@@ -86,6 +86,7 @@
     "chapters": [
       {
         "title": "Logo",
+        "num": "01",
         "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
         "subchapters": [
           "Logo Design & The Slash",
@@ -106,6 +107,7 @@
       },
       {
         "title": "Font & Color",
+        "num": "02 & 03",
         "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
         "subchapters": [
           "ABC Walter Neue (Mittel)",
@@ -122,6 +124,7 @@
       },
       {
         "title": "LAVA Narrative + What if + LAB",
+        "num": "04",
         "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
         "subchapters": [
           "About LAVA",
@@ -144,6 +147,7 @@
       },
       {
         "title": "Themes",
+        "num": "05",
         "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
         "subchapters": [
           "Theme-Driven Approach — Overview",
@@ -170,6 +174,7 @@
       },
       {
         "title": "LAVA Locations",
+        "num": "06",
         "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
         "subchapters": [
           "Studios — Berlin, HCMC, Stuttgart, Sydney",
@@ -184,6 +189,7 @@
       },
       {
         "title": "Style & Hub",
+        "num": "07 & 08",
         "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
         "subchapters": [
           "Writing Style & Conventions",
