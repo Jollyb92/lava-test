@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import * as XLSX from 'xlsx-js-style';
 import { COLORS, READINESS, detailPages, tocData } from './data.js';
+
+const LS_KEY = 'lava_status_comments';
 
 const MANUALS = [
   { id: 'office',        label: 'Office Manual Berlin 2026',   colorKey: 'center',        responsible: 'Office Manager + Directors',            readiness: READINESS.office },
@@ -55,6 +57,14 @@ const SECTION_READINESS = {
   live:          [60, 70, 70, 70, 70],
 };
 
+function loadComments() {
+  try {
+    return JSON.parse(localStorage.getItem(LS_KEY) || '{}');
+  } catch {
+    return {};
+  }
+}
+
 function getSections(id) {
   if (id === 'office') {
     return tocData.parts
@@ -89,6 +99,29 @@ function ProgressCell({ value }) {
   );
 }
 
+function CommentCell({ value, onChange }) {
+  const ref = useRef(null);
+
+  function autoResize() {
+    const el = ref.current;
+    if (!el) return;
+    el.style.height = 'auto';
+    el.style.height = el.scrollHeight + 'px';
+  }
+
+  return (
+    <textarea
+      ref={ref}
+      className="st-comment-input"
+      value={value}
+      rows={1}
+      onChange={e => { onChange(e.target.value); autoResize(); }}
+      onFocus={autoResize}
+      onClick={e => e.stopPropagation()}
+    />
+  );
+}
+
 // All colors must be 8-char AARRGGBB for xlsx-js-style
 function argb(hex) {
   return 'FF' + hex.replace('#', '').toUpperCase();
@@ -106,73 +139,89 @@ function cell(v, s) {
   return { v, t: 's', s };
 }
 
-function exportToXlsx() {
-  const ws = {};
-  let row = 0;
+export default function StatusTable({ open, onClose }) {
+  const [expanded, setExpanded] = useState(() => new Set(MANUALS.map(m => m.id)));
+  const [comments, setComments] = useState(loadComments);
+  const commentsRef = useRef(comments);
+  const saveTimer = useRef(null);
 
-  // Header row
-  const HDR = {
-    fill: { patternType: 'solid', fgColor: { rgb: argb('#1a1a1a') } },
-    font: { bold: true, color: { rgb: argb('#B3F400') }, sz: 11 },
-    alignment: { vertical: 'center' },
-  };
-  ['Manual', 'Section', 'Responsible', 'Readiness %', 'Comments'].forEach((v, c) => {
-    ws[XLSX.utils.encode_cell({ r: row, c })] = cell(v, HDR);
-  });
-  row++;
+  function getComment(key, defaultVal) {
+    return key in comments ? comments[key] : (defaultVal ?? '');
+  }
 
-  for (const manual of MANUALS) {
-    const bg      = COLORS[manual.colorKey];
-    const fgText  = manual.colorKey === 'center' ? argb('#1a1a1a') : argb('#ffffff');
-    const tintBg  = tintArgb(bg, 0.15);
+  function handleCommentChange(key, value) {
+    const next = { ...commentsRef.current, [key]: value };
+    commentsRef.current = next;
+    setComments(next);
+    clearTimeout(saveTimer.current);
+    saveTimer.current = setTimeout(() => {
+      localStorage.setItem(LS_KEY, JSON.stringify(commentsRef.current));
+    }, 1500);
+  }
 
-    const MAN = {
-      fill: { patternType: 'solid', fgColor: { rgb: argb(bg) } },
-      font: { bold: true, color: { rgb: fgText }, sz: 11 },
+  function exportToXlsx() {
+    const ws = {};
+    let row = 0;
+
+    const HDR = {
+      fill: { patternType: 'solid', fgColor: { rgb: argb('#1a1a1a') } },
+      font: { bold: true, color: { rgb: argb('#B3F400') }, sz: 11 },
       alignment: { vertical: 'center' },
     };
-    const SEC = {
-      fill: { patternType: 'solid', fgColor: { rgb: tintBg } },
-      font: { color: { rgb: argb('#374151') }, sz: 10 },
-      alignment: { vertical: 'center', indent: 1 },
-    };
-    const SEC_DIM = {
-      fill: { patternType: 'solid', fgColor: { rgb: tintBg } },
-      font: { color: { rgb: argb('#9CA3AF') }, sz: 10 },
-      alignment: { vertical: 'center' },
-    };
-
-    // Manual row
-    const readinessVal = manual.readiness != null ? manual.readiness + '%' : '';
-    [manual.label, '', manual.responsible, readinessVal, MANUAL_COMMENTS[manual.id] || ''].forEach((v, c) => {
-      ws[XLSX.utils.encode_cell({ r: row, c })] = cell(v, MAN);
+    ['Manual', 'Section', 'Responsible', 'Readiness %', 'Comments'].forEach((v, c) => {
+      ws[XLSX.utils.encode_cell({ r: row, c })] = cell(v, HDR);
     });
     row++;
 
-    // Section rows
-    getSections(manual.id).forEach((sec, si) => {
-      const secVal     = (SECTION_READINESS[manual.id] || [])[si] ?? null;
-      const secComment = (SECTION_COMMENTS[manual.id]  || [])[si] ?? null;
-      ws[XLSX.utils.encode_cell({ r: row, c: 0 })] = cell('', SEC);
-      ws[XLSX.utils.encode_cell({ r: row, c: 1 })] = cell(sec, SEC);
-      ws[XLSX.utils.encode_cell({ r: row, c: 2 })] = cell(manual.responsible, SEC_DIM);
-      ws[XLSX.utils.encode_cell({ r: row, c: 3 })] = cell(secVal != null ? secVal + '%' : '—', SEC_DIM);
-      ws[XLSX.utils.encode_cell({ r: row, c: 4 })] = cell(secComment || '', SEC_DIM);
+    for (const manual of MANUALS) {
+      const bg      = COLORS[manual.colorKey];
+      const fgText  = manual.colorKey === 'center' ? argb('#1a1a1a') : argb('#ffffff');
+      const tintBg  = tintArgb(bg, 0.15);
+
+      const MAN = {
+        fill: { patternType: 'solid', fgColor: { rgb: argb(bg) } },
+        font: { bold: true, color: { rgb: fgText }, sz: 11 },
+        alignment: { vertical: 'center' },
+      };
+      const SEC = {
+        fill: { patternType: 'solid', fgColor: { rgb: tintBg } },
+        font: { color: { rgb: argb('#374151') }, sz: 10 },
+        alignment: { vertical: 'center', indent: 1 },
+      };
+      const SEC_DIM = {
+        fill: { patternType: 'solid', fgColor: { rgb: tintBg } },
+        font: { color: { rgb: argb('#9CA3AF') }, sz: 10 },
+        alignment: { vertical: 'center' },
+      };
+
+      const readinessVal = manual.readiness != null ? manual.readiness + '%' : '';
+      const manComment = getComment(`manual_${manual.id}`, MANUAL_COMMENTS[manual.id]);
+      [manual.label, '', manual.responsible, readinessVal, manComment].forEach((v, c) => {
+        ws[XLSX.utils.encode_cell({ r: row, c })] = cell(v, MAN);
+      });
       row++;
-    });
+
+      getSections(manual.id).forEach((sec, si) => {
+        const secVal     = (SECTION_READINESS[manual.id] || [])[si] ?? null;
+        const secDefault = (SECTION_COMMENTS[manual.id]  || [])[si] ?? null;
+        const secComment = getComment(`section_${manual.id}_${si}`, secDefault);
+        ws[XLSX.utils.encode_cell({ r: row, c: 0 })] = cell('', SEC);
+        ws[XLSX.utils.encode_cell({ r: row, c: 1 })] = cell(sec, SEC);
+        ws[XLSX.utils.encode_cell({ r: row, c: 2 })] = cell(manual.responsible, SEC_DIM);
+        ws[XLSX.utils.encode_cell({ r: row, c: 3 })] = cell(secVal != null ? secVal + '%' : '—', SEC_DIM);
+        ws[XLSX.utils.encode_cell({ r: row, c: 4 })] = cell(secComment || '', SEC_DIM);
+        row++;
+      });
+    }
+
+    ws['!ref']  = XLSX.utils.encode_range({ s: { r: 0, c: 0 }, e: { r: row - 1, c: 4 } });
+    ws['!cols'] = [{ wch: 36 }, { wch: 42 }, { wch: 36 }, { wch: 14 }, { wch: 50 }];
+    ws['!rows'] = Array.from({ length: row }, () => ({ hpt: 18 }));
+
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Manual Status');
+    XLSX.writeFile(wb, 'LAVA_Manual_Status.xlsx');
   }
-
-  ws['!ref']  = XLSX.utils.encode_range({ s: { r: 0, c: 0 }, e: { r: row - 1, c: 4 } });
-  ws['!cols'] = [{ wch: 36 }, { wch: 42 }, { wch: 36 }, { wch: 14 }, { wch: 50 }];
-  ws['!rows'] = Array.from({ length: row }, () => ({ hpt: 18 }));
-
-  const wb = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb, ws, 'Manual Status');
-  XLSX.writeFile(wb, 'LAVA_Manual_Status.xlsx');
-}
-
-export default function StatusTable({ open, onClose }) {
-  const [expanded, setExpanded] = useState(() => new Set(MANUALS.map(m => m.id)));
 
   if (!open) return null;
 
@@ -220,7 +269,6 @@ export default function StatusTable({ open, onClose }) {
             <tbody>
               {MANUALS.map(manual => {
                 const color   = COLORS[manual.colorKey];
-                const onColor = manual.colorKey === 'center' ? '#1a1a1a' : '#fff';
                 const sections = getSections(manual.id);
                 const isOpen  = expanded.has(manual.id);
                 return (
@@ -235,11 +283,16 @@ export default function StatusTable({ open, onClose }) {
                       </td>
                       <td className="st-cell-resp">{manual.responsible}</td>
                       <td className="st-cell-prog"><ProgressCell value={manual.readiness} /></td>
-                      <td className="st-cell-comment">{MANUAL_COMMENTS[manual.id] || ''}</td>
+                      <td className="st-cell-comment">
+                        <CommentCell
+                          value={getComment(`manual_${manual.id}`, MANUAL_COMMENTS[manual.id])}
+                          onChange={v => handleCommentChange(`manual_${manual.id}`, v)}
+                        />
+                      </td>
                     </tr>
                     {isOpen && sections.map((sec, si) => {
                       const secVal     = (SECTION_READINESS[manual.id] || [])[si] ?? null;
-                      const secComment = (SECTION_COMMENTS[manual.id]  || [])[si] ?? null;
+                      const secDefault = (SECTION_COMMENTS[manual.id]  || [])[si] ?? null;
                       return (
                         <tr key={`${manual.id}-${si}`} className="st-row-section">
                           <td className="st-cell-section">
@@ -248,7 +301,12 @@ export default function StatusTable({ open, onClose }) {
                           </td>
                           <td className="st-cell-resp st-dim">{manual.responsible}</td>
                           <td className="st-cell-prog"><ProgressCell value={secVal} /></td>
-                          <td className="st-cell-comment st-dim">{secComment || ''}</td>
+                          <td className="st-cell-comment st-dim">
+                            <CommentCell
+                              value={getComment(`section_${manual.id}_${si}`, secDefault)}
+                              onChange={v => handleCommentChange(`section_${manual.id}_${si}`, v)}
+                            />
+                          </td>
                         </tr>
                       );
                     })}
