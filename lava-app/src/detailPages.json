@@ -532,6 +532,45 @@
       { "label": "QEMS", "id": "qems" }
     ]
   },
+  "lavazero": {
+    "id": "lavazero",
+    "colorKey": "lavaZero",
+    "title": "LAVA Zero",
+    "subtitle": "Environmental Sustainability",
+    "isoTag": "ISO 14001 §6.2 — Environmental Objectives",
+    "breadcrumb": "LAVA Zero",
+    "chapters": [
+      {
+        "title": "Learning Sessions",
+        "num": "01",
+        "subchapters": [],
+        "slideData": []
+      },
+      {
+        "title": "Tools",
+        "num": "02",
+        "subchapters": [],
+        "slideData": []
+      },
+      {
+        "title": "Recommended Materials",
+        "num": "03",
+        "subchapters": [],
+        "slideData": []
+      },
+      {
+        "title": "EPD Databases",
+        "num": "04",
+        "subchapters": [],
+        "slideData": []
+      }
+    ],
+    "links": [
+      { "label": "QEMS", "id": "qems" },
+      { "label": "D.2 Environmental Practice / LAVA Zero", "id": "d2" },
+      { "label": "D.3 Environmental Preparedness", "id": "d3" }
+    ]
+  },
   "guides": {
     "id": "guides",
     "colorKey": "guides",
