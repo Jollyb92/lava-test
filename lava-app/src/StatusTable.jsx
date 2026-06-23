@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import * as XLSX from 'xlsx-js-style';
 import { COLORS, READINESS, detailPages, tocData } from './data.js';
 
@@ -144,6 +144,21 @@ export default function StatusTable({ open, onClose }) {
   const [comments, setComments] = useState(loadComments);
   const commentsRef = useRef(comments);
   const saveTimer = useRef(null);
+
+  // Flush pending save immediately when modal closes or component unmounts
+  useEffect(() => {
+    if (!open) {
+      clearTimeout(saveTimer.current);
+      localStorage.setItem(LS_KEY, JSON.stringify(commentsRef.current));
+    }
+  }, [open]);
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(saveTimer.current);
+      localStorage.setItem(LS_KEY, JSON.stringify(commentsRef.current));
+    };
+  }, []);
 
   function getComment(key, defaultVal) {
     return key in comments ? comments[key] : (defaultVal ?? '');
