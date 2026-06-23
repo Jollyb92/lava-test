@@ -224,7 +224,6 @@ export const nodes = [
   {
     id: 'lavazero',
     label: 'LAVA\nZERO',
-    sublabel: 'Environmental Sustainability',
     color: COLORS.lavaZero,
     textColor: COLORS.white,
     radius: 50,
