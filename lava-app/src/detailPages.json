@@ -380,6 +380,14 @@
           { "type": "pdf-page", "page": 88 },
           { "type": "pdf-page", "page": 93 }
         ],
+        "serverLinks": {
+          "3.1.2 Folder Structure": [
+            {
+              "label": "Folder Structure",
+              "path": "L:\\4_PROJECT MANAGEMENT\\02_Templates\\02_Folder Structure"
+            }
+          ]
+        },
         "links": [
           { "label": "E.4 Project Folder Structure", "id": "e4" },
           { "label": "E.5 Templates & Standards Register", "id": "e5" },
