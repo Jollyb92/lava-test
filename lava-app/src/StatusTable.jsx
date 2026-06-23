@@ -15,6 +15,7 @@ const MANUALS = [
   { id: 'worksafety',    label: 'Work Safety Manual',          colorKey: 'safety',        responsible: 'Sicherheitsfachkraft (Safety Officer)', readiness: READINESS.safety },
   { id: 'guides',        label: 'Guides & Registers',          colorKey: 'guides',        responsible: 'LAVA Zero + Admin',                     readiness: READINESS.guides },
   { id: 'live',          label: 'Live Systems & Tools',        colorKey: 'live',          responsible: 'IT team',                               readiness: READINESS.live },
+  { id: 'lavazero',     label: 'LAVA Zero',                   colorKey: 'lavaZero',      responsible: 'LAVA Zero Team',                        readiness: READINESS.lavaZero },
 ];
 
 const MANUAL_COMMENTS = {
@@ -22,12 +23,13 @@ const MANUAL_COMMENTS = {
   cultural:      'Not started, content is flying around for recycling',
   design:        'Has parts in PMM and Comp guidelines and Communication?',
   bidding:       'Big part in PMM, currently Su is working on other parts',
-  communication: 'Compiled, outdated, not confirmed',
+  communication: 'Compiled, structured in app with 6 chapters',
   qems:          'Compiled — requires to insert documents',
   ppm:           'Outdated, needs to be cleaned and split',
   worksafety:    'Done',
   guides:        'Spread around, needs to be cleaned, proofed and combined',
   live:          'Compiled, missing some parts',
+  lavazero:      'Structure ready in app, content to be populated per chapter',
 };
 
 const SECTION_COMMENTS = {
@@ -35,12 +37,13 @@ const SECTION_COMMENTS = {
   cultural:      ['Add content and narrative', 'Add content and narrative', 'Add content and narrative', 'Add content and narrative'],
   design:        ['Design direction and explanation', 'Add narrative', 'Choose diagrams and templates', 'Comes from communication?', 'Not approved, big pdf'],
   bidding:       ['In the PMM?', 'What ones go here?', 'What ones go here?', 'What ones go here?'],
-  communication: ['Check/update', 'Check/update', 'Check/update', 'Check/update', 'Check/update', 'Check/update'],
+  communication: ['Logo — confirm clearspace rules', 'Font & Color — confirm accents', 'LAVA Narrative — confirm copy', 'Themes — confirm visuals', 'LAVA Locations — check studio list', 'Style & Hub — link to assets hub'],
   qems:          ['Available to read?', 'Available to read?', 'Available to read?', 'Available to read?', 'Available to read?', 'Available to read?'],
   ppm:           ['Check and proof', 'Goes to Bidding Manual', 'Check and proof', 'Check and proof'],
   worksafety:    ['Ready to use document, implemented', 'Ready to use document, implemented', 'Ready to use document, implemented', 'Ready to use document, implemented', 'Ready to use document, implemented'],
   guides:        ['Which form of the information?', 'Which form of the information?', 'Which form of the information?', 'Which form of the information?'],
   live:          [null, 'Check actuality', 'Check actuality, implement in the app', 'Check actuality', 'Check actuality'],
+  lavazero:      ['Add session content', 'Add tools list', 'Add materials catalogue', 'Add EPD database links'],
 };
 
 // Section-level readiness % per manual (indexed by section order from getSections)
@@ -55,6 +58,7 @@ const SECTION_READINESS = {
   worksafety:    [100, 100, 100, 100, 100],
   guides:        [20, 20, 20, 20],
   live:          [60, 70, 70, 70, 70],
+  lavazero:      [90, 90, 90, 90],
 };
 
 function loadComments() {

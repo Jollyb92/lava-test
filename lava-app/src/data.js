@@ -40,7 +40,7 @@ export const READINESS = {
   communication: 40,
   guides: 20,
   live: 60,
-  lavaZero: 10,
+  lavaZero: 90,
 };
 
 // Diagram node definitions
