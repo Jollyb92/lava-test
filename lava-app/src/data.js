@@ -227,7 +227,7 @@ export const nodes = [
     color: COLORS.lavaZero,
     textColor: COLORS.white,
     radius: 50,
-    x: 400, y: 685,
+    x: 315, y: 690,
     clickTarget: '/detail/lavazero',
     layer: 3,
     readiness: READINESS.lavaZero,
