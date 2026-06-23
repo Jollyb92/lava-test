@@ -235,12 +235,6 @@ export const nodes = [
     connectionType: 'dashed',
   },
 
-  // ── LAVA Zero sub-nodes ──────────────────────────────────────────────────
-  { id: 'lz-learning',   label: 'Learning\nSessions',        color: COLORS.lavaZeroSub, textColor: COLORS.dark, radius: 28, x: 295, y: 728, layer: 2, parent: 'lavazero', clickTarget: '/detail/lavazero', connectionType: 'dotted' },
-  { id: 'lz-tools',      label: 'Tools',                     color: COLORS.lavaZeroSub, textColor: COLORS.dark, radius: 28, x: 355, y: 748, layer: 2, parent: 'lavazero', clickTarget: '/detail/lavazero', connectionType: 'dotted' },
-  { id: 'lz-materials',  label: 'Recommended\nMaterials',    color: COLORS.lavaZeroSub, textColor: COLORS.dark, radius: 28, x: 430, y: 748, layer: 2, parent: 'lavazero', clickTarget: '/detail/lavazero', connectionType: 'dotted' },
-  { id: 'lz-epd',        label: 'EPD\nDatabases',            color: COLORS.lavaZeroSub, textColor: COLORS.dark, radius: 28, x: 488, y: 730, layer: 2, parent: 'lavazero', clickTarget: '/detail/lavazero', connectionType: 'dotted' },
-
   // ── Work Safety sub-nodes — r=110, fan below WorkSafety(600,585) ─────────
   { id: 'ws-roles',     label: 'Contacts\n& Roles',         color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 703, y: 623, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
   { id: 'ws-emergency', label: 'Emergency\nProcedures',     color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 663, y: 675, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety', connectionType: 'dotted' },
@@ -294,11 +288,6 @@ export const connections = [
   ['center', 'guides'],
   ['center', 'live'],
   ['center', 'lavazero'],
-  // LAVA Zero sub-nodes (dotted)
-  ['lavazero', 'lz-learning'],
-  ['lavazero', 'lz-tools'],
-  ['lavazero', 'lz-materials'],
-  ['lavazero', 'lz-epd'],
   // PPM sub-nodes (dotted)
   ['ppm', 'ppm-intro'],
   ['ppm', 'ppm-before'],
