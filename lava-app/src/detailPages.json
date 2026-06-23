@@ -89,19 +89,19 @@
         "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
         "subchapters": [
           "Logo Design & The Slash",
-          "Color Usage — Green, Black, White",
           "Main Logo Green",
           "Logo Variants — Presentations & Monochrome",
           "Email Signature & Long Logo",
-          "Clearspace Rules"
+          "Clearspace — Width of Letter L",
+          "Clearspace — Width of Letters LAB"
         ],
         "slideData": [
           { "type": "pdf-page", "page": 4 },
           { "type": "pdf-page", "page": 5 },
           { "type": "pdf-page", "page": 6 },
-          { "type": "pdf-page", "page": 7 },
           { "type": "pdf-page", "page": 8 },
-          { "type": "pdf-page", "page": 9 }
+          { "type": "pdf-page", "page": 9 },
+          { "type": "pdf-page", "page": 10 }
         ]
       },
       {
@@ -119,13 +119,13 @@
         "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
         "subchapters": [
           "Primary Colors — Green, Black, White",
-          "Theme Color Accents",
+          "Theme Color Accents — 8 Themes",
           "Additional Color Accents"
         ],
         "slideData": [
+          { "type": "pdf-page", "page": 12 },
           { "type": "pdf-page", "page": 13 },
-          { "type": "pdf-page", "page": 14 },
-          { "type": "pdf-page", "page": 17 }
+          { "type": "pdf-page", "page": 14 }
         ]
       },
       {
@@ -134,17 +134,19 @@
         "subchapters": [
           "About LAVA",
           "Mission, Vision, Process & Purpose",
-          "Key Aspects — 5 Communication Pillars",
-          "Key Question & Punchline",
+          "Key Aspects — 5 Narrative Pillars",
+          "Key Question",
+          "Punchline — Inquire. Imagine. Invent.",
           "What if — Book",
           "LAB Platform"
         ],
         "slideData": [
+          { "type": "pdf-page", "page": 16 },
+          { "type": "pdf-page", "page": 17 },
           { "type": "pdf-page", "page": 19 },
           { "type": "pdf-page", "page": 20 },
           { "type": "pdf-page", "page": 21 },
           { "type": "pdf-page", "page": 22 },
-          { "type": "pdf-page", "page": 23 },
           { "type": "pdf-page", "page": 24 }
         ]
       },
@@ -164,14 +166,14 @@
         ],
         "slideData": [
           { "type": "pdf-page", "page": 25 },
+          { "type": "pdf-page", "page": 26 },
           { "type": "pdf-page", "page": 27 },
           { "type": "pdf-page", "page": 28 },
           { "type": "pdf-page", "page": 29 },
           { "type": "pdf-page", "page": 30 },
           { "type": "pdf-page", "page": 31 },
           { "type": "pdf-page", "page": 32 },
-          { "type": "pdf-page", "page": 33 },
-          { "type": "pdf-page", "page": 34 }
+          { "type": "pdf-page", "page": 33 }
         ]
       },
       {
@@ -179,9 +181,11 @@
         "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
         "subchapters": [
           "Studios — Berlin, HCMC, Stuttgart, Sydney",
-          "Satellites & Global Reach"
+          "Satellites",
+          "Global Reach — Projects by Region"
         ],
         "slideData": [
+          { "type": "pdf-page", "page": 34 },
           { "type": "pdf-page", "page": 35 },
           { "type": "pdf-page", "page": 36 }
         ]
