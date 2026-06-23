@@ -1160,11 +1160,14 @@ function PdfPageSlide({ data, allSlideData, topicIndex, onSelect, pdfPath, pages
   const digits = pagePad ?? 2;
 
   useEffect(() => {
-    const el = scrollRef.current?.children[topicIndex];
-    if (!el) return;
-    progScroll.current = true;
-    el.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
-    setTimeout(() => { progScroll.current = false; }, 600);
+    const frame = requestAnimationFrame(() => {
+      const el = scrollRef.current?.children[topicIndex];
+      if (!el) return;
+      progScroll.current = true;
+      el.scrollIntoView({ behavior: 'instant', inline: 'start', block: 'nearest' });
+      requestAnimationFrame(() => { progScroll.current = false; });
+    });
+    return () => cancelAnimationFrame(frame);
   }, [topicIndex]);
 
   // Reset pan when switching pages
