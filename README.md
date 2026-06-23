@@ -17,4 +17,9 @@ git pull
 
 
 cd C:\Users\sebo\lava-test\lava-app
-git restore .
+git restore
+
+
+
+
+http://10.1.0.138:5173/
