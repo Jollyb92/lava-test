@@ -567,7 +567,7 @@
     ],
     "links": [
       { "label": "QEMS", "id": "qems" },
-      { "label": "D.2 Environmental Practice / LAVA Zero", "id": "d2" },
+      { "label": "D.2 Environmental Practice", "id": "d2" },
       { "label": "D.3 Environmental Preparedness", "id": "d3" }
     ]
   },
@@ -1897,7 +1897,7 @@
   "d2": {
     "id": "d2",
     "colorKey": "qems",
-    "title": "D.2 Environmental Practice — LAVA Zero",
+    "title": "D.2 Environmental Practice",
     "isoTag": "ISO 14001 §6.2 / §9.1 — Objectives & Monitoring",
     "breadcrumb": "Part D — Safety & Environment > D.2 Environmental Practice",
     "topics": [
@@ -1909,7 +1909,7 @@
       "Monitoring & KPIs — paper, CO₂"
     ],
     "topicLinks": [
-      [{"label": "QEMS", "id": "qems"}, {"label": "Guides & Registers", "id": "guides"}],
+      [{"label": "LAVA Zero", "id": "lavazero"}, {"label": "QEMS", "id": "qems"}, {"label": "Guides & Registers", "id": "guides"}],
       [{"label": "C.2 Housekeeping", "id": "c2"}, {"label": "Guides & Registers", "id": "guides"}],
       [{"label": "C.2 Housekeeping", "id": "c2"}],
       [{"label": "D.1 Work Safety", "id": "d1"}],

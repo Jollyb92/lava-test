@@ -54,7 +54,7 @@ const CHECKLIST_TRIGGER = 'Digital Onboarding Checklist';
 
 const MANUAL_IDS = new Set([
   'cultural', 'design', 'bidding', 'communication',
-  'qems', 'ppm', 'worksafety', 'guides', 'live', 'project',
+  'qems', 'ppm', 'worksafety', 'guides', 'live', 'project', 'lavazero',
 ]);
 
 const FRONT_MATTER_IDS = new Set(['doc-control', 'intro']);
