@@ -125,7 +125,7 @@
         "slideData": [
           { "type": "pdf-page", "page": 13 },
           { "type": "pdf-page", "page": 14 },
-          { "type": "pdf-page", "page": 15 }
+          { "type": "pdf-page", "page": 17 }
         ]
       },
       {
@@ -140,12 +140,12 @@
           "LAB Platform"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 17 },
-          { "type": "pdf-page", "page": 18 },
           { "type": "pdf-page", "page": 19 },
           { "type": "pdf-page", "page": 20 },
           { "type": "pdf-page", "page": 21 },
-          { "type": "pdf-page", "page": 22 }
+          { "type": "pdf-page", "page": 22 },
+          { "type": "pdf-page", "page": 23 },
+          { "type": "pdf-page", "page": 24 }
         ]
       },
       {
@@ -163,15 +163,15 @@
           "Conceptual Explorations"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 23 },
           { "type": "pdf-page", "page": 25 },
-          { "type": "pdf-page", "page": 26 },
           { "type": "pdf-page", "page": 27 },
           { "type": "pdf-page", "page": 28 },
           { "type": "pdf-page", "page": 29 },
           { "type": "pdf-page", "page": 30 },
           { "type": "pdf-page", "page": 31 },
-          { "type": "pdf-page", "page": 32 }
+          { "type": "pdf-page", "page": 32 },
+          { "type": "pdf-page", "page": 33 },
+          { "type": "pdf-page", "page": 34 }
         ]
       },
       {
@@ -182,8 +182,8 @@
           "Satellites & Global Reach"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 33 },
-          { "type": "pdf-page", "page": 34 }
+          { "type": "pdf-page", "page": 35 },
+          { "type": "pdf-page", "page": 36 }
         ]
       },
       {
@@ -193,7 +193,7 @@
           "Writing Style & Conventions"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 35 }
+          { "type": "pdf-page", "page": 37 }
         ]
       },
       {
@@ -203,7 +203,7 @@
           "CI + Visual Assets Hub"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 36 }
+          { "type": "pdf-page", "page": 38 }
         ]
       }
     ],
