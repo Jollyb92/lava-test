@@ -85,7 +85,7 @@
     "coverPdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
     "chapters": [
       {
-        "title": "01 Logo",
+        "title": "Logo",
         "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
         "subchapters": [
           "Logo Design & The Slash",
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "title": "02 & 03 Font & Color",
+        "title": "Font & Color",
         "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
         "subchapters": [
           "ABC Walter Neue (Mittel)",
@@ -121,7 +121,7 @@
         ]
       },
       {
-        "title": "04 LAVA Narrative + What if + LAB",
+        "title": "LAVA Narrative + What if + LAB",
         "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
         "subchapters": [
           "About LAVA",
@@ -143,7 +143,7 @@
         ]
       },
       {
-        "title": "05 Themes",
+        "title": "Themes",
         "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
         "subchapters": [
           "Theme-Driven Approach — Overview",
@@ -169,7 +169,7 @@
         ]
       },
       {
-        "title": "06 LAVA Locations",
+        "title": "LAVA Locations",
         "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
         "subchapters": [
           "Studios — Berlin, HCMC, Stuttgart, Sydney",
@@ -183,7 +183,7 @@
         ]
       },
       {
-        "title": "07 & 08 Style & Hub",
+        "title": "Style & Hub",
         "pdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
         "subchapters": [
           "Writing Style & Conventions",
@@ -316,6 +316,14 @@
           { "type": "pdf-page", "page": 37 },
           { "type": "pdf-page", "page": 38 }
         ],
+        "serverLinks": {
+          "2.2 Project Checklist": [
+            {
+              "label": "Project Checklist",
+              "path": "L:\\4_PROJECT MANAGEMENT\\02_Templates\\01_Project Checklist"
+            }
+          ]
+        },
         "links": [
           { "label": "Bidding Manual", "id": "bidding" },
           { "label": "E.5 Templates & Standards Register", "id": "e5" }

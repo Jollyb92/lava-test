@@ -136,6 +136,34 @@ function SubchapterLabel({ text }) {
   );
 }
 
+function ServerLinks({ links }) {
+  if (!links?.length) return null;
+  return (
+    <div className="server-links">
+      <span className="server-links-label">Server Links</span>
+      <div className="server-links-btns">
+        {links.map((link, i) => {
+          const fileUrl = 'file:///' + link.path.replace(/\\/g, '/');
+          return (
+            <a
+              key={i}
+              className="server-link-btn"
+              href={fileUrl}
+              onClick={(e) => { e.preventDefault(); window.open(fileUrl); }}
+            >
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                <path d="M1 3.5C1 2.67 1.67 2 2.5 2H5l1.5 1.5H10.5C11.33 3.5 12 4.17 12 5v5c0 .83-.67 1.5-1.5 1.5h-8C1.67 11.5 1 10.83 1 10V3.5Z"
+                  stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round"/>
+              </svg>
+              {link.label}
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function ChaptersView({ chapters, accentColor, onLinksChange, selectedSubch, onSubchapterSelect, openIndex, onOpenChange }) {
   function toggle(i, ch) {
     const next = openIndex === i ? null : i;
@@ -477,6 +505,14 @@ export default function DetailPage({ onSearchOpen }) {
               ))}
             </ul>
           )}
+
+          {(() => {
+            if (!selectedSubch || !page.chapters) return null;
+            const ch = page.chapters[selectedSubch.ch];
+            const subName = ch?.subchapters[selectedSubch.sub];
+            const links = ch?.serverLinks?.[subName];
+            return links?.length ? <ServerLinks links={links} /> : null;
+          })()}
 
           {activeLinks && activeLinks.length > 0 && (
             <LinkedNav links={activeLinks} navigate={navigate} />

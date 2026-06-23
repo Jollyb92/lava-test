@@ -137,12 +137,12 @@ export const nodes = [
   { id: 'bid-client',    label: 'Client\nEngagement',      color: COLORS.biddingSub, textColor: COLORS.dark, radius: 28, x: 848, y: 585, layer: 2, parent: 'bidding', clickTarget: '/detail/bidding', connectionType: 'dotted' },
 
   // ── Communication sub-nodes — r=110, angles 100°→260° ────────────────────
-  { id: 'comm-document', label: '07 & 08\nStyle\n& Hub',      color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 296, y: 588, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
-  { id: 'comm-external', label: '06\nLAVA\nLocations',        color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 241, y: 562, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
-  { id: 'comm-layout',   label: '05\nThemes',                 color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 209, y: 510, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
-  { id: 'comm-colour',   label: '04\nLAVA\nNarrative',        color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 209, y: 450, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
-  { id: 'comm-graphic',  label: '02 & 03\nFont &\nColor',     color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 241, y: 398, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
-  { id: 'comm-fonts',    label: '01\nLogo',                   color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 296, y: 372, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
+  { id: 'comm-document', label: 'Style\n& Hub',      color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 296, y: 588, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
+  { id: 'comm-external', label: 'LAVA\nLocations',   color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 241, y: 562, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
+  { id: 'comm-layout',   label: 'Themes',            color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 209, y: 510, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
+  { id: 'comm-colour',   label: 'LAVA\nNarrative',   color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 209, y: 450, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
+  { id: 'comm-graphic',  label: 'Font &\nColor',     color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 241, y: 398, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
+  { id: 'comm-fonts',    label: 'Logo',              color: COLORS.communicationSub, textColor: COLORS.dark, radius: 28, x: 296, y: 372, layer: 2, parent: 'communication', clickTarget: '/detail/communication', connectionType: 'dotted' },
 
   // ── Tier 3: External Systems ─────────────────────────────────────────────
   {

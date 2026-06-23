@@ -677,15 +677,17 @@ a { color: inherit; text-decoration: none; }
 }
 
 .chapter-bubble-num {
-  width: 26px;
+  min-width: 26px;
   height: 26px;
-  border-radius: 50%;
+  padding: 0 6px;
+  border-radius: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
   font-weight: 700;
   flex-shrink: 0;
+  white-space: nowrap;
   transition: background 0.15s;
 }
 
@@ -776,6 +778,50 @@ a { color: inherit; text-decoration: none; }
 .subch-sub {
   font-weight: 400;
   color: #666;
+}
+
+.server-links {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.server-links-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.server-links-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.server-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 12px;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.12s, border-color 0.12s;
+  width: fit-content;
+}
+
+.server-link-btn:hover {
+  background: #ebebeb;
+  border-color: #bbb;
 }
 
 .linked-sources {
