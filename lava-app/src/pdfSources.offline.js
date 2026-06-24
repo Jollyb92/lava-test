@@ -13,3 +13,5 @@ export const PDF_COMM            = null;
 export const PDF_COMM_FALLBACK   = null;
 export const PDF_REGEN           = null;
 export const PDF_REGEN_FALLBACK  = null;
+export const PDF_MATCARBON          = null;
+export const PDF_MATCARBON_FALLBACK = null;

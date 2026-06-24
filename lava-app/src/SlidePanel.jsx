@@ -1148,44 +1148,89 @@ function TableSlide({ data, accentColor }) {
 
 function PdfScrollSlide({ data }) {
   const [numPages, setNumPages] = useState(null);
-  const [pageWidth, setPageWidth] = useState(0);
+  const [baseWidth, setBaseWidth] = useState(0);
+  const [zoom, setZoom] = useState(1);
   const [useFallback, setUseFallback] = useState(false);
   const wrapRef = useRef(null);
+  const isPanning = useRef(false);
+  const panStart = useRef({ x: 0, y: 0, sl: 0, st: 0 });
 
   useEffect(() => {
     const el = wrapRef.current;
     if (!el) return;
     const ro = new ResizeObserver(([entry]) => {
-      setPageWidth(Math.floor(entry.contentRect.width - 24));
+      setBaseWidth(Math.floor(entry.contentRect.width - 32));
     });
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
 
+  const clampZoom = (z) => Math.min(4, Math.max(0.5, z));
+
+  const onWheel = (e) => {
+    if (!e.ctrlKey && !e.metaKey) return;
+    e.preventDefault();
+    setZoom(z => clampZoom(z - e.deltaY * 0.001));
+  };
+
+  const onMouseDown = (e) => {
+    if (e.button !== 0) return;
+    isPanning.current = true;
+    const el = wrapRef.current;
+    panStart.current = { x: e.clientX, y: e.clientY, sl: el.scrollLeft, st: el.scrollTop };
+    e.preventDefault();
+  };
+  const onMouseMove = (e) => {
+    if (!isPanning.current) return;
+    const el = wrapRef.current;
+    el.scrollLeft = panStart.current.sl - (e.clientX - panStart.current.x);
+    el.scrollTop  = panStart.current.st - (e.clientY - panStart.current.y);
+  };
+  const onMouseUp = () => { isPanning.current = false; };
+
   const src = useFallback ? resolveFallbackPath(data.pdfPath) : resolvePdfPath(data.pdfPath);
+  const pageWidth = baseWidth > 0 ? Math.round(baseWidth * zoom) : 0;
 
   return (
-    <div ref={wrapRef} className="sppdf-wrap">
-      <Document
-        file={src}
-        onLoadSuccess={({ numPages: n }) => setNumPages(n)}
-        onLoadError={() => {
-          if (!useFallback && resolveFallbackPath(data.pdfPath)) setUseFallback(true);
-        }}
-        loading={<div className="sppdf-msg">Loading PDF…</div>}
-        error={<div className="sppdf-msg sppdf-msg--err">Could not load PDF.<br/>Make sure the file server is reachable.</div>}
+    <div className="sppdf-outer">
+      <div className="sppdf-toolbar">
+        <button className="sppdf-zoom-btn" onClick={() => setZoom(z => clampZoom(z - 0.15))} title="Zoom out">−</button>
+        <span className="sppdf-zoom-label">{Math.round(zoom * 100)}%</span>
+        <button className="sppdf-zoom-btn" onClick={() => setZoom(z => clampZoom(z + 0.15))} title="Zoom in">+</button>
+        <button className="sppdf-zoom-btn sppdf-zoom-reset" onClick={() => setZoom(1)} title="Reset zoom">⟳</button>
+        {numPages && <span className="sppdf-page-count">{numPages} pages</span>}
+      </div>
+      <div
+        ref={wrapRef}
+        className="sppdf-wrap"
+        onWheel={onWheel}
+        onMouseDown={onMouseDown}
+        onMouseMove={onMouseMove}
+        onMouseUp={onMouseUp}
+        onMouseLeave={onMouseUp}
+        style={{ cursor: isPanning.current ? 'grabbing' : 'grab' }}
       >
-        {numPages && pageWidth > 0 && Array.from({ length: numPages }, (_, i) => (
-          <div key={i} className="sppdf-page">
-            <Page
-              pageNumber={i + 1}
-              width={pageWidth}
-              renderTextLayer={false}
-              renderAnnotationLayer={false}
-            />
-          </div>
-        ))}
-      </Document>
+        <Document
+          file={src}
+          onLoadSuccess={({ numPages: n }) => setNumPages(n)}
+          onLoadError={() => {
+            if (!useFallback && resolveFallbackPath(data.pdfPath)) setUseFallback(true);
+          }}
+          loading={<div className="sppdf-msg">Loading PDF…</div>}
+          error={<div className="sppdf-msg sppdf-msg--err">Could not load PDF.<br/>Make sure the file server is reachable.</div>}
+        >
+          {numPages && pageWidth > 0 && Array.from({ length: numPages }, (_, i) => (
+            <div key={i} className="sppdf-page">
+              <Page
+                pageNumber={i + 1}
+                width={pageWidth}
+                renderTextLayer={false}
+                renderAnnotationLayer={false}
+              />
+            </div>
+          ))}
+        </Document>
+      </div>
     </div>
   );
 }

@@ -6,3 +6,5 @@ export const PDF_COMM            = '/MANUALS/COMMUNICATION%20MANUAL/LAVA_Communi
 export const PDF_COMM_FALLBACK   = '/pdf-server/6_MANUALS_TEST/6_COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf';
 export const PDF_REGEN           = '/MANUALS/LAVA%20ZERO/2ndEditionRegenerative_Design_and_Development.pdf';
 export const PDF_REGEN_FALLBACK  = '/pdf-server/6_MANUALS_TEST/7_LAVA%20ZERO/03_Recommended%20materials/2ndEditionRegenerative_Design_and_Development.pdf';
+export const PDF_MATCARBON          = '/MANUALS/LAVA%20ZERO/02_260610_L0_MaterialityAndEmbodiedCarbon.pdf';
+export const PDF_MATCARBON_FALLBACK = '/pdf-server/6_MANUALS_TEST/7_LAVA%20ZERO/01_Learning%20sessions/02_260610_L0_MaterialityAndEmbodiedCarbon.pdf';
