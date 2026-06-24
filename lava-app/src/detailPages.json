@@ -12,16 +12,60 @@
       "Studio Culture & Rituals — Monday Meeting, Friday Academy, team events"
     ],
     "topicLinks": [
-      [{"label": "A.1 LAVA World", "id": "a1"}],
-      [{"label": "G.1 Knowledge & Growth", "id": "g1"}, {"label": "A.2 Values & General Rules", "id": "a2"}],
-      [{"label": "A.2 Values & General Rules", "id": "a2"}, {"label": "QEMS", "id": "qems"}],
-      [{"label": "C.3 Spaces & Facilities", "id": "c3"}, {"label": "G.1 Knowledge & Growth", "id": "g1"}]
+      [
+        {
+          "label": "A.1 LAVA World",
+          "id": "a1"
+        }
+      ],
+      [
+        {
+          "label": "G.1 Knowledge & Growth",
+          "id": "g1"
+        },
+        {
+          "label": "A.2 Values & General Rules",
+          "id": "a2"
+        }
+      ],
+      [
+        {
+          "label": "A.2 Values & General Rules",
+          "id": "a2"
+        },
+        {
+          "label": "QEMS",
+          "id": "qems"
+        }
+      ],
+      [
+        {
+          "label": "C.3 Spaces & Facilities",
+          "id": "c3"
+        },
+        {
+          "label": "G.1 Knowledge & Growth",
+          "id": "g1"
+        }
+      ]
     ],
     "links": [
-      { "label": "A.1 LAVA World", "id": "a1" },
-      { "label": "A.2 Values & General Rules", "id": "a2" },
-      { "label": "QEMS", "id": "qems" },
-      { "label": "G.1 Knowledge & Growth", "id": "g1" }
+      {
+        "label": "A.1 LAVA World",
+        "id": "a1"
+      },
+      {
+        "label": "A.2 Values & General Rules",
+        "id": "a2"
+      },
+      {
+        "label": "QEMS",
+        "id": "qems"
+      },
+      {
+        "label": "G.1 Knowledge & Growth",
+        "id": "g1"
+      }
     ]
   },
   "design": {
@@ -38,17 +82,74 @@
       "Competition Guidelines — entry process, brief reading, submission standards"
     ],
     "topicLinks": [
-      [{"label": "E.1 Design Manual at a Glance", "id": "e1"}, {"label": "E.2 Project Management at a Glance", "id": "e2"}],
-      [{"label": "A.1 LAVA World", "id": "a1"}, {"label": "A.2 Values & General Rules", "id": "a2"}],
-      [{"label": "E.5 Templates & Standards Register", "id": "e5"}, {"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
-      [{"label": "E.8 Graphic Identity in Practice", "id": "e8"}, {"label": "E.5 Templates & Standards Register", "id": "e5"}],
-      [{"label": "Bidding Manual", "id": "bidding"}, {"label": "E.2 Project Management at a Glance", "id": "e2"}]
+      [
+        {
+          "label": "E.1 Design Manual at a Glance",
+          "id": "e1"
+        },
+        {
+          "label": "E.2 Project Management at a Glance",
+          "id": "e2"
+        }
+      ],
+      [
+        {
+          "label": "A.1 LAVA World",
+          "id": "a1"
+        },
+        {
+          "label": "A.2 Values & General Rules",
+          "id": "a2"
+        }
+      ],
+      [
+        {
+          "label": "E.5 Templates & Standards Register",
+          "id": "e5"
+        },
+        {
+          "label": "E.8 Graphic Identity in Practice",
+          "id": "e8"
+        }
+      ],
+      [
+        {
+          "label": "E.8 Graphic Identity in Practice",
+          "id": "e8"
+        },
+        {
+          "label": "E.5 Templates & Standards Register",
+          "id": "e5"
+        }
+      ],
+      [
+        {
+          "label": "Bidding Manual",
+          "id": "bidding"
+        },
+        {
+          "label": "E.2 Project Management at a Glance",
+          "id": "e2"
+        }
+      ]
     ],
     "links": [
-      { "label": "E.1 Design Manual at a Glance", "id": "e1" },
-      { "label": "E.8 Graphic Identity in Practice", "id": "e8" },
-      { "label": "E.5 Templates & Standards Register", "id": "e5" },
-      { "label": "QEMS", "id": "qems" }
+      {
+        "label": "E.1 Design Manual at a Glance",
+        "id": "e1"
+      },
+      {
+        "label": "E.8 Graphic Identity in Practice",
+        "id": "e8"
+      },
+      {
+        "label": "E.5 Templates & Standards Register",
+        "id": "e5"
+      },
+      {
+        "label": "QEMS",
+        "id": "qems"
+      }
     ]
   },
   "bidding": {
@@ -64,15 +165,52 @@
       "Client Engagement — communication style, presentation, follow-up"
     ],
     "topicLinks": [
-      [{"label": "E.2 Project Management at a Glance", "id": "e2"}, {"label": "E.3 SOPs", "id": "e3"}],
-      [{"label": "E.5 Templates & Standards Register", "id": "e5"}, {"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
-      [{"label": "E.2 Project Management at a Glance", "id": "e2"}],
-      [{"label": "E.8 Graphic Identity in Practice", "id": "e8"}]
+      [
+        {
+          "label": "E.2 Project Management at a Glance",
+          "id": "e2"
+        },
+        {
+          "label": "E.3 SOPs",
+          "id": "e3"
+        }
+      ],
+      [
+        {
+          "label": "E.5 Templates & Standards Register",
+          "id": "e5"
+        },
+        {
+          "label": "E.8 Graphic Identity in Practice",
+          "id": "e8"
+        }
+      ],
+      [
+        {
+          "label": "E.2 Project Management at a Glance",
+          "id": "e2"
+        }
+      ],
+      [
+        {
+          "label": "E.8 Graphic Identity in Practice",
+          "id": "e8"
+        }
+      ]
     ],
     "links": [
-      { "label": "E.2 Project Management at a Glance", "id": "e2" },
-      { "label": "E.5 Templates & Standards Register", "id": "e5" },
-      { "label": "E.8 Graphic Identity in Practice", "id": "e8" }
+      {
+        "label": "E.2 Project Management at a Glance",
+        "id": "e2"
+      },
+      {
+        "label": "E.5 Templates & Standards Register",
+        "id": "e5"
+      },
+      {
+        "label": "E.8 Graphic Identity in Practice",
+        "id": "e8"
+      }
     ]
   },
   "communication": {
@@ -97,12 +235,30 @@
           "Clearspace — Width of Letters LAB"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 4 },
-          { "type": "pdf-page", "page": 5 },
-          { "type": "pdf-page", "page": 6 },
-          { "type": "pdf-page", "page": 8 },
-          { "type": "pdf-page", "page": 9 },
-          { "type": "pdf-page", "page": 10 }
+          {
+            "type": "pdf-page",
+            "page": 4
+          },
+          {
+            "type": "pdf-page",
+            "page": 5
+          },
+          {
+            "type": "pdf-page",
+            "page": 6
+          },
+          {
+            "type": "pdf-page",
+            "page": 8
+          },
+          {
+            "type": "pdf-page",
+            "page": 9
+          },
+          {
+            "type": "pdf-page",
+            "page": 10
+          }
         ]
       },
       {
@@ -116,10 +272,22 @@
           "Additional Color Accents"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 11 },
-          { "type": "pdf-page", "page": 12 },
-          { "type": "pdf-page", "page": 13 },
-          { "type": "pdf-page", "page": 14 }
+          {
+            "type": "pdf-page",
+            "page": 11
+          },
+          {
+            "type": "pdf-page",
+            "page": 12
+          },
+          {
+            "type": "pdf-page",
+            "page": 13
+          },
+          {
+            "type": "pdf-page",
+            "page": 14
+          }
         ]
       },
       {
@@ -136,13 +304,34 @@
           "LAB Platform"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 16 },
-          { "type": "pdf-page", "page": 17 },
-          { "type": "pdf-page", "page": 19 },
-          { "type": "pdf-page", "page": 20 },
-          { "type": "pdf-page", "page": 21 },
-          { "type": "pdf-page", "page": 22 },
-          { "type": "pdf-page", "page": 24 }
+          {
+            "type": "pdf-page",
+            "page": 16
+          },
+          {
+            "type": "pdf-page",
+            "page": 17
+          },
+          {
+            "type": "pdf-page",
+            "page": 19
+          },
+          {
+            "type": "pdf-page",
+            "page": 20
+          },
+          {
+            "type": "pdf-page",
+            "page": 21
+          },
+          {
+            "type": "pdf-page",
+            "page": 22
+          },
+          {
+            "type": "pdf-page",
+            "page": 24
+          }
         ]
       },
       {
@@ -161,15 +350,42 @@
           "Conceptual Explorations"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 25 },
-          { "type": "pdf-page", "page": 26 },
-          { "type": "pdf-page", "page": 27 },
-          { "type": "pdf-page", "page": 28 },
-          { "type": "pdf-page", "page": 29 },
-          { "type": "pdf-page", "page": 30 },
-          { "type": "pdf-page", "page": 31 },
-          { "type": "pdf-page", "page": 32 },
-          { "type": "pdf-page", "page": 33 }
+          {
+            "type": "pdf-page",
+            "page": 25
+          },
+          {
+            "type": "pdf-page",
+            "page": 26
+          },
+          {
+            "type": "pdf-page",
+            "page": 27
+          },
+          {
+            "type": "pdf-page",
+            "page": 28
+          },
+          {
+            "type": "pdf-page",
+            "page": 29
+          },
+          {
+            "type": "pdf-page",
+            "page": 30
+          },
+          {
+            "type": "pdf-page",
+            "page": 31
+          },
+          {
+            "type": "pdf-page",
+            "page": 32
+          },
+          {
+            "type": "pdf-page",
+            "page": 33
+          }
         ]
       },
       {
@@ -182,9 +398,18 @@
           "Global Reach — Projects by Region"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 34 },
-          { "type": "pdf-page", "page": 35 },
-          { "type": "pdf-page", "page": 36 }
+          {
+            "type": "pdf-page",
+            "page": 34
+          },
+          {
+            "type": "pdf-page",
+            "page": 35
+          },
+          {
+            "type": "pdf-page",
+            "page": 36
+          }
         ]
       },
       {
@@ -196,15 +421,30 @@
           "CI + Visual Assets Hub"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 37 },
-          { "type": "pdf-page", "page": 38 }
+          {
+            "type": "pdf-page",
+            "page": 37
+          },
+          {
+            "type": "pdf-page",
+            "page": 38
+          }
         ]
       }
     ],
     "links": [
-      { "label": "E.8 Graphic Identity in Practice", "id": "e8" },
-      { "label": "E.5 Templates & Standards Register", "id": "e5" },
-      { "label": "E.1 Design Manual at a Glance", "id": "e1" }
+      {
+        "label": "E.8 Graphic Identity in Practice",
+        "id": "e8"
+      },
+      {
+        "label": "E.5 Templates & Standards Register",
+        "id": "e5"
+      },
+      {
+        "label": "E.1 Design Manual at a Glance",
+        "id": "e1"
+      }
     ]
   },
   "project": {
@@ -221,9 +461,18 @@
       "Lessons Learned"
     ],
     "links": [
-      { "label": "E.2 Project Management at a Glance", "id": "e2" },
-      { "label": "QEMS", "id": "qems" },
-      { "label": "E.1 Design Manual at a Glance", "id": "e1" }
+      {
+        "label": "E.2 Project Management at a Glance",
+        "id": "e2"
+      },
+      {
+        "label": "QEMS",
+        "id": "qems"
+      },
+      {
+        "label": "E.1 Design Manual at a Glance",
+        "id": "e1"
+      }
     ]
   },
   "qems": {
@@ -242,18 +491,80 @@
       "Document control §7.5"
     ],
     "topicLinks": [
-      [{"label": "F.1 Cross-References", "id": "f1"}],
-      [{"label": "Guides & Registers", "id": "guides"}, {"label": "D.2 Environmental Practice", "id": "d2"}],
-      [{"label": "B.5 Performance & Growth", "id": "b5"}, {"label": "B.1 Onboarding & First Days", "id": "b1"}],
-      [{"label": "E.3 SOPs", "id": "e3"}, {"label": "E.7 Document Control", "id": "e7"}],
-      [{"label": "D.2 Environmental Practice", "id": "d2"}, {"label": "D.3 Environmental Preparedness", "id": "d3"}],
-      [{"label": "E.7 Document Control", "id": "e7"}, {"label": "E.3 SOPs", "id": "e3"}]
+      [
+        {
+          "label": "F.1 Cross-References",
+          "id": "f1"
+        }
+      ],
+      [
+        {
+          "label": "Guides & Registers",
+          "id": "guides"
+        },
+        {
+          "label": "D.2 Environmental Practice",
+          "id": "d2"
+        }
+      ],
+      [
+        {
+          "label": "B.5 Performance & Growth",
+          "id": "b5"
+        },
+        {
+          "label": "B.1 Onboarding & First Days",
+          "id": "b1"
+        }
+      ],
+      [
+        {
+          "label": "E.3 SOPs",
+          "id": "e3"
+        },
+        {
+          "label": "E.7 Document Control",
+          "id": "e7"
+        }
+      ],
+      [
+        {
+          "label": "D.2 Environmental Practice",
+          "id": "d2"
+        },
+        {
+          "label": "D.3 Environmental Preparedness",
+          "id": "d3"
+        }
+      ],
+      [
+        {
+          "label": "E.7 Document Control",
+          "id": "e7"
+        },
+        {
+          "label": "E.3 SOPs",
+          "id": "e3"
+        }
+      ]
     ],
     "links": [
-      { "label": "D.2 Environmental Practice", "id": "d2" },
-      { "label": "D.3 Environmental Preparedness", "id": "d3" },
-      { "label": "E.6 IT, Servers & Poolarserver", "id": "e6" },
-      { "label": "E.7 Document Control", "id": "e7" }
+      {
+        "label": "D.2 Environmental Practice",
+        "id": "d2"
+      },
+      {
+        "label": "D.3 Environmental Preparedness",
+        "id": "d3"
+      },
+      {
+        "label": "E.6 IT, Servers & Poolarserver",
+        "id": "e6"
+      },
+      {
+        "label": "E.7 Document Control",
+        "id": "e7"
+      }
     ]
   },
   "ppm": {
@@ -279,18 +590,48 @@
           "1.8 Project Processes Framework"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 4 },
-          { "type": "pdf-page", "page": 6 },
-          { "type": "pdf-page", "page": 8 },
-          { "type": "pdf-page", "page": 12 },
-          { "type": "pdf-page", "page": 13 },
-          { "type": "pdf-page", "page": 15 },
-          { "type": "pdf-page", "page": 17 },
-          { "type": "pdf-page", "page": 18 }
+          {
+            "type": "pdf-page",
+            "page": 4
+          },
+          {
+            "type": "pdf-page",
+            "page": 6
+          },
+          {
+            "type": "pdf-page",
+            "page": 8
+          },
+          {
+            "type": "pdf-page",
+            "page": 12
+          },
+          {
+            "type": "pdf-page",
+            "page": 13
+          },
+          {
+            "type": "pdf-page",
+            "page": 15
+          },
+          {
+            "type": "pdf-page",
+            "page": 17
+          },
+          {
+            "type": "pdf-page",
+            "page": 18
+          }
         ],
         "links": [
-          { "label": "E.2 Project Management at a Glance", "id": "e2" },
-          { "label": "E.5 Templates & Standards Register", "id": "e5" }
+          {
+            "label": "E.2 Project Management at a Glance",
+            "id": "e2"
+          },
+          {
+            "label": "E.5 Templates & Standards Register",
+            "id": "e5"
+          }
         ]
       },
       {
@@ -310,17 +651,50 @@
           "2.2.3 Process Checklist"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 23 },
-          { "type": "pdf-page", "page": 24 },
-          { "type": "pdf-page", "page": 26 },
-          { "type": "pdf-page", "page": 30 },
-          { "type": "pdf-page", "page": 31 },
-          { "type": "pdf-page", "page": 32 },
-          { "type": "pdf-page", "page": 33 },
-          { "type": "pdf-page", "page": 35 },
-          { "type": "pdf-page", "page": 36 },
-          { "type": "pdf-page", "page": 37 },
-          { "type": "pdf-page", "page": 38 }
+          {
+            "type": "pdf-page",
+            "page": 23
+          },
+          {
+            "type": "pdf-page",
+            "page": 24
+          },
+          {
+            "type": "pdf-page",
+            "page": 26
+          },
+          {
+            "type": "pdf-page",
+            "page": 30
+          },
+          {
+            "type": "pdf-page",
+            "page": 31
+          },
+          {
+            "type": "pdf-page",
+            "page": 32
+          },
+          {
+            "type": "pdf-page",
+            "page": 33
+          },
+          {
+            "type": "pdf-page",
+            "page": 35
+          },
+          {
+            "type": "pdf-page",
+            "page": 36
+          },
+          {
+            "type": "pdf-page",
+            "page": 37
+          },
+          {
+            "type": "pdf-page",
+            "page": 38
+          }
         ],
         "serverLinks": {
           "2.2 Project Checklist": [
@@ -331,8 +705,14 @@
           ]
         },
         "links": [
-          { "label": "Bidding Manual", "id": "bidding" },
-          { "label": "E.5 Templates & Standards Register", "id": "e5" }
+          {
+            "label": "Bidding Manual",
+            "id": "bidding"
+          },
+          {
+            "label": "E.5 Templates & Standards Register",
+            "id": "e5"
+          }
         ]
       },
       {
@@ -360,25 +740,82 @@
           "3.3.6 Quality Control"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 44 },
-          { "type": "pdf-page", "page": 45 },
-          { "type": "pdf-page", "page": 46 },
-          { "type": "pdf-page", "page": 49 },
-          { "type": "pdf-page", "page": 61 },
-          { "type": "pdf-page", "page": 63 },
-          { "type": "pdf-page", "page": 67 },
-          { "type": "pdf-page", "page": 68 },
-          { "type": "pdf-page", "page": 73 },
-          { "type": "pdf-page", "page": 74 },
-          { "type": "pdf-page", "page": 75 },
-          { "type": "pdf-page", "page": 76 },
-          { "type": "pdf-page", "page": 77 },
-          { "type": "pdf-page", "page": 78 },
-          { "type": "pdf-page", "page": 80 },
-          { "type": "pdf-page", "page": 81 },
-          { "type": "pdf-page", "page": 86 },
-          { "type": "pdf-page", "page": 88 },
-          { "type": "pdf-page", "page": 93 }
+          {
+            "type": "pdf-page",
+            "page": 44
+          },
+          {
+            "type": "pdf-page",
+            "page": 45
+          },
+          {
+            "type": "pdf-page",
+            "page": 46
+          },
+          {
+            "type": "pdf-page",
+            "page": 49
+          },
+          {
+            "type": "pdf-page",
+            "page": 61
+          },
+          {
+            "type": "pdf-page",
+            "page": 63
+          },
+          {
+            "type": "pdf-page",
+            "page": 67
+          },
+          {
+            "type": "pdf-page",
+            "page": 68
+          },
+          {
+            "type": "pdf-page",
+            "page": 73
+          },
+          {
+            "type": "pdf-page",
+            "page": 74
+          },
+          {
+            "type": "pdf-page",
+            "page": 75
+          },
+          {
+            "type": "pdf-page",
+            "page": 76
+          },
+          {
+            "type": "pdf-page",
+            "page": 77
+          },
+          {
+            "type": "pdf-page",
+            "page": 78
+          },
+          {
+            "type": "pdf-page",
+            "page": 80
+          },
+          {
+            "type": "pdf-page",
+            "page": 81
+          },
+          {
+            "type": "pdf-page",
+            "page": 86
+          },
+          {
+            "type": "pdf-page",
+            "page": 88
+          },
+          {
+            "type": "pdf-page",
+            "page": 93
+          }
         ],
         "serverLinks": {
           "3.1.2 Folder Structure": [
@@ -389,9 +826,18 @@
           ]
         },
         "links": [
-          { "label": "E.4 Project Folder Structure", "id": "e4" },
-          { "label": "E.5 Templates & Standards Register", "id": "e5" },
-          { "label": "QEMS", "id": "qems" }
+          {
+            "label": "E.4 Project Folder Structure",
+            "id": "e4"
+          },
+          {
+            "label": "E.5 Templates & Standards Register",
+            "id": "e5"
+          },
+          {
+            "label": "QEMS",
+            "id": "qems"
+          }
         ]
       },
       {
@@ -403,21 +849,48 @@
           "4.1.3 Project Fact Sheet"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 100 },
-          { "type": "pdf-page", "page": 101 },
-          { "type": "pdf-page", "page": 102 }
+          {
+            "type": "pdf-page",
+            "page": 100
+          },
+          {
+            "type": "pdf-page",
+            "page": 101
+          },
+          {
+            "type": "pdf-page",
+            "page": 102
+          }
         ],
         "links": [
-          { "label": "E.4 Project Folder Structure", "id": "e4" },
-          { "label": "E.7 Document Control", "id": "e7" }
+          {
+            "label": "E.4 Project Folder Structure",
+            "id": "e4"
+          },
+          {
+            "label": "E.7 Document Control",
+            "id": "e7"
+          }
         ]
       }
     ],
     "links": [
-      { "label": "E.2 Project Management at a Glance", "id": "e2" },
-      { "label": "E.3 SOPs", "id": "e3" },
-      { "label": "E.4 Project Folder Structure", "id": "e4" },
-      { "label": "E.5 Templates & Standards Register", "id": "e5" }
+      {
+        "label": "E.2 Project Management at a Glance",
+        "id": "e2"
+      },
+      {
+        "label": "E.3 SOPs",
+        "id": "e3"
+      },
+      {
+        "label": "E.4 Project Folder Structure",
+        "id": "e4"
+      },
+      {
+        "label": "E.5 Templates & Standards Register",
+        "id": "e5"
+      }
     ]
   },
   "worksafety": {
@@ -438,14 +911,32 @@
           "NOISE — Be Considerate"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 3 },
-          { "type": "pdf-page", "page": 4 },
-          { "type": "pdf-page", "page": 5 },
-          { "type": "pdf-page", "page": 6 }
+          {
+            "type": "pdf-page",
+            "page": 3
+          },
+          {
+            "type": "pdf-page",
+            "page": 4
+          },
+          {
+            "type": "pdf-page",
+            "page": 5
+          },
+          {
+            "type": "pdf-page",
+            "page": 6
+          }
         ],
         "links": [
-          { "label": "C.1 Berlin Office Rules", "id": "c1" },
-          { "label": "C.3 Spaces & Facilities", "id": "c3" }
+          {
+            "label": "C.1 Berlin Office Rules",
+            "id": "c1"
+          },
+          {
+            "label": "C.3 Spaces & Facilities",
+            "id": "c3"
+          }
         ]
       },
       {
@@ -456,12 +947,24 @@
           "ELECTRICITY — Electrical Devices"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 7 },
-          { "type": "pdf-page", "page": 8 }
+          {
+            "type": "pdf-page",
+            "page": 7
+          },
+          {
+            "type": "pdf-page",
+            "page": 8
+          }
         ],
         "links": [
-          { "label": "D.1 Work Safety", "id": "d1" },
-          { "label": "D.3 Environmental Preparedness", "id": "d3" }
+          {
+            "label": "D.1 Work Safety",
+            "id": "d1"
+          },
+          {
+            "label": "D.3 Environmental Preparedness",
+            "id": "d3"
+          }
         ]
       },
       {
@@ -474,14 +977,32 @@
           "ESCAPE ROUTES — Help and Assist"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 9 },
-          { "type": "pdf-page", "page": 10 },
-          { "type": "pdf-page", "page": 11 },
-          { "type": "pdf-page", "page": 12 }
+          {
+            "type": "pdf-page",
+            "page": 9
+          },
+          {
+            "type": "pdf-page",
+            "page": 10
+          },
+          {
+            "type": "pdf-page",
+            "page": 11
+          },
+          {
+            "type": "pdf-page",
+            "page": 12
+          }
         ],
         "links": [
-          { "label": "D.1 Work Safety", "id": "d1" },
-          { "label": "D.3 Environmental Preparedness", "id": "d3" }
+          {
+            "label": "D.1 Work Safety",
+            "id": "d1"
+          },
+          {
+            "label": "D.3 Environmental Preparedness",
+            "id": "d3"
+          }
         ]
       },
       {
@@ -494,14 +1015,32 @@
           "PREGNANT? BREASTFEEDING? — Protection & Support"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 13 },
-          { "type": "pdf-page", "page": 14 },
-          { "type": "pdf-page", "page": 15 },
-          { "type": "pdf-page", "page": 16 }
+          {
+            "type": "pdf-page",
+            "page": 13
+          },
+          {
+            "type": "pdf-page",
+            "page": 14
+          },
+          {
+            "type": "pdf-page",
+            "page": 15
+          },
+          {
+            "type": "pdf-page",
+            "page": 16
+          }
         ],
         "links": [
-          { "label": "B.2 A Standard Day at LAVA", "id": "b2" },
-          { "label": "B.5 Performance & Growth", "id": "b5" }
+          {
+            "label": "B.2 A Standard Day at LAVA",
+            "id": "b2"
+          },
+          {
+            "label": "B.5 Performance & Growth",
+            "id": "b5"
+          }
         ]
       },
       {
@@ -514,22 +1053,52 @@
           "PROFESSIONAL SUPPORT — Sicherheitsfachkraft / Betriebsarzt"
         ],
         "slideData": [
-          { "type": "pdf-page", "page": 17 },
-          { "type": "pdf-page", "page": 18 },
-          { "type": "pdf-page", "page": 19 },
-          { "type": "pdf-page", "page": 20 }
+          {
+            "type": "pdf-page",
+            "page": 17
+          },
+          {
+            "type": "pdf-page",
+            "page": 18
+          },
+          {
+            "type": "pdf-page",
+            "page": 19
+          },
+          {
+            "type": "pdf-page",
+            "page": 20
+          }
         ],
         "links": [
-          { "label": "D.1 Work Safety", "id": "d1" },
-          { "label": "QEMS", "id": "qems" }
+          {
+            "label": "D.1 Work Safety",
+            "id": "d1"
+          },
+          {
+            "label": "QEMS",
+            "id": "qems"
+          }
         ]
       }
     ],
     "links": [
-      { "label": "D.1 Work Safety", "id": "d1" },
-      { "label": "D.3 Environmental Preparedness", "id": "d3" },
-      { "label": "C.3 Spaces & Facilities", "id": "c3" },
-      { "label": "QEMS", "id": "qems" }
+      {
+        "label": "D.1 Work Safety",
+        "id": "d1"
+      },
+      {
+        "label": "D.3 Environmental Preparedness",
+        "id": "d3"
+      },
+      {
+        "label": "C.3 Spaces & Facilities",
+        "id": "c3"
+      },
+      {
+        "label": "QEMS",
+        "id": "qems"
+      }
     ]
   },
   "lavazero": {
@@ -561,14 +1130,121 @@
       {
         "title": "EPD Databases",
         "num": "04",
-        "subchapters": [],
-        "slideData": []
+        "subchapters": [
+          "How to Use This EPD Tracker",
+          "EPD Database"
+        ],
+        "slideData": [
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "Getting Started"
+              },
+              {
+                "t": "bullets",
+                "items": [
+                  "Step 1 — Go to the EPD Database sub-chapter. Each row represents one EPD / product.",
+                  "Step 2 — Minimum fields for early-stage use: Product Name, Category, Manufacturer, EPD Reg. No., Issue & Expiry Dates, LCA Scope, and GWP A1–A3 Total.",
+                  "Step 3 — For LP3+ detailed assessments, fill in module columns A1–A3, A4, A5, B, C1–C4 and D individually."
+                ]
+              },
+              {
+                "t": "h",
+                "text": "Column Guide"
+              },
+              {
+                "t": "kv",
+                "items": [
+                  {
+                    "k": "GWP A1–A3",
+                    "v": "Global Warming Potential for manufacturing stages — the primary carbon figure per declared unit."
+                  },
+                  {
+                    "k": "A4 Transport",
+                    "v": "Carbon from transporting the product to the construction site."
+                  },
+                  {
+                    "k": "A5 Installation",
+                    "v": "Carbon from the installation / construction process."
+                  },
+                  {
+                    "k": "B1–B7 Use Stage",
+                    "v": "Emissions during the product's in-use life (often zero for passive materials)."
+                  },
+                  {
+                    "k": "C1–C4 End of Life",
+                    "v": "Demolition, transport, waste processing and disposal."
+                  },
+                  {
+                    "k": "D Beyond Boundary",
+                    "v": "Benefits from reuse, recovery or recycling (reported separately, not added to totals)."
+                  },
+                  {
+                    "k": "Δ A1–C4 Total",
+                    "v": "Sum of modules A1 through C4 — the cradle-to-grave figure without Module D."
+                  }
+                ]
+              },
+              {
+                "t": "h",
+                "text": "Data Quality Tips"
+              },
+              {
+                "t": "kv",
+                "items": [
+                  {
+                    "k": "Declared unit",
+                    "v": "Always record values per the EPD's declared unit. Note the unit and quantity in the product fields."
+                  },
+                  {
+                    "k": "Expiry dates",
+                    "v": "EPDs expire after 5 years. Review quarterly — entries flagged in orange expire within 6 months; red entries are expired."
+                  },
+                  {
+                    "k": "Document link",
+                    "v": "Paste the server path or URL to the EPD PDF in the Document Link field so it can be retrieved later."
+                  },
+                  {
+                    "k": "New versions",
+                    "v": "When an EPD is updated, add a new row. Do not overwrite the existing entry — add a note referencing the old one."
+                  },
+                  {
+                    "k": "GWP for timber",
+                    "v": "Timber products often show a negative A1–A3 GWP due to biogenic carbon storage. This is released in C3 at end of life."
+                  },
+                  {
+                    "k": "Cement EPDs",
+                    "v": "CEM I and CEM II entries are raw material ingredients — do not assign them to geometry in LCA models."
+                  }
+                ]
+              },
+              {
+                "t": "note",
+                "text": "All changes to the database are saved automatically to your browser's local storage and will be available the next time you open the app."
+              }
+            ]
+          },
+          {
+            "type": "epd-database"
+          }
+        ]
       }
     ],
     "links": [
-      { "label": "QEMS", "id": "qems" },
-      { "label": "D.2 Environmental Practice", "id": "d2" },
-      { "label": "D.3 Environmental Preparedness", "id": "d3" }
+      {
+        "label": "QEMS",
+        "id": "qems"
+      },
+      {
+        "label": "D.2 Environmental Practice",
+        "id": "d2"
+      },
+      {
+        "label": "D.3 Environmental Preparedness",
+        "id": "d3"
+      }
     ]
   },
   "guides": {
@@ -585,9 +1261,18 @@
       "Energy & Waste Tracking"
     ],
     "links": [
-      { "label": "D.2 Environmental Practice", "id": "d2" },
-      { "label": "D.3 Environmental Preparedness", "id": "d3" },
-      { "label": "C.2 Housekeeping", "id": "c2" }
+      {
+        "label": "D.2 Environmental Practice",
+        "id": "d2"
+      },
+      {
+        "label": "D.3 Environmental Preparedness",
+        "id": "d3"
+      },
+      {
+        "label": "C.2 Housekeeping",
+        "id": "c2"
+      }
     ]
   },
   "live": {
@@ -605,16 +1290,58 @@
       "Software licenses — M365, Adobe CC, Rhino, Autodesk, Enscape"
     ],
     "topicLinks": [
-      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}],
-      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "B.2 A Standard Day at LAVA", "id": "b2"}],
-      [{"label": "C.3 Spaces & Facilities", "id": "c3"}],
-      [{"label": "E.4 Project Folder Structure", "id": "e4"}, {"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}],
-      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}]
+      [
+        {
+          "label": "E.6 IT, Servers & Poolarserver",
+          "id": "e6"
+        }
+      ],
+      [
+        {
+          "label": "E.6 IT, Servers & Poolarserver",
+          "id": "e6"
+        },
+        {
+          "label": "B.2 A Standard Day at LAVA",
+          "id": "b2"
+        }
+      ],
+      [
+        {
+          "label": "C.3 Spaces & Facilities",
+          "id": "c3"
+        }
+      ],
+      [
+        {
+          "label": "E.4 Project Folder Structure",
+          "id": "e4"
+        },
+        {
+          "label": "E.6 IT, Servers & Poolarserver",
+          "id": "e6"
+        }
+      ],
+      [
+        {
+          "label": "E.6 IT, Servers & Poolarserver",
+          "id": "e6"
+        }
+      ]
     ],
     "links": [
-      { "label": "E.6 IT, Servers & Poolarserver", "id": "e6" },
-      { "label": "E.4 Project Folder Structure", "id": "e4" },
-      { "label": "E.5 Templates & Standards Register", "id": "e5" }
+      {
+        "label": "E.6 IT, Servers & Poolarserver",
+        "id": "e6"
+      },
+      {
+        "label": "E.4 Project Folder Structure",
+        "id": "e4"
+      },
+      {
+        "label": "E.5 Templates & Standards Register",
+        "id": "e5"
+      }
     ]
   },
   "toc": {
@@ -635,23 +1362,104 @@
       "Part G — Knowledge & Growth"
     ],
     "topicLinks": [
-      [{"label": "Document Control", "id": "doc-control"}],
-      [{"label": "A.1 LAVA World", "id": "a1"}, {"label": "A.2 Values & General Rules", "id": "a2"}],
-      [{"label": "B.1 Onboarding & First Days", "id": "b1"}, {"label": "B.5 Performance & Growth", "id": "b5"}],
-      [{"label": "C.1 Berlin Office Rules", "id": "c1"}, {"label": "C.3 Spaces & Facilities", "id": "c3"}],
-      [{"label": "D.1 Work Safety", "id": "d1"}, {"label": "D.3 Environmental Preparedness", "id": "d3"}],
-      [{"label": "E.1 Design Manual at a Glance", "id": "e1"}, {"label": "E.5 Templates & Standards Register", "id": "e5"}],
-      [{"label": "F.1 Cross-References", "id": "f1"}],
-      [{"label": "G.1 Knowledge & Growth", "id": "g1"}]
+      [
+        {
+          "label": "Document Control",
+          "id": "doc-control"
+        }
+      ],
+      [
+        {
+          "label": "A.1 LAVA World",
+          "id": "a1"
+        },
+        {
+          "label": "A.2 Values & General Rules",
+          "id": "a2"
+        }
+      ],
+      [
+        {
+          "label": "B.1 Onboarding & First Days",
+          "id": "b1"
+        },
+        {
+          "label": "B.5 Performance & Growth",
+          "id": "b5"
+        }
+      ],
+      [
+        {
+          "label": "C.1 Berlin Office Rules",
+          "id": "c1"
+        },
+        {
+          "label": "C.3 Spaces & Facilities",
+          "id": "c3"
+        }
+      ],
+      [
+        {
+          "label": "D.1 Work Safety",
+          "id": "d1"
+        },
+        {
+          "label": "D.3 Environmental Preparedness",
+          "id": "d3"
+        }
+      ],
+      [
+        {
+          "label": "E.1 Design Manual at a Glance",
+          "id": "e1"
+        },
+        {
+          "label": "E.5 Templates & Standards Register",
+          "id": "e5"
+        }
+      ],
+      [
+        {
+          "label": "F.1 Cross-References",
+          "id": "f1"
+        }
+      ],
+      [
+        {
+          "label": "G.1 Knowledge & Growth",
+          "id": "g1"
+        }
+      ]
     ],
     "links": [
-      { "label": "A.1 LAVA World", "id": "a1" },
-      { "label": "B.1 Onboarding & First Days", "id": "b1" },
-      { "label": "C.1 Berlin Office Rules", "id": "c1" },
-      { "label": "D.1 Work Safety", "id": "d1" },
-      { "label": "E.1 Design Manual at a Glance", "id": "e1" },
-      { "label": "F.1 Cross-References", "id": "f1" },
-      { "label": "G.1 Knowledge & Growth", "id": "g1" }
+      {
+        "label": "A.1 LAVA World",
+        "id": "a1"
+      },
+      {
+        "label": "B.1 Onboarding & First Days",
+        "id": "b1"
+      },
+      {
+        "label": "C.1 Berlin Office Rules",
+        "id": "c1"
+      },
+      {
+        "label": "D.1 Work Safety",
+        "id": "d1"
+      },
+      {
+        "label": "E.1 Design Manual at a Glance",
+        "id": "e1"
+      },
+      {
+        "label": "F.1 Cross-References",
+        "id": "f1"
+      },
+      {
+        "label": "G.1 Knowledge & Growth",
+        "id": "g1"
+      }
     ]
   },
   "doc-control": {
@@ -669,8 +1477,14 @@
       "Revision history — version · date · description · author"
     ],
     "links": [
-      { "label": "QEMS", "id": "qems" },
-      { "label": "E.7 Document Control", "id": "e7" }
+      {
+        "label": "QEMS",
+        "id": "qems"
+      },
+      {
+        "label": "E.7 Document Control",
+        "id": "e7"
+      }
     ]
   },
   "intro": {
@@ -697,19 +1511,68 @@
       "#8B2D2D"
     ],
     "topicLinks": [
-      [{"label": "Table of Contents", "id": "toc"}],
-      [{"label": "Cultural Manual", "id": "cultural"}],
-      [{"label": "Design Manual", "id": "design"}, {"label": "E.1 Design Manual at a Glance", "id": "e1"}],
-      [{"label": "Bidding Manual", "id": "bidding"}],
-      [{"label": "Project Management Manual", "id": "ppm"}],
-      [{"label": "Work Safety Manual", "id": "worksafety"}]
+      [
+        {
+          "label": "Table of Contents",
+          "id": "toc"
+        }
+      ],
+      [
+        {
+          "label": "Cultural Manual",
+          "id": "cultural"
+        }
+      ],
+      [
+        {
+          "label": "Design Manual",
+          "id": "design"
+        },
+        {
+          "label": "E.1 Design Manual at a Glance",
+          "id": "e1"
+        }
+      ],
+      [
+        {
+          "label": "Bidding Manual",
+          "id": "bidding"
+        }
+      ],
+      [
+        {
+          "label": "Project Management Manual",
+          "id": "ppm"
+        }
+      ],
+      [
+        {
+          "label": "Work Safety Manual",
+          "id": "worksafety"
+        }
+      ]
     ],
     "links": [
-      { "label": "Cultural Manual", "id": "cultural" },
-      { "label": "Design Manual", "id": "design" },
-      { "label": "Bidding Manual", "id": "bidding" },
-      { "label": "Project Management Manual", "id": "ppm" },
-      { "label": "Work Safety Manual", "id": "worksafety" }
+      {
+        "label": "Cultural Manual",
+        "id": "cultural"
+      },
+      {
+        "label": "Design Manual",
+        "id": "design"
+      },
+      {
+        "label": "Bidding Manual",
+        "id": "bidding"
+      },
+      {
+        "label": "Project Management Manual",
+        "id": "ppm"
+      },
+      {
+        "label": "Work Safety Manual",
+        "id": "worksafety"
+      }
     ]
   },
   "a1": {
@@ -729,68 +1592,171 @@
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"LAVA was founded in 2007 by Tobias Wallisser, Alexander Rieck and Chris Bosse in Germany and Australia. Today more than 80 people work on projects across Europe, the Middle East, China and Australia."},
-          {"t":"para","text":"The practice has developed a specific approach across a wide range of projects of various sizes, cultures and typologies — always driven by intensive dialogue with the client and a commitment to visionary, technology-forward design."},
-          {"t":"note","text":"\"LAVA is always ready for the next breakthrough!\" — Tobias Wallisser, Alexander Rieck, Chris Bosse"}
+          {
+            "t": "para",
+            "text": "LAVA was founded in 2007 by Tobias Wallisser, Alexander Rieck and Chris Bosse in Germany and Australia. Today more than 80 people work on projects across Europe, the Middle East, China and Australia."
+          },
+          {
+            "t": "para",
+            "text": "The practice has developed a specific approach across a wide range of projects of various sizes, cultures and typologies — always driven by intensive dialogue with the client and a commitment to visionary, technology-forward design."
+          },
+          {
+            "t": "note",
+            "text": "\"LAVA is always ready for the next breakthrough!\" — Tobias Wallisser, Alexander Rieck, Chris Bosse"
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"kv","items":[
-            {"k":"Berlin (HQ)","v":"Saarbrücker Strasse 24, Haus D · 10405 Berlin · +49 30 473 747 180 · wallisser@l-a-v-a.com"},
-            {"k":"Stuttgart","v":"Wolframstrasse 20b · 70191 Stuttgart · +49 711 722 329 01 · rieck@l-a-v-a.com"},
-            {"k":"Sydney","v":"88 Oxford Street, Paddington NSW 2021 · +61 02 935 681 79 · bosse@l-a-v-a.net"},
-            {"k":"Ho Chi Minh","v":"Alley 3/27A Quoc Huong, Thao Dien, Dist. 2 · +84 8 2228 8273 · lava.vietnam@l-a-v-a.net"}
-          ]}
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Berlin (HQ)",
+                "v": "Saarbrücker Strasse 24, Haus D · 10405 Berlin · +49 30 473 747 180 · wallisser@l-a-v-a.com"
+              },
+              {
+                "k": "Stuttgart",
+                "v": "Wolframstrasse 20b · 70191 Stuttgart · +49 711 722 329 01 · rieck@l-a-v-a.com"
+              },
+              {
+                "k": "Sydney",
+                "v": "88 Oxford Street, Paddington NSW 2021 · +61 02 935 681 79 · bosse@l-a-v-a.net"
+              },
+              {
+                "k": "Ho Chi Minh",
+                "v": "Alley 3/27A Quoc Huong, Thao Dien, Dist. 2 · +84 8 2228 8273 · lava.vietnam@l-a-v-a.net"
+              }
+            ]
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"kv","items":[
-            {"k":"Address","v":"Saarbrücker Strasse 24, Haus D · 10405 Berlin, Germany"},
-            {"k":"Phone","v":"+49 30 473 747 180"},
-            {"k":"Email","v":"office.ber@l-a-v-a.com"}
-          ]},
-          {"t":"para","text":"Having diverse international perspectives allows for a uniquely strategic approach in masterplanning large-scale developments. High-quality design results from the continuity of the process and intensive dialogue with the client."}
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Address",
+                "v": "Saarbrücker Strasse 24, Haus D · 10405 Berlin, Germany"
+              },
+              {
+                "k": "Phone",
+                "v": "+49 30 473 747 180"
+              },
+              {
+                "k": "Email",
+                "v": "office.ber@l-a-v-a.com"
+              }
+            ]
+          },
+          {
+            "t": "para",
+            "text": "Having diverse international perspectives allows for a uniquely strategic approach in masterplanning large-scale developments. High-quality design results from the continuity of the process and intensive dialogue with the client."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"h","text":"\"More with Less\""},
-          {"t":"para","text":"LAVA believes in achieving better quality and better architecture with less material and resources. Every project, in every budget range, incorporates that special, unique LAVA feature — born from ongoing experimentation with materials, technical solutions and methods of production."},
-          {"t":"h","text":"\"What If?\""},
-          {"t":"para","text":"At LAVA we ask \"What if?\" Our practice specialises in finding the core of the client's problem and turning it into a unique advantage. We challenge the perception of architecture as the production of square metres — unifying structure, space and architectural expression to create unique experiences."}
+          {
+            "t": "h",
+            "text": "\"More with Less\""
+          },
+          {
+            "t": "para",
+            "text": "LAVA believes in achieving better quality and better architecture with less material and resources. Every project, in every budget range, incorporates that special, unique LAVA feature — born from ongoing experimentation with materials, technical solutions and methods of production."
+          },
+          {
+            "t": "h",
+            "text": "\"What If?\""
+          },
+          {
+            "t": "para",
+            "text": "At LAVA we ask \"What if?\" Our practice specialises in finding the core of the client's problem and turning it into a unique advantage. We challenge the perception of architecture as the production of square metres — unifying structure, space and architectural expression to create unique experiences."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"LAVA's work is organised around six evolving themes, each framed as an open question:"},
-          {"t":"bullets","items":[
-            "Designed to Connect — What if architecture can enhance a new togetherness of social interaction, lifelong learning and meaningful debate?",
-            "Digitizing the Process — What if architecture could gain new relevance by harnessing automation to fight today's housing crisis?",
-            "Energy Transition — What if architecture could communicate the abstract nature of energy while being a symbol for a greener future?",
-            "Creativity at Work — What if work could be life-improving: making us feel connected, inspired, smarter and more productive?",
-            "Future Cities — What if planetary challenges like the climate crisis required new concepts and methods for the architectural profession?",
-            "Planning with Nature — What if a single building can be akin to a forest with a highly balanced indoor microbiome to support all species?"
-          ]}
+          {
+            "t": "para",
+            "text": "LAVA's work is organised around six evolving themes, each framed as an open question:"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Designed to Connect — What if architecture can enhance a new togetherness of social interaction, lifelong learning and meaningful debate?",
+              "Digitizing the Process — What if architecture could gain new relevance by harnessing automation to fight today's housing crisis?",
+              "Energy Transition — What if architecture could communicate the abstract nature of energy while being a symbol for a greener future?",
+              "Creativity at Work — What if work could be life-improving: making us feel connected, inspired, smarter and more productive?",
+              "Future Cities — What if planetary challenges like the climate crisis required new concepts and methods for the architectural profession?",
+              "Planning with Nature — What if a single building can be akin to a forest with a highly balanced indoor microbiome to support all species?"
+            ]
+          }
         ]
       }
     ],
     "topicLinks": [
-      [{"label": "A.2 Values & General Rules", "id": "a2"}],
-      [{"label": "C.1 Berlin Office Rules", "id": "c1"}, {"label": "C.3 Spaces & Facilities", "id": "c3"}],
-      [{"label": "C.1 Berlin Office Rules", "id": "c1"}],
-      [{"label": "E.1 Design Manual at a Glance", "id": "e1"}, {"label": "A.2 Values & General Rules", "id": "a2"}],
-      [{"label": "A.2 Values & General Rules", "id": "a2"}, {"label": "E.1 Design Manual at a Glance", "id": "e1"}]
+      [
+        {
+          "label": "A.2 Values & General Rules",
+          "id": "a2"
+        }
+      ],
+      [
+        {
+          "label": "C.1 Berlin Office Rules",
+          "id": "c1"
+        },
+        {
+          "label": "C.3 Spaces & Facilities",
+          "id": "c3"
+        }
+      ],
+      [
+        {
+          "label": "C.1 Berlin Office Rules",
+          "id": "c1"
+        }
+      ],
+      [
+        {
+          "label": "E.1 Design Manual at a Glance",
+          "id": "e1"
+        },
+        {
+          "label": "A.2 Values & General Rules",
+          "id": "a2"
+        }
+      ],
+      [
+        {
+          "label": "A.2 Values & General Rules",
+          "id": "a2"
+        },
+        {
+          "label": "E.1 Design Manual at a Glance",
+          "id": "e1"
+        }
+      ]
     ],
     "links": [
-      { "label": "A.2 Values & General Rules", "id": "a2" },
-      { "label": "QEMS", "id": "qems" },
-      { "label": "G.1 Knowledge & Growth", "id": "g1" }
+      {
+        "label": "A.2 Values & General Rules",
+        "id": "a2"
+      },
+      {
+        "label": "QEMS",
+        "id": "qems"
+      },
+      {
+        "label": "G.1 Knowledge & Growth",
+        "id": "g1"
+      }
     ]
   },
   "a2": {
@@ -810,71 +1776,141 @@
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"Office culture is built by the small interactions. Consider the impact that your decisions may have on others."},
-          {"t":"note","text":"\"The way you do anything is the way you do everything\""},
-          {"t":"para","text":"It is important that we apply our beliefs to our projects in addition to our office environment. The same values that guide our architecture guide how we work together every day."}
+          {
+            "t": "para",
+            "text": "Office culture is built by the small interactions. Consider the impact that your decisions may have on others."
+          },
+          {
+            "t": "note",
+            "text": "\"The way you do anything is the way you do everything\""
+          },
+          {
+            "t": "para",
+            "text": "It is important that we apply our beliefs to our projects in addition to our office environment. The same values that guide our architecture guide how we work together every day."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"Everyone's equality is independent of gender, race or position. Value colleagues and treat them the way you would want to be treated."},
-          {"t":"bullets","items":[
-            "Treat everyone with equal respect regardless of seniority",
-            "Be forward about sharing knowledge and open when you need input",
-            "Encourage and accept constructive feedback from anyone"
-          ]}
+          {
+            "t": "para",
+            "text": "Everyone's equality is independent of gender, race or position. Value colleagues and treat them the way you would want to be treated."
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Treat everyone with equal respect regardless of seniority",
+              "Be forward about sharing knowledge and open when you need input",
+              "Encourage and accept constructive feedback from anyone"
+            ]
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"At LAVA we collaborate instead of compete. We encourage sharing constructive feedback and helping each other grow."},
-          {"t":"bullets","items":[
-            "Share knowledge openly — don't hoard expertise",
-            "Ask questions when you need input, and welcome questions directed at you",
-            "Give and receive constructive feedback as a normal part of work",
-            "Support colleagues across teams and disciplines"
-          ]}
+          {
+            "t": "para",
+            "text": "At LAVA we collaborate instead of compete. We encourage sharing constructive feedback and helping each other grow."
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Share knowledge openly — don't hoard expertise",
+              "Ask questions when you need input, and welcome questions directed at you",
+              "Give and receive constructive feedback as a normal part of work",
+              "Support colleagues across teams and disciplines"
+            ]
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"Knowledge sharing is one of LAVA's core values. The whole practice improves when individuals share what they know and learn openly."},
-          {"t":"bullets","items":[
-            "Be proactive about sharing knowledge with colleagues",
-            "Ask questions openly — don't struggle alone with a problem",
-            "Contribute to Friday Academy and Lunch Presentations",
-            "Document project learnings on the server for future teams"
-          ]}
+          {
+            "t": "para",
+            "text": "Knowledge sharing is one of LAVA's core values. The whole practice improves when individuals share what they know and learn openly."
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Be proactive about sharing knowledge with colleagues",
+              "Ask questions openly — don't struggle alone with a problem",
+              "Contribute to Friday Academy and Lunch Presentations",
+              "Document project learnings on the server for future teams"
+            ]
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"It is important for LAVA to support healthy engagement, both in creative work and in how we come together as a community."},
-          {"t":"bullets","items":[
-            "Fabrication Lab — hands-on making and prototyping",
-            "VR-Room — immersive design review and exploration",
-            "Library — research, reference and inspiration",
-            "Monday Morning Meeting — weekly whole-office gathering for connection"
-          ]},
-          {"t":"note","text":"These spaces and rituals make LAVA a community, not just a workplace. Make use of them."}
+          {
+            "t": "para",
+            "text": "It is important for LAVA to support healthy engagement, both in creative work and in how we come together as a community."
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Fabrication Lab — hands-on making and prototyping",
+              "VR-Room — immersive design review and exploration",
+              "Library — research, reference and inspiration",
+              "Monday Morning Meeting — weekly whole-office gathering for connection"
+            ]
+          },
+          {
+            "t": "note",
+            "text": "These spaces and rituals make LAVA a community, not just a workplace. Make use of them."
+          }
         ]
       }
     ],
     "topicLinks": [
-      [{"label": "A.1 LAVA World", "id": "a1"}],
-      [{"label": "QEMS", "id": "qems"}],
-      [{"label": "A.1 LAVA World", "id": "a1"}],
-      [{"label": "G.1 Knowledge & Growth", "id": "g1"}],
-      [{"label": "C.3 Spaces & Facilities", "id": "c3"}]
+      [
+        {
+          "label": "A.1 LAVA World",
+          "id": "a1"
+        }
+      ],
+      [
+        {
+          "label": "QEMS",
+          "id": "qems"
+        }
+      ],
+      [
+        {
+          "label": "A.1 LAVA World",
+          "id": "a1"
+        }
+      ],
+      [
+        {
+          "label": "G.1 Knowledge & Growth",
+          "id": "g1"
+        }
+      ],
+      [
+        {
+          "label": "C.3 Spaces & Facilities",
+          "id": "c3"
+        }
+      ]
     ],
     "links": [
-      { "label": "A.1 LAVA World", "id": "a1" },
-      { "label": "QEMS", "id": "qems" },
-      { "label": "G.1 Knowledge & Growth", "id": "g1" }
+      {
+        "label": "A.1 LAVA World",
+        "id": "a1"
+      },
+      {
+        "label": "QEMS",
+        "id": "qems"
+      },
+      {
+        "label": "G.1 Knowledge & Growth",
+        "id": "g1"
+      }
     ]
   },
   "b1": {
@@ -900,27 +1936,117 @@
       {
         "type": "links",
         "items": [
-          { "label": "Vacation Request",      "desc": "Submit annual leave and holiday requests to HR",          "url": "#", "icon": "calendar" },
-          { "label": "Compensation Request",  "desc": "Overtime compensation and time-off-in-lieu forms",       "url": "#", "icon": "coins"    },
-          { "label": "DATEV",                 "desc": "Payslips, payroll documents and DateV employee portal",  "url": "https://apps.datev.de", "icon": "datev", "external": true },
-          { "label": "IT Request",            "desc": "Hardware, software and IT support requests",             "url": "#", "icon": "computer" }
+          {
+            "label": "Vacation Request",
+            "desc": "Submit annual leave and holiday requests to HR",
+            "url": "#",
+            "icon": "calendar"
+          },
+          {
+            "label": "Compensation Request",
+            "desc": "Overtime compensation and time-off-in-lieu forms",
+            "url": "#",
+            "icon": "coins"
+          },
+          {
+            "label": "DATEV",
+            "desc": "Payslips, payroll documents and DateV employee portal",
+            "url": "https://apps.datev.de",
+            "icon": "datev",
+            "external": true
+          },
+          {
+            "label": "IT Request",
+            "desc": "Hardware, software and IT support requests",
+            "url": "#",
+            "icon": "computer"
+          }
         ]
       }
     ],
     "topicLinks": [
-      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}],
-      [{"label": "B.4 Mentoring & Buddy System", "id": "b4"}, {"label": "C.1 Berlin Office Rules", "id": "c1"}],
-      [{"label": "D.1 Work Safety", "id": "d1"}, {"label": "QEMS", "id": "qems"}],
-      [{"label": "B.4 Mentoring & Buddy System", "id": "b4"}, {"label": "QEMS", "id": "qems"}],
-      [{"label": "B.4 Mentoring & Buddy System", "id": "b4"}, {"label": "B.5 Performance & Growth", "id": "b5"}],
-      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}]
+      [
+        {
+          "label": "E.6 IT, Servers & Poolarserver",
+          "id": "e6"
+        },
+        {
+          "label": "Live Systems & Tools",
+          "id": "live"
+        }
+      ],
+      [
+        {
+          "label": "B.4 Mentoring & Buddy System",
+          "id": "b4"
+        },
+        {
+          "label": "C.1 Berlin Office Rules",
+          "id": "c1"
+        }
+      ],
+      [
+        {
+          "label": "D.1 Work Safety",
+          "id": "d1"
+        },
+        {
+          "label": "QEMS",
+          "id": "qems"
+        }
+      ],
+      [
+        {
+          "label": "B.4 Mentoring & Buddy System",
+          "id": "b4"
+        },
+        {
+          "label": "QEMS",
+          "id": "qems"
+        }
+      ],
+      [
+        {
+          "label": "B.4 Mentoring & Buddy System",
+          "id": "b4"
+        },
+        {
+          "label": "B.5 Performance & Growth",
+          "id": "b5"
+        }
+      ],
+      [
+        {
+          "label": "E.6 IT, Servers & Poolarserver",
+          "id": "e6"
+        },
+        {
+          "label": "Live Systems & Tools",
+          "id": "live"
+        }
+      ]
     ],
     "links": [
-      { "label": "B.4 Mentoring & Buddy System", "id": "b4" },
-      { "label": "D.1 Work Safety", "id": "d1" },
-      { "label": "E.6 IT, Servers & Poolarserver", "id": "e6" },
-      { "label": "Live Systems & Tools", "id": "live" },
-      { "label": "QEMS", "id": "qems" }
+      {
+        "label": "B.4 Mentoring & Buddy System",
+        "id": "b4"
+      },
+      {
+        "label": "D.1 Work Safety",
+        "id": "d1"
+      },
+      {
+        "label": "E.6 IT, Servers & Poolarserver",
+        "id": "e6"
+      },
+      {
+        "label": "Live Systems & Tools",
+        "id": "live"
+      },
+      {
+        "label": "QEMS",
+        "id": "qems"
+      }
     ]
   },
   "b2": {
@@ -940,77 +2066,191 @@
       {
         "type": "text",
         "blocks": [
-          {"t":"kv","items":[
-            {"k":"Core hours","v":"09:30 – 17:00"},
-            {"k":"Typical arrival","v":"Between 08:30 and 09:30"},
-            {"k":"Working day","v":"8 hours (lunch break does not count as working time)"},
-            {"k":"Flexibility","v":"Earlier start or later finish is allowed; coordinate any changes with your team lead"}
-          ]},
-          {"t":"note","text":"On Mondays the whole office meets at 09:30 sharp — no exceptions on that day."}
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Core hours",
+                "v": "09:30 – 17:00"
+              },
+              {
+                "k": "Typical arrival",
+                "v": "Between 08:30 and 09:30"
+              },
+              {
+                "k": "Working day",
+                "v": "8 hours (lunch break does not count as working time)"
+              },
+              {
+                "k": "Flexibility",
+                "v": "Earlier start or later finish is allowed; coordinate any changes with your team lead"
+              }
+            ]
+          },
+          {
+            "t": "note",
+            "text": "On Mondays the whole office meets at 09:30 sharp — no exceptions on that day."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"kv","items":[
-            {"k":"When","v":"Every Monday, 09:30 – 10:00"},
-            {"k":"Where","v":"Green room"},
-            {"k":"What","v":"Round-table talk and small breakfast together"}
-          ]},
-          {"t":"para","text":"The Monday Morning Meeting is important for socialising and building community — not on a project basis, but on a personal level. It helps everyone get to know each other better and keeps up a good group dynamic."}
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "When",
+                "v": "Every Monday, 09:30 – 10:00"
+              },
+              {
+                "k": "Where",
+                "v": "Green room"
+              },
+              {
+                "k": "What",
+                "v": "Round-table talk and small breakfast together"
+              }
+            ]
+          },
+          {
+            "t": "para",
+            "text": "The Monday Morning Meeting is important for socialising and building community — not on a project basis, but on a personal level. It helps everyone get to know each other better and keeps up a good group dynamic."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"You are required to notify your project lead or administration if you anticipate being late. Inform the office before 9:00 am."},
-          {"t":"kv","items":[
-            {"k":"Phone","v":"+49 30 473 747 180"},
-            {"k":"Email","v":"office.ber@l-a-v-a.com"}
-          ]},
-          {"t":"note","text":"If you worked very late the night before, exceptions are made as long as they have been agreed with the Project Architect in advance."}
+          {
+            "t": "para",
+            "text": "You are required to notify your project lead or administration if you anticipate being late. Inform the office before 9:00 am."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Phone",
+                "v": "+49 30 473 747 180"
+              },
+              {
+                "k": "Email",
+                "v": "office.ber@l-a-v-a.com"
+              }
+            ]
+          },
+          {
+            "t": "note",
+            "text": "If you worked very late the night before, exceptions are made as long as they have been agreed with the Project Architect in advance."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"Saturdays and Sundays are free in principle. Overtime may be required in the final phases of competitions or for project deadlines — always discuss with your Project Lead and Director first."},
-          {"t":"h","text":"Late-night perks"},
-          {"t":"bullets","items":[
-            "Dinner reimbursement: up to €15 when working late, at the discretion of the Project Architect",
-            "Taxi home: covered if you work past the last regular bus or U-Bahn",
-            "Compensation days: accrued for overtime and must be taken within the following week"
-          ]},
-          {"t":"note","text":"Claim dinner and taxi via the monthly expenses sheet with receipts — submit to admin at end of month."}
+          {
+            "t": "para",
+            "text": "Saturdays and Sundays are free in principle. Overtime may be required in the final phases of competitions or for project deadlines — always discuss with your Project Lead and Director first."
+          },
+          {
+            "t": "h",
+            "text": "Late-night perks"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Dinner reimbursement: up to €15 when working late, at the discretion of the Project Architect",
+              "Taxi home: covered if you work past the last regular bus or U-Bahn",
+              "Compensation days: accrued for overtime and must be taken within the following week"
+            ]
+          },
+          {
+            "t": "note",
+            "text": "Claim dinner and taxi via the monthly expenses sheet with receipts — submit to admin at end of month."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"It is mandatory for everyone to log their working hours in Poolarserver. This allows the office to track time spent on every project and phase."},
-          {"t":"h","text":"How to log time"},
-          {"t":"bullets","items":[
-            "Click on the day for which you want to enter your time-sheet",
-            "Fill in the project number and the phase (you can set a default project)",
-            "Highlight when you arrived and when you left",
-            "Lunch time is excluded — it does not count as working time",
-            "Submit sick days via Poolarserver as well"
-          ]}
+          {
+            "t": "para",
+            "text": "It is mandatory for everyone to log their working hours in Poolarserver. This allows the office to track time spent on every project and phase."
+          },
+          {
+            "t": "h",
+            "text": "How to log time"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Click on the day for which you want to enter your time-sheet",
+              "Fill in the project number and the phase (you can set a default project)",
+              "Highlight when you arrived and when you left",
+              "Lunch time is excluded — it does not count as working time",
+              "Submit sick days via Poolarserver as well"
+            ]
+          }
         ]
       }
     ],
     "topicLinks": [
-      [{"label": "B.3 Time Off & Absence", "id": "b3"}],
-      [{"label": "C.3 Spaces & Facilities", "id": "c3"}, {"label": "A.2 Values & General Rules", "id": "a2"}],
-      [{"label": "B.3 Time Off & Absence", "id": "b3"}],
-      [{"label": "B.3 Time Off & Absence", "id": "b3"}],
-      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}]
+      [
+        {
+          "label": "B.3 Time Off & Absence",
+          "id": "b3"
+        }
+      ],
+      [
+        {
+          "label": "C.3 Spaces & Facilities",
+          "id": "c3"
+        },
+        {
+          "label": "A.2 Values & General Rules",
+          "id": "a2"
+        }
+      ],
+      [
+        {
+          "label": "B.3 Time Off & Absence",
+          "id": "b3"
+        }
+      ],
+      [
+        {
+          "label": "B.3 Time Off & Absence",
+          "id": "b3"
+        }
+      ],
+      [
+        {
+          "label": "E.6 IT, Servers & Poolarserver",
+          "id": "e6"
+        },
+        {
+          "label": "Live Systems & Tools",
+          "id": "live"
+        }
+      ]
     ],
     "links": [
-      { "label": "E.6 IT, Servers & Poolarserver", "id": "e6" },
-      { "label": "Live Systems & Tools", "id": "live" },
-      { "label": "C.1 Berlin Office Rules", "id": "c1" },
-      { "label": "B.3 Time Off & Absence", "id": "b3" }
+      {
+        "label": "E.6 IT, Servers & Poolarserver",
+        "id": "e6"
+      },
+      {
+        "label": "Live Systems & Tools",
+        "id": "live"
+      },
+      {
+        "label": "C.1 Berlin Office Rules",
+        "id": "c1"
+      },
+      {
+        "label": "B.3 Time Off & Absence",
+        "id": "b3"
+      }
     ]
   },
   "b3": {
@@ -1031,14 +2271,23 @@
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"The holiday year runs from 1 January to 31 December. For the year of joining and for part-time employees, entitlement is calculated on a pro-rata basis."},
-          {"t":"bullets","items":[
-            "Holiday must be taken in periods of no less than half a day",
-            "Coordinate leave with your Project Lead first, then with Administration",
-            "Long holidays: submit the Urlaubsantrag at least 1 month in advance",
-            "Extended weekends or 1 day off: submit at least 2 weeks in advance"
-          ]},
-          {"t":"note","text":"There is no holiday entitlement during the trial period. The Urlaubsantrag form is available in the IT Wiki."}
+          {
+            "t": "para",
+            "text": "The holiday year runs from 1 January to 31 December. For the year of joining and for part-time employees, entitlement is calculated on a pro-rata basis."
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Holiday must be taken in periods of no less than half a day",
+              "Coordinate leave with your Project Lead first, then with Administration",
+              "Long holidays: submit the Urlaubsantrag at least 1 month in advance",
+              "Extended weekends or 1 day off: submit at least 2 weeks in advance"
+            ]
+          },
+          {
+            "t": "note",
+            "text": "There is no holiday entitlement during the trial period. The Urlaubsantrag form is available in the IT Wiki."
+          }
         ]
       },
       {
@@ -1047,12 +2296,48 @@
         "subtitle": "Submit annual or special leave to HR",
         "icon": "calendar",
         "fields": [
-          { "id": "name",     "label": "Full Name",     "type": "text",     "placeholder": "Your full name",        "required": true },
-          { "id": "position", "label": "Position",      "type": "text",     "placeholder": "Your job title" },
-          { "id": "from",     "label": "From",          "type": "date",                                             "required": true },
-          { "id": "to",       "label": "To",            "type": "date",                                             "required": true },
-          { "id": "type",     "label": "Leave Type",    "type": "select",   "options": ["Annual Leave", "Special Leave (Sonderurlaub)", "Unpaid Leave"], "required": true },
-          { "id": "notes",    "label": "Notes",         "type": "textarea", "placeholder": "Any additional context for HR" }
+          {
+            "id": "name",
+            "label": "Full Name",
+            "type": "text",
+            "placeholder": "Your full name",
+            "required": true
+          },
+          {
+            "id": "position",
+            "label": "Position",
+            "type": "text",
+            "placeholder": "Your job title"
+          },
+          {
+            "id": "from",
+            "label": "From",
+            "type": "date",
+            "required": true
+          },
+          {
+            "id": "to",
+            "label": "To",
+            "type": "date",
+            "required": true
+          },
+          {
+            "id": "type",
+            "label": "Leave Type",
+            "type": "select",
+            "options": [
+              "Annual Leave",
+              "Special Leave (Sonderurlaub)",
+              "Unpaid Leave"
+            ],
+            "required": true
+          },
+          {
+            "id": "notes",
+            "label": "Notes",
+            "type": "textarea",
+            "placeholder": "Any additional context for HR"
+          }
         ],
         "submitLabel": "Submit Vacation Request",
         "confirmMessage": "Your vacation request has been submitted. HR will confirm within 2 business days."
@@ -1063,11 +2348,39 @@
         "subtitle": "Request time off in lieu of extra days worked",
         "icon": "swap",
         "fields": [
-          { "id": "name",        "label": "Full Name",          "type": "text",     "placeholder": "Your full name",   "required": true },
-          { "id": "worked_date", "label": "Day(s) Worked Extra","type": "text",     "placeholder": "e.g. 15.03.2026, weekend / public holiday", "required": true },
-          { "id": "comp_date",   "label": "Requested Day(s) Off","type": "text",    "placeholder": "e.g. 22.03.2026", "required": true },
-          { "id": "hours",       "label": "Extra Hours Worked", "type": "text",     "placeholder": "e.g. 8h" },
-          { "id": "reason",      "label": "Reason",             "type": "textarea", "placeholder": "Project name or deadline context" }
+          {
+            "id": "name",
+            "label": "Full Name",
+            "type": "text",
+            "placeholder": "Your full name",
+            "required": true
+          },
+          {
+            "id": "worked_date",
+            "label": "Day(s) Worked Extra",
+            "type": "text",
+            "placeholder": "e.g. 15.03.2026, weekend / public holiday",
+            "required": true
+          },
+          {
+            "id": "comp_date",
+            "label": "Requested Day(s) Off",
+            "type": "text",
+            "placeholder": "e.g. 22.03.2026",
+            "required": true
+          },
+          {
+            "id": "hours",
+            "label": "Extra Hours Worked",
+            "type": "text",
+            "placeholder": "e.g. 8h"
+          },
+          {
+            "id": "reason",
+            "label": "Reason",
+            "type": "textarea",
+            "placeholder": "Project name or deadline context"
+          }
         ],
         "submitLabel": "Submit Compensation Request",
         "confirmMessage": "Your compensation days request has been submitted. Your lead and HR will confirm within 3 business days."
@@ -1075,19 +2388,25 @@
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"Berlin public holidays — these are non-working days in addition to your annual leave entitlement:"},
-          {"t":"bullets","items":[
-            "01 January — Neujahr / New Year's Day",
-            "08 March — Internationaler Frauentag / International Women's Day",
-            "Friday before Easter — Karfreitag / Good Friday",
-            "Monday after Easter — Ostermontag / Easter Monday",
-            "01 May — Tag der Arbeit / Labour Day",
-            "39 days after Easter — Christi Himmelfahrt / Ascension Day",
-            "50 days after Easter — Pfingstmontag / Whit Monday",
-            "03 October — Tag der Deutschen Einheit / German Unity Day",
-            "25 December — 1. Weihnachtsfeiertag / Christmas Day",
-            "26 December — 2. Weihnachtsfeiertag / Boxing Day"
-          ]}
+          {
+            "t": "para",
+            "text": "Berlin public holidays — these are non-working days in addition to your annual leave entitlement:"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "01 January — Neujahr / New Year's Day",
+              "08 March — Internationaler Frauentag / International Women's Day",
+              "Friday before Easter — Karfreitag / Good Friday",
+              "Monday after Easter — Ostermontag / Easter Monday",
+              "01 May — Tag der Arbeit / Labour Day",
+              "39 days after Easter — Christi Himmelfahrt / Ascension Day",
+              "50 days after Easter — Pfingstmontag / Whit Monday",
+              "03 October — Tag der Deutschen Einheit / German Unity Day",
+              "25 December — 1. Weihnachtsfeiertag / Christmas Day",
+              "26 December — 2. Weihnachtsfeiertag / Boxing Day"
+            ]
+          }
         ]
       },
       {
@@ -1096,11 +2415,36 @@
         "subtitle": "Notify HR and upload your doctor's note",
         "icon": "health",
         "fields": [
-          { "id": "name",     "label": "Full Name",          "type": "text",  "placeholder": "Your full name",   "required": true },
-          { "id": "from",     "label": "Absent From",        "type": "date",                                     "required": true },
-          { "id": "to",       "label": "Expected Return",    "type": "date" },
-          { "id": "note",     "label": "Doctor's Note",      "type": "upload","placeholder": "Upload AU-Bescheinigung (PDF or image)" },
-          { "id": "comments", "label": "Additional Info",    "type": "textarea", "placeholder": "Optional — e.g. if partial capacity on return" }
+          {
+            "id": "name",
+            "label": "Full Name",
+            "type": "text",
+            "placeholder": "Your full name",
+            "required": true
+          },
+          {
+            "id": "from",
+            "label": "Absent From",
+            "type": "date",
+            "required": true
+          },
+          {
+            "id": "to",
+            "label": "Expected Return",
+            "type": "date"
+          },
+          {
+            "id": "note",
+            "label": "Doctor's Note",
+            "type": "upload",
+            "placeholder": "Upload AU-Bescheinigung (PDF or image)"
+          },
+          {
+            "id": "comments",
+            "label": "Additional Info",
+            "type": "textarea",
+            "placeholder": "Optional — e.g. if partial capacity on return"
+          }
         ],
         "submitLabel": "Submit Sick Leave Notification",
         "confirmMessage": "Your sick leave notification has been received by HR. Get well soon."
@@ -1111,20 +2455,63 @@
         "subtitle": "Claim dinner allowance, taxi or time-off in lieu for overtime",
         "icon": "clock",
         "fields": [
-          { "id": "name",      "label": "Full Name",           "type": "text",   "placeholder": "Your full name",  "required": true },
-          { "id": "date",      "label": "Date of Overtime",    "type": "date",                                     "required": true },
-          { "id": "hours",     "label": "Hours Worked Late",   "type": "text",   "placeholder": "e.g. 3h (from 19:00)", "required": true },
-          { "id": "type",      "label": "Compensation Type",   "type": "select", "options": ["Dinner Allowance", "Taxi Reimbursement", "Time Off in Lieu"], "required": true },
-          { "id": "project",   "label": "Project / Reason",    "type": "text",   "placeholder": "Project name or deadline" },
-          { "id": "receipt",   "label": "Receipt (if any)",    "type": "upload", "placeholder": "Upload receipt (PDF or image)" }
+          {
+            "id": "name",
+            "label": "Full Name",
+            "type": "text",
+            "placeholder": "Your full name",
+            "required": true
+          },
+          {
+            "id": "date",
+            "label": "Date of Overtime",
+            "type": "date",
+            "required": true
+          },
+          {
+            "id": "hours",
+            "label": "Hours Worked Late",
+            "type": "text",
+            "placeholder": "e.g. 3h (from 19:00)",
+            "required": true
+          },
+          {
+            "id": "type",
+            "label": "Compensation Type",
+            "type": "select",
+            "options": [
+              "Dinner Allowance",
+              "Taxi Reimbursement",
+              "Time Off in Lieu"
+            ],
+            "required": true
+          },
+          {
+            "id": "project",
+            "label": "Project / Reason",
+            "type": "text",
+            "placeholder": "Project name or deadline"
+          },
+          {
+            "id": "receipt",
+            "label": "Receipt (if any)",
+            "type": "upload",
+            "placeholder": "Upload receipt (PDF or image)"
+          }
         ],
         "submitLabel": "Submit Overtime Request",
         "confirmMessage": "Your overtime compensation request has been submitted to HR. Reimbursements are processed with the next payroll."
       }
     ],
     "links": [
-      { "label": "Guides & Registers", "id": "guides" },
-      { "label": "B.5 Performance & Growth", "id": "b5" }
+      {
+        "label": "Guides & Registers",
+        "id": "guides"
+      },
+      {
+        "label": "B.5 Performance & Growth",
+        "id": "b5"
+      }
     ]
   },
   "b4": {
@@ -1142,17 +2529,64 @@
       "Why participate — what the mentor gains"
     ],
     "topicLinks": [
-      [{"label": "B.1 Onboarding & First Days", "id": "b1"}],
-      [{"label": "B.5 Performance & Growth", "id": "b5"}],
-      [{"label": "B.1 Onboarding & First Days", "id": "b1"}],
-      [{"label": "B.1 Onboarding & First Days", "id": "b1"}, {"label": "B.5 Performance & Growth", "id": "b5"}],
-      [{"label": "G.1 Knowledge & Growth", "id": "g1"}],
-      [{"label": "G.1 Knowledge & Growth", "id": "g1"}, {"label": "B.5 Performance & Growth", "id": "b5"}]
+      [
+        {
+          "label": "B.1 Onboarding & First Days",
+          "id": "b1"
+        }
+      ],
+      [
+        {
+          "label": "B.5 Performance & Growth",
+          "id": "b5"
+        }
+      ],
+      [
+        {
+          "label": "B.1 Onboarding & First Days",
+          "id": "b1"
+        }
+      ],
+      [
+        {
+          "label": "B.1 Onboarding & First Days",
+          "id": "b1"
+        },
+        {
+          "label": "B.5 Performance & Growth",
+          "id": "b5"
+        }
+      ],
+      [
+        {
+          "label": "G.1 Knowledge & Growth",
+          "id": "g1"
+        }
+      ],
+      [
+        {
+          "label": "G.1 Knowledge & Growth",
+          "id": "g1"
+        },
+        {
+          "label": "B.5 Performance & Growth",
+          "id": "b5"
+        }
+      ]
     ],
     "links": [
-      { "label": "B.1 Onboarding & First Days", "id": "b1" },
-      { "label": "B.5 Performance & Growth", "id": "b5" },
-      { "label": "G.1 Knowledge & Growth", "id": "g1" }
+      {
+        "label": "B.1 Onboarding & First Days",
+        "id": "b1"
+      },
+      {
+        "label": "B.5 Performance & Growth",
+        "id": "b5"
+      },
+      {
+        "label": "G.1 Knowledge & Growth",
+        "id": "g1"
+      }
     ]
   },
   "b5": {
@@ -1175,9 +2609,21 @@
       {
         "type": "eval-matrix",
         "ratings": [
-          {"label": "Red",    "desc": "Not meeting expectations", "color": "#EF4444"},
-          {"label": "Yellow", "desc": "Meeting expectations",     "color": "#F59E0B"},
-          {"label": "Green",  "desc": "Exceeding expectations",   "color": "#22C55E"}
+          {
+            "label": "Red",
+            "desc": "Not meeting expectations",
+            "color": "#EF4444"
+          },
+          {
+            "label": "Yellow",
+            "desc": "Meeting expectations",
+            "color": "#F59E0B"
+          },
+          {
+            "label": "Green",
+            "desc": "Exceeding expectations",
+            "color": "#22C55E"
+          }
         ],
         "categories": [
           {
@@ -1269,16 +2715,54 @@
       null
     ],
     "topicLinks": [
-      [{"label": "B.4 Mentoring & Buddy System", "id": "b4"}],
-      [{"label": "QEMS", "id": "qems"}],
-      [{"label": "QEMS", "id": "qems"}, {"label": "B.4 Mentoring & Buddy System", "id": "b4"}],
-      [{"label": "QEMS", "id": "qems"}],
-      [{"label": "G.1 Knowledge & Growth", "id": "g1"}]
+      [
+        {
+          "label": "B.4 Mentoring & Buddy System",
+          "id": "b4"
+        }
+      ],
+      [
+        {
+          "label": "QEMS",
+          "id": "qems"
+        }
+      ],
+      [
+        {
+          "label": "QEMS",
+          "id": "qems"
+        },
+        {
+          "label": "B.4 Mentoring & Buddy System",
+          "id": "b4"
+        }
+      ],
+      [
+        {
+          "label": "QEMS",
+          "id": "qems"
+        }
+      ],
+      [
+        {
+          "label": "G.1 Knowledge & Growth",
+          "id": "g1"
+        }
+      ]
     ],
     "links": [
-      { "label": "QEMS", "id": "qems" },
-      { "label": "B.4 Mentoring & Buddy System", "id": "b4" },
-      { "label": "G.1 Knowledge & Growth", "id": "g1" }
+      {
+        "label": "QEMS",
+        "id": "qems"
+      },
+      {
+        "label": "B.4 Mentoring & Buddy System",
+        "id": "b4"
+      },
+      {
+        "label": "G.1 Knowledge & Growth",
+        "id": "g1"
+      }
     ]
   },
   "b6": {
@@ -1295,17 +2779,70 @@
       "Final timesheet, settlement & reference"
     ],
     "topicLinks": [
-      [{"label": "QEMS", "id": "qems"}],
-      [{"label": "E.4 Project Folder Structure", "id": "e4"}, {"label": "E.7 Document Control", "id": "e7"}],
-      [{"label": "G.1 Knowledge & Growth", "id": "g1"}],
-      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}],
-      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}, {"label": "QEMS", "id": "qems"}]
+      [
+        {
+          "label": "QEMS",
+          "id": "qems"
+        }
+      ],
+      [
+        {
+          "label": "E.4 Project Folder Structure",
+          "id": "e4"
+        },
+        {
+          "label": "E.7 Document Control",
+          "id": "e7"
+        }
+      ],
+      [
+        {
+          "label": "G.1 Knowledge & Growth",
+          "id": "g1"
+        }
+      ],
+      [
+        {
+          "label": "E.6 IT, Servers & Poolarserver",
+          "id": "e6"
+        },
+        {
+          "label": "Live Systems & Tools",
+          "id": "live"
+        }
+      ],
+      [
+        {
+          "label": "E.6 IT, Servers & Poolarserver",
+          "id": "e6"
+        },
+        {
+          "label": "Live Systems & Tools",
+          "id": "live"
+        },
+        {
+          "label": "QEMS",
+          "id": "qems"
+        }
+      ]
     ],
     "links": [
-      { "label": "QEMS", "id": "qems" },
-      { "label": "E.4 Project Folder Structure", "id": "e4" },
-      { "label": "E.7 Document Control", "id": "e7" },
-      { "label": "Live Systems & Tools", "id": "live" }
+      {
+        "label": "QEMS",
+        "id": "qems"
+      },
+      {
+        "label": "E.4 Project Folder Structure",
+        "id": "e4"
+      },
+      {
+        "label": "E.7 Document Control",
+        "id": "e7"
+      },
+      {
+        "label": "Live Systems & Tools",
+        "id": "live"
+      }
     ]
   },
   "c1": {
@@ -1328,26 +2865,84 @@
       {
         "type": "office-map",
         "desks": [
-          { "id": "A1", "name": "Anna K.",   "zone": "window" },
-          { "id": "A2", "name": "Ben F.",    "zone": "window" },
-          { "id": "A3", "name": "Clara V.",  "zone": "window" },
-          { "id": "A4", "name": "David R.",  "zone": "window" },
-          { "id": "B1", "name": "Eva M.",    "zone": "left"   },
-          { "id": "B2", "name": "Felix S.",  "zone": "left"   },
-          { "id": "C1", "name": "Greta H.",  "zone": "center" },
-          { "id": "C2", "name": "Hugo T.",   "zone": "center" },
-          { "id": "C3", "name": "Irene N.",  "zone": "center" },
-          { "id": "C4", "name": "Jonas B.",  "zone": "center" },
-          { "id": "H1", "name": "Hot Desk",  "zone": "hub"    },
-          { "id": "H2", "name": "Hot Desk",  "zone": "hub"    },
-          { "id": "H3", "name": "Hot Desk",  "zone": "hub"    }
+          {
+            "id": "A1",
+            "name": "Anna K.",
+            "zone": "window"
+          },
+          {
+            "id": "A2",
+            "name": "Ben F.",
+            "zone": "window"
+          },
+          {
+            "id": "A3",
+            "name": "Clara V.",
+            "zone": "window"
+          },
+          {
+            "id": "A4",
+            "name": "David R.",
+            "zone": "window"
+          },
+          {
+            "id": "B1",
+            "name": "Eva M.",
+            "zone": "left"
+          },
+          {
+            "id": "B2",
+            "name": "Felix S.",
+            "zone": "left"
+          },
+          {
+            "id": "C1",
+            "name": "Greta H.",
+            "zone": "center"
+          },
+          {
+            "id": "C2",
+            "name": "Hugo T.",
+            "zone": "center"
+          },
+          {
+            "id": "C3",
+            "name": "Irene N.",
+            "zone": "center"
+          },
+          {
+            "id": "C4",
+            "name": "Jonas B.",
+            "zone": "center"
+          },
+          {
+            "id": "H1",
+            "name": "Hot Desk",
+            "zone": "hub"
+          },
+          {
+            "id": "H2",
+            "name": "Hot Desk",
+            "zone": "hub"
+          },
+          {
+            "id": "H3",
+            "name": "Hot Desk",
+            "zone": "hub"
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"The Hub has wooden drawers stocked with cables, webcams and other tech devices. Stationery and office supplies can be found in the closets by administration."},
-          {"t":"note","text":"Ask administration if you need anything — they are the first point of contact for all office supplies and equipment."}
+          {
+            "t": "para",
+            "text": "The Hub has wooden drawers stocked with cables, webcams and other tech devices. Stationery and office supplies can be found in the closets by administration."
+          },
+          {
+            "t": "note",
+            "text": "Ask administration if you need anything — they are the first point of contact for all office supplies and equipment."
+          }
         ]
       },
       {
@@ -1379,32 +2974,77 @@
         "type": "locker-map",
         "rows": 5,
         "cols": 10,
-        "freePositions": [2, 7, 11, 16, 20, 25, 28, 33, 37, 41, 44, 48, 3, 38]
-      },
-      {
-        "type": "text",
-        "blocks": [
-          {"t":"para","text":"Each team is responsible for the windows along their \"island\". The last team member — not the last person to leave the office — closes these windows."},
-          {"t":"note","text":"If the last person in the office has to close a window that belongs to another team, take a snapshot — that team buys a drink!"},
-          {"t":"para","text":"All other windows (green room, meeting rooms etc.) must be closed by the last user when they leave. These windows should never be left open when nobody is in the room."}
+        "freePositions": [
+          2,
+          7,
+          11,
+          16,
+          20,
+          25,
+          28,
+          33,
+          37,
+          41,
+          44,
+          48,
+          3,
+          38
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"It is everyone's duty to answer the phone. Introduce yourself professionally: say \"LAVA Berlin\" and your name. If you take a message, write down the caller's name and company and forward it promptly."},
-          {"t":"kv","items":[
-            {"k":"Berlin","v":"+49 30 473 747 180"},
-            {"k":"Stuttgart","v":"+49 711 722 329 01"},
-            {"k":"Sydney","v":"+61 02 935 68 179"}
-          ]}
+          {
+            "t": "para",
+            "text": "Each team is responsible for the windows along their \"island\". The last team member — not the last person to leave the office — closes these windows."
+          },
+          {
+            "t": "note",
+            "text": "If the last person in the office has to close a window that belongs to another team, take a snapshot — that team buys a drink!"
+          },
+          {
+            "t": "para",
+            "text": "All other windows (green room, meeting rooms etc.) must be closed by the last user when they leave. These windows should never be left open when nobody is in the room."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"If you accept a package at the door, either bring it directly to the addressed person or deliver it to Administration so that it can be forwarded correctly."},
-          {"t":"note","text":"Never leave packages unattended at the entrance."}
+          {
+            "t": "para",
+            "text": "It is everyone's duty to answer the phone. Introduce yourself professionally: say \"LAVA Berlin\" and your name. If you take a message, write down the caller's name and company and forward it promptly."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Berlin",
+                "v": "+49 30 473 747 180"
+              },
+              {
+                "k": "Stuttgart",
+                "v": "+49 711 722 329 01"
+              },
+              {
+                "k": "Sydney",
+                "v": "+61 02 935 68 179"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "If you accept a package at the door, either bring it directly to the addressed person or deliver it to Administration so that it can be forwarded correctly."
+          },
+          {
+            "t": "note",
+            "text": "Never leave packages unattended at the entrance."
+          }
         ]
       },
       {
@@ -1575,25 +3215,75 @@
             "label": "Keys & Cards",
             "color": "#EF4444",
             "icon": "key",
-            "items": ["Storage Room Key", "Roof Access Key", "Photo Studio Card", "Van Keys", "Workshop Key"]
+            "items": [
+              "Storage Room Key",
+              "Roof Access Key",
+              "Photo Studio Card",
+              "Van Keys",
+              "Workshop Key"
+            ]
           }
         ]
       }
     ],
     "topicLinks": [
-      [{"label": "D.1 Work Safety", "id": "d1"}],
-      [{"label": "C.2 Housekeeping", "id": "c2"}],
-      [{"label": "D.1 Work Safety", "id": "d1"}],
-      [{"label": "C.2 Housekeeping", "id": "c2"}],
-      [{"label": "D.2 Environmental Practice", "id": "d2"}],
-      [{"label": "B.2 A Standard Day at LAVA", "id": "b2"}],
+      [
+        {
+          "label": "D.1 Work Safety",
+          "id": "d1"
+        }
+      ],
+      [
+        {
+          "label": "C.2 Housekeeping",
+          "id": "c2"
+        }
+      ],
+      [
+        {
+          "label": "D.1 Work Safety",
+          "id": "d1"
+        }
+      ],
+      [
+        {
+          "label": "C.2 Housekeeping",
+          "id": "c2"
+        }
+      ],
+      [
+        {
+          "label": "D.2 Environmental Practice",
+          "id": "d2"
+        }
+      ],
+      [
+        {
+          "label": "B.2 A Standard Day at LAVA",
+          "id": "b2"
+        }
+      ],
       [],
-      [{"label": "C.3 Spaces & Facilities", "id": "c3"}]
+      [
+        {
+          "label": "C.3 Spaces & Facilities",
+          "id": "c3"
+        }
+      ]
     ],
     "links": [
-      { "label": "C.2 Housekeeping", "id": "c2" },
-      { "label": "C.3 Spaces & Facilities", "id": "c3" },
-      { "label": "D.1 Work Safety", "id": "d1" }
+      {
+        "label": "C.2 Housekeeping",
+        "id": "c2"
+      },
+      {
+        "label": "C.3 Spaces & Facilities",
+        "id": "c3"
+      },
+      {
+        "label": "D.1 Work Safety",
+        "id": "d1"
+      }
     ]
   },
   "c2": {
@@ -1614,90 +3304,189 @@
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"A cleaning service comes to the office twice per week. On top of this, everyone is expected to keep their workspace tidy and act proactively."},
-          {"t":"bullets","items":[
-            "Do not leave things on the floor before the cleaning service visits",
-            "Leave workstations in the state you found them — including cables and peripherals",
-            "Tidy and clean your desk every Friday before leaving",
-            "Replace shared items (like hand towels) when you finish them — don't leave it for the next person"
-          ]}
+          {
+            "t": "para",
+            "text": "A cleaning service comes to the office twice per week. On top of this, everyone is expected to keep their workspace tidy and act proactively."
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Do not leave things on the floor before the cleaning service visits",
+              "Leave workstations in the state you found them — including cables and peripherals",
+              "Tidy and clean your desk every Friday before leaving",
+              "Replace shared items (like hand towels) when you finish them — don't leave it for the next person"
+            ]
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"There is one dishwasher. Put all glasses, cups, plates and cutlery straight into the dishwasher throughout the day. Turn it on when full; unload when the cycle completes."},
-          {"t":"bullets","items":[
-            "If you have a meeting with consultants or clients: clean the table and do the washing up immediately after — do not leave anything for others",
-            "Do not leave dirty dishes in the sink",
-            "Keep the fridge presentable and clear out old food"
-          ]},
-          {"t":"note","text":"The kitchen is a shared space — leave it at least as clean as you found it."}
+          {
+            "t": "para",
+            "text": "There is one dishwasher. Put all glasses, cups, plates and cutlery straight into the dishwasher throughout the day. Turn it on when full; unload when the cycle completes."
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "If you have a meeting with consultants or clients: clean the table and do the washing up immediately after — do not leave anything for others",
+              "Do not leave dirty dishes in the sink",
+              "Keep the fridge presentable and clear out old food"
+            ]
+          },
+          {
+            "t": "note",
+            "text": "The kitchen is a shared space — leave it at least as clean as you found it."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"There is a rotating weekly list of Kitchen Duty responsibilities. Check the planning to know when it is your week."},
-          {"t":"h","text":"Weekly duties include:"},
-          {"t":"bullets","items":[
-            "Loading and unloading the dishwasher",
-            "Briefly wiping down kitchen surfaces before signing off for the day",
-            "Making sure the fridge is presentable"
-          ]}
+          {
+            "t": "para",
+            "text": "There is a rotating weekly list of Kitchen Duty responsibilities. Check the planning to know when it is your week."
+          },
+          {
+            "t": "h",
+            "text": "Weekly duties include:"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Loading and unloading the dishwasher",
+              "Briefly wiping down kitchen surfaces before signing off for the day",
+              "Making sure the fridge is presentable"
+            ]
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"LAVA supports bringing fruit or snacks to leave in public areas, and will reimburse you for office purchases."},
-          {"t":"h","text":"Reimbursement process:"},
-          {"t":"bullets","items":[
-            "Send an email to admin with the filled-out reimbursement form and a copy of receipts",
-            "Submit physical receipts to admin for record keeping",
-            "Admin will pay you back"
-          ]},
-          {"t":"note","text":"The reimbursement form is available in the IT Wiki: Teams > BER > Office Management > IT Wiki"}
+          {
+            "t": "para",
+            "text": "LAVA supports bringing fruit or snacks to leave in public areas, and will reimburse you for office purchases."
+          },
+          {
+            "t": "h",
+            "text": "Reimbursement process:"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Send an email to admin with the filled-out reimbursement form and a copy of receipts",
+              "Submit physical receipts to admin for record keeping",
+              "Admin will pay you back"
+            ]
+          },
+          {
+            "t": "note",
+            "text": "The reimbursement form is available in the IT Wiki: Teams > BER > Office Management > IT Wiki"
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"Have a forward-thinking approach to maintaining the office. If you notice something that needs attention, take care of it or report it."},
-          {"t":"bullets","items":[
-            "Report broken, missing or needed items to administration immediately",
-            "If you take the last snack or finish the coffee pot, take care of the empty dish",
-            "If you see something that should be taken care of and don't know how, reach out to admin"
-          ]}
+          {
+            "t": "para",
+            "text": "Have a forward-thinking approach to maintaining the office. If you notice something that needs attention, take care of it or report it."
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Report broken, missing or needed items to administration immediately",
+              "If you take the last snack or finish the coffee pot, take care of the empty dish",
+              "If you see something that should be taken care of and don't know how, reach out to admin"
+            ]
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"There are four bins in the kitchen. Please use them correctly for waste separation:"},
-          {"t":"kv","items":[
-            {"k":"General recycling","v":"Restmüll — general waste"},
-            {"k":"Plastic / Packaging","v":"Gelber Sack — plastics, cartons, packaging"},
-            {"k":"Paper","v":"Papiertonne — paper, cardboard, newspapers"},
-            {"k":"Organic","v":"Small organic bin in the kitchen — food scraps only"}
-          ]},
-          {"t":"h","text":"Bokashi Composting"},
-          {"t":"para","text":"As part of LAVA's sustainability initiative, we use Bokashi composting — an airtight fermentation process. Do not open the Bokashi bins (they smell due to rapid decomposition). Use the small organic bin instead; admin handles the transfer to the Bokashi container."}
+          {
+            "t": "para",
+            "text": "There are four bins in the kitchen. Please use them correctly for waste separation:"
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "General recycling",
+                "v": "Restmüll — general waste"
+              },
+              {
+                "k": "Plastic / Packaging",
+                "v": "Gelber Sack — plastics, cartons, packaging"
+              },
+              {
+                "k": "Paper",
+                "v": "Papiertonne — paper, cardboard, newspapers"
+              },
+              {
+                "k": "Organic",
+                "v": "Small organic bin in the kitchen — food scraps only"
+              }
+            ]
+          },
+          {
+            "t": "h",
+            "text": "Bokashi Composting"
+          },
+          {
+            "t": "para",
+            "text": "As part of LAVA's sustainability initiative, we use Bokashi composting — an airtight fermentation process. Do not open the Bokashi bins (they smell due to rapid decomposition). Use the small organic bin instead; admin handles the transfer to the Bokashi container."
+          }
         ]
       }
     ],
     "topicLinks": [
       [],
-      [{"label": "C.1 Berlin Office Rules", "id": "c1"}],
-      [{"label": "Guides & Registers", "id": "guides"}],
+      [
+        {
+          "label": "C.1 Berlin Office Rules",
+          "id": "c1"
+        }
+      ],
+      [
+        {
+          "label": "Guides & Registers",
+          "id": "guides"
+        }
+      ],
       [],
-      [{"label": "D.3 Environmental Preparedness", "id": "d3"}],
-      [{"label": "D.2 Environmental Practice", "id": "d2"}, {"label": "Guides & Registers", "id": "guides"}]
+      [
+        {
+          "label": "D.3 Environmental Preparedness",
+          "id": "d3"
+        }
+      ],
+      [
+        {
+          "label": "D.2 Environmental Practice",
+          "id": "d2"
+        },
+        {
+          "label": "Guides & Registers",
+          "id": "guides"
+        }
+      ]
     ],
     "links": [
-      { "label": "D.2 Environmental Practice", "id": "d2" },
-      { "label": "Guides & Registers", "id": "guides" },
-      { "label": "C.1 Berlin Office Rules", "id": "c1" }
+      {
+        "label": "D.2 Environmental Practice",
+        "id": "d2"
+      },
+      {
+        "label": "Guides & Registers",
+        "id": "guides"
+      },
+      {
+        "label": "C.1 Berlin Office Rules",
+        "id": "c1"
+      }
     ]
   },
   "c3": {
@@ -1718,41 +3507,74 @@
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"LAVA's library contains books and the most important architecture and design magazines. Research is a core part of the creative design process — books offer better quality information than a quick internet search."},
-          {"t":"h","text":"Library categories"},
-          {"t":"bullets","items":[
-            "Monographs",
-            "Programme & Typologies",
-            "Interior Design",
-            "Concepts & Experimentations",
-            "Projects & Collections (World, Asia, Europe, Germany, Berlin)",
-            "Construction (Regulations, Structure, Materials)",
-            "LAVA projects & publications",
-            "Green"
-          ]},
-          {"t":"h","text":"Current periodicals"},
-          {"t":"bullets","items":[
-            "Detail · AIT · Interior/Fashion · Der Architekt · DAB",
-            "Cube · Journal · Xia Intelligente Architektur"
-          ]},
-          {"t":"note","text":"To borrow a book: fill out the Book Borrowing form with your name and the book title, and give it to the Office Manager so others can find it."}
+          {
+            "t": "para",
+            "text": "LAVA's library contains books and the most important architecture and design magazines. Research is a core part of the creative design process — books offer better quality information than a quick internet search."
+          },
+          {
+            "t": "h",
+            "text": "Library categories"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Monographs",
+              "Programme & Typologies",
+              "Interior Design",
+              "Concepts & Experimentations",
+              "Projects & Collections (World, Asia, Europe, Germany, Berlin)",
+              "Construction (Regulations, Structure, Materials)",
+              "LAVA projects & publications",
+              "Green"
+            ]
+          },
+          {
+            "t": "h",
+            "text": "Current periodicals"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Detail · AIT · Interior/Fashion · Der Architekt · DAB",
+              "Cube · Journal · Xia Intelligente Architektur"
+            ]
+          },
+          {
+            "t": "note",
+            "text": "To borrow a book: fill out the Book Borrowing form with your name and the book title, and give it to the Office Manager so others can find it."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"h","text":"Safety First"},
-          {"t":"para","text":"Always prioritise safety in the Fabrication Lab. A First Aid Kit is always nearby — find it before you start work. Wear appropriate protective gear (gloves, safety goggles, air-purifying masks)."},
-          {"t":"h","text":"General rules"},
-          {"t":"bullets","items":[
-            "Treat all tools, equipment and machines with care and respect",
-            "Always clean up after finishing and return tools and materials to their designated places",
-            "Certain machines require authorisation and training — never use them without prior approval or without an authorised person present",
-            "Report any damage, malfunction or burnt smell to Office Management immediately",
-            "Always use scrap materials before opening new stock",
-            "Log used materials on the online list provided by Office Management"
-          ]},
-          {"t":"note","text":"In case of injury: call 112. In case of fire: use the extinguisher and call 112 if needed. Never use equipment you have not been trained on."}
+          {
+            "t": "h",
+            "text": "Safety First"
+          },
+          {
+            "t": "para",
+            "text": "Always prioritise safety in the Fabrication Lab. A First Aid Kit is always nearby — find it before you start work. Wear appropriate protective gear (gloves, safety goggles, air-purifying masks)."
+          },
+          {
+            "t": "h",
+            "text": "General rules"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Treat all tools, equipment and machines with care and respect",
+              "Always clean up after finishing and return tools and materials to their designated places",
+              "Certain machines require authorisation and training — never use them without prior approval or without an authorised person present",
+              "Report any damage, malfunction or burnt smell to Office Management immediately",
+              "Always use scrap materials before opening new stock",
+              "Log used materials on the online list provided by Office Management"
+            ]
+          },
+          {
+            "t": "note",
+            "text": "In case of injury: call 112. In case of fire: use the extinguisher and call 112 if needed. Never use equipment you have not been trained on."
+          }
         ]
       },
       null,
@@ -1760,48 +3582,123 @@
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"Meeting rooms are available for internal design meetings and external consultations. The person who arranges the meeting is responsible for preparing the room."},
-          {"t":"h","text":"Room booking"},
-          {"t":"bullets","items":[
-            "Book via the Office Calendar in Outlook — specify Meeting Room 1 or Meeting Room 2",
-            "This ensures other meetings can be scheduled around free slots",
-            "Ask IT for help with Outlook calendar booking if needed"
-          ]},
-          {"t":"h","text":"Hosting a meeting"},
-          {"t":"bullets","items":[
-            "Prepare laptop and screen yourself before guests arrive",
-            "Set up coffee, tea and water with glasses",
-            "After the meeting: clear and tidy the room for the next guests"
-          ]}
+          {
+            "t": "para",
+            "text": "Meeting rooms are available for internal design meetings and external consultations. The person who arranges the meeting is responsible for preparing the room."
+          },
+          {
+            "t": "h",
+            "text": "Room booking"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Book via the Office Calendar in Outlook — specify Meeting Room 1 or Meeting Room 2",
+              "This ensures other meetings can be scheduled around free slots",
+              "Ask IT for help with Outlook calendar booking if needed"
+            ]
+          },
+          {
+            "t": "h",
+            "text": "Hosting a meeting"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Prepare laptop and screen yourself before guests arrive",
+              "Set up coffee, tea and water with glasses",
+              "After the meeting: clear and tidy the room for the next guests"
+            ]
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"h","text":"Friday Academy"},
-          {"t":"para","text":"On some Friday afternoons, time is set aside from ongoing projects to work, share and learn as a small group — for example: learning a software tool, developing an office standard, or writing a shared script."},
-          {"t":"para","text":"Think about what skill or knowledge you have and would like to share with others."},
-          {"t":"h","text":"Friday Lunch Presentations"},
-          {"t":"para","text":"On some Fridays, a colleague presents over lunch — a competition debrief, a project phase review, or a specific technical or research topic."},
-          {"t":"para","text":"The goal is not just to present a project, but to share learning: LAVA's design strategy, competition booklet development, drawing techniques, research approaches."},
-          {"t":"h","text":"Pin-up"},
-          {"t":"para","text":"Pin-up panels in the Flex Room display projects in progress. LAVA encourages teams to pin up in-progress material to share their work with the whole office. There is no fixed format — it rotates as projects evolve."}
+          {
+            "t": "h",
+            "text": "Friday Academy"
+          },
+          {
+            "t": "para",
+            "text": "On some Friday afternoons, time is set aside from ongoing projects to work, share and learn as a small group — for example: learning a software tool, developing an office standard, or writing a shared script."
+          },
+          {
+            "t": "para",
+            "text": "Think about what skill or knowledge you have and would like to share with others."
+          },
+          {
+            "t": "h",
+            "text": "Friday Lunch Presentations"
+          },
+          {
+            "t": "para",
+            "text": "On some Fridays, a colleague presents over lunch — a competition debrief, a project phase review, or a specific technical or research topic."
+          },
+          {
+            "t": "para",
+            "text": "The goal is not just to present a project, but to share learning: LAVA's design strategy, competition booklet development, drawing techniques, research approaches."
+          },
+          {
+            "t": "h",
+            "text": "Pin-up"
+          },
+          {
+            "t": "para",
+            "text": "Pin-up panels in the Flex Room display projects in progress. LAVA encourages teams to pin up in-progress material to share their work with the whole office. There is no fixed format — it rotates as projects evolve."
+          }
         ]
       }
     ],
     "topicLinks": [
-      [{"label": "Guides & Registers", "id": "guides"}],
-      [{"label": "D.1 Work Safety", "id": "d1"}],
+      [
+        {
+          "label": "Guides & Registers",
+          "id": "guides"
+        }
+      ],
+      [
+        {
+          "label": "D.1 Work Safety",
+          "id": "d1"
+        }
+      ],
       [],
       [],
-      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}],
-      [{"label": "G.1 Knowledge & Growth", "id": "g1"}]
+      [
+        {
+          "label": "E.6 IT, Servers & Poolarserver",
+          "id": "e6"
+        },
+        {
+          "label": "Live Systems & Tools",
+          "id": "live"
+        }
+      ],
+      [
+        {
+          "label": "G.1 Knowledge & Growth",
+          "id": "g1"
+        }
+      ]
     ],
     "links": [
-      { "label": "D.1 Work Safety", "id": "d1" },
-      { "label": "G.1 Knowledge & Growth", "id": "g1" },
-      { "label": "E.6 IT, Servers & Poolarserver", "id": "e6" },
-      { "label": "Live Systems & Tools", "id": "live" }
+      {
+        "label": "D.1 Work Safety",
+        "id": "d1"
+      },
+      {
+        "label": "G.1 Knowledge & Growth",
+        "id": "g1"
+      },
+      {
+        "label": "E.6 IT, Servers & Poolarserver",
+        "id": "e6"
+      },
+      {
+        "label": "Live Systems & Tools",
+        "id": "live"
+      }
     ]
   },
   "d1": {
@@ -1821,77 +3718,194 @@
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"LAVA maintains designated safety roles in the Berlin office, as required by German occupational safety law (Arbeitssicherheitsgesetz):"},
-          {"t":"kv","items":[
-            {"k":"Sicherheitsfachkraft","v":"Safety specialist — responsible for occupational health and safety oversight"},
-            {"k":"Sicherheitsbeauftragte","v":"Safety officer — practical safety representative in the office"},
-            {"k":"Brandschutzhelfer","v":"Fire protection helper — trained in fire evacuation procedures"},
-            {"k":"Ersthelfer","v":"First aider — trained in first aid and emergency response"}
-          ]},
-          {"t":"note","text":"Names and contact details for current role holders are available from Office Management."}
+          {
+            "t": "para",
+            "text": "LAVA maintains designated safety roles in the Berlin office, as required by German occupational safety law (Arbeitssicherheitsgesetz):"
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Sicherheitsfachkraft",
+                "v": "Safety specialist — responsible for occupational health and safety oversight"
+              },
+              {
+                "k": "Sicherheitsbeauftragte",
+                "v": "Safety officer — practical safety representative in the office"
+              },
+              {
+                "k": "Brandschutzhelfer",
+                "v": "Fire protection helper — trained in fire evacuation procedures"
+              },
+              {
+                "k": "Ersthelfer",
+                "v": "First aider — trained in first aid and emergency response"
+              }
+            ]
+          },
+          {
+            "t": "note",
+            "text": "Names and contact details for current role holders are available from Office Management."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"note","text":"In any emergency — call 112 (police, fire brigade, ambulance)"},
-          {"t":"kv","items":[
-            {"k":"Injury","v":"Ask colleagues for help. Use the First Aid Kit. If the kit is not sufficient, call 112 immediately."},
-            {"k":"Fire","v":"Locate the nearest fire extinguisher and use it if safe to do so. Evacuate. Call 112 for a large fire."},
-            {"k":"Other","v":"Notify Office Management and your Project Lead immediately, and log the incident."}
-          ]}
+          {
+            "t": "note",
+            "text": "In any emergency — call 112 (police, fire brigade, ambulance)"
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Injury",
+                "v": "Ask colleagues for help. Use the First Aid Kit. If the kit is not sufficient, call 112 immediately."
+              },
+              {
+                "k": "Fire",
+                "v": "Locate the nearest fire extinguisher and use it if safe to do so. Evacuate. Call 112 for a large fire."
+              },
+              {
+                "k": "Other",
+                "v": "Notify Office Management and your Project Lead immediately, and log the incident."
+              }
+            ]
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"A First Aid Kit is always nearby in the Fabrication Lab. Locate it before starting work so you know exactly where it is in case of need."},
-          {"t":"bullets","items":[
-            "First Aid Kit — located in the Fabrication Lab",
-            "Fire Extinguisher — located near the Fabrication Lab entrance",
-            "Emergency number — 112 (ambulance, fire brigade, police)"
-          ]},
-          {"t":"note","text":"Familiarise yourself with the location of safety equipment on your first visit to the FabLab."}
+          {
+            "t": "para",
+            "text": "A First Aid Kit is always nearby in the Fabrication Lab. Locate it before starting work so you know exactly where it is in case of need."
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "First Aid Kit — located in the Fabrication Lab",
+              "Fire Extinguisher — located near the Fabrication Lab entrance",
+              "Emergency number — 112 (ambulance, fire brigade, police)"
+            ]
+          },
+          {
+            "t": "note",
+            "text": "Familiarise yourself with the location of safety equipment on your first visit to the FabLab."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"If you notice any hazard, damage or malfunction anywhere in the office or Fabrication Lab, report it to Office Management immediately. Do not wait, and do not continue to use damaged equipment."},
-          {"t":"bullets","items":[
-            "Damaged tools or machines — stop use immediately and report to Office Management",
-            "Burnt smell or unusual noise from equipment — stop use and report",
-            "Trip hazards, spills or structural issues — report immediately",
-            "Broken safety equipment (First Aid Kit, extinguisher) — report to Office Management"
-          ]}
+          {
+            "t": "para",
+            "text": "If you notice any hazard, damage or malfunction anywhere in the office or Fabrication Lab, report it to Office Management immediately. Do not wait, and do not continue to use damaged equipment."
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Damaged tools or machines — stop use immediately and report to Office Management",
+              "Burnt smell or unusual noise from equipment — stop use and report",
+              "Trip hazards, spills or structural issues — report immediately",
+              "Broken safety equipment (First Aid Kit, extinguisher) — report to Office Management"
+            ]
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"Certain tools and machines in the Fabrication Lab require prior training and authorisation before use. Never operate these machines without approval or without an authorised person present."},
-          {"t":"bullets","items":[
-            "A training workshop will be provided with clear instructions on setup, calibration and operation",
-            "For specific tools requiring experience: follow the guidelines document or request assistance from an authorised colleague",
-            "3D Printers — trained users only; training workshop will be organised by Office Management",
-            "Hot Wire Cutter — safety guidelines and material restrictions apply; do not use without training"
-          ]},
-          {"t":"note","text":"Training and authorisation status is tracked by Office Management. Always ask before using any unfamiliar machine."}
+          {
+            "t": "para",
+            "text": "Certain tools and machines in the Fabrication Lab require prior training and authorisation before use. Never operate these machines without approval or without an authorised person present."
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "A training workshop will be provided with clear instructions on setup, calibration and operation",
+              "For specific tools requiring experience: follow the guidelines document or request assistance from an authorised colleague",
+              "3D Printers — trained users only; training workshop will be organised by Office Management",
+              "Hot Wire Cutter — safety guidelines and material restrictions apply; do not use without training"
+            ]
+          },
+          {
+            "t": "note",
+            "text": "Training and authorisation status is tracked by Office Management. Always ask before using any unfamiliar machine."
+          }
         ]
       }
     ],
     "topicLinks": [
-      [{"label": "Work Safety Manual", "id": "worksafety"}, {"label": "QEMS", "id": "qems"}],
-      [{"label": "Work Safety Manual", "id": "worksafety"}, {"label": "D.3 Environmental Preparedness", "id": "d3"}],
-      [{"label": "Work Safety Manual", "id": "worksafety"}, {"label": "C.3 Spaces & Facilities", "id": "c3"}],
-      [{"label": "QEMS", "id": "qems"}, {"label": "D.3 Environmental Preparedness", "id": "d3"}],
-      [{"label": "C.3 Spaces & Facilities", "id": "c3"}, {"label": "Work Safety Manual", "id": "worksafety"}]
+      [
+        {
+          "label": "Work Safety Manual",
+          "id": "worksafety"
+        },
+        {
+          "label": "QEMS",
+          "id": "qems"
+        }
+      ],
+      [
+        {
+          "label": "Work Safety Manual",
+          "id": "worksafety"
+        },
+        {
+          "label": "D.3 Environmental Preparedness",
+          "id": "d3"
+        }
+      ],
+      [
+        {
+          "label": "Work Safety Manual",
+          "id": "worksafety"
+        },
+        {
+          "label": "C.3 Spaces & Facilities",
+          "id": "c3"
+        }
+      ],
+      [
+        {
+          "label": "QEMS",
+          "id": "qems"
+        },
+        {
+          "label": "D.3 Environmental Preparedness",
+          "id": "d3"
+        }
+      ],
+      [
+        {
+          "label": "C.3 Spaces & Facilities",
+          "id": "c3"
+        },
+        {
+          "label": "Work Safety Manual",
+          "id": "worksafety"
+        }
+      ]
     ],
     "links": [
-      { "label": "Work Safety Manual", "id": "worksafety" },
-      { "label": "QEMS", "id": "qems" },
-      { "label": "C.3 Spaces & Facilities", "id": "c3" },
-      { "label": "D.3 Environmental Preparedness", "id": "d3" }
+      {
+        "label": "Work Safety Manual",
+        "id": "worksafety"
+      },
+      {
+        "label": "QEMS",
+        "id": "qems"
+      },
+      {
+        "label": "C.3 Spaces & Facilities",
+        "id": "c3"
+      },
+      {
+        "label": "D.3 Environmental Preparedness",
+        "id": "d3"
+      }
     ]
   },
   "d2": {
@@ -1909,17 +3923,67 @@
       "Monitoring & KPIs — paper, CO₂"
     ],
     "topicLinks": [
-      [{"label": "LAVA Zero", "id": "lavazero"}, {"label": "QEMS", "id": "qems"}, {"label": "Guides & Registers", "id": "guides"}],
-      [{"label": "C.2 Housekeeping", "id": "c2"}, {"label": "Guides & Registers", "id": "guides"}],
-      [{"label": "C.2 Housekeeping", "id": "c2"}],
-      [{"label": "D.1 Work Safety", "id": "d1"}],
+      [
+        {
+          "label": "LAVA Zero",
+          "id": "lavazero"
+        },
+        {
+          "label": "QEMS",
+          "id": "qems"
+        },
+        {
+          "label": "Guides & Registers",
+          "id": "guides"
+        }
+      ],
+      [
+        {
+          "label": "C.2 Housekeeping",
+          "id": "c2"
+        },
+        {
+          "label": "Guides & Registers",
+          "id": "guides"
+        }
+      ],
+      [
+        {
+          "label": "C.2 Housekeeping",
+          "id": "c2"
+        }
+      ],
+      [
+        {
+          "label": "D.1 Work Safety",
+          "id": "d1"
+        }
+      ],
       [],
-      [{"label": "QEMS", "id": "qems"}, {"label": "Guides & Registers", "id": "guides"}]
+      [
+        {
+          "label": "QEMS",
+          "id": "qems"
+        },
+        {
+          "label": "Guides & Registers",
+          "id": "guides"
+        }
+      ]
     ],
     "links": [
-      { "label": "QEMS", "id": "qems" },
-      { "label": "Guides & Registers", "id": "guides" },
-      { "label": "C.2 Housekeeping", "id": "c2" }
+      {
+        "label": "QEMS",
+        "id": "qems"
+      },
+      {
+        "label": "Guides & Registers",
+        "id": "guides"
+      },
+      {
+        "label": "C.2 Housekeeping",
+        "id": "c2"
+      }
     ]
   },
   "d3": {
@@ -1937,18 +4001,67 @@
       "Incident register & reporting"
     ],
     "topicLinks": [
-      [{"label": "D.1 Work Safety", "id": "d1"}, {"label": "Work Safety Manual", "id": "worksafety"}],
-      [{"label": "Work Safety Manual", "id": "worksafety"}],
-      [{"label": "C.2 Housekeeping", "id": "c2"}, {"label": "Work Safety Manual", "id": "worksafety"}],
-      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}],
+      [
+        {
+          "label": "D.1 Work Safety",
+          "id": "d1"
+        },
+        {
+          "label": "Work Safety Manual",
+          "id": "worksafety"
+        }
+      ],
+      [
+        {
+          "label": "Work Safety Manual",
+          "id": "worksafety"
+        }
+      ],
+      [
+        {
+          "label": "C.2 Housekeeping",
+          "id": "c2"
+        },
+        {
+          "label": "Work Safety Manual",
+          "id": "worksafety"
+        }
+      ],
+      [
+        {
+          "label": "E.6 IT, Servers & Poolarserver",
+          "id": "e6"
+        }
+      ],
       [],
-      [{"label": "QEMS", "id": "qems"}, {"label": "Guides & Registers", "id": "guides"}]
+      [
+        {
+          "label": "QEMS",
+          "id": "qems"
+        },
+        {
+          "label": "Guides & Registers",
+          "id": "guides"
+        }
+      ]
     ],
     "links": [
-      { "label": "QEMS", "id": "qems" },
-      { "label": "Guides & Registers", "id": "guides" },
-      { "label": "Work Safety Manual", "id": "worksafety" },
-      { "label": "D.1 Work Safety", "id": "d1" }
+      {
+        "label": "QEMS",
+        "id": "qems"
+      },
+      {
+        "label": "Guides & Registers",
+        "id": "guides"
+      },
+      {
+        "label": "Work Safety Manual",
+        "id": "worksafety"
+      },
+      {
+        "label": "D.1 Work Safety",
+        "id": "d1"
+      }
     ]
   },
   "e1": {
@@ -1964,15 +4077,52 @@
       "File naming convention"
     ],
     "topicLinks": [
-      [{"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
-      [{"label": "E.5 Templates & Standards Register", "id": "e5"}, {"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
-      [{"label": "E.2 Project Management at a Glance", "id": "e2"}],
-      [{"label": "E.7 Document Control", "id": "e7"}, {"label": "E.4 Project Folder Structure", "id": "e4"}]
+      [
+        {
+          "label": "E.8 Graphic Identity in Practice",
+          "id": "e8"
+        }
+      ],
+      [
+        {
+          "label": "E.5 Templates & Standards Register",
+          "id": "e5"
+        },
+        {
+          "label": "E.8 Graphic Identity in Practice",
+          "id": "e8"
+        }
+      ],
+      [
+        {
+          "label": "E.2 Project Management at a Glance",
+          "id": "e2"
+        }
+      ],
+      [
+        {
+          "label": "E.7 Document Control",
+          "id": "e7"
+        },
+        {
+          "label": "E.4 Project Folder Structure",
+          "id": "e4"
+        }
+      ]
     ],
     "links": [
-      { "label": "E.8 Graphic Identity in Practice", "id": "e8" },
-      { "label": "E.5 Templates & Standards Register", "id": "e5" },
-      { "label": "E.2 Project Management at a Glance", "id": "e2" }
+      {
+        "label": "E.8 Graphic Identity in Practice",
+        "id": "e8"
+      },
+      {
+        "label": "E.5 Templates & Standards Register",
+        "id": "e5"
+      },
+      {
+        "label": "E.2 Project Management at a Glance",
+        "id": "e2"
+      }
     ]
   },
   "e2": {
@@ -1989,17 +4139,66 @@
       "Issues Tracker & MoMs"
     ],
     "topicLinks": [
-      [{"label": "E.5 Templates & Standards Register", "id": "e5"}, {"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}],
-      [{"label": "E.4 Project Folder Structure", "id": "e4"}],
-      [{"label": "E.4 Project Folder Structure", "id": "e4"}],
-      [{"label": "E.4 Project Folder Structure", "id": "e4"}, {"label": "E.7 Document Control", "id": "e7"}],
-      [{"label": "E.7 Document Control", "id": "e7"}]
+      [
+        {
+          "label": "E.5 Templates & Standards Register",
+          "id": "e5"
+        },
+        {
+          "label": "E.6 IT, Servers & Poolarserver",
+          "id": "e6"
+        },
+        {
+          "label": "Live Systems & Tools",
+          "id": "live"
+        }
+      ],
+      [
+        {
+          "label": "E.4 Project Folder Structure",
+          "id": "e4"
+        }
+      ],
+      [
+        {
+          "label": "E.4 Project Folder Structure",
+          "id": "e4"
+        }
+      ],
+      [
+        {
+          "label": "E.4 Project Folder Structure",
+          "id": "e4"
+        },
+        {
+          "label": "E.7 Document Control",
+          "id": "e7"
+        }
+      ],
+      [
+        {
+          "label": "E.7 Document Control",
+          "id": "e7"
+        }
+      ]
     ],
     "links": [
-      { "label": "E.3 SOPs", "id": "e3" },
-      { "label": "E.4 Project Folder Structure", "id": "e4" },
-      { "label": "E.5 Templates & Standards Register", "id": "e5" },
-      { "label": "Live Systems & Tools", "id": "live" }
+      {
+        "label": "E.3 SOPs",
+        "id": "e3"
+      },
+      {
+        "label": "E.4 Project Folder Structure",
+        "id": "e4"
+      },
+      {
+        "label": "E.5 Templates & Standards Register",
+        "id": "e5"
+      },
+      {
+        "label": "Live Systems & Tools",
+        "id": "live"
+      }
     ]
   },
   "e3": {
@@ -2014,25 +4213,89 @@
     "slideData": [
       {
         "type": "table",
-        "columns": ["Process", "Short Description", "Process Owner", "Responsible for Implementation"],
+        "columns": [
+          "Process",
+          "Short Description",
+          "Process Owner",
+          "Responsible for Implementation"
+        ],
         "rows": [
-          ["Global Processes", "QEMS Scope, Policy and Objectives, Org Chart, Compliance Requirements, Document Control", "Senior Leadership", "All LAVA Staff"],
-          ["Sales / Business Acquisition", "Handling customer inquiries, preparing offers, contract conclusion, order acceptance", "Senior Leadership", "Directors, Project Leads"],
-          ["Project Management / Project Execution", "Planning, design, construction supervision, project approvals, milestones, schedule control", "Project Management", "Directors, Project Leads, Project Staff"],
-          ["Design and Development Processes", "Concept development, design reviews, approvals, change management", "Senior Leadership", "Directors, Project Leads, Project Staff"],
-          ["Procurement / Supplier Management", "Supplier selection, evaluation, ordering, verification of delivered goods/services", "Head of Finance", "Directors, Project Leads"],
-          ["Human Resources / Personnel Management", "Recruiting, onboarding, training, qualification management, workforce planning", "Head of HR", "All LAVA Staff"],
-          ["Complaint Management / Customer Feedback", "Handling complaints, root cause analysis, corrective actions", "Senior Leadership", "Directors, Project Leads"],
-          ["Waste and Emissions Management", "Separation, disposal, reduction of waste and emissions", "Admin / LAVA Zero", "All LAVA Staff"],
-          ["Risk and Opportunity Management", "Identification of project and environmental risks, planning of measures", "Senior Leadership", "CEO, Directors"],
-          ["Work Safety", "Hazard identification, Health Safety, Fire Protection, First Aid, Training", "Sicherheitsfachkraft (Safety Officer)", "Sicherheitsbeauftragte (Safety Representatives)"]
+          [
+            "Global Processes",
+            "QEMS Scope, Policy and Objectives, Org Chart, Compliance Requirements, Document Control",
+            "Senior Leadership",
+            "All LAVA Staff"
+          ],
+          [
+            "Sales / Business Acquisition",
+            "Handling customer inquiries, preparing offers, contract conclusion, order acceptance",
+            "Senior Leadership",
+            "Directors, Project Leads"
+          ],
+          [
+            "Project Management / Project Execution",
+            "Planning, design, construction supervision, project approvals, milestones, schedule control",
+            "Project Management",
+            "Directors, Project Leads, Project Staff"
+          ],
+          [
+            "Design and Development Processes",
+            "Concept development, design reviews, approvals, change management",
+            "Senior Leadership",
+            "Directors, Project Leads, Project Staff"
+          ],
+          [
+            "Procurement / Supplier Management",
+            "Supplier selection, evaluation, ordering, verification of delivered goods/services",
+            "Head of Finance",
+            "Directors, Project Leads"
+          ],
+          [
+            "Human Resources / Personnel Management",
+            "Recruiting, onboarding, training, qualification management, workforce planning",
+            "Head of HR",
+            "All LAVA Staff"
+          ],
+          [
+            "Complaint Management / Customer Feedback",
+            "Handling complaints, root cause analysis, corrective actions",
+            "Senior Leadership",
+            "Directors, Project Leads"
+          ],
+          [
+            "Waste and Emissions Management",
+            "Separation, disposal, reduction of waste and emissions",
+            "Admin / LAVA Zero",
+            "All LAVA Staff"
+          ],
+          [
+            "Risk and Opportunity Management",
+            "Identification of project and environmental risks, planning of measures",
+            "Senior Leadership",
+            "CEO, Directors"
+          ],
+          [
+            "Work Safety",
+            "Hazard identification, Health Safety, Fire Protection, First Aid, Training",
+            "Sicherheitsfachkraft (Safety Officer)",
+            "Sicherheitsbeauftragte (Safety Representatives)"
+          ]
         ]
       }
     ],
     "links": [
-      { "label": "QEMS", "id": "qems" },
-      { "label": "E.2 Project Management at a Glance", "id": "e2" },
-      { "label": "E.7 Document Control", "id": "e7" }
+      {
+        "label": "QEMS",
+        "id": "qems"
+      },
+      {
+        "label": "E.2 Project Management at a Glance",
+        "id": "e2"
+      },
+      {
+        "label": "E.7 Document Control",
+        "id": "e7"
+      }
     ]
   },
   "e4": {
@@ -2053,69 +4316,164 @@
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"The Berlin server follows a standardised folder structure shared with the Stuttgart office. Familiarise yourself with the layout and consult the PowerPoint folder structure guide."},
-          {"t":"kv","items":[
-            {"k":"Guide location","v":"L:\\1_LAVA\\LAVA STANDARDS\\FOLDER STRUCTURE"}
-          ]},
-          {"t":"note","text":"LAVA has released a new unified folder structure. All new projects in both Berlin and Stuttgart must use this structure from now on."}
+          {
+            "t": "para",
+            "text": "The Berlin server follows a standardised folder structure shared with the Stuttgart office. Familiarise yourself with the layout and consult the PowerPoint folder structure guide."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Guide location",
+                "v": "L:\\1_LAVA\\LAVA STANDARDS\\FOLDER STRUCTURE"
+              }
+            ]
+          },
+          {
+            "t": "note",
+            "text": "LAVA has released a new unified folder structure. All new projects in both Berlin and Stuttgart must use this structure from now on."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"The Berlin server (L:\\) is divided into the following main zones:"},
-          {"t":"kv","items":[
-            {"k":"BER PROJECTS","v":"All ongoing and recent Berlin projects — categorised by number and abbreviation. DO NOT MOVE OR DELETE FILES."},
-            {"k":"BER LIBRARY","v":"Reference materials, standards and resources accessible to everyone. DO NOT MOVE OR DELETE FILES."},
-            {"k":"BER TEMP","v":"Temporary files only — emptied regularly. Do not store anything important here."},
-            {"k":"T:\\_SCANS","v":"Scanned documents from the printer. Delete your scans from this folder after use."}
-          ]},
-          {"t":"h","text":"BER LIBRARY sub-folders"},
-          {"t":"bullets","items":[
-            "1. LAVA — logos, office manual, standards and project structure guides",
-            "2. FUNDAMENTALS — readings, guidelines, regulations and references",
-            "3. RESOURCES — software tools, fonts and tutorials",
-            "4. PRODUCTS — supplier catalogues and product references (add new ones as you use them)"
-          ]}
+          {
+            "t": "para",
+            "text": "The Berlin server (L:\\) is divided into the following main zones:"
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "BER PROJECTS",
+                "v": "All ongoing and recent Berlin projects — categorised by number and abbreviation. DO NOT MOVE OR DELETE FILES."
+              },
+              {
+                "k": "BER LIBRARY",
+                "v": "Reference materials, standards and resources accessible to everyone. DO NOT MOVE OR DELETE FILES."
+              },
+              {
+                "k": "BER TEMP",
+                "v": "Temporary files only — emptied regularly. Do not store anything important here."
+              },
+              {
+                "k": "T:\\_SCANS",
+                "v": "Scanned documents from the printer. Delete your scans from this folder after use."
+              }
+            ]
+          },
+          {
+            "t": "h",
+            "text": "BER LIBRARY sub-folders"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "1. LAVA — logos, office manual, standards and project structure guides",
+              "2. FUNDAMENTALS — readings, guidelines, regulations and references",
+              "3. RESOURCES — software tools, fonts and tutorials",
+              "4. PRODUCTS — supplier catalogues and product references (add new ones as you use them)"
+            ]
+          }
         ]
       },
       null,
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"Each project on the server is saved under a unique number with an abbreviation as its name. All projects share the same standardised internal folder structure."},
-          {"t":"note","text":"Project numbers are created by the Project Lead at the start of a project. New project numbers are decided and coordinated exclusively during the Monday Morning Meeting — also coordinated with Stuttgart."}
+          {
+            "t": "para",
+            "text": "Each project on the server is saved under a unique number with an abbreviation as its name. All projects share the same standardised internal folder structure."
+          },
+          {
+            "t": "note",
+            "text": "Project numbers are created by the Project Lead at the start of a project. New project numbers are decided and coordinated exclusively during the Monday Morning Meeting — also coordinated with Stuttgart."
+          }
         ]
       },
       null,
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"The Project Database stores only key files for the website, publications and portfolio — not the full project archive. All relevant information must be saved there before taking compensation days, going on holiday or starting a new project."},
-          {"t":"h","text":"Steps for archiving a project phase"},
-          {"t":"bullets","items":[
-            "Create a folder with the phase name",
-            "Original Files: save final presentation as packaged InDesign or PPT; include original AI, PS, JPEG, PDF, movie files and physical model photos",
-            "Publication: save ONLY the most relevant images, plans and diagrams in JPEG or PDF — curated selection, not everything",
-            "In Publication > Text folder: use the Card template to enter all project info"
-          ]},
-          {"t":"note","text":"No Rhino, Revit or other raw working files belong in the database. Only final, publication-quality content."}
+          {
+            "t": "para",
+            "text": "The Project Database stores only key files for the website, publications and portfolio — not the full project archive. All relevant information must be saved there before taking compensation days, going on holiday or starting a new project."
+          },
+          {
+            "t": "h",
+            "text": "Steps for archiving a project phase"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Create a folder with the phase name",
+              "Original Files: save final presentation as packaged InDesign or PPT; include original AI, PS, JPEG, PDF, movie files and physical model photos",
+              "Publication: save ONLY the most relevant images, plans and diagrams in JPEG or PDF — curated selection, not everything",
+              "In Publication > Text folder: use the Card template to enter all project info"
+            ]
+          },
+          {
+            "t": "note",
+            "text": "No Rhino, Revit or other raw working files belong in the database. Only final, publication-quality content."
+          }
         ]
       }
     ],
     "topicLinks": [
-      [{"label": "E.2 Project Management at a Glance", "id": "e2"}],
-      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}],
-      [{"label": "E.5 Templates & Standards Register", "id": "e5"}],
-      [{"label": "E.2 Project Management at a Glance", "id": "e2"}],
+      [
+        {
+          "label": "E.2 Project Management at a Glance",
+          "id": "e2"
+        }
+      ],
+      [
+        {
+          "label": "E.6 IT, Servers & Poolarserver",
+          "id": "e6"
+        },
+        {
+          "label": "Live Systems & Tools",
+          "id": "live"
+        }
+      ],
+      [
+        {
+          "label": "E.5 Templates & Standards Register",
+          "id": "e5"
+        }
+      ],
+      [
+        {
+          "label": "E.2 Project Management at a Glance",
+          "id": "e2"
+        }
+      ],
       [],
-      [{"label": "E.7 Document Control", "id": "e7"}]
+      [
+        {
+          "label": "E.7 Document Control",
+          "id": "e7"
+        }
+      ]
     ],
     "links": [
-      { "label": "E.2 Project Management at a Glance", "id": "e2" },
-      { "label": "E.6 IT, Servers & Poolarserver", "id": "e6" },
-      { "label": "Live Systems & Tools", "id": "live" },
-      { "label": "E.7 Document Control", "id": "e7" }
+      {
+        "label": "E.2 Project Management at a Glance",
+        "id": "e2"
+      },
+      {
+        "label": "E.6 IT, Servers & Poolarserver",
+        "id": "e6"
+      },
+      {
+        "label": "Live Systems & Tools",
+        "id": "live"
+      },
+      {
+        "label": "E.7 Document Control",
+        "id": "e7"
+      }
     ]
   },
   "e5": {
@@ -2131,15 +4489,48 @@
       "How to use templates"
     ],
     "topicLinks": [
-      [{"label": "Bidding Manual", "id": "bidding"}, {"label": "E.8 Graphic Identity in Practice", "id": "e8"}],
-      [{"label": "E.7 Document Control", "id": "e7"}],
-      [{"label": "E.7 Document Control", "id": "e7"}],
-      [{"label": "E.8 Graphic Identity in Practice", "id": "e8"}]
+      [
+        {
+          "label": "Bidding Manual",
+          "id": "bidding"
+        },
+        {
+          "label": "E.8 Graphic Identity in Practice",
+          "id": "e8"
+        }
+      ],
+      [
+        {
+          "label": "E.7 Document Control",
+          "id": "e7"
+        }
+      ],
+      [
+        {
+          "label": "E.7 Document Control",
+          "id": "e7"
+        }
+      ],
+      [
+        {
+          "label": "E.8 Graphic Identity in Practice",
+          "id": "e8"
+        }
+      ]
     ],
     "links": [
-      { "label": "E.2 Project Management at a Glance", "id": "e2" },
-      { "label": "E.8 Graphic Identity in Practice", "id": "e8" },
-      { "label": "Bidding Manual", "id": "bidding" }
+      {
+        "label": "E.2 Project Management at a Glance",
+        "id": "e2"
+      },
+      {
+        "label": "E.8 Graphic Identity in Practice",
+        "id": "e8"
+      },
+      {
+        "label": "Bidding Manual",
+        "id": "bidding"
+      }
     ]
   },
   "e6": {
@@ -2159,79 +4550,169 @@
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"Poolarserver is the LAVA intranet platform where you log working hours, access project information and send large files securely. Your login username and password will be provided by admin."},
-          {"t":"kv","items":[
-            {"k":"Login","v":"https://lava.poolarserver.com/login.aspx"},
-            {"k":"Timesheets","v":"Mandatory — fill in daily working times per project and phase"},
-            {"k":"Poolarmail","v":"Send files up to 2 GB securely, internally and externally"},
-            {"k":"Project list","v":"Contact details, team members and project information"}
-          ]},
-          {"t":"note","text":"Individual file size on Poolarmail must not exceed 2 GB — exceeding this will cause the transfer to fail at a late stage."}
+          {
+            "t": "para",
+            "text": "Poolarserver is the LAVA intranet platform where you log working hours, access project information and send large files securely. Your login username and password will be provided by admin."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Login",
+                "v": "https://lava.poolarserver.com/login.aspx"
+              },
+              {
+                "k": "Timesheets",
+                "v": "Mandatory — fill in daily working times per project and phase"
+              },
+              {
+                "k": "Poolarmail",
+                "v": "Send files up to 2 GB securely, internally and externally"
+              },
+              {
+                "k": "Project list",
+                "v": "Contact details, team members and project information"
+              }
+            ]
+          },
+          {
+            "t": "note",
+            "text": "Individual file size on Poolarmail must not exceed 2 GB — exceeding this will cause the transfer to fail at a late stage."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"IT resources and instructions are available in the IT Wiki: Teams > BER > Office Management > IT Wiki. Check there for forms, login contacts and guides."},
-          {"t":"kv","items":[
-            {"k":"IT Support","v":"Provided remotely by Jürgen Fischer"},
-            {"k":"Emergency IT","v":"jfischer@pcs-neuffen.com · 07025/5140"},
-            {"k":"Day-to-day","v":"Contact Harry, Sibel or Veronika V. for hardware, software installs and IT support"}
-          ]},
-          {"t":"note","text":"For VPN setup or complex IT issues, plan ahead and make an online appointment with Mr. Fischer."}
+          {
+            "t": "para",
+            "text": "IT resources and instructions are available in the IT Wiki: Teams > BER > Office Management > IT Wiki. Check there for forms, login contacts and guides."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "IT Support",
+                "v": "Provided remotely by Jürgen Fischer"
+              },
+              {
+                "k": "Emergency IT",
+                "v": "jfischer@pcs-neuffen.com · 07025/5140"
+              },
+              {
+                "k": "Day-to-day",
+                "v": "Contact Harry, Sibel or Veronika V. for hardware, software installs and IT support"
+              }
+            ]
+          },
+          {
+            "t": "note",
+            "text": "For VPN setup or complex IT issues, plan ahead and make an online appointment with Mr. Fischer."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"LAVA provides licences for the following software. All hardware requests and software installations go through Harry, Sibel or Veronika V."},
-          {"t":"bullets","items":[
-            "Microsoft 365 (M365) — Office suite, Teams, Outlook",
-            "Adobe Creative Cloud (CC)",
-            "Rhino 7",
-            "Autodesk suite — Revit, Civil 3D, AutoCAD, InfraWorks, Navisworks Manage",
-            "Enscape (NScape)"
-          ]},
-          {"t":"note","text":"Current licence information — available seats and responsible person — is on Poolarserver / Wiki."}
+          {
+            "t": "para",
+            "text": "LAVA provides licences for the following software. All hardware requests and software installations go through Harry, Sibel or Veronika V."
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Microsoft 365 (M365) — Office suite, Teams, Outlook",
+              "Adobe Creative Cloud (CC)",
+              "Rhino 7",
+              "Autodesk suite — Revit, Civil 3D, AutoCAD, InfraWorks, Navisworks Manage",
+              "Enscape (NScape)"
+            ]
+          },
+          {
+            "t": "note",
+            "text": "Current licence information — available seats and responsible person — is on Poolarserver / Wiki."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"VPN is used for remote server connection only from office computers or LAVA laptops. If you work from a personal computer, coordinate with your team to get files from the server instead."},
-          {"t":"bullets","items":[
-            "To set up VPN on an office computer: request VPN files and instructions from Sibel",
-            "Two AnyDesk licences are available — for emergency remote access to an office desktop only",
-            "All files from your personal computer must be regularly saved on the server"
-          ]},
-          {"t":"note","text":"AnyDesk is for emergency situations only — do not use it as a regular remote work tool."}
+          {
+            "t": "para",
+            "text": "VPN is used for remote server connection only from office computers or LAVA laptops. If you work from a personal computer, coordinate with your team to get files from the server instead."
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "To set up VPN on an office computer: request VPN files and instructions from Sibel",
+              "Two AnyDesk licences are available — for emergency remote access to an office desktop only",
+              "All files from your personal computer must be regularly saved on the server"
+            ]
+          },
+          {
+            "t": "note",
+            "text": "AnyDesk is for emergency situations only — do not use it as a regular remote work tool."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"The WLAN password is available from Sibel. Request it directly from her on your first day or whenever you need it."},
-          {"t":"h","text":"Scanning"},
-          {"t":"bullets","items":[
-            "Select 'Workflow Scanning' on the printer",
-            "Select the 'Scan_2020' option",
-            "Your scans will appear at T:\\_SCANS",
-            "Delete your scans from the folder after you are done"
-          ]}
+          {
+            "t": "para",
+            "text": "The WLAN password is available from Sibel. Request it directly from her on your first day or whenever you need it."
+          },
+          {
+            "t": "h",
+            "text": "Scanning"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Select 'Workflow Scanning' on the printer",
+              "Select the 'Scan_2020' option",
+              "Your scans will appear at T:\\_SCANS",
+              "Delete your scans from the folder after you are done"
+            ]
+          }
         ]
       }
     ],
     "topicLinks": [
-      [{"label": "B.2 A Standard Day at LAVA", "id": "b2"}],
-      [{"label": "E.4 Project Folder Structure", "id": "e4"}],
-      [{"label": "E.5 Templates & Standards Register", "id": "e5"}],
+      [
+        {
+          "label": "B.2 A Standard Day at LAVA",
+          "id": "b2"
+        }
+      ],
+      [
+        {
+          "label": "E.4 Project Folder Structure",
+          "id": "e4"
+        }
+      ],
+      [
+        {
+          "label": "E.5 Templates & Standards Register",
+          "id": "e5"
+        }
+      ],
       [],
       []
     ],
     "links": [
-      { "label": "E.4 Project Folder Structure", "id": "e4" },
-      { "label": "E.5 Templates & Standards Register", "id": "e5" },
-      { "label": "B.2 A Standard Day at LAVA", "id": "b2" }
+      {
+        "label": "E.4 Project Folder Structure",
+        "id": "e4"
+      },
+      {
+        "label": "E.5 Templates & Standards Register",
+        "id": "e5"
+      },
+      {
+        "label": "B.2 A Standard Day at LAVA",
+        "id": "b2"
+      }
     ]
   },
   "e7": {
@@ -2247,16 +4728,60 @@
       "File locations & accessibility (server vs SharePoint)"
     ],
     "topicLinks": [
-      [{"label": "E.3 SOPs", "id": "e3"}, {"label": "QEMS", "id": "qems"}],
-      [{"label": "E.4 Project Folder Structure", "id": "e4"}],
-      [{"label": "E.4 Project Folder Structure", "id": "e4"}],
-      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}, {"label": "Live Systems & Tools", "id": "live"}, {"label": "E.4 Project Folder Structure", "id": "e4"}]
+      [
+        {
+          "label": "E.3 SOPs",
+          "id": "e3"
+        },
+        {
+          "label": "QEMS",
+          "id": "qems"
+        }
+      ],
+      [
+        {
+          "label": "E.4 Project Folder Structure",
+          "id": "e4"
+        }
+      ],
+      [
+        {
+          "label": "E.4 Project Folder Structure",
+          "id": "e4"
+        }
+      ],
+      [
+        {
+          "label": "E.6 IT, Servers & Poolarserver",
+          "id": "e6"
+        },
+        {
+          "label": "Live Systems & Tools",
+          "id": "live"
+        },
+        {
+          "label": "E.4 Project Folder Structure",
+          "id": "e4"
+        }
+      ]
     ],
     "links": [
-      { "label": "QEMS", "id": "qems" },
-      { "label": "E.3 SOPs", "id": "e3" },
-      { "label": "E.4 Project Folder Structure", "id": "e4" },
-      { "label": "Live Systems & Tools", "id": "live" }
+      {
+        "label": "QEMS",
+        "id": "qems"
+      },
+      {
+        "label": "E.3 SOPs",
+        "id": "e3"
+      },
+      {
+        "label": "E.4 Project Folder Structure",
+        "id": "e4"
+      },
+      {
+        "label": "Live Systems & Tools",
+        "id": "live"
+      }
     ]
   },
   "e8": {
@@ -2272,15 +4797,48 @@
       "Template setup files — where to find them"
     ],
     "topicLinks": [
-      [{"label": "E.1 Design Manual at a Glance", "id": "e1"}],
-      [{"label": "E.1 Design Manual at a Glance", "id": "e1"}],
-      [{"label": "E.1 Design Manual at a Glance", "id": "e1"}],
-      [{"label": "E.5 Templates & Standards Register", "id": "e5"}, {"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}]
+      [
+        {
+          "label": "E.1 Design Manual at a Glance",
+          "id": "e1"
+        }
+      ],
+      [
+        {
+          "label": "E.1 Design Manual at a Glance",
+          "id": "e1"
+        }
+      ],
+      [
+        {
+          "label": "E.1 Design Manual at a Glance",
+          "id": "e1"
+        }
+      ],
+      [
+        {
+          "label": "E.5 Templates & Standards Register",
+          "id": "e5"
+        },
+        {
+          "label": "E.6 IT, Servers & Poolarserver",
+          "id": "e6"
+        }
+      ]
     ],
     "links": [
-      { "label": "E.5 Templates & Standards Register", "id": "e5" },
-      { "label": "E.1 Design Manual at a Glance", "id": "e1" },
-      { "label": "E.6 IT, Servers & Poolarserver", "id": "e6" }
+      {
+        "label": "E.5 Templates & Standards Register",
+        "id": "e5"
+      },
+      {
+        "label": "E.1 Design Manual at a Glance",
+        "id": "e1"
+      },
+      {
+        "label": "E.6 IT, Servers & Poolarserver",
+        "id": "e6"
+      }
     ]
   },
   "f1": {
@@ -2296,21 +4854,88 @@
       "Live locations: IT Wiki · Server L:\\ · Poolarserver · Office Calendar"
     ],
     "topicLinks": [
-      [{"label": "Cultural Manual", "id": "cultural"}, {"label": "Design Manual", "id": "design"}, {"label": "Bidding Manual", "id": "bidding"}, {"label": "Communication Manual", "id": "communication"}],
-      [{"label": "QEMS", "id": "qems"}, {"label": "Project Management Manual", "id": "ppm"}, {"label": "Work Safety Manual", "id": "worksafety"}],
-      [{"label": "Guides & Registers", "id": "guides"}],
-      [{"label": "E.6 IT, Servers & Poolarserver", "id": "e6"}]
+      [
+        {
+          "label": "Cultural Manual",
+          "id": "cultural"
+        },
+        {
+          "label": "Design Manual",
+          "id": "design"
+        },
+        {
+          "label": "Bidding Manual",
+          "id": "bidding"
+        },
+        {
+          "label": "Communication Manual",
+          "id": "communication"
+        }
+      ],
+      [
+        {
+          "label": "QEMS",
+          "id": "qems"
+        },
+        {
+          "label": "Project Management Manual",
+          "id": "ppm"
+        },
+        {
+          "label": "Work Safety Manual",
+          "id": "worksafety"
+        }
+      ],
+      [
+        {
+          "label": "Guides & Registers",
+          "id": "guides"
+        }
+      ],
+      [
+        {
+          "label": "E.6 IT, Servers & Poolarserver",
+          "id": "e6"
+        }
+      ]
     ],
     "links": [
-      { "label": "Cultural Manual", "id": "cultural" },
-      { "label": "Design Manual", "id": "design" },
-      { "label": "Bidding Manual", "id": "bidding" },
-      { "label": "Communication Manual", "id": "communication" },
-      { "label": "QEMS", "id": "qems" },
-      { "label": "Project Management Manual", "id": "ppm" },
-      { "label": "Work Safety Manual", "id": "worksafety" },
-      { "label": "Guides & Registers", "id": "guides" },
-      { "label": "Live Systems & Tools", "id": "live" }
+      {
+        "label": "Cultural Manual",
+        "id": "cultural"
+      },
+      {
+        "label": "Design Manual",
+        "id": "design"
+      },
+      {
+        "label": "Bidding Manual",
+        "id": "bidding"
+      },
+      {
+        "label": "Communication Manual",
+        "id": "communication"
+      },
+      {
+        "label": "QEMS",
+        "id": "qems"
+      },
+      {
+        "label": "Project Management Manual",
+        "id": "ppm"
+      },
+      {
+        "label": "Work Safety Manual",
+        "id": "worksafety"
+      },
+      {
+        "label": "Guides & Registers",
+        "id": "guides"
+      },
+      {
+        "label": "Live Systems & Tools",
+        "id": "live"
+      }
     ]
   },
   "g1": {
@@ -2329,40 +4954,107 @@
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"On some Friday afternoons, time is set aside from ongoing projects to work, share and learn as a small group. This can be regular — for example: learning a software, developing an office standard, or building a shared script."},
-          {"t":"para","text":"Think about what skill or expertise you have and would like to share with others. Everyone has something to contribute."},
-          {"t":"note","text":"Friday Academy is a community investment — the whole office improves when individuals share what they know."}
+          {
+            "t": "para",
+            "text": "On some Friday afternoons, time is set aside from ongoing projects to work, share and learn as a small group. This can be regular — for example: learning a software, developing an office standard, or building a shared script."
+          },
+          {
+            "t": "para",
+            "text": "Think about what skill or expertise you have and would like to share with others. Everyone has something to contribute."
+          },
+          {
+            "t": "note",
+            "text": "Friday Academy is a community investment — the whole office improves when individuals share what they know."
+          }
         ]
       },
       {
         "type": "text",
         "blocks": [
-          {"t":"para","text":"On some Fridays, colleagues present a topic over lunch — a competition debrief after submission, a project phase review, a specific technical subject, or a research area."},
-          {"t":"para","text":"The goal is not simply to present a project, but to share learning: how LAVA develops a design strategy, how we put together a competition booklet, how we draw a detail, how we push research on a topic."},
-          {"t":"note","text":"Lunch Presentations give the whole team access to the thinking behind the work — not just the result."}
+          {
+            "t": "para",
+            "text": "On some Fridays, colleagues present a topic over lunch — a competition debrief after submission, a project phase review, a specific technical subject, or a research area."
+          },
+          {
+            "t": "para",
+            "text": "The goal is not simply to present a project, but to share learning: how LAVA develops a design strategy, how we put together a competition booklet, how we draw a detail, how we push research on a topic."
+          },
+          {
+            "t": "note",
+            "text": "Lunch Presentations give the whole team access to the thinking behind the work — not just the result."
+          }
         ]
       },
       null,
       {
         "type": "text",
         "blocks": [
-          {"t":"h","text":"Pin-up"},
-          {"t":"para","text":"The Flex Room has Pin-up panels displaying projects in progress. LAVA encourages all teams to pin up in-progress material to share current development with the wider office."},
-          {"t":"para","text":"There is no fixed format. It rotates naturally as projects evolve — new material replaces older work. If your project is at an interesting stage, put it up."},
-          {"t":"note","text":"Pin-up culture is a direct expression of LAVA's belief in knowledge sharing and open studio practice."}
+          {
+            "t": "h",
+            "text": "Pin-up"
+          },
+          {
+            "t": "para",
+            "text": "The Flex Room has Pin-up panels displaying projects in progress. LAVA encourages all teams to pin up in-progress material to share current development with the wider office."
+          },
+          {
+            "t": "para",
+            "text": "There is no fixed format. It rotates naturally as projects evolve — new material replaces older work. If your project is at an interesting stage, put it up."
+          },
+          {
+            "t": "note",
+            "text": "Pin-up culture is a direct expression of LAVA's belief in knowledge sharing and open studio practice."
+          }
         ]
       }
     ],
     "topicLinks": [
-      [{"label": "C.3 Spaces & Facilities", "id": "c3"}, {"label": "A.2 Values & General Rules", "id": "a2"}],
-      [{"label": "C.3 Spaces & Facilities", "id": "c3"}],
-      [{"label": "B.5 Performance & Growth", "id": "b5"}],
-      [{"label": "A.2 Values & General Rules", "id": "a2"}, {"label": "B.5 Performance & Growth", "id": "b5"}]
+      [
+        {
+          "label": "C.3 Spaces & Facilities",
+          "id": "c3"
+        },
+        {
+          "label": "A.2 Values & General Rules",
+          "id": "a2"
+        }
+      ],
+      [
+        {
+          "label": "C.3 Spaces & Facilities",
+          "id": "c3"
+        }
+      ],
+      [
+        {
+          "label": "B.5 Performance & Growth",
+          "id": "b5"
+        }
+      ],
+      [
+        {
+          "label": "A.2 Values & General Rules",
+          "id": "a2"
+        },
+        {
+          "label": "B.5 Performance & Growth",
+          "id": "b5"
+        }
+      ]
     ],
     "links": [
-      { "label": "C.3 Spaces & Facilities", "id": "c3" },
-      { "label": "B.5 Performance & Growth", "id": "b5" },
-      { "label": "A.2 Values & General Rules", "id": "a2" }
+      {
+        "label": "C.3 Spaces & Facilities",
+        "id": "c3"
+      },
+      {
+        "label": "B.5 Performance & Growth",
+        "id": "b5"
+      },
+      {
+        "label": "A.2 Values & General Rules",
+        "id": "a2"
+      }
     ]
   }
 }

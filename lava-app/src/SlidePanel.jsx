@@ -3,6 +3,7 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 import { resolvePdfPath, resolveFallbackPath } from './pdfResolver.js';
+import EPDDatabase from './EPDDatabase.jsx';
 
 pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
 
@@ -1367,6 +1368,8 @@ export default function SlidePanel({
           <TextSlide data={slideData} accentColor={accentColor} />
         ) : slideData?.type === 'eval-matrix' ? (
           <EvalMatrixSlide data={slideData} accentColor={accentColor} />
+        ) : slideData?.type === 'epd-database' ? (
+          <EPDDatabase accentColor={accentColor} />
         ) : slideData?.type === 'pdf-page' ? (
           <PdfPageSlide data={slideData} allSlideData={allSlideData} topicIndex={topicIndex} onSelect={onSelect} pdfPath={pdfPath} pagesPath={pagesPath} pagePad={pagePad} />
         ) : (
