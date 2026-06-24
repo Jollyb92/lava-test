@@ -348,7 +348,7 @@ export const tocData = {
     {
       label: 'Part C — The Office Environment',
       sections: [
-        { id: 'c1', label: 'C.1 Berlin Office Rules' },
+        { id: 'c1', label: 'C.1 Office Rules' },
         { id: 'c2', label: 'C.2 Housekeeping' },
         { id: 'c3', label: 'C.3 Spaces & Facilities' },
       ],

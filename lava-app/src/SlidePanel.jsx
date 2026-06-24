@@ -1380,6 +1380,14 @@ function PdfPageSlide({ data, allSlideData, topicIndex, onSelect, pdfPath, pages
   );
 }
 
+const OFFICE_VARIANT_PAGES = new Set(['c1', 'c2', 'c3', 'd1', 'd2', 'd3']);
+
+const OFFICE_TABS = [
+  { id: 'berlin-sa24', label: 'Berlin SA24' },
+  { id: 'berlin-s161', label: 'Berlin S161' },
+  { id: 'stuttgart',   label: 'Stuttgart'   },
+];
+
 export default function SlidePanel({
   topic,
   topicIndex,
@@ -1395,6 +1403,7 @@ export default function SlidePanel({
   onSelect,
   onClose,
 }) {
+  const [officeTab, setOfficeTab] = useState('berlin-sa24');
   const folderPath = `file:///L:/BER%20PROJECTS/Office%20Manual/${pageId.toUpperCase()}/`;
   const folderLabel = `L:\\BER PROJECTS\\Office Manual\\${pageId.toUpperCase()}\\`;
 
@@ -1438,8 +1447,36 @@ export default function SlidePanel({
           <span className="sp-header-topic">{topic}</span>
         </div>
 
+        {/* Office location tabs for C and D chapters */}
+        {OFFICE_VARIANT_PAGES.has(pageId) && (
+          <div className="sp-office-tabs">
+            {OFFICE_TABS.map(tab => (
+              <button
+                key={tab.id}
+                className={`sp-office-tab${officeTab === tab.id ? ' sp-office-tab--active' : ''}`}
+                style={officeTab === tab.id ? { borderBottomColor: accentColor, color: accentColor } : {}}
+                onClick={() => setOfficeTab(tab.id)}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        )}
+
         {/* Content area */}
-        {slideData?.type === 'table' ? (
+        {OFFICE_VARIANT_PAGES.has(pageId) && officeTab !== 'berlin-sa24' ? (
+          <div className="sp-placeholder">
+            <div className="sp-placeholder-inner">
+              <img src="/lava-logo.svg" alt="LAVA" className="sp-logo-img" />
+              <div className="sp-placeholder-label">
+                {OFFICE_TABS.find(t => t.id === officeTab)?.label} — content coming soon
+              </div>
+              <div className="sp-placeholder-hint">
+                <em>{topic}</em> rules for this office will be placed here
+              </div>
+            </div>
+          </div>
+        ) : slideData?.type === 'table' ? (
           <TableSlide data={slideData} accentColor={accentColor} />
         ) : slideData?.type === 'links' ? (
           <LinksSlide data={slideData} accentColor={accentColor} />
