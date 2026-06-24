@@ -398,6 +398,7 @@ export default function DetailPage({ onSearchOpen }) {
   const topicSpecific = selectedSlide !== null ? (page.topicLinks?.[selectedSlide] ?? null) : null;
   const subchLinks = subchOpen ? (page.chapters?.[selectedSubch.ch]?.links ?? null) : null;
   const activeLinks = (topicSpecific?.length ? topicSpecific : null) || subchLinks || chapterLinks || page.links || null;
+  const topicServerLinksList = selectedSlide !== null ? (page.topicServerLinks?.[selectedSlide] ?? null) : null;
 
   const bodyClass = [
     'detail-body',
@@ -521,6 +522,10 @@ export default function DetailPage({ onSearchOpen }) {
             const links = ch?.serverLinks?.[subName];
             return links?.length ? <ServerLinks links={links} /> : null;
           })()}
+
+          {topicServerLinksList?.length > 0 && (
+            <ServerLinks links={topicServerLinksList} />
+          )}
 
           {activeLinks && activeLinks.length > 0 && (
             <LinkedNav links={activeLinks} navigate={navigate} />
