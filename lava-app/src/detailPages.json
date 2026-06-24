@@ -1229,7 +1229,21 @@
           {
             "type": "epd-database"
           }
-        ]
+        ],
+        "serverLinks": {
+          "How to Use This EPD Tracker": [
+            {
+              "label": "EPD Databases folder",
+              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\04_EPD_Databases"
+            }
+          ],
+          "EPD Database": [
+            {
+              "label": "EPD Databases folder",
+              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\04_EPD_Databases"
+            }
+          ]
+        }
       }
     ],
     "links": [
