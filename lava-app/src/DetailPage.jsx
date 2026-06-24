@@ -143,7 +143,7 @@ function ServerLinks({ links }) {
   function handleCopy(path, i) {
     navigator.clipboard.writeText(path).then(() => {
       setCopied(i);
-      setTimeout(() => setCopied(null), 1200);
+      setTimeout(() => setCopied(null), 1500);
     });
   }
 
@@ -154,14 +154,14 @@ function ServerLinks({ links }) {
         {links.map((link, i) => (
           <button
             key={i}
-            className="server-link-btn"
+            className={`server-link-btn${copied === i ? ' server-link-btn--copied' : ''}`}
             onClick={() => handleCopy(link.path, i)}
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M1.5 4.5C1.5 3.4 2.4 2.5 3.5 2.5H6.5L8 4H13C14.1 4 15 4.9 15 6V12C15 13.1 14.1 14 13 14H3C1.9 14 1 13.1 1 12V4.5Z"
-                stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" fill="currentColor" fillOpacity="0.08"/>
+                stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" fill="currentColor" fillOpacity="0.12"/>
             </svg>
-            {link.label}
+            <span className="server-link-btn-label">{link.label}</span>
             {copied === i && (
               <span className="server-link-copied">Path copied!</span>
             )}

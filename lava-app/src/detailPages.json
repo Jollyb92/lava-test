@@ -2876,12 +2876,7 @@
           },
           {
             "t": "note",
-            "text": "The Application for Leave form is available on the server. Use the path below to copy it to your desktop and fill it in."
-          },
-          {
-            "t": "server-link",
-            "label": "Application for Leave",
-            "path": "K:\\4_GENERAL OFFICE\\Application for leave"
+            "text": "The Application for Leave form is available on the server — use the server link button on the left to copy the path."
           }
         ]
       },
@@ -2939,6 +2934,14 @@
           "id": "qems"
         }
       ]
+    ],
+    "topicServerLinks": [
+      [{ "label": "Application for Leave", "path": "K:\\4_GENERAL OFFICE\\Application for leave" }],
+      null,
+      null,
+      null,
+      null,
+      null
     ],
     "links": [
       {

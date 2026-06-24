@@ -808,39 +808,43 @@ a { color: inherit; text-decoration: none; }
   gap: 7px;
   padding: 7px 12px;
   background: #f4f4f4;
-  border: 1px solid #ddd;
+  border: 1.5px solid #ddd;
   border-radius: 6px;
   font-size: 12px;
   font-weight: 600;
   color: #333;
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.12s, border-color 0.12s;
+  transition: background 0.18s, border-color 0.18s, color 0.18s;
   width: fit-content;
 }
 
 .server-link-btn:hover {
-  background: #ebebeb;
+  background: #e8e8e8;
   border-color: #bbb;
 }
 
-.server-link-copied {
-  margin-left: 6px;
-  padding: 2px 7px;
-  background: #1a1a1a;
-  color: #fff;
-  border-radius: 4px;
-  font-size: 10px;
-  font-weight: 600;
-  white-space: nowrap;
-  animation: fade-in-out 1.2s ease forwards;
+.server-link-btn--copied {
+  background: #B3F400;
+  border-color: #96cc00;
+  color: #1a1a1a;
 }
 
-@keyframes fade-in-out {
-  0%   { opacity: 0; transform: translateY(-3px); }
-  15%  { opacity: 1; transform: translateY(0); }
-  75%  { opacity: 1; }
-  100% { opacity: 0; }
+.server-link-btn--copied:hover {
+  background: #B3F400;
+  border-color: #96cc00;
+}
+
+.server-link-copied {
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  animation: sl-pop-in 0.15s ease;
+}
+
+@keyframes sl-pop-in {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
 .linked-sources {
