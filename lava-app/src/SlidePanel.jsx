@@ -1089,12 +1089,12 @@ function ServerLinkBlock({ label, path, accentColor }) {
     <div className="sptx-server-link-wrap">
       <span className="sptx-server-link-label">Server Link</span>
       <button className="sptx-server-link-btn" onClick={handleCopy} style={{ borderColor: accentColor }}>
-        <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-          <path d="M1 3.5C1 2.67 1.67 2 2.5 2H5l1.5 1.5H10.5C11.33 3.5 12 4.17 12 5v5c0 .83-.67 1.5-1.5 1.5h-8C1.67 11.5 1 10.83 1 10V3.5Z"
-            stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round"/>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M1.5 4.5C1.5 3.4 2.4 2.5 3.5 2.5H6.5L8 4H13C14.1 4 15 4.9 15 6V12C15 13.1 14.1 14 13 14H3C1.9 14 1 13.1 1 12V4.5Z"
+            stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" fill="currentColor" fillOpacity="0.08"/>
         </svg>
         {label}
-        {copied && <span className="sptx-server-link-copied">Path Copied!</span>}
+        {copied && <span className="sptx-server-link-copied">Path copied!</span>}
       </button>
     </div>
   );
