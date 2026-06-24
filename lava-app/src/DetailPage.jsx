@@ -136,12 +136,27 @@ function SubchapterLabel({ text }) {
   );
 }
 
+function copyToClipboard(text) {
+  if (navigator.clipboard?.writeText) {
+    return navigator.clipboard.writeText(text);
+  }
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none';
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  document.execCommand('copy');
+  document.body.removeChild(ta);
+  return Promise.resolve();
+}
+
 function ServerLinks({ links }) {
   const [copied, setCopied] = useState(null);
   if (!links?.length) return null;
 
   function handleCopy(path, i) {
-    navigator.clipboard.writeText(path).then(() => {
+    copyToClipboard(path).then(() => {
       setCopied(i);
       setTimeout(() => setCopied(null), 1500);
     });
