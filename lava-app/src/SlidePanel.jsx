@@ -1113,6 +1113,13 @@ function TextSlide({ data, accentColor }) {
               {block.text}
             </div>
           );
+        if (block.t === 'cta')
+          return (
+            <a key={i} href={block.url} target="_blank" rel="noopener noreferrer" className="sptx-cta" style={{ background: accentColor, color: accentColor === '#B3F400' ? '#1a1a1a' : '#fff' }}>
+              {block.label}
+              <span className="sptx-cta-arrow">↗</span>
+            </a>
+          );
         return null;
       })}
     </div>

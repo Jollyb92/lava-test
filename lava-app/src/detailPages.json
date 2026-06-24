@@ -2903,7 +2903,8 @@
       "Windows & islands — team responsibility",
       "Telephone etiquette",
       "Post & packages",
-      "Check-in / check-out system — shared resources & equipment"
+      "Check-in / check-out system — shared resources & equipment",
+      "Reimbursement — expenses, travel & project costs"
     ],
     "slideData": [
       {
@@ -3268,6 +3269,38 @@
             ]
           }
         ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "h",
+            "text": "Reimbursement"
+          },
+          {
+            "t": "para",
+            "text": "LAVA covers all work-related expenses you incur on behalf of the office. The following costs are fully reimbursable when accompanied by a receipt and submitted within 30 days of the expense date."
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "MMM (Monday Morning Meeting) — catering, refreshments and any supplies purchased for the weekly team meeting",
+              "Overnight dinners — meals during business trips or client events that extend past regular working hours",
+              "Taxi & transport — rides to/from client sites, airports, or off-site meetings when public transport is impractical",
+              "Project expenses — materials, printing, models, or other direct project costs approved by the project lead",
+              "Travel — flights, trains, hotels, and ground transport for work-related travel"
+            ]
+          },
+          {
+            "t": "note",
+            "text": "Keep all original receipts. Expenses submitted without proof of purchase cannot be processed."
+          },
+          {
+            "t": "cta",
+            "label": "Submit Expense Reimbursement Form",
+            "url": "https://forms.office.com/Pages/ResponsePage.aspx?id=ladaOxCD_Ea-7T2PdXXbTaNvKaSYlSFNlWLCIwgidKVUNFlYQTA3M0taQUFEVkJNRU5JMjAwU0NRMSQlQCN0PWcu"
+          }
+        ]
       }
     ],
     "topicLinks": [
@@ -3313,7 +3346,8 @@
           "label": "C.3 Spaces & Facilities",
           "id": "c3"
         }
-      ]
+      ],
+      []
     ],
     "links": [
       {
