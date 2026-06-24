@@ -49,18 +49,19 @@ const ConnectionLine = memo(function ConnectionLine({ x1, y1, x2, y2, col, op, d
 
 // ── Memoized node group — only re-renders when its visual state changes ─────
 
-const NodeGroup = memo(function NodeGroup({ node, dx, dy, op, isHov, isSearchMatch, onMouseEnter, onMouseLeave, onClick }) {
+const NodeGroup = memo(function NodeGroup({ node, op, isHov, isSearchMatch, onMouseEnter, onMouseLeave, onClick }) {
   const lines = node.label.split('\n');
   const lineH = node.layer === 2 ? 12 : 15;
   const totalH = lines.length * lineH;
 
   return (
     <g
+      data-node-id={node.id}
       style={{
         cursor: node.clickTarget ? 'pointer' : 'default',
         opacity: op,
-        transform: `translate(${node.x + (dx || 0)}px, ${node.y + (dy || 0)}px)`,
-        transition: 'transform 2.5s ease-in-out, opacity 0.2s',
+        transform: `translate(${node.x}px, ${node.y}px)`,
+        transition: 'opacity 0.2s',
         willChange: 'transform',
       }}
       onMouseEnter={onMouseEnter}
@@ -132,19 +133,24 @@ const NodeGroup = memo(function NodeGroup({ node, dx, dy, op, isHov, isSearchMat
 
 // ──────────────────────────────────────────────────────────────────────────
 
-const IDLE_MS    = 2 * 60 * 1000; // 2 minutes
-const REDRIFT_MS = 4500;          // re-randomise drift every 4.5 s
+const IDLE_MS = 2 * 60 * 1000; // 2 minutes
 
-function generateDrifts() {
-  const d = {};
+// Per-node orbital params: amplitude, angular speed (rad/s), phase offset
+// Built once when screensaver starts so each run looks different
+function buildOrbitParams() {
+  const p = {};
   nodes.forEach(n => {
-    const range = n.layer === 0 ? 28 : n.layer === 1 ? 60 : 85;
-    d[n.id] = {
-      dx: (Math.random() - 0.5) * range * 2,
-      dy: (Math.random() - 0.5) * range * 2,
-    };
+    const amp   = n.id === 'center' ? 3 : n.layer === 1 ? 16 : 32;
+    // Speed: 0.14–0.26 rad/s → period 24–45 s, intentionally irrational per node
+    const speed = (0.14 + Math.random() * 0.12) * (Math.random() < 0.5 ? 1 : -1);
+    const phase = Math.random() * Math.PI * 2;
+    // Each node also has a secondary wobble on a perpendicular axis for figure-8 feel
+    const amp2   = amp * (0.3 + Math.random() * 0.4);
+    const speed2 = speed * (1.37 + Math.random() * 0.5); // irrational ratio to avoid sync
+    const phase2 = Math.random() * Math.PI * 2;
+    p[n.id] = { amp, speed, phase, amp2, speed2, phase2 };
   });
-  return d;
+  return p;
 }
 
 export default function DiagramPage({ onSearchOpen }) {
@@ -154,25 +160,58 @@ export default function DiagramPage({ onSearchOpen }) {
   const [search, setSearch]         = useState('');
   const [statusOpen, setStatusOpen] = useState(false);
   const [screensaver, setScreensaver] = useState(false);
-  const [drifts, setDrifts]           = useState({});
-  const svgRef       = useRef(null);
-  const ssActive     = useRef(false);
-  const idleTimer    = useRef(null);
-  const driftTimer   = useRef(null);
+  const svgRef      = useRef(null);
+  const ssActive    = useRef(false);
+  const idleTimer   = useRef(null);
+  const rafRef      = useRef(null);
+  const orbitParams = useRef({});
+  const nodeEls     = useRef(null); // cached DOM refs, populated once per session
 
   useEffect(() => {
+    function cacheNodeEls() {
+      const map = {};
+      nodes.forEach(n => {
+        map[n.id] = svgRef.current?.querySelector(`[data-node-id="${n.id}"]`) ?? null;
+      });
+      nodeEls.current = map;
+    }
+
+    function tick(t) {
+      const s = t / 1000;
+      nodes.forEach(n => {
+        const el = nodeEls.current?.[n.id];
+        if (!el) return;
+        const { amp, speed, phase, amp2, speed2, phase2 } = orbitParams.current[n.id];
+        const dx = amp  * Math.cos(speed  * s + phase)
+                 + amp2 * Math.cos(speed2 * s + phase2);
+        const dy = amp  * Math.sin(speed  * s + phase)
+                 + amp2 * Math.sin(speed2 * s + phase2);
+        el.style.transition = 'opacity 0.2s';
+        el.style.transform  = `translate(${n.x + dx}px, ${n.y + dy}px)`;
+      });
+      rafRef.current = requestAnimationFrame(tick);
+    }
+
     function start() {
-      ssActive.current = true;
+      ssActive.current   = true;
+      orbitParams.current = buildOrbitParams();
+      cacheNodeEls();
       setScreensaver(true);
-      setDrifts(generateDrifts());
-      driftTimer.current = setInterval(() => setDrifts(generateDrifts()), REDRIFT_MS);
+      rafRef.current = requestAnimationFrame(tick);
     }
 
     function stop() {
       ssActive.current = false;
+      cancelAnimationFrame(rafRef.current);
       setScreensaver(false);
-      setDrifts({});
-      clearInterval(driftTimer.current);
+      // Return all nodes to original position with smooth transition
+      nodes.forEach(n => {
+        const el = nodeEls.current?.[n.id];
+        if (!el) return;
+        el.style.transition = 'transform 2s ease-out, opacity 0.2s';
+        el.style.transform  = `translate(${n.x}px, ${n.y}px)`;
+      });
+      nodeEls.current = null;
       schedule();
     }
 
@@ -192,7 +231,7 @@ export default function DiagramPage({ onSearchOpen }) {
     window.addEventListener('keydown', onActivity);
     return () => {
       clearTimeout(idleTimer.current);
-      clearInterval(driftTimer.current);
+      cancelAnimationFrame(rafRef.current);
       window.removeEventListener('mousemove', onActivity);
       window.removeEventListener('click', onActivity);
       window.removeEventListener('keydown', onActivity);
@@ -297,7 +336,6 @@ export default function DiagramPage({ onSearchOpen }) {
           })}
 
           {nodes.map(node => {
-            const drift = drifts[node.id] || { dx: 0, dy: 0 };
             const op           = nodeOpacity(node.id);
             const isHov        = hovered === node.id;
             const isSearchMatch = matchSet?.has(node.id) ?? false;
@@ -305,8 +343,6 @@ export default function DiagramPage({ onSearchOpen }) {
               <NodeGroup
                 key={node.id}
                 node={node}
-                dx={drift.dx}
-                dy={drift.dy}
                 op={op}
                 isHov={isHov}
                 isSearchMatch={isSearchMatch}
