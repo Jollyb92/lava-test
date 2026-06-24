@@ -1077,6 +1077,29 @@ function EvalMatrixSlide({ data }) {
   );
 }
 
+function ServerLinkBlock({ label, path, accentColor }) {
+  const [copied, setCopied] = useState(false);
+  function handleCopy() {
+    navigator.clipboard.writeText(path).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1200);
+    });
+  }
+  return (
+    <div className="sptx-server-link-wrap">
+      <span className="sptx-server-link-label">Server Link</span>
+      <button className="sptx-server-link-btn" onClick={handleCopy} style={{ borderColor: accentColor }}>
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+          <path d="M1 3.5C1 2.67 1.67 2 2.5 2H5l1.5 1.5H10.5C11.33 3.5 12 4.17 12 5v5c0 .83-.67 1.5-1.5 1.5h-8C1.67 11.5 1 10.83 1 10V3.5Z"
+            stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round"/>
+        </svg>
+        {label}
+        {copied && <span className="sptx-server-link-copied">Path Copied!</span>}
+      </button>
+    </div>
+  );
+}
+
 function TextSlide({ data, accentColor }) {
   return (
     <div className="sptx-wrap">
@@ -1120,6 +1143,8 @@ function TextSlide({ data, accentColor }) {
               <span className="sptx-cta-arrow">↗</span>
             </a>
           );
+        if (block.t === 'server-link')
+          return <ServerLinkBlock key={i} label={block.label} path={block.path} accentColor={accentColor} />;
         return null;
       })}
     </div>

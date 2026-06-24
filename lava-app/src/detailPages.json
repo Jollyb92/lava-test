@@ -259,7 +259,15 @@
             "type": "pdf-page",
             "page": 10
           }
-        ]
+        ],
+        "serverLinks": {
+          "Logo Design & The Slash": [{ "label": "01_Logo folder", "path": "L:\\4_GENERAL OFFICE\\01_Logo" }],
+          "Main Logo Green": [{ "label": "01_Logo folder", "path": "L:\\4_GENERAL OFFICE\\01_Logo" }],
+          "Logo Variants — Presentations & Monochrome": [{ "label": "01_Logo folder", "path": "L:\\4_GENERAL OFFICE\\01_Logo" }],
+          "Email Signature & Long Logo": [{ "label": "01_Logo folder", "path": "L:\\4_GENERAL OFFICE\\01_Logo" }],
+          "Clearspace — Width of Letter L": [{ "label": "01_Logo folder", "path": "L:\\4_GENERAL OFFICE\\01_Logo" }],
+          "Clearspace — Width of Letters LAB": [{ "label": "01_Logo folder", "path": "L:\\4_GENERAL OFFICE\\01_Logo" }]
+        }
       },
       {
         "title": "Font & Color",
@@ -288,7 +296,13 @@
             "type": "pdf-page",
             "page": 14
           }
-        ]
+        ],
+        "serverLinks": {
+          "ABC Walter Neue (Mittel)": [{ "label": "02_Font folder", "path": "L:\\4_GENERAL OFFICE\\02_Font" }],
+          "Primary Colors — Green, Black, White": [{ "label": "02_Font folder", "path": "L:\\4_GENERAL OFFICE\\02_Font" }],
+          "Theme Color Accents — 8 Themes": [{ "label": "02_Font folder", "path": "L:\\4_GENERAL OFFICE\\02_Font" }],
+          "Additional Color Accents": [{ "label": "02_Font folder", "path": "L:\\4_GENERAL OFFICE\\02_Font" }]
+        }
       },
       {
         "title": "LAVA Narrative + What if + LAB",
@@ -2816,13 +2830,53 @@
     "isoTag": "ISO 9001 §9.1 / §10 — Evaluation & Improvement",
     "breadcrumb": "Part B — Working Here > B.6 Offboarding",
     "topics": [
+      "Quitting — application for leave",
       "Notice period & confirmation of last working day",
       "Handover process — project knowledge transfer",
       "Lessons learned documentation",
       "Equipment & access return",
       "Final timesheet, settlement & reference"
     ],
+    "slideData": [
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "h",
+            "text": "Application for Leave"
+          },
+          {
+            "t": "para",
+            "text": "When you decide to leave LAVA, the process begins with a formal application for leave. This document is required to officially initiate your departure and must be submitted to your line manager and HR as early as possible."
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Complete the Application for Leave form and submit it to your direct manager",
+              "Send a copy to administration (HR) for processing",
+              "Your notice period begins from the date the application is received and acknowledged",
+              "Keep a copy of the signed and confirmed application for your own records"
+            ]
+          },
+          {
+            "t": "note",
+            "text": "The Application for Leave form is available on the server. Use the path below to copy it to your desktop and fill it in."
+          },
+          {
+            "t": "server-link",
+            "label": "Application for Leave",
+            "path": "K:\\4_GENERAL OFFICE\\Application for leave"
+          }
+        ]
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
     "topicLinks": [
+      [],
       [
         {
           "label": "QEMS",
