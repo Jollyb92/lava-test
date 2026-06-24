@@ -5,17 +5,17 @@ import { COLORS, READINESS, detailPages, tocData } from './data.js';
 const LS_KEY = 'lava_status_comments';
 
 const MANUALS = [
-  { id: 'office',        label: 'Office Manual Berlin 2026',   colorKey: 'center',        responsible: 'Office Manager + Directors',            readiness: READINESS.office },
-  { id: 'cultural',      label: 'Cultural Manual',             colorKey: 'cultural',      responsible: 'Founders / Directors',                  readiness: READINESS.cultural },
-  { id: 'design',        label: 'Design Manual',               colorKey: 'design',        responsible: 'Directors, Project Leads, Project Staff', readiness: READINESS.design },
-  { id: 'bidding',       label: 'Bidding Manual',              colorKey: 'bidding',       responsible: 'PR + Senior Leadership',                readiness: READINESS.bidding },
-  { id: 'communication', label: 'Communication Manual',        colorKey: 'communication', responsible: 'Design Leads',                          readiness: READINESS.communication },
-  { id: 'qems',          label: 'QEMS',                        colorKey: 'qems',          responsible: 'Existing owners',                       readiness: READINESS.qems },
-  { id: 'ppm',           label: 'Project Management Manual',   colorKey: 'ppm',           responsible: 'Directors, Project Leads, Project Staff', readiness: READINESS.ppm },
-  { id: 'worksafety',    label: 'Work Safety Manual',          colorKey: 'safety',        responsible: 'Sicherheitsfachkraft (Safety Officer)', readiness: READINESS.safety },
-  { id: 'guides',        label: 'Guides & Registers',          colorKey: 'guides',        responsible: 'LAVA Zero + Admin',                     readiness: READINESS.guides },
-  { id: 'live',          label: 'Live Systems & Tools',        colorKey: 'live',          responsible: 'IT team',                               readiness: READINESS.live },
-  { id: 'lavazero',     label: 'LAVA Zero',                   colorKey: 'lavaZero',      responsible: 'LAVA Zero Team',                        readiness: READINESS.lavaZero },
+  { id: 'office',        label: 'Office Manual Berlin 2026',   colorKey: 'center',        responsible: 'Office Manager + Directors',             readiness: READINESS.office,        date: '2023',       version: 'V1.01' },
+  { id: 'cultural',      label: 'Cultural Manual',             colorKey: 'cultural',      responsible: 'Founders / Directors',                   readiness: READINESS.cultural,      date: 'N/A',        version: 'V1.01' },
+  { id: 'design',        label: 'Design Manual',               colorKey: 'design',        responsible: 'Directors, Project Leads, Project Staff', readiness: READINESS.design,        date: 'N/A',        version: 'V1.01' },
+  { id: 'bidding',       label: 'Bidding Manual',              colorKey: 'bidding',       responsible: 'PR + Senior Leadership',                 readiness: READINESS.bidding,       date: '2026',       version: 'V1.01' },
+  { id: 'communication', label: 'Communication Manual',        colorKey: 'communication', responsible: 'Design Leads',                           readiness: READINESS.communication, date: '01.2023',    version: 'V1.01' },
+  { id: 'qems',          label: 'QEMS',                        colorKey: 'qems',          responsible: 'Existing owners',                        readiness: READINESS.qems,          date: '2026',       version: 'V1.01' },
+  { id: 'ppm',           label: 'Project Management Manual',   colorKey: 'ppm',           responsible: 'Directors, Project Leads, Project Staff', readiness: READINESS.ppm,           date: '15.05.2025', version: 'V1.01' },
+  { id: 'worksafety',    label: 'Work Safety Manual',          colorKey: 'safety',        responsible: 'Sicherheitsfachkraft (Safety Officer)',  readiness: READINESS.safety,        date: '2026',       version: 'V1.01' },
+  { id: 'guides',        label: 'Guides & Registers',          colorKey: 'guides',        responsible: 'LAVA Zero + Admin',                      readiness: READINESS.guides,        date: '06.2026',    version: 'V1.01' },
+  { id: 'live',          label: 'Live Systems & Tools',        colorKey: 'live',          responsible: 'IT team',                                readiness: READINESS.live,          date: '2026',       version: 'V1.01' },
+  { id: 'lavazero',      label: 'LAVA Zero',                   colorKey: 'lavaZero',      responsible: 'LAVA Zero Team',                         readiness: READINESS.lavaZero,      date: '06.2026',    version: 'V1.01' },
 ];
 
 const MANUAL_COMMENTS = {
@@ -188,7 +188,7 @@ export default function StatusTable({ open, onClose }) {
       font: { bold: true, color: { rgb: argb('#B3F400') }, sz: 11 },
       alignment: { vertical: 'center' },
     };
-    ['Manual', 'Section', 'Responsible', 'Readiness %', 'Comments'].forEach((v, c) => {
+    ['Manual', 'Section', 'Responsible', 'Readiness %', 'Date', 'Version', 'Comments'].forEach((v, c) => {
       ws[XLSX.utils.encode_cell({ r: row, c })] = cell(v, HDR);
     });
     row++;
@@ -216,7 +216,7 @@ export default function StatusTable({ open, onClose }) {
 
       const readinessVal = manual.readiness != null ? manual.readiness + '%' : '';
       const manComment = getComment(`manual_${manual.id}`, MANUAL_COMMENTS[manual.id]);
-      [manual.label, '', manual.responsible, readinessVal, manComment].forEach((v, c) => {
+      [manual.label, '', manual.responsible, readinessVal, manual.date, manual.version, manComment].forEach((v, c) => {
         ws[XLSX.utils.encode_cell({ r: row, c })] = cell(v, MAN);
       });
       row++;
@@ -229,13 +229,15 @@ export default function StatusTable({ open, onClose }) {
         ws[XLSX.utils.encode_cell({ r: row, c: 1 })] = cell(sec, SEC);
         ws[XLSX.utils.encode_cell({ r: row, c: 2 })] = cell(manual.responsible, SEC_DIM);
         ws[XLSX.utils.encode_cell({ r: row, c: 3 })] = cell(secVal != null ? secVal + '%' : '—', SEC_DIM);
-        ws[XLSX.utils.encode_cell({ r: row, c: 4 })] = cell(secComment || '', SEC_DIM);
+        ws[XLSX.utils.encode_cell({ r: row, c: 4 })] = cell('', SEC_DIM);
+        ws[XLSX.utils.encode_cell({ r: row, c: 5 })] = cell('', SEC_DIM);
+        ws[XLSX.utils.encode_cell({ r: row, c: 6 })] = cell(secComment || '', SEC_DIM);
         row++;
       });
     }
 
-    ws['!ref']  = XLSX.utils.encode_range({ s: { r: 0, c: 0 }, e: { r: row - 1, c: 4 } });
-    ws['!cols'] = [{ wch: 36 }, { wch: 42 }, { wch: 36 }, { wch: 14 }, { wch: 50 }];
+    ws['!ref']  = XLSX.utils.encode_range({ s: { r: 0, c: 0 }, e: { r: row - 1, c: 6 } });
+    ws['!cols'] = [{ wch: 36 }, { wch: 42 }, { wch: 36 }, { wch: 14 }, { wch: 12 }, { wch: 10 }, { wch: 50 }];
     ws['!rows'] = Array.from({ length: row }, () => ({ hpt: 18 }));
 
     const wb = XLSX.utils.book_new();
@@ -283,6 +285,8 @@ export default function StatusTable({ open, onClose }) {
                 <th className="st-th-name">Manual / Section</th>
                 <th className="st-th-resp">Responsible</th>
                 <th className="st-th-prog">Readiness</th>
+                <th className="st-th-date">Date</th>
+                <th className="st-th-ver">Version</th>
                 <th className="st-th-comment">Comments</th>
               </tr>
             </thead>
@@ -303,6 +307,8 @@ export default function StatusTable({ open, onClose }) {
                       </td>
                       <td className="st-cell-resp">{manual.responsible}</td>
                       <td className="st-cell-prog"><ProgressCell value={manual.readiness} /></td>
+                      <td className="st-cell-date">{manual.date}</td>
+                      <td className="st-cell-ver">{manual.version}</td>
                       <td className="st-cell-comment">
                         <CommentCell
                           value={getComment(`manual_${manual.id}`, MANUAL_COMMENTS[manual.id])}
@@ -321,6 +327,8 @@ export default function StatusTable({ open, onClose }) {
                           </td>
                           <td className="st-cell-resp st-dim">{manual.responsible}</td>
                           <td className="st-cell-prog"><ProgressCell value={secVal} /></td>
+                          <td className="st-cell-date st-dim" />
+                          <td className="st-cell-ver st-dim" />
                           <td className="st-cell-comment st-dim">
                             <CommentCell
                               value={getComment(`section_${manual.id}_${si}`, secDefault)}

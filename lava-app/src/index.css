@@ -3244,10 +3244,28 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid #e5e7eb;
 }
 
-.st-th-name    { width: 26%; }
-.st-th-resp    { width: 20%; }
-.st-th-prog    { width: 16%; }
-.st-th-comment { width: 38%; }
+.st-th-name    { width: 24%; }
+.st-th-resp    { width: 18%; }
+.st-th-prog    { width: 14%; }
+.st-th-date    { width: 9%; }
+.st-th-ver     { width: 7%; }
+.st-th-comment { width: 28%; }
+
+.st-cell-date {
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #374151;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.st-cell-ver {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  white-space: nowrap;
+  vertical-align: middle;
+}
 
 .st-cell-comment {
   padding: 4px 12px;
