@@ -1146,6 +1146,50 @@ function TableSlide({ data, accentColor }) {
   );
 }
 
+function PdfScrollSlide({ data }) {
+  const [numPages, setNumPages] = useState(null);
+  const [pageWidth, setPageWidth] = useState(0);
+  const [useFallback, setUseFallback] = useState(false);
+  const wrapRef = useRef(null);
+
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(([entry]) => {
+      setPageWidth(Math.floor(entry.contentRect.width - 24));
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  const src = useFallback ? resolveFallbackPath(data.pdfPath) : resolvePdfPath(data.pdfPath);
+
+  return (
+    <div ref={wrapRef} className="sppdf-wrap">
+      <Document
+        file={src}
+        onLoadSuccess={({ numPages: n }) => setNumPages(n)}
+        onLoadError={() => {
+          if (!useFallback && resolveFallbackPath(data.pdfPath)) setUseFallback(true);
+        }}
+        loading={<div className="sppdf-msg">Loading PDF…</div>}
+        error={<div className="sppdf-msg sppdf-msg--err">Could not load PDF.<br/>Make sure the file server is reachable.</div>}
+      >
+        {numPages && pageWidth > 0 && Array.from({ length: numPages }, (_, i) => (
+          <div key={i} className="sppdf-page">
+            <Page
+              pageNumber={i + 1}
+              width={pageWidth}
+              renderTextLayer={false}
+              renderAnnotationLayer={false}
+            />
+          </div>
+        ))}
+      </Document>
+    </div>
+  );
+}
+
 function PdfPageSlide({ data, allSlideData, topicIndex, onSelect, pdfPath, pagesPath, pagePad }) {
   const scrollRef = useRef(null);
   const progScroll = useRef(false);
@@ -1370,6 +1414,8 @@ export default function SlidePanel({
           <EvalMatrixSlide data={slideData} accentColor={accentColor} />
         ) : slideData?.type === 'epd-database' ? (
           <EPDDatabase accentColor={accentColor} />
+        ) : slideData?.type === 'pdf-scroll' ? (
+          <PdfScrollSlide data={slideData} />
         ) : slideData?.type === 'pdf-page' ? (
           <PdfPageSlide data={slideData} allSlideData={allSlideData} topicIndex={topicIndex} onSelect={onSelect} pdfPath={pdfPath} pagesPath={pagesPath} pagePad={pagePad} />
         ) : (

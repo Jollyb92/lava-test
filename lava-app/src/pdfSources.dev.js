@@ -4,3 +4,5 @@ export const PDF_PPM             = '/MANUALS/PROJECT%20MANAGEMENT%20MANUAL/25091
 export const PDF_PPM_FALLBACK    = '/pdf-server/6_MANUALS_TEST/3_PROJECT%20MANAGEMENT%20MANUAL/250919_Project%20Processes%20Manual_v0.1.pdf';
 export const PDF_COMM            = '/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf';
 export const PDF_COMM_FALLBACK   = '/pdf-server/6_MANUALS_TEST/6_COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf';
+export const PDF_REGEN           = '/MANUALS/LAVA%20ZERO/2ndEditionRegenerative_Design_and_Development.pdf';
+export const PDF_REGEN_FALLBACK  = '/pdf-server/6_MANUALS_TEST/7_LAVA%20ZERO/03_Recommended%20materials/2ndEditionRegenerative_Design_and_Development.pdf';

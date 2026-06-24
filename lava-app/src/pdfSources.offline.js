@@ -11,3 +11,5 @@ export const PDF_PPM             = ppmPdf;
 export const PDF_PPM_FALLBACK    = null;
 export const PDF_COMM            = null;
 export const PDF_COMM_FALLBACK   = null;
+export const PDF_REGEN           = null;
+export const PDF_REGEN_FALLBACK  = null;

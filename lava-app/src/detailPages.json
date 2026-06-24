@@ -1124,8 +1124,23 @@
       {
         "title": "Recommended Materials",
         "num": "03",
-        "subchapters": [],
-        "slideData": []
+        "subchapters": [
+          "Regenerative Design and Development"
+        ],
+        "slideData": [
+          {
+            "type": "pdf-scroll",
+            "pdfPath": "/MANUALS/LAVA%20ZERO/2ndEditionRegenerative_Design_and_Development.pdf"
+          }
+        ],
+        "serverLinks": {
+          "Regenerative Design and Development": [
+            {
+              "label": "Recommended Materials folder",
+              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\03_Recommended materials"
+            }
+          ]
+        }
       },
       {
         "title": "EPD Databases",
