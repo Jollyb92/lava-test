@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useMemo, memo } from 'react';
+import { useState, useRef, useCallback, useMemo, memo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { nodes, connections, COLORS } from './data.js';
 import { SearchButton } from './GlobalSearch.jsx';
@@ -42,25 +42,26 @@ const ConnectionLine = memo(function ConnectionLine({ x1, y1, x2, y2, col, op, d
       strokeWidth={1.5}
       strokeOpacity={op}
       strokeDasharray={dash}
-      style={{ transition: 'stroke-opacity 0.2s' }}
+      style={{ transition: 'stroke-opacity 1s ease' }}
     />
   );
 });
 
 // ── Memoized node group — only re-renders when its visual state changes ─────
 
-const NodeGroup = memo(function NodeGroup({ node, op, isHov, isSearchMatch, onMouseEnter, onMouseLeave, onClick }) {
+const NodeGroup = memo(function NodeGroup({ node, dx, dy, op, isHov, isSearchMatch, onMouseEnter, onMouseLeave, onClick }) {
   const lines = node.label.split('\n');
   const lineH = node.layer === 2 ? 12 : 15;
   const totalH = lines.length * lineH;
 
   return (
     <g
-      transform={`translate(${node.x},${node.y})`}
       style={{
         cursor: node.clickTarget ? 'pointer' : 'default',
         opacity: op,
-        transition: 'opacity 0.2s',
+        transform: `translate(${node.x + (dx || 0)}px, ${node.y + (dy || 0)}px)`,
+        transition: 'transform 2.5s ease-in-out, opacity 0.2s',
+        willChange: 'transform',
       }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -131,13 +132,72 @@ const NodeGroup = memo(function NodeGroup({ node, op, isHov, isSearchMatch, onMo
 
 // ──────────────────────────────────────────────────────────────────────────
 
+const IDLE_MS    = 2 * 60 * 1000; // 2 minutes
+const REDRIFT_MS = 4500;          // re-randomise drift every 4.5 s
+
+function generateDrifts() {
+  const d = {};
+  nodes.forEach(n => {
+    const range = n.layer === 0 ? 28 : n.layer === 1 ? 60 : 85;
+    d[n.id] = {
+      dx: (Math.random() - 0.5) * range * 2,
+      dy: (Math.random() - 0.5) * range * 2,
+    };
+  });
+  return d;
+}
+
 export default function DiagramPage({ onSearchOpen }) {
   const navigate = useNavigate();
   const [hovered, setHovered]       = useState(null);
   const [tooltip, setTooltip]       = useState({ visible: false, x: 0, y: 0, text: '' });
   const [search, setSearch]         = useState('');
   const [statusOpen, setStatusOpen] = useState(false);
-  const svgRef = useRef(null);
+  const [screensaver, setScreensaver] = useState(false);
+  const [drifts, setDrifts]           = useState({});
+  const svgRef       = useRef(null);
+  const ssActive     = useRef(false);
+  const idleTimer    = useRef(null);
+  const driftTimer   = useRef(null);
+
+  useEffect(() => {
+    function start() {
+      ssActive.current = true;
+      setScreensaver(true);
+      setDrifts(generateDrifts());
+      driftTimer.current = setInterval(() => setDrifts(generateDrifts()), REDRIFT_MS);
+    }
+
+    function stop() {
+      ssActive.current = false;
+      setScreensaver(false);
+      setDrifts({});
+      clearInterval(driftTimer.current);
+      schedule();
+    }
+
+    function schedule() {
+      clearTimeout(idleTimer.current);
+      idleTimer.current = setTimeout(start, IDLE_MS);
+    }
+
+    function onActivity() {
+      if (ssActive.current) stop();
+      else schedule();
+    }
+
+    schedule();
+    window.addEventListener('mousemove', onActivity);
+    window.addEventListener('click', onActivity);
+    window.addEventListener('keydown', onActivity);
+    return () => {
+      clearTimeout(idleTimer.current);
+      clearInterval(driftTimer.current);
+      window.removeEventListener('mousemove', onActivity);
+      window.removeEventListener('click', onActivity);
+      window.removeEventListener('keydown', onActivity);
+    };
+  }, []);
 
   const matchSet = useMemo(() => {
     if (!search.trim()) return null;
@@ -225,7 +285,7 @@ export default function DiagramPage({ onSearchOpen }) {
             if (!from || !to) return null;
             const dash = connDash(to.layer);
             const col  = connColor(to.layer);
-            const op   = lineOpacity(fromId, toId);
+            const op   = screensaver ? 0 : lineOpacity(fromId, toId);
             return (
               <ConnectionLine
                 key={i}
@@ -237,6 +297,7 @@ export default function DiagramPage({ onSearchOpen }) {
           })}
 
           {nodes.map(node => {
+            const drift = drifts[node.id] || { dx: 0, dy: 0 };
             const op           = nodeOpacity(node.id);
             const isHov        = hovered === node.id;
             const isSearchMatch = matchSet?.has(node.id) ?? false;
@@ -244,6 +305,8 @@ export default function DiagramPage({ onSearchOpen }) {
               <NodeGroup
                 key={node.id}
                 node={node}
+                dx={drift.dx}
+                dy={drift.dy}
                 op={op}
                 isHov={isHov}
                 isSearchMatch={isSearchMatch}
