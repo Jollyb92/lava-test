@@ -1,6 +1,25 @@
 import { useState, useEffect } from 'react';
 
-const STORAGE_KEY = 'lava-epd-database-v1';
+const STORAGE_KEY = 'lava-epd-database-v2';
+
+function CopyBtn({ value }) {
+  const [copied, setCopied] = useState(false);
+  if (!value) return <span style={{ color: '#9CA3AF' }}>—</span>;
+  function copy() {
+    navigator.clipboard.writeText(value).catch(() => {});
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
+  }
+  return (
+    <button
+      className={`epd-copy-btn${copied ? ' epd-copy-btn--copied' : ''}`}
+      onClick={copy}
+      title={value}
+    >
+      {copied ? '✓ Copied' : '⎘ Copy path'}
+    </button>
+  );
+}
 
 function expiryStatus(dateStr) {
   if (!dateStr) return 'unknown';
@@ -63,6 +82,17 @@ const EMPTY_ENTRY = {
   lavaArchivist: '', programmeOperator: '',
   epdRegNo: '', issueDate: '', expiryDate: '', lcaScope: '', standard: '',
   gwpA1A3: '', gwpA4: '', gwpA5: '', gwpB17: '', gwpC1C4: '', gwpD: '', gwpDeltaA1C4: '',
+  gwpFossilA1A3: '', gwpFossilTotal: '',
+  gwpBiogenicA1A3: '', gwpBiogenicTotal: '',
+  gwpLulucA1A3: '', gwpLulucTotal: '',
+  odpA1A3: '', odpTotal: '',
+  apA1A3: '', apTotal: '',
+  epFwA1A3: '', epFwTotal: '',
+  epMarineA1A3: '', epMarineTotal: '',
+  epTerrA1A3: '', epTerrTotal: '',
+  pereA1A3: '', pereTotal: '',
+  penreA1A3: '', penreTotal: '',
+  waterA1A3: '', waterTotal: '',
   recycledContent: '', recyclability: '', eolWasteCategory: '', reusePoential: 'Unknown',
   assessedLifecycle: '', projectCode: 'LAVA Learning',
   dateAdded: new Date().toLocaleDateString('de-DE').replace(/\//g, '.'),
@@ -108,6 +138,7 @@ export default function EPDDatabase({ accentColor }) {
 
   const isLight = accentColor === '#B3F400';
   const btnStyle = { background: accentColor, color: isLight ? '#1a1a1a' : '#fff' };
+  const thStyle = { background: accentColor, color: isLight ? '#1a1a1a' : '#fff' };
   const allCats = [...new Set(entries.map(e => e.category).filter(Boolean))].sort();
 
   const filtered = entries.filter(e => {
@@ -229,7 +260,7 @@ export default function EPDDatabase({ accentColor }) {
             </Field>
           </Section>
 
-          <Section label="GWP Values (kg CO₂e / declared unit)" accent={accentColor}>
+          <Section label="GWP Total (kg CO₂e / declared unit)" accent={accentColor}>
             <Field label="A1–A3"><input className="epd-input" value={formData.gwpA1A3} onChange={e => f('gwpA1A3', e.target.value)} /></Field>
             <Field label="A4 Transport"><input className="epd-input" value={formData.gwpA4} onChange={e => f('gwpA4', e.target.value)} /></Field>
             <Field label="A5 Installation"><input className="epd-input" value={formData.gwpA5} onChange={e => f('gwpA5', e.target.value)} /></Field>
@@ -237,6 +268,34 @@ export default function EPDDatabase({ accentColor }) {
             <Field label="C1–C4 End of Life"><input className="epd-input" value={formData.gwpC1C4} onChange={e => f('gwpC1C4', e.target.value)} /></Field>
             <Field label="D Beyond Boundary"><input className="epd-input" value={formData.gwpD} onChange={e => f('gwpD', e.target.value)} /></Field>
             <Field label="Δ A1–C4 Total"><input className="epd-input" value={formData.gwpDeltaA1C4} onChange={e => f('gwpDeltaA1C4', e.target.value)} /></Field>
+          </Section>
+
+          <Section label="GWP Sub-types (kg CO₂e / declared unit)" accent={accentColor}>
+            <Field label="Fossil A1–A3"><input className="epd-input" value={formData.gwpFossilA1A3} onChange={e => f('gwpFossilA1A3', e.target.value)} /></Field>
+            <Field label="Fossil Total"><input className="epd-input" value={formData.gwpFossilTotal} onChange={e => f('gwpFossilTotal', e.target.value)} /></Field>
+            <Field label="Biogenic A1–A3"><input className="epd-input" value={formData.gwpBiogenicA1A3} onChange={e => f('gwpBiogenicA1A3', e.target.value)} /></Field>
+            <Field label="Biogenic Total"><input className="epd-input" value={formData.gwpBiogenicTotal} onChange={e => f('gwpBiogenicTotal', e.target.value)} /></Field>
+            <Field label="LULUC A1–A3"><input className="epd-input" value={formData.gwpLulucA1A3} onChange={e => f('gwpLulucA1A3', e.target.value)} /></Field>
+            <Field label="LULUC Total"><input className="epd-input" value={formData.gwpLulucTotal} onChange={e => f('gwpLulucTotal', e.target.value)} /></Field>
+          </Section>
+
+          <Section label="Environmental Indicators" accent={accentColor}>
+            <Field label="ODP A1–A3"><input className="epd-input" value={formData.odpA1A3} onChange={e => f('odpA1A3', e.target.value)} /></Field>
+            <Field label="ODP Total"><input className="epd-input" value={formData.odpTotal} onChange={e => f('odpTotal', e.target.value)} /></Field>
+            <Field label="AP A1–A3"><input className="epd-input" value={formData.apA1A3} onChange={e => f('apA1A3', e.target.value)} /></Field>
+            <Field label="AP Total"><input className="epd-input" value={formData.apTotal} onChange={e => f('apTotal', e.target.value)} /></Field>
+            <Field label="EP-freshwater A1–A3"><input className="epd-input" value={formData.epFwA1A3} onChange={e => f('epFwA1A3', e.target.value)} /></Field>
+            <Field label="EP-freshwater Total"><input className="epd-input" value={formData.epFwTotal} onChange={e => f('epFwTotal', e.target.value)} /></Field>
+            <Field label="EP-marine A1–A3"><input className="epd-input" value={formData.epMarineA1A3} onChange={e => f('epMarineA1A3', e.target.value)} /></Field>
+            <Field label="EP-marine Total"><input className="epd-input" value={formData.epMarineTotal} onChange={e => f('epMarineTotal', e.target.value)} /></Field>
+            <Field label="EP-terrestrial A1–A3"><input className="epd-input" value={formData.epTerrA1A3} onChange={e => f('epTerrA1A3', e.target.value)} /></Field>
+            <Field label="EP-terrestrial Total"><input className="epd-input" value={formData.epTerrTotal} onChange={e => f('epTerrTotal', e.target.value)} /></Field>
+            <Field label="PERE A1–A3"><input className="epd-input" value={formData.pereA1A3} onChange={e => f('pereA1A3', e.target.value)} /></Field>
+            <Field label="PERE Total"><input className="epd-input" value={formData.pereTotal} onChange={e => f('pereTotal', e.target.value)} /></Field>
+            <Field label="PENRE A1–A3"><input className="epd-input" value={formData.penreA1A3} onChange={e => f('penreA1A3', e.target.value)} /></Field>
+            <Field label="PENRE Total"><input className="epd-input" value={formData.penreTotal} onChange={e => f('penreTotal', e.target.value)} /></Field>
+            <Field label="Water A1–A3"><input className="epd-input" value={formData.waterA1A3} onChange={e => f('waterA1A3', e.target.value)} /></Field>
+            <Field label="Water Total"><input className="epd-input" value={formData.waterTotal} onChange={e => f('waterTotal', e.target.value)} /></Field>
           </Section>
 
           <Section label="Resource &amp; End of Life" accent={accentColor}>
@@ -289,6 +348,8 @@ export default function EPDDatabase({ accentColor }) {
   }
 
   // ── LIST VIEW ──────────────────────────────────────────────────────────────
+  const v = (val) => (val !== '' && val != null) ? val : '—';
+
   return (
     <div className="epd-list-wrap">
       <div className="epd-toolbar">
@@ -311,33 +372,170 @@ export default function EPDDatabase({ accentColor }) {
       <div className="epd-table-scroll">
         <table className="epd-table">
           <thead>
-            <tr>
-              {['#', 'Product', 'Category', 'GWP A1–A3', 'Unit', 'Expiry', ''].map(h => (
-                <th key={h} style={{ background: accentColor, color: isLight ? '#1a1a1a' : '#fff' }}>{h}</th>
-              ))}
+            <tr className="epd-th-group">
+              <th rowSpan={2} className="epd-th-group-cell" style={thStyle}>#</th>
+              <th colSpan={8} className="epd-th-group-cell" style={thStyle}>Product Identity</th>
+              <th colSpan={5} className="epd-th-group-cell" style={thStyle}>Manufacturer</th>
+              <th colSpan={3} className="epd-th-group-cell" style={thStyle}>EPD Registration</th>
+              <th colSpan={7} className="epd-th-group-cell" style={thStyle}>GWP Total (kg CO₂e)</th>
+              <th colSpan={2} className="epd-th-group-cell" style={thStyle}>GWP Fossil</th>
+              <th colSpan={2} className="epd-th-group-cell" style={thStyle}>GWP Biogenic</th>
+              <th colSpan={2} className="epd-th-group-cell" style={thStyle}>GWP LULUC</th>
+              <th colSpan={2} className="epd-th-group-cell" style={thStyle}>ODP</th>
+              <th colSpan={2} className="epd-th-group-cell" style={thStyle}>AP</th>
+              <th colSpan={2} className="epd-th-group-cell" style={thStyle}>EP-fw</th>
+              <th colSpan={2} className="epd-th-group-cell" style={thStyle}>EP-marine</th>
+              <th colSpan={2} className="epd-th-group-cell" style={thStyle}>EP-terr</th>
+              <th colSpan={2} className="epd-th-group-cell" style={thStyle}>PERE</th>
+              <th colSpan={2} className="epd-th-group-cell" style={thStyle}>PENRE</th>
+              <th colSpan={2} className="epd-th-group-cell" style={thStyle}>Water</th>
+              <th colSpan={5} className="epd-th-group-cell" style={thStyle}>Resource & EoL</th>
+              <th colSpan={4} className="epd-th-group-cell" style={thStyle}>Project & Admin</th>
+              <th rowSpan={2} className="epd-th-group-cell" style={thStyle}></th>
+            </tr>
+            <tr className="epd-th-col">
+              {/* Product Identity */}
+              <th style={thStyle}>Product Name</th>
+              <th style={thStyle}>Category</th>
+              <th style={thStyle}>Sub-Cat.</th>
+              <th style={thStyle}>Description</th>
+              <th style={thStyle}>Unit</th>
+              <th style={thStyle}>Qty</th>
+              <th style={thStyle}>LCA Scope</th>
+              <th style={thStyle}>Standard</th>
+              {/* Manufacturer */}
+              <th style={thStyle}>Manufacturer</th>
+              <th style={thStyle}>Location</th>
+              <th style={thStyle}>Website</th>
+              <th style={thStyle}>Archivist</th>
+              <th style={thStyle}>Programme Op.</th>
+              {/* EPD Registration */}
+              <th style={thStyle}>EPD Reg. No.</th>
+              <th style={thStyle}>Issue</th>
+              <th style={thStyle}>Expiry</th>
+              {/* GWP Total */}
+              <th style={thStyle}>A1–A3</th>
+              <th style={thStyle}>A4</th>
+              <th style={thStyle}>A5</th>
+              <th style={thStyle}>B1–B7</th>
+              <th style={thStyle}>C1–C4</th>
+              <th style={thStyle}>D</th>
+              <th style={thStyle}>Δ A1–C4</th>
+              {/* GWP sub-types: Fossil, Biogenic, LULUC */}
+              <th style={thStyle}>A1–A3</th><th style={thStyle}>Total</th>
+              <th style={thStyle}>A1–A3</th><th style={thStyle}>Total</th>
+              <th style={thStyle}>A1–A3</th><th style={thStyle}>Total</th>
+              {/* Env. indicators: ODP, AP, EP-fw, EP-marine, EP-terr, PERE, PENRE, Water */}
+              <th style={thStyle}>A1–A3</th><th style={thStyle}>Total</th>
+              <th style={thStyle}>A1–A3</th><th style={thStyle}>Total</th>
+              <th style={thStyle}>A1–A3</th><th style={thStyle}>Total</th>
+              <th style={thStyle}>A1–A3</th><th style={thStyle}>Total</th>
+              <th style={thStyle}>A1–A3</th><th style={thStyle}>Total</th>
+              <th style={thStyle}>A1–A3</th><th style={thStyle}>Total</th>
+              <th style={thStyle}>A1–A3</th><th style={thStyle}>Total</th>
+              <th style={thStyle}>A1–A3</th><th style={thStyle}>Total</th>
+              {/* Resource & EoL */}
+              <th style={thStyle}>Recycled %</th>
+              <th style={thStyle}>Recyclability %</th>
+              <th style={thStyle}>EoL Waste</th>
+              <th style={thStyle}>Reuse</th>
+              <th style={thStyle}>Life (yr)</th>
+              {/* Project & Admin */}
+              <th style={thStyle}>Project</th>
+              <th style={thStyle}>Date Added</th>
+              <th style={thStyle}>EPD Document</th>
+              <th style={thStyle}>Notes</th>
             </tr>
           </thead>
           <tbody>
             {filtered.length === 0 && (
-              <tr><td colSpan={7} className="epd-empty">No entries found.</td></tr>
+              <tr><td colSpan={59} className="epd-empty">No entries found.</td></tr>
             )}
             {filtered.map((e, i) => {
               const st = expiryStatus(e.expiryDate);
               const expLabel = e.expiryDate ? e.expiryDate.split('-').reverse().join('.') : '—';
+              const issLabel = e.issueDate ? e.issueDate.split('-').reverse().join('.') : '—';
               return (
                 <tr key={e.id} className={`epd-row${i % 2 ? '' : ' epd-row-alt'}`}>
                   <td className="epd-td epd-td-id">{i + 1}</td>
-                  <td className="epd-td epd-td-name">{e.productName}</td>
-                  <td className="epd-td epd-td-cat">
-                    <span className="epd-cat-chip">{e.category}</span>
+                  {/* Product Identity */}
+                  <td className="epd-td epd-td-name" title={e.productName}>{e.productName || '—'}</td>
+                  <td className="epd-td"><span className="epd-cat-chip">{e.category || '—'}</span></td>
+                  <td className="epd-td">{v(e.subCategory)}</td>
+                  <td className="epd-td epd-td-desc" title={e.productDescription}>{v(e.productDescription)}</td>
+                  <td className="epd-td epd-td-unit">{v(e.unitOfMeasure)}</td>
+                  <td className="epd-td">{v(e.declaredUnitQty)}</td>
+                  <td className="epd-td">{v(e.lcaScope)}</td>
+                  <td className="epd-td">{v(e.standard)}</td>
+                  {/* Manufacturer */}
+                  <td className="epd-td">{v(e.manufacturerName)}</td>
+                  <td className="epd-td">{v(e.locationOfManufacture)}</td>
+                  <td className="epd-td epd-td-link">
+                    {e.manufacturerWebsite
+                      ? <a href={e.manufacturerWebsite} target="_blank" rel="noopener noreferrer" className="epd-link" title={e.manufacturerWebsite}>↗</a>
+                      : '—'}
                   </td>
-                  <td className="epd-td epd-td-gwp">
-                    {e.gwpA1A3 !== '' && e.gwpA1A3 != null ? e.gwpA1A3 : '—'}
-                  </td>
-                  <td className="epd-td epd-td-unit">{e.unitOfMeasure || '—'}</td>
+                  <td className="epd-td">{v(e.lavaArchivist)}</td>
+                  <td className="epd-td">{v(e.programmeOperator)}</td>
+                  {/* EPD Registration */}
+                  <td className="epd-td epd-td-regno">{v(e.epdRegNo)}</td>
+                  <td className="epd-td epd-td-expiry">{issLabel}</td>
                   <td className="epd-td epd-td-expiry">
                     <span className={`epd-status epd-status--${st}`}>{expLabel}</span>
                   </td>
+                  {/* GWP Total */}
+                  <td className="epd-td epd-td-num">{v(e.gwpA1A3)}</td>
+                  <td className="epd-td epd-td-num">{v(e.gwpA4)}</td>
+                  <td className="epd-td epd-td-num">{v(e.gwpA5)}</td>
+                  <td className="epd-td epd-td-num">{v(e.gwpB17)}</td>
+                  <td className="epd-td epd-td-num">{v(e.gwpC1C4)}</td>
+                  <td className="epd-td epd-td-num">{v(e.gwpD)}</td>
+                  <td className="epd-td epd-td-num">{v(e.gwpDeltaA1C4)}</td>
+                  {/* GWP Fossil */}
+                  <td className="epd-td epd-td-num">{v(e.gwpFossilA1A3)}</td>
+                  <td className="epd-td epd-td-num">{v(e.gwpFossilTotal)}</td>
+                  {/* GWP Biogenic */}
+                  <td className="epd-td epd-td-num">{v(e.gwpBiogenicA1A3)}</td>
+                  <td className="epd-td epd-td-num">{v(e.gwpBiogenicTotal)}</td>
+                  {/* GWP LULUC */}
+                  <td className="epd-td epd-td-num">{v(e.gwpLulucA1A3)}</td>
+                  <td className="epd-td epd-td-num">{v(e.gwpLulucTotal)}</td>
+                  {/* ODP */}
+                  <td className="epd-td epd-td-num">{v(e.odpA1A3)}</td>
+                  <td className="epd-td epd-td-num">{v(e.odpTotal)}</td>
+                  {/* AP */}
+                  <td className="epd-td epd-td-num">{v(e.apA1A3)}</td>
+                  <td className="epd-td epd-td-num">{v(e.apTotal)}</td>
+                  {/* EP-fw */}
+                  <td className="epd-td epd-td-num">{v(e.epFwA1A3)}</td>
+                  <td className="epd-td epd-td-num">{v(e.epFwTotal)}</td>
+                  {/* EP-marine */}
+                  <td className="epd-td epd-td-num">{v(e.epMarineA1A3)}</td>
+                  <td className="epd-td epd-td-num">{v(e.epMarineTotal)}</td>
+                  {/* EP-terr */}
+                  <td className="epd-td epd-td-num">{v(e.epTerrA1A3)}</td>
+                  <td className="epd-td epd-td-num">{v(e.epTerrTotal)}</td>
+                  {/* PERE */}
+                  <td className="epd-td epd-td-num">{v(e.pereA1A3)}</td>
+                  <td className="epd-td epd-td-num">{v(e.pereTotal)}</td>
+                  {/* PENRE */}
+                  <td className="epd-td epd-td-num">{v(e.penreA1A3)}</td>
+                  <td className="epd-td epd-td-num">{v(e.penreTotal)}</td>
+                  {/* Water */}
+                  <td className="epd-td epd-td-num">{v(e.waterA1A3)}</td>
+                  <td className="epd-td epd-td-num">{v(e.waterTotal)}</td>
+                  {/* Resource & EoL */}
+                  <td className="epd-td">{v(e.recycledContent)}</td>
+                  <td className="epd-td">{v(e.recyclability)}</td>
+                  <td className="epd-td">{v(e.eolWasteCategory)}</td>
+                  <td className="epd-td">{v(e.reusePoential)}</td>
+                  <td className="epd-td">{v(e.assessedLifecycle)}</td>
+                  {/* Project & Admin */}
+                  <td className="epd-td">{v(e.projectCode)}</td>
+                  <td className="epd-td">{v(e.dateAdded)}</td>
+                  <td className="epd-td"><CopyBtn value={e.epdDocumentLink} /></td>
+                  <td className="epd-td epd-td-notes" title={e.notes}>{v(e.notes)}</td>
+                  {/* Edit */}
                   <td className="epd-td epd-td-action">
                     <button className="epd-edit-row-btn" onClick={() => openEdit(e)}>Edit</button>
                   </td>
