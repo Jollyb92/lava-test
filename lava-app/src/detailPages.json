@@ -1145,16 +1145,64 @@
         "title": "Learning Sessions",
         "num": "01",
         "subchapters": [
-          "Materiality and Embodied Carbon"
+          "Session 1 — Regenerative Design",
+          "Session 2 — Materiality & Embodied Carbon",
+          "Session 3 — Operational Carbon",
+          "Session 4 — Water Management",
+          "Session 5 — Biophilic, Biomimicry & Biodiversity",
+          "Session 6 — Microclimate & Ecology",
+          "Session 7 — Building Evolution"
         ],
         "slideData": [
+          null,
           {
             "type": "pdf-scroll",
             "pdfPath": "/MANUALS/LAVA%20ZERO/02_260610_L0_MaterialityAndEmbodiedCarbon.pdf"
-          }
+          },
+          null,
+          null,
+          null,
+          null,
+          null
         ],
         "serverLinks": {
-          "Materiality and Embodied Carbon": [
+          "Session 1 — Regenerative Design": [
+            {
+              "label": "Learning Sessions folder",
+              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
+            }
+          ],
+          "Session 2 — Materiality & Embodied Carbon": [
+            {
+              "label": "Learning Sessions folder",
+              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
+            }
+          ],
+          "Session 3 — Operational Carbon": [
+            {
+              "label": "Learning Sessions folder",
+              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
+            }
+          ],
+          "Session 4 — Water Management": [
+            {
+              "label": "Learning Sessions folder",
+              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
+            }
+          ],
+          "Session 5 — Biophilic, Biomimicry & Biodiversity": [
+            {
+              "label": "Learning Sessions folder",
+              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
+            }
+          ],
+          "Session 6 — Microclimate & Ecology": [
+            {
+              "label": "Learning Sessions folder",
+              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
+            }
+          ],
+          "Session 7 — Building Evolution": [
             {
               "label": "Learning Sessions folder",
               "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
