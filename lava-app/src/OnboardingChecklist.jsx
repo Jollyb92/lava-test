@@ -117,7 +117,7 @@ export default function OnboardingChecklist({ onClose }) {
   // ── Email export ───────────────────────────────────────────────────────────
   function handleEmail() {
     const lines = [
-      'ONBOARDING CHECKLIST — LAVA BERLIN 2026',
+      'ONBOARDING CHECKLIST — LAVA 2026',
       '══════════════════════════════════════════',
       '',
       'PERSONAL DETAILS',
@@ -199,7 +199,7 @@ export default function OnboardingChecklist({ onClose }) {
 <div class="doc-header">
   <div>
     <h1>Onboarding Checklist</h1>
-    <div class="meta">LAVA Berlin 2026 — Human Resources &amp; Personnel Management</div>
+    <div class="meta">LAVA 2026 — Human Resources &amp; Personnel Management</div>
   </div>
   <div style="text-align:right">
     <div class="progress-bar"><div class="progress-fill"></div></div>

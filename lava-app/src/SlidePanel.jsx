@@ -225,7 +225,7 @@ function FormSlide({ data, accentColor }) {
     }).join('');
 
     const html = `<!DOCTYPE html><html><head><meta charset="UTF-8">
-<title>${data.title} — LAVA Berlin</title>
+<title>${data.title} — LAVA</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; color: #111; padding: 28px 40px; }
@@ -252,7 +252,7 @@ function FormSlide({ data, accentColor }) {
     <div class="doc-sub">${data.subtitle}</div>
   </div>
   <div class="doc-meta">
-    LAVA Berlin 2026<br/>
+    LAVA 2026<br/>
     HR &amp; Personnel Management<br/>
     Date: ${today}
   </div>
@@ -1566,7 +1566,7 @@ export default function SlidePanel({
         {/* Footer: branding + folder link */}
         <div className="sp-footer">
           <span className="sp-brand">
-            <strong>LAVA</strong> Office Manual Berlin 2026
+            <strong>LAVA</strong> Office Manual 2026
           </span>
           <a
             className="sp-folder-btn"

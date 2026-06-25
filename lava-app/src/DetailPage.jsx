@@ -292,7 +292,7 @@ function buildSectionPrintHtml(page) {
   }).join('');
 
   return `<!DOCTYPE html><html><head><meta charset="UTF-8">
-<title>${page.title} — LAVA Berlin 2026</title>
+<title>${page.title} — LAVA 2026</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #111; padding: 28px 40px; }
@@ -323,15 +323,15 @@ function buildSectionPrintHtml(page) {
 </style></head><body>
 <div class="phdr">
   <div class="phdr-left">
-    <div class="phdr-bc">LAVA Office Manual Berlin 2026 › ${page.breadcrumb || page.title}</div>
+    <div class="phdr-bc">LAVA Office Manual 2026 › ${page.breadcrumb || page.title}</div>
     <div class="phdr-title">${page.title}</div>
     ${page.isoTag ? `<div class="phdr-iso">${page.isoTag}</div>` : ''}
   </div>
-  <div class="phdr-meta">LAVA Berlin 2026<br/>Office Manual v4 — Draft<br/>Printed: ${new Date().toLocaleDateString('en-GB')}</div>
+  <div class="phdr-meta">LAVA 2026<br/>Office Manual V1.01<br/>Printed: ${new Date().toLocaleDateString('en-GB')}</div>
 </div>
 ${topicHtml}
 <div class="pfooter">
-  <span>LAVA Berlin 2026 — Office Manual v4 — Draft</span>
+  <span>LAVA 2026 — Office Manual V1.01</span>
   <span>${page.title}</span>
 </div>
 </body></html>`;
@@ -398,7 +398,7 @@ export default function DetailPage({ onSearchOpen }) {
         <div style={{ padding: '60px 56px', color: '#999' }}>
           Section not found: <strong>{id}</strong>
         </div>
-        <div className="page-footer">LAVA Berlin 2026 — Office Manual v4 — Draft</div>
+        <div className="page-footer">LAVA 2026 — Office Manual V1.01</div>
       </div>
     );
   }
@@ -431,7 +431,7 @@ export default function DetailPage({ onSearchOpen }) {
           </svg>
           Back
         </button>
-        <span className="top-bar-logo">LAVA Office Manual Berlin 2026</span>
+        <span className="top-bar-logo">LAVA Office Manual 2026</span>
         <SearchButton onClick={onSearchOpen} />
         {page.topics && (
           <button className="print-section-btn" onClick={handlePrintSection} title="Print section as PDF">
@@ -453,7 +453,7 @@ export default function DetailPage({ onSearchOpen }) {
 
         <div className="detail-content" ref={scrollRef}>
           <div className="breadcrumb">
-            LAVA Office Manual Berlin 2026 &rsaquo; <span>{page.breadcrumb}</span>
+            LAVA Office Manual 2026 &rsaquo; <span>{page.breadcrumb}</span>
           </div>
 
           <div className="detail-title">{page.title}</div>
@@ -595,7 +595,7 @@ export default function DetailPage({ onSearchOpen }) {
         })()}
       </div>
 
-      <div className="page-footer">LAVA Berlin 2026 — Office Manual v4 — Draft</div>
+      <div className="page-footer">LAVA 2026 — Office Manual V1.01</div>
     </div>
   );
 }

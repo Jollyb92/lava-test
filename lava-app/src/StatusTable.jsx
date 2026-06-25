@@ -5,7 +5,7 @@ import { COLORS, READINESS, detailPages, tocData } from './data.js';
 const LS_KEY = 'lava_status_comments';
 
 const MANUALS = [
-  { id: 'office',        label: 'Office Manual Berlin 2026',   colorKey: 'center',        responsible: 'Office Manager + Directors',             readiness: READINESS.office,        date: '2023',       version: 'V1.01' },
+  { id: 'office',        label: 'Office Manual 2026',   colorKey: 'center',        responsible: 'Office Manager + Directors',             readiness: READINESS.office,        date: '2023',       version: 'V1.01' },
   { id: 'cultural',      label: 'Cultural Manual',             colorKey: 'cultural',      responsible: 'Founders / Directors',                   readiness: READINESS.cultural,      date: 'N/A',        version: 'V1.01' },
   { id: 'design',        label: 'Design Manual',               colorKey: 'design',        responsible: 'Directors, Project Leads, Project Staff', readiness: READINESS.design,        date: 'N/A',        version: 'V1.01' },
   { id: 'bidding',       label: 'Bidding Manual',              colorKey: 'bidding',       responsible: 'PR + Senior Leadership',                 readiness: READINESS.bidding,       date: '2026',       version: 'V1.01' },
@@ -346,7 +346,7 @@ export default function StatusTable({ open, onClose }) {
         </div>
 
         <div className="st-footer">
-          LAVA Berlin 2026 — Office Manual v4 — Draft
+          LAVA 2026 — Office Manual V1.01
         </div>
       </div>
     </div>

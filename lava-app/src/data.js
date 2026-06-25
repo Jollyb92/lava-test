@@ -50,7 +50,7 @@ export const nodes = [
   // ── Center ──────────────────────────────────────────────────────────────
   {
     id: 'center',
-    label: 'OFFICE MANUAL\nBERLIN 2026',
+    label: 'LAVA OFFICE MANUAL\n2026',
     color: COLORS.center,
     textColor: COLORS.dark,
     strokeColor: COLORS.centerStroke,
