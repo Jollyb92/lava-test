@@ -3905,6 +3905,10 @@ a { color: inherit; text-decoration: none; }
   background: #fff;
   border-radius: 4px;
   overflow: hidden;
+  margin-bottom: 12px;
+}
+.sppdf-page:last-child {
+  margin-bottom: 0;
 }
 .sppdf-page canvas {
   display: block;
