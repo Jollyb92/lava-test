@@ -15,3 +15,10 @@ export const PDF_REGEN           = null;
 export const PDF_REGEN_FALLBACK  = null;
 export const PDF_MATCARBON          = null;
 export const PDF_MATCARBON_FALLBACK = null;
+// To enable offline mode for the Design Manual PDFs, place them under public/MANUALS/DESIGN MANUAL/ and uncomment:
+// import graphicPdf from '../public/MANUALS/DESIGN MANUAL/260205_GRAPHIC GUIDELINES.pdf?url';
+// import competitionPdf from '../public/MANUALS/DESIGN MANUAL/260205_COMPETITION GUIDELINES.pdf?url';
+export const PDF_GRAPHIC            = null;
+export const PDF_GRAPHIC_FALLBACK   = null;
+export const PDF_COMPETITION_DES    = null;
+export const PDF_COMPETITION_DES_FALLBACK = null;

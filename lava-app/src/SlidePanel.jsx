@@ -1237,6 +1237,7 @@ function PdfScrollSlide({ data }) {
 
   const src = useFallback ? resolveFallbackPath(data.pdfPath) : resolvePdfPath(data.pdfPath);
   const pageWidth = baseWidth > 0 ? Math.round(baseWidth * zoom) : 0;
+  const startPage = data.startPage ?? 1;
 
   return (
     <div className="sppdf-outer">
@@ -1245,7 +1246,13 @@ function PdfScrollSlide({ data }) {
         <span className="sppdf-zoom-label">{Math.round(zoom * 100)}%</span>
         <button className="sppdf-zoom-btn" onClick={() => setZoom(z => clampZoom(z + 0.15))} title="Zoom in">+</button>
         <button className="sppdf-zoom-btn sppdf-zoom-reset" onClick={() => setZoom(1)} title="Reset zoom">⟳</button>
-        {numPages && <span className="sppdf-page-count">{numPages} pages</span>}
+        {numPages && (
+          <span className="sppdf-page-count">
+            {data.startPage
+              ? `pp. ${startPage}–${Math.min(data.endPage ?? numPages, numPages)}`
+              : `${numPages} pages`}
+          </span>
+        )}
       </div>
       <div
         ref={wrapRef}
@@ -1266,16 +1273,23 @@ function PdfScrollSlide({ data }) {
           loading={<div className="sppdf-msg">Loading PDF…</div>}
           error={<div className="sppdf-msg sppdf-msg--err">Could not load PDF.<br/>Make sure the file server is reachable.</div>}
         >
-          {numPages && pageWidth > 0 && Array.from({ length: numPages }, (_, i) => (
-            <div key={i} className="sppdf-page">
-              <Page
-                pageNumber={i + 1}
-                width={pageWidth}
-                renderTextLayer={false}
-                renderAnnotationLayer={false}
-              />
-            </div>
-          ))}
+          {numPages && pageWidth > 0 && (() => {
+            const end = Math.min(data.endPage ?? numPages, numPages);
+            const pages = [];
+            for (let p = startPage; p <= end; p++) {
+              pages.push(
+                <div key={p} className="sppdf-page">
+                  <Page
+                    pageNumber={p}
+                    width={pageWidth}
+                    renderTextLayer={false}
+                    renderAnnotationLayer={false}
+                  />
+                </div>
+              );
+            }
+            return pages;
+          })()}
         </Document>
       </div>
     </div>

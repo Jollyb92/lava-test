@@ -127,11 +127,11 @@ export const nodes = [
   { id: 'cult-studio',    label: 'Studio\nCulture\n& Rituals',   color: COLORS.culturalSub, textColor: COLORS.dark, radius: 28, x: 378, y: 155, layer: 2, parent: 'cultural', clickTarget: '/detail/cultural?slide=3', connectionType: 'dotted' },
 
   // ── Design sub-nodes — r=110, angles 214°→346° ───────────────────────────
-  { id: 'des-workflow',    label: 'Design\nWorkflow',               color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 509, y: 133, layer: 2, parent: 'design', clickTarget: '/detail/design?slide=0', connectionType: 'dotted' },
-  { id: 'des-philosophy',  label: 'Design\nPhilosophy\nin Practice',color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 557, y: 94,  layer: 2, parent: 'design', clickTarget: '/detail/design?slide=1', connectionType: 'dotted' },
-  { id: 'des-templates',   label: 'Templates\n& Standards',        color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 619, y: 87,  layer: 2, parent: 'design', clickTarget: '/detail/design?slide=2', connectionType: 'dotted' },
-  { id: 'des-graphic',     label: 'Graphic\nApproach',             color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 675, y: 115, layer: 2, parent: 'design', clickTarget: '/detail/design?slide=3', connectionType: 'dotted' },
-  { id: 'des-competition', label: 'Competition\nGuidelines',       color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 707, y: 168, layer: 2, parent: 'design', clickTarget: '/detail/design?slide=4', connectionType: 'dotted' },
+  { id: 'des-workflow',    label: 'Design\nWorkflow',               color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 509, y: 133, layer: 2, parent: 'design', clickTarget: '/detail/design?chapter=0', connectionType: 'dotted' },
+  { id: 'des-philosophy',  label: 'Design\nPhilosophy\nin Practice',color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 557, y: 94,  layer: 2, parent: 'design', clickTarget: '/detail/design?chapter=1', connectionType: 'dotted' },
+  { id: 'des-templates',   label: 'Templates\n& Standards',        color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 619, y: 87,  layer: 2, parent: 'design', clickTarget: '/detail/design?chapter=2', connectionType: 'dotted' },
+  { id: 'des-graphic',     label: 'Graphic\nApproach',             color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 675, y: 115, layer: 2, parent: 'design', clickTarget: '/detail/design?chapter=3', connectionType: 'dotted' },
+  { id: 'des-competition', label: 'Competition\nGuidelines',       color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 707, y: 168, layer: 2, parent: 'design', clickTarget: '/detail/design?chapter=4', connectionType: 'dotted' },
 
   // ── Bidding sub-nodes — r=110, angles 350°→86° ───────────────────────────
   { id: 'bid-proposal',  label: 'Proposal\nProcess',       color: COLORS.biddingSub, textColor: COLORS.dark, radius: 28, x: 948, y: 456, layer: 2, parent: 'bidding', clickTarget: '/detail/bidding?slide=0', connectionType: 'dotted' },

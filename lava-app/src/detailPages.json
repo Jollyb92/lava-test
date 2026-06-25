@@ -74,64 +74,82 @@
     "title": "Design Manual",
     "isoTag": "ISO 9001 §8.3 — Design Development",
     "breadcrumb": "Design Manual",
-    "topics": [
-      "Design Workflow — Concept → Schematic → DD → Documentation → Delivery",
-      "Design Philosophy in Practice — 'More with less', 'What if?', the 6 themes",
-      "Templates & Standards — key files, where to find, how to use",
-      "Graphic Approach — diagram standards, layout conventions, drawing directions",
-      "Competition Guidelines — entry process, brief reading, submission standards"
-    ],
-    "topicLinks": [
-      [
-        {
-          "label": "E.1 Design Manual at a Glance",
-          "id": "e1"
-        },
-        {
-          "label": "E.2 Project Management at a Glance",
-          "id": "e2"
-        }
-      ],
-      [
-        {
-          "label": "A.1 LAVA World",
-          "id": "a1"
-        },
-        {
-          "label": "A.2 Values & General Rules",
-          "id": "a2"
-        }
-      ],
-      [
-        {
-          "label": "E.5 Templates & Standards Register",
-          "id": "e5"
-        },
-        {
-          "label": "E.8 Graphic Identity in Practice",
-          "id": "e8"
-        }
-      ],
-      [
-        {
-          "label": "E.8 Graphic Identity in Practice",
-          "id": "e8"
-        },
-        {
-          "label": "E.5 Templates & Standards Register",
-          "id": "e5"
-        }
-      ],
-      [
-        {
-          "label": "Bidding Manual",
-          "id": "bidding"
-        },
-        {
-          "label": "E.2 Project Management at a Glance",
-          "id": "e2"
-        }
-      ]
+    "coverPdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf",
+    "chapters": [
+      {
+        "title": "Design Workflow",
+        "num": "01",
+        "subchapters": [],
+        "slideData": []
+      },
+      {
+        "title": "Design Philosophy in Practice",
+        "num": "02",
+        "subchapters": [],
+        "slideData": []
+      },
+      {
+        "title": "Templates & Standards",
+        "num": "03",
+        "subchapters": [],
+        "slideData": []
+      },
+      {
+        "title": "Graphic Approach",
+        "num": "04",
+        "subchapters": [
+          "Intention",
+          "Diagram Catalogue",
+          "1. Information Diagrams",
+          "2. Mood Diagrams",
+          "3. Instrumental Diagrams",
+          "4. Conceptual Narrative Diagrams",
+          "5. Representation Diagrams",
+          "Intent-Driven Drawings",
+          "Drawings by Scale",
+          "Detail Catalogue"
+        ],
+        "slideData": [
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 2, "endPage": 2 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 3, "endPage": 5 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 6, "endPage": 12 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 13, "endPage": 16 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 17, "endPage": 24 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 25, "endPage": 32 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 33, "endPage": 39 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 40, "endPage": 49 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 50, "endPage": 71 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 72, "endPage": 76 }
+        ],
+        "links": [
+          { "label": "E.8 Graphic Identity in Practice", "id": "e8" },
+          { "label": "E.5 Templates & Standards Register", "id": "e5" }
+        ]
+      },
+      {
+        "title": "Competition Guidelines",
+        "num": "05",
+        "subchapters": [
+          "Intention & LAVA Process",
+          "Project Setup & Checklists",
+          "Design Timeline",
+          "Project Initiation",
+          "Concept & Design Parameters",
+          "Key Spatial Constraints"
+        ],
+        "slideData": [
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_COMPETITION%20GUIDELINES.pdf", "startPage": 2, "endPage": 5 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_COMPETITION%20GUIDELINES.pdf", "startPage": 6, "endPage": 11 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_COMPETITION%20GUIDELINES.pdf", "startPage": 12, "endPage": 13 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_COMPETITION%20GUIDELINES.pdf", "startPage": 14, "endPage": 18 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_COMPETITION%20GUIDELINES.pdf", "startPage": 19, "endPage": 23 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_COMPETITION%20GUIDELINES.pdf", "startPage": 24, "endPage": 45 }
+        ],
+        "links": [
+          { "label": "Bidding Manual", "id": "bidding" },
+          { "label": "E.2 Project Management at a Glance", "id": "e2" }
+        ]
+      }
     ],
     "links": [
       {

@@ -8,3 +8,7 @@ export const PDF_REGEN           = '/MANUALS/LAVA%20ZERO/2ndEditionRegenerative_
 export const PDF_REGEN_FALLBACK  = '/pdf-server/6_MANUALS_TEST/7_LAVA%20ZERO/03_Recommended%20materials/2ndEditionRegenerative_Design_and_Development.pdf';
 export const PDF_MATCARBON          = '/MANUALS/LAVA%20ZERO/02_260610_L0_MaterialityAndEmbodiedCarbon.pdf';
 export const PDF_MATCARBON_FALLBACK = '/pdf-server/6_MANUALS_TEST/7_LAVA%20ZERO/01_Learning%20sessions/02_260610_L0_MaterialityAndEmbodiedCarbon.pdf';
+export const PDF_GRAPHIC            = '/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf';
+export const PDF_GRAPHIC_FALLBACK   = null;
+export const PDF_COMPETITION_DES    = '/MANUALS/DESIGN%20MANUAL/260205_COMPETITION%20GUIDELINES.pdf';
+export const PDF_COMPETITION_DES_FALLBACK = null;
