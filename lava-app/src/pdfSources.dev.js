@@ -12,3 +12,5 @@ export const PDF_GRAPHIC            = '/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%2
 export const PDF_GRAPHIC_FALLBACK   = null;
 export const PDF_COMPETITION_DES    = '/MANUALS/DESIGN%20MANUAL/260205_COMPETITION%20GUIDELINES.pdf';
 export const PDF_COMPETITION_DES_FALLBACK = null;
+export const PDF_OFFICE_GUIDELINES          = '/MANUALS/LAVA%20ZERO/07_Office%20Guidelines/LAVAzero_Office%20Guidelines.pdf';
+export const PDF_OFFICE_GUIDELINES_FALLBACK = '/pdf-server/6_MANUALS_TEST/7_LAVA%20ZERO/07_Office%20Guidelines/LAVAzero_Office%20Guidelines.pdf';

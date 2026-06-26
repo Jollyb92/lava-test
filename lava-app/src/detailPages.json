@@ -4134,10 +4134,56 @@
     "topics": [
       "LAVA Zero objectives — energy, emissions, mobility, recycling",
       "Waste separation — categories",
-      "Bokashi composting",
-      "Stoßlüften — ventilation method",
+      "Bio waste bokashi",
+      "Heating and Energy",
       "Sustainable mobility",
       "Monitoring & KPIs — paper, CO₂"
+    ],
+    "slideData": [
+      null,
+      {
+        "type": "pdf-scroll",
+        "pdfPath": "/MANUALS/LAVA%20ZERO/07_Office%20Guidelines/LAVAzero_Office%20Guidelines.pdf",
+        "startPage": 1,
+        "endPage": 2
+      },
+      {
+        "type": "pdf-scroll",
+        "pdfPath": "/MANUALS/LAVA%20ZERO/07_Office%20Guidelines/LAVAzero_Office%20Guidelines.pdf",
+        "startPage": 5,
+        "endPage": 5
+      },
+      {
+        "type": "pdf-scroll",
+        "pdfPath": "/MANUALS/LAVA%20ZERO/07_Office%20Guidelines/LAVAzero_Office%20Guidelines.pdf",
+        "startPage": 3,
+        "endPage": 4
+      },
+      null,
+      null
+    ],
+    "topicServerLinks": [
+      null,
+      [
+        {
+          "label": "Office Guidelines folder",
+          "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\07_Office Guidelines"
+        }
+      ],
+      [
+        {
+          "label": "Office Guidelines folder",
+          "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\07_Office Guidelines"
+        }
+      ],
+      [
+        {
+          "label": "Office Guidelines folder",
+          "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\07_Office Guidelines"
+        }
+      ],
+      null,
+      null
     ],
     "topicLinks": [
       [

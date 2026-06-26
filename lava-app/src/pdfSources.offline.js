@@ -22,3 +22,5 @@ export const PDF_GRAPHIC            = null;
 export const PDF_GRAPHIC_FALLBACK   = null;
 export const PDF_COMPETITION_DES    = null;
 export const PDF_COMPETITION_DES_FALLBACK = null;
+export const PDF_OFFICE_GUIDELINES          = null;
+export const PDF_OFFICE_GUIDELINES_FALLBACK = null;
