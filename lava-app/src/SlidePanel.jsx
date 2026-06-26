@@ -1198,12 +1198,13 @@ function PdfScrollSlide({ data }) {
   const [baseWidth, setBaseWidth] = useState(0);
   const [zoom, setZoom] = useState(1);
   const [useFallback, setUseFallback] = useState(false);
+  const outerRef = useRef(null);
   const wrapRef = useRef(null);
   const isPanning = useRef(false);
   const panStart = useRef({ x: 0, y: 0, sl: 0, st: 0 });
 
   useEffect(() => {
-    const el = wrapRef.current;
+    const el = outerRef.current;
     if (!el) return;
     const ro = new ResizeObserver(([entry]) => {
       setBaseWidth(Math.floor(entry.contentRect.width - 32));
@@ -1240,7 +1241,7 @@ function PdfScrollSlide({ data }) {
   const startPage = data.startPage ?? 1;
 
   return (
-    <div className="sppdf-outer">
+    <div ref={outerRef} className="sppdf-outer">
       <div
         ref={wrapRef}
         className="sppdf-wrap"
