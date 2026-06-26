@@ -49,10 +49,11 @@ const ConnectionLine = memo(function ConnectionLine({ x1, y1, x2, y2, col, op, d
 
 // ── Memoized node group — only re-renders when its visual state changes ─────
 
-const NodeGroup = memo(function NodeGroup({ node, op, isHov, isSearchMatch, onMouseEnter, onMouseLeave, onClick }) {
+const NodeGroup = memo(function NodeGroup({ node, op, isHov, isSearchMatch, screensaver, onMouseEnter, onMouseLeave, onClick }) {
   const lines = node.label.split('\n');
   const lineH = node.layer === 2 ? 12 : 15;
   const totalH = lines.length * lineH;
+  const ssActive = screensaver && node.id !== 'center';
 
   return (
     <g
@@ -68,7 +69,7 @@ const NodeGroup = memo(function NodeGroup({ node, op, isHov, isSearchMatch, onMo
       onMouseLeave={onMouseLeave}
       onClick={onClick}
     >
-      {isHov && (
+      {isHov && !screensaver && (
         <circle
           r={node.radius + 8}
           fill="none"
@@ -79,7 +80,7 @@ const NodeGroup = memo(function NodeGroup({ node, op, isHov, isSearchMatch, onMo
         />
       )}
 
-      {isSearchMatch && !isHov && (
+      {isSearchMatch && !isHov && !screensaver && (
         <circle
           r={node.radius + 6}
           fill="none"
@@ -91,9 +92,10 @@ const NodeGroup = memo(function NodeGroup({ node, op, isHov, isSearchMatch, onMo
 
       <circle
         r={node.radius}
-        fill={node.color}
-        stroke={node.id === 'center' ? COLORS.centerStroke : 'none'}
-        strokeWidth={node.id === 'center' ? 2 : 0}
+        fill={ssActive ? 'none' : node.color}
+        stroke={ssActive ? 'rgba(180,180,180,0.45)' : (node.id === 'center' ? COLORS.centerStroke : 'none')}
+        strokeWidth={ssActive ? 1.5 : (node.id === 'center' ? 2 : 0)}
+        style={{ transition: 'fill 1.5s ease, stroke 1.5s ease, stroke-width 1.5s ease' }}
       />
 
       <text
@@ -104,7 +106,8 @@ const NodeGroup = memo(function NodeGroup({ node, op, isHov, isSearchMatch, onMo
         fontWeight="700"
         fontFamily="'Inter','Helvetica Neue',Arial,sans-serif"
         letterSpacing="0.04em"
-        style={{ userSelect: 'none', pointerEvents: 'none' }}
+        opacity={ssActive ? 0 : 1}
+        style={{ userSelect: 'none', pointerEvents: 'none', transition: 'opacity 1.5s ease' }}
       >
         {lines.map((l, i) => (
           <tspan key={i} x={0} dy={i === 0 ? -(totalH / 2 - lineH / 2) : lineH}>
@@ -119,8 +122,8 @@ const NodeGroup = memo(function NodeGroup({ node, op, isHov, isSearchMatch, onMo
           fill={node.textColor || COLORS.white}
           fontSize={node.layer === 0 ? 6 : 7.5}
           fontFamily="'Inter','Helvetica Neue',Arial,sans-serif"
-          opacity={0.7}
-          style={{ userSelect: 'none', pointerEvents: 'none' }}
+          opacity={ssActive ? 0 : 0.7}
+          style={{ userSelect: 'none', pointerEvents: 'none', transition: 'opacity 1.5s ease' }}
         >
           {node.sublabel.split('\n').map((l, i) => (
             <tspan key={i} x={0} dy={i === 0 ? totalH / 2 + 8 : 10}>{l}</tspan>
@@ -281,7 +284,7 @@ export default function DiagramPage({ onSearchOpen }) {
   }
 
   return (
-    <div className="diagram-page">
+    <div className={`diagram-page${screensaver ? ' diagram-page--screensaver' : ''}`}>
       <div className="diagram-header">
         <div className="logo">
           <span className="logo-badge">LAVA</span>
@@ -346,6 +349,7 @@ export default function DiagramPage({ onSearchOpen }) {
                 op={op}
                 isHov={isHov}
                 isSearchMatch={isSearchMatch}
+                screensaver={screensaver}
                 onMouseEnter={e => handleMouseEnterNode(e, node)}
                 onMouseLeave={handleMouseLeaveNode}
                 onClick={() => handleNodeClick(node.clickTarget)}

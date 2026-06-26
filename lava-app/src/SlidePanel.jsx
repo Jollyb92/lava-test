@@ -1241,19 +1241,6 @@ function PdfScrollSlide({ data }) {
 
   return (
     <div className="sppdf-outer">
-      <div className="sppdf-toolbar">
-        <button className="sppdf-zoom-btn" onClick={() => setZoom(z => clampZoom(z - 0.15))} title="Zoom out">−</button>
-        <span className="sppdf-zoom-label">{Math.round(zoom * 100)}%</span>
-        <button className="sppdf-zoom-btn" onClick={() => setZoom(z => clampZoom(z + 0.15))} title="Zoom in">+</button>
-        <button className="sppdf-zoom-btn sppdf-zoom-reset" onClick={() => setZoom(1)} title="Reset zoom">⟳</button>
-        {numPages && (
-          <span className="sppdf-page-count">
-            {data.startPage
-              ? `pp. ${startPage}–${Math.min(data.endPage ?? numPages, numPages)}`
-              : `${numPages} pages`}
-          </span>
-        )}
-      </div>
       <div
         ref={wrapRef}
         className="sppdf-wrap"
@@ -1291,6 +1278,19 @@ function PdfScrollSlide({ data }) {
             return pages;
           })()}
         </Document>
+      </div>
+      <div className="sp-zoom-controls">
+        <button className="sp-zoom-btn" onClick={() => setZoom(z => clampZoom(z - 0.15))} title="Zoom out">−</button>
+        <span className="sp-zoom-label">{Math.round(zoom * 100)}%</span>
+        <button className="sp-zoom-btn" onClick={() => setZoom(z => clampZoom(z + 0.15))} title="Zoom in">+</button>
+        <button className="sp-zoom-btn sp-zoom-reset" onClick={() => setZoom(1)} title="Reset zoom">⟳</button>
+        {numPages && (
+          <span className="sppdf-page-count">
+            {data.startPage
+              ? `pp. ${startPage}–${Math.min(data.endPage ?? numPages, numPages)}`
+              : `${numPages} pages`}
+          </span>
+        )}
       </div>
     </div>
   );
