@@ -22,6 +22,7 @@ export const COLORS = {
   live: '#1B3B6B',
   lavaZero: '#3A7D44',
   lavaZeroSub: '#76B985',
+  lavai: '#7A1F5C',
   officeSub: '#C8F040',
   white: '#FFFFFF',
   dark: '#1a1a1a',
@@ -41,6 +42,7 @@ export const READINESS = {
   guides: 20,
   live: 60,
   lavaZero: 90,
+  lavai: 10,
 };
 
 // Diagram node definitions
@@ -234,6 +236,20 @@ export const nodes = [
     connectionType: 'dashed',
   },
 
+  // ── LAVai — top-left, between Cultural(370,265) and Design(600,195) ─────
+  {
+    id: 'lavai',
+    label: 'LAVai',
+    color: COLORS.lavai,
+    textColor: COLORS.white,
+    radius: 50,
+    x: 385, y: 55,
+    clickTarget: '/detail/lavai',
+    layer: 3,
+    readiness: READINESS.lavai,
+    connectionType: 'dashed',
+  },
+
   // ── Work Safety sub-nodes — r=110, fan below WorkSafety(600,585) ─────────
   { id: 'ws-roles',     label: 'Contacts\n& Roles',         color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 703, y: 623, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety?chapter=4', connectionType: 'dotted' },
   { id: 'ws-emergency', label: 'Emergency\nProcedures',     color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 663, y: 675, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety?chapter=2', connectionType: 'dotted' },
@@ -287,6 +303,7 @@ export const connections = [
   ['center', 'guides'],
   ['center', 'live'],
   ['center', 'lavazero'],
+  ['center', 'lavai'],
   // PPM sub-nodes (dotted)
   ['ppm', 'ppm-intro'],
   ['ppm', 'ppm-before'],
@@ -394,6 +411,7 @@ export const tocData = {
         { id: 'worksafety', label: 'Work Safety Manual' },
         { id: 'guides', label: 'Guides & Registers (Appendices A–M)' },
         { id: 'live', label: 'Live Systems & Tools' },
+        { id: 'lavai', label: 'LAVai' },
       ],
     },
   ],

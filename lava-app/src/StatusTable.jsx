@@ -16,6 +16,7 @@ const MANUALS = [
   { id: 'guides',        label: 'Guides & Registers',          colorKey: 'guides',        responsible: 'LAVA Zero + Admin',                      readiness: READINESS.guides,        date: '06.2026',    version: 'V1.01' },
   { id: 'live',          label: 'Live Systems & Tools',        colorKey: 'live',          responsible: 'IT team',                                readiness: READINESS.live,          date: '2026',       version: 'V1.01' },
   { id: 'lavazero',      label: 'LAVA Zero',                   colorKey: 'lavaZero',      responsible: 'LAVA Zero Team',                         readiness: READINESS.lavaZero,      date: '06.2026',    version: 'V1.01' },
+  { id: 'lavai',         label: 'LAVai',                       colorKey: 'lavai',         responsible: 'TBD',                                    readiness: READINESS.lavai,         date: '2026',       version: 'V1.01' },
 ];
 
 const MANUAL_COMMENTS = {
@@ -30,6 +31,7 @@ const MANUAL_COMMENTS = {
   guides:        'Spread around, needs to be cleaned, proofed and combined',
   live:          'Compiled, missing some parts',
   lavazero:      'Structure ready in app, content to be populated per chapter',
+  lavai:         'Placeholder page, content to be added',
 };
 
 const SECTION_COMMENTS = {
@@ -44,6 +46,7 @@ const SECTION_COMMENTS = {
   guides:        ['Which form of the information?', 'Which form of the information?', 'Which form of the information?', 'Which form of the information?'],
   live:          [null, 'Check actuality', 'Check actuality, implement in the app', 'Check actuality', 'Check actuality'],
   lavazero:      ['Add session content', 'Add tools list', 'Add materials catalogue', 'Add EPD database links'],
+  lavai:         ['Add content', 'Add content', 'Add content', 'Add content', 'Add content'],
 };
 
 // Section-level readiness % per manual (indexed by section order from getSections)
@@ -59,6 +62,7 @@ const SECTION_READINESS = {
   guides:        [20, 20, 20, 20],
   live:          [60, 70, 70, 70, 70],
   lavazero:      [90, 90, 90, 90],
+  lavai:         [10, 10, 10, 10, 10],
 };
 
 function loadComments() {

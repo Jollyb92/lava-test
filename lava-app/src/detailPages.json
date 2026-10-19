@@ -5319,5 +5319,96 @@
         "id": "a2"
       }
     ]
+  },
+  "lavai": {
+    "id": "lavai",
+    "colorKey": "lavai",
+    "title": "LAVai",
+    "subtitle": "AI at LAVA",
+    "breadcrumb": "LAVai",
+    "topics": [
+      "What is LAVai",
+      "Getting Started",
+      "Use Cases at LAVA",
+      "Guidelines & Data Privacy",
+      "Tools & Access"
+    ],
+    "slideData": [
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "[Placeholder] What is LAVai — content to be added."
+          },
+          {
+            "t": "note",
+            "text": "Placeholder section. Replace this text in detailPages.json → \"lavai\"."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "[Placeholder] Getting Started — content to be added."
+          },
+          {
+            "t": "note",
+            "text": "Placeholder section. Replace this text in detailPages.json → \"lavai\"."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "[Placeholder] Use Cases at LAVA — content to be added."
+          },
+          {
+            "t": "note",
+            "text": "Placeholder section. Replace this text in detailPages.json → \"lavai\"."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "[Placeholder] Guidelines & Data Privacy — content to be added."
+          },
+          {
+            "t": "note",
+            "text": "Placeholder section. Replace this text in detailPages.json → \"lavai\"."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "[Placeholder] Tools & Access — content to be added."
+          },
+          {
+            "t": "note",
+            "text": "Placeholder section. Replace this text in detailPages.json → \"lavai\"."
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "label": "Live Systems & Tools",
+        "id": "live"
+      },
+      {
+        "label": "E.6 IT, Servers & Poolarserver",
+        "id": "e6"
+      }
+    ]
   }
 }
