@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => {
       host: true,
       proxy: {
         '/pdf-server': {
-          target: env.PDF_SERVER || 'http://localhost:3000',
+          target: env.PDF_SERVER || 'http://127.0.0.1:3000',
           changeOrigin: true,
           rewrite: path => path.replace(/^\/pdf-server/, ''),
         },
