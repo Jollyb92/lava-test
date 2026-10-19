@@ -1,4 +1,4 @@
-// LAVA Office Manual — full content data
+// Operating LAVA — full content data
 import rawDetailPages from './detailPages.json';
 
 export const COLORS = {
@@ -52,7 +52,7 @@ export const nodes = [
   // ── Center ──────────────────────────────────────────────────────────────
   {
     id: 'center',
-    label: 'LAVA OFFICE MANUAL\n2026',
+    label: 'OPERATING\nLAVA',
     color: COLORS.center,
     textColor: COLORS.dark,
     strokeColor: COLORS.centerStroke,
@@ -201,10 +201,10 @@ export const nodes = [
     readiness: READINESS.guides,
     connectionType: 'dashed',
   },
-  // Live Systems — lower-right, connector threads between Bidding lower subs and WS right sub
+  // IT Manual (formerly Live Systems & Tools) — lower-right, connector threads between Bidding lower subs and WS right sub
   {
     id: 'live',
-    label: 'LIVE SYSTEMS\n& TOOLS',
+    label: 'IT\nMANUAL',
     sublabel: 'Operational Platforms',
     color: COLORS.live,
     textColor: COLORS.white,
@@ -410,7 +410,7 @@ export const tocData = {
         { id: 'ppm', label: 'Project Management Manual (PPM)' },
         { id: 'worksafety', label: 'Work Safety Manual' },
         { id: 'guides', label: 'Guides & Registers (Appendices A–M)' },
-        { id: 'live', label: 'Live Systems & Tools' },
+        { id: 'live', label: 'IT Manual' },
         { id: 'lavai', label: 'LAVai' },
       ],
     },
@@ -461,11 +461,16 @@ export const glossaryData = {
 };
 
 export const involvedPartiesData = [
-  { manual: 'Office Manual', role: 'Office Manager drafts, Directors review' },
-  { manual: 'Cultural Manual', role: 'Founders/Directors draft, all staff invited to comment' },
-  { manual: 'Bidding Manual', role: 'PR + Senior Leadership draft and review' },
-  { manual: 'Project Manual', role: 'Design Leads + Project Managers draft, Directors review' },
-  { manual: 'QEMS, PPM, Work Safety Manual', role: 'Existing owners stay' },
-  { manual: 'Live Systems & Tools', role: 'IT team maintains' },
+  { manual: 'Operating LAVA', role: 'Office Manager drafts, Directors review' },
+  { manual: 'Cultural Manual', role: 'Thili' },
+  { manual: 'Design Manual', role: 'Albert' },
+  { manual: 'Bidding Manual', role: 'Lukas K and Su' },
+  { manual: 'Project Manual / Project Management Manual', role: 'Jalal' },
+  { manual: 'Communication Manual', role: 'Roxane and Durant' },
+  { manual: 'Work Safety Manual', role: 'Daniel' },
+  { manual: 'IT Manual', role: 'Mohammad' },
+  { manual: 'LAVA Zero', role: 'Daniel' },
+  { manual: 'LAVai', role: 'Jan' },
+  { manual: 'QEMS', role: 'Existing owners stay' },
   { manual: 'Guides & Registers', role: 'LAVA Zero team + Admin' },
 ];

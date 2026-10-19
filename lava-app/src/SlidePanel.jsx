@@ -1581,7 +1581,7 @@ export default function SlidePanel({
         {/* Footer: branding + folder link */}
         <div className="sp-footer">
           <span className="sp-brand">
-            <strong>LAVA</strong> Office Manual 2026
+            <strong>Operating</strong> LAVA
           </span>
           <a
             className="sp-folder-btn"

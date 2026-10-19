@@ -5,18 +5,18 @@ import { COLORS, READINESS, detailPages, tocData } from './data.js';
 const LS_KEY = 'lava_status_comments';
 
 const MANUALS = [
-  { id: 'office',        label: 'Office Manual 2026',   colorKey: 'center',        responsible: 'Office Manager + Directors',             readiness: READINESS.office,        date: '2023',       version: 'V1.01' },
-  { id: 'cultural',      label: 'Cultural Manual',             colorKey: 'cultural',      responsible: 'Founders / Directors',                   readiness: READINESS.cultural,      date: 'N/A',        version: 'V1.01' },
-  { id: 'design',        label: 'Design Manual',               colorKey: 'design',        responsible: 'Directors, Project Leads, Project Staff', readiness: READINESS.design,        date: 'N/A',        version: 'V1.01' },
-  { id: 'bidding',       label: 'Bidding Manual',              colorKey: 'bidding',       responsible: 'PR + Senior Leadership',                 readiness: READINESS.bidding,       date: '2026',       version: 'V1.01' },
-  { id: 'communication', label: 'Communication Manual',        colorKey: 'communication', responsible: 'Design Leads',                           readiness: READINESS.communication, date: '01.2023',    version: 'V1.01' },
+  { id: 'office',        label: 'Operating LAVA',       colorKey: 'center',        responsible: 'Office Manager + Directors',             readiness: READINESS.office,        date: '2023',       version: 'V1.01' },
+  { id: 'cultural',      label: 'Cultural Manual',             colorKey: 'cultural',      responsible: 'Thili',                                  readiness: READINESS.cultural,      date: 'N/A',        version: 'V1.01' },
+  { id: 'design',        label: 'Design Manual',               colorKey: 'design',        responsible: 'Albert',                                 readiness: READINESS.design,        date: 'N/A',        version: 'V1.01' },
+  { id: 'bidding',       label: 'Bidding Manual',              colorKey: 'bidding',       responsible: 'Lukas K, Su',                            readiness: READINESS.bidding,       date: '2026',       version: 'V1.01' },
+  { id: 'communication', label: 'Communication Manual',        colorKey: 'communication', responsible: 'Roxane, Durant',                         readiness: READINESS.communication, date: '01.2023',    version: 'V1.01' },
   { id: 'qems',          label: 'QEMS',                        colorKey: 'qems',          responsible: 'Existing owners',                        readiness: READINESS.qems,          date: '2026',       version: 'V1.01' },
-  { id: 'ppm',           label: 'Project Management Manual',   colorKey: 'ppm',           responsible: 'Directors, Project Leads, Project Staff', readiness: READINESS.ppm,           date: '15.05.2025', version: 'V1.01' },
-  { id: 'worksafety',    label: 'Work Safety Manual',          colorKey: 'safety',        responsible: 'Sicherheitsfachkraft (Safety Officer)',  readiness: READINESS.safety,        date: '2026',       version: 'V1.01' },
+  { id: 'ppm',           label: 'Project Management Manual',   colorKey: 'ppm',           responsible: 'Jalal',                                  readiness: READINESS.ppm,           date: '15.05.2025', version: 'V1.01' },
+  { id: 'worksafety',    label: 'Work Safety Manual',          colorKey: 'safety',        responsible: 'Daniel',                                 readiness: READINESS.safety,        date: '2026',       version: 'V1.01' },
   { id: 'guides',        label: 'Guides & Registers',          colorKey: 'guides',        responsible: 'LAVA Zero + Admin',                      readiness: READINESS.guides,        date: '06.2026',    version: 'V1.01' },
-  { id: 'live',          label: 'Live Systems & Tools',        colorKey: 'live',          responsible: 'IT team',                                readiness: READINESS.live,          date: '2026',       version: 'V1.01' },
-  { id: 'lavazero',      label: 'LAVA Zero',                   colorKey: 'lavaZero',      responsible: 'LAVA Zero Team',                         readiness: READINESS.lavaZero,      date: '06.2026',    version: 'V1.01' },
-  { id: 'lavai',         label: 'LAVai',                       colorKey: 'lavai',         responsible: 'TBD',                                    readiness: READINESS.lavai,         date: '2026',       version: 'V1.01' },
+  { id: 'live',          label: 'IT Manual',                   colorKey: 'live',          responsible: 'Mohammad',                               readiness: READINESS.live,          date: '2026',       version: 'V1.01' },
+  { id: 'lavazero',      label: 'LAVA Zero',                   colorKey: 'lavaZero',      responsible: 'Daniel',                                 readiness: READINESS.lavaZero,      date: '06.2026',    version: 'V1.01' },
+  { id: 'lavai',         label: 'LAVai',                       colorKey: 'lavai',         responsible: 'Jan',                                    readiness: READINESS.lavai,         date: '2026',       version: 'V1.01' },
 ];
 
 const MANUAL_COMMENTS = {
@@ -350,7 +350,7 @@ export default function StatusTable({ open, onClose }) {
         </div>
 
         <div className="st-footer">
-          LAVA 2026 — Office Manual V1.01
+          Operating LAVA 1.01
         </div>
       </div>
     </div>

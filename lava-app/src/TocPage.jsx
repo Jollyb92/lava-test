@@ -36,16 +36,16 @@ export default function TocPage({ onSearchOpen }) {
           </svg>
           Back to the Map
         </button>
-        <span className="top-bar-logo">LAVA Office Manual 2026</span>
+        <span className="top-bar-logo">Operating LAVA</span>
         <SearchButton onClick={onSearchOpen} />
       </div>
 
       <div className="detail-body">
         <div className="accent-bar" style={{ background: COLORS.center }} />
         <div className="toc-content" ref={scrollRef}>
-          <div className="breadcrumb">LAVA Office Manual 2026 &rsaquo; <span>Table of Contents</span></div>
+          <div className="breadcrumb">Operating LAVA &rsaquo; <span>Table of Contents</span></div>
           <div className="toc-title">Table of Contents</div>
-          <div className="toc-meta">Office Manual 2026 — V1.01</div>
+          <div className="toc-meta">Operating LAVA 1.01</div>
 
           {tocData.parts.map((part, pi) => {
             const partLetter = part.label.match(/^Part ([A-G])/)?.[1]?.toLowerCase();
@@ -81,7 +81,7 @@ export default function TocPage({ onSearchOpen }) {
         </div>
       </div>
 
-      <div className="page-footer">LAVA 2026 — Office Manual V1.01</div>
+      <div className="page-footer">Operating LAVA 1.01</div>
     </div>
   );
 }

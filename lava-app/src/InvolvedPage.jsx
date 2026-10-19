@@ -16,7 +16,7 @@ export default function InvolvedPage({ onSearchOpen }) {
           </svg>
           Back
         </button>
-        <span className="top-bar-logo">LAVA Office Manual 2026</span>
+        <span className="top-bar-logo">Operating LAVA</span>
         <SearchButton onClick={onSearchOpen} />
         <div className="iso-tag">ISO 9001 §5 — Leadership</div>
       </div>
@@ -24,7 +24,7 @@ export default function InvolvedPage({ onSearchOpen }) {
       <div className="detail-body">
         <div className="accent-bar" style={{ background: COLORS.center }} />
         <div className="special-content" ref={scrollRef}>
-          <div className="breadcrumb">LAVA Office Manual 2026 &rsaquo; <span>Involved Parties</span></div>
+          <div className="breadcrumb">Operating LAVA &rsaquo; <span>Involved Parties</span></div>
           <div className="special-title">Involved Parties</div>
           <div className="special-meta">Who owns, drafts, and reviews each document in the manual family.</div>
 
@@ -43,7 +43,7 @@ export default function InvolvedPage({ onSearchOpen }) {
         </div>
       </div>
 
-      <div className="page-footer">LAVA 2026 — Office Manual V1.01</div>
+      <div className="page-footer">Operating LAVA 1.01</div>
     </div>
   );
 }

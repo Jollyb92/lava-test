@@ -24,7 +24,7 @@ export default function GlossaryPage({ onSearchOpen }) {
           </svg>
           Back
         </button>
-        <span className="top-bar-logo">LAVA Office Manual 2026</span>
+        <span className="top-bar-logo">Operating LAVA</span>
         <SearchButton onClick={onSearchOpen} />
         <div className="iso-tag">ISO 9001 §7.5 — Documented Information</div>
       </div>
@@ -32,7 +32,7 @@ export default function GlossaryPage({ onSearchOpen }) {
       <div className="detail-body">
         <div className="accent-bar" style={{ background: COLORS.center }} />
         <div className="special-content" ref={scrollRef}>
-          <div className="breadcrumb">LAVA Office Manual 2026 &rsaquo; <span>Glossary</span></div>
+          <div className="breadcrumb">Operating LAVA &rsaquo; <span>Glossary</span></div>
           <div className="special-title">Glossary</div>
           <div className="special-meta">Abbreviations, terms, and German words used in the manual family.</div>
 
@@ -50,7 +50,7 @@ export default function GlossaryPage({ onSearchOpen }) {
         </div>
       </div>
 
-      <div className="page-footer">LAVA 2026 — Office Manual V1.01</div>
+      <div className="page-footer">Operating LAVA 1.01</div>
     </div>
   );
 }

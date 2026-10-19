@@ -288,7 +288,7 @@ export default function DiagramPage({ onSearchOpen }) {
       <div className="diagram-header">
         <div className="logo">
           <span className="logo-badge">LAVA</span>
-          Office Manual 2026
+          Operating LAVA
         </div>
         <div className="diagram-search-center">
           <SearchButton onClick={onSearchOpen} />
@@ -374,7 +374,7 @@ export default function DiagramPage({ onSearchOpen }) {
         </button>
       </div>
 
-      <div className="page-footer">LAVA 2026 — Office Manual V1.01</div>
+      <div className="page-footer">Operating LAVA 1.01</div>
     </div>
   );
 }
