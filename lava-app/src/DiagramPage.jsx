@@ -1,7 +1,7 @@
 import { useState, useRef, useCallback, useMemo, memo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { nodes, connections, COLORS } from './data.js';
-import { SearchButton } from './GlobalSearch.jsx';
+import GlobalSearch, { SearchButton } from './GlobalSearch.jsx';
 import StatusTable from './StatusTable.jsx';
 
 const VW = 1200;
@@ -156,11 +156,11 @@ function buildOrbitParams() {
   return p;
 }
 
-export default function DiagramPage({ onSearchOpen }) {
+export default function DiagramPage({ searchOpen, onSearchOpen, onSearchClose }) {
   const navigate = useNavigate();
   const [hovered, setHovered]       = useState(null);
   const [tooltip, setTooltip]       = useState({ visible: false, x: 0, y: 0, text: '' });
-  const [search, setSearch]         = useState('');
+  const [highlight, setHighlight]   = useState(null); // { all, active } from the search panel
   const [statusOpen, setStatusOpen] = useState(false);
   const [screensaver, setScreensaver] = useState(false);
   const svgRef      = useRef(null);
@@ -241,15 +241,8 @@ export default function DiagramPage({ onSearchOpen }) {
     };
   }, []);
 
-  const matchSet = useMemo(() => {
-    if (!search.trim()) return null;
-    const q = search.toLowerCase();
-    return new Set(
-      nodes
-        .filter(n => n.label.toLowerCase().includes(q) || (n.sublabel || '').toLowerCase().includes(q))
-        .map(n => n.id)
-    );
-  }, [search]);
+  const matchSet  = highlight?.all ?? null;
+  const activeSet = highlight?.active ?? null;
 
   const neighborSet = useMemo(() => hovered ? getNeighbors(hovered) : null, [hovered]);
 
@@ -260,7 +253,7 @@ export default function DiagramPage({ onSearchOpen }) {
   }
 
   function lineOpacity(a, b) {
-    if (matchSet)     return 0.12;
+    if (matchSet)     return matchSet.has(a) && matchSet.has(b) ? 0.8 : 0.12;
     if (!neighborSet) return 1;
     return neighborSet.has(a) && neighborSet.has(b) ? 1 : 0.07;
   }
@@ -302,76 +295,82 @@ export default function DiagramPage({ onSearchOpen }) {
 
       <StatusTable open={statusOpen} onClose={() => setStatusOpen(false)} />
 
-      <div className="diagram-canvas-wrap" onMouseMove={handleMouseMove}>
-        <svg
-          ref={svgRef}
-          className="diagram-svg fade-in"
-          viewBox={`0 0 ${VW} ${VH}`}
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <defs>
-            {nodes.map(n => (
-              <filter key={`glow-${n.id}`} id={`glow-${n.id}`} x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="5" result="blur" />
-                <feMerge>
-                  <feMergeNode in="blur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-            ))}
-          </defs>
+      <div className="diagram-body">
+        <div className="diagram-canvas-wrap" onMouseMove={handleMouseMove}>
+          <svg
+            ref={svgRef}
+            className="diagram-svg fade-in"
+            viewBox={`0 0 ${VW} ${VH}`}
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <defs>
+              {nodes.map(n => (
+                <filter key={`glow-${n.id}`} id={`glow-${n.id}`} x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="5" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              ))}
+            </defs>
 
-          {connections.map(([fromId, toId], i) => {
-            const from = getNode(fromId);
-            const to   = getNode(toId);
-            if (!from || !to) return null;
-            const dash = connDash(to.layer);
-            const col  = connColor(to.layer);
-            const op   = screensaver ? 0 : lineOpacity(fromId, toId);
-            return (
-              <ConnectionLine
-                key={i}
-                x1={from.x} y1={from.y}
-                x2={to.x}   y2={to.y}
-                col={col} op={op} dash={dash}
-              />
-            );
-          })}
+            {connections.map(([fromId, toId], i) => {
+              const from = getNode(fromId);
+              const to   = getNode(toId);
+              if (!from || !to) return null;
+              const dash = connDash(to.layer);
+              const col  = connColor(to.layer);
+              const op   = screensaver ? 0 : lineOpacity(fromId, toId);
+              return (
+                <ConnectionLine
+                  key={i}
+                  x1={from.x} y1={from.y}
+                  x2={to.x}   y2={to.y}
+                  col={col} op={op} dash={dash}
+                />
+              );
+            })}
 
-          {nodes.map(node => {
-            const op           = nodeOpacity(node.id);
-            const isHov        = hovered === node.id;
-            const isSearchMatch = matchSet?.has(node.id) ?? false;
-            return (
-              <NodeGroup
-                key={node.id}
-                node={node}
-                op={op}
-                isHov={isHov}
-                isSearchMatch={isSearchMatch}
-                screensaver={screensaver}
-                onMouseEnter={e => handleMouseEnterNode(e, node)}
-                onMouseLeave={handleMouseLeaveNode}
-                onClick={() => handleNodeClick(node.clickTarget)}
-              />
-            );
-          })}
-        </svg>
-
-        {tooltip.visible && (
-          <div className="node-tooltip" style={{ left: tooltip.x, top: tooltip.y }}>
-            {tooltip.text}
-          </div>
-        )}
-
-        <button className="st-open-btn" onClick={() => setStatusOpen(true)}>
-          <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-            <rect x="1" y="1" width="11" height="2.5" rx="0.5" fill="currentColor" opacity="0.7"/>
-            <rect x="1" y="5.25" width="11" height="2.5" rx="0.5" fill="currentColor" opacity="0.5"/>
-            <rect x="1" y="9.5" width="7" height="2.5" rx="0.5" fill="currentColor" opacity="0.35"/>
+            {nodes.map(node => {
+              const op           = nodeOpacity(node.id);
+              const isHov        = hovered === node.id || (activeSet?.has(node.id) ?? false);
+              const isSearchMatch = matchSet?.has(node.id) ?? false;
+              return (
+                <NodeGroup
+                  key={node.id}
+                  node={node}
+                  op={op}
+                  isHov={isHov}
+                  isSearchMatch={isSearchMatch}
+                  screensaver={screensaver}
+                  onMouseEnter={e => handleMouseEnterNode(e, node)}
+                  onMouseLeave={handleMouseLeaveNode}
+                  onClick={() => handleNodeClick(node.clickTarget)}
+                />
+              );
+            })}
           </svg>
-          Status Overview
-        </button>
+
+          {tooltip.visible && (
+            <div className="node-tooltip" style={{ left: tooltip.x, top: tooltip.y }}>
+              {tooltip.text}
+            </div>
+          )}
+
+          <button className="st-open-btn" onClick={() => setStatusOpen(true)}>
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+              <rect x="1" y="1" width="11" height="2.5" rx="0.5" fill="currentColor" opacity="0.7"/>
+              <rect x="1" y="5.25" width="11" height="2.5" rx="0.5" fill="currentColor" opacity="0.5"/>
+              <rect x="1" y="9.5" width="7" height="2.5" rx="0.5" fill="currentColor" opacity="0.35"/>
+            </svg>
+            Status Overview
+          </button>
+        </div>
+
+        {searchOpen && (
+          <GlobalSearch open variant="side" onClose={onSearchClose} onHighlight={setHighlight} />
+        )}
       </div>
 
       <div className="page-footer">Operating LAVA 1.01</div>

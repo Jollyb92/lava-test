@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { detailPages, glossaryData, COLORS } from './data.js';
+import { detailPages, glossaryData, COLORS, nodes } from './data.js';
 
 // ── Build search index once ───────────────────────────────────────────────────
 function buildIndex() {
@@ -17,14 +17,14 @@ function buildIndex() {
     // Topics
     page.topics?.forEach((topic, i) => {
       const clean = topic.replace(/ — .*/, '');
-      entries.push({ ...base, text: topic, type: 'topic', nav: pageNav(id, i), topicHint: clean });
+      entries.push({ ...base, text: topic, type: 'topic', nav: pageNav(id, i), topicHint: clean, ti: i });
     });
 
     // Chapter-based pages
     page.chapters?.forEach((ch, ci) => {
-      entries.push({ ...base, text: ch.title, type: 'chapter', nav: pageNav(id, undefined, ci) });
+      entries.push({ ...base, text: ch.title, type: 'chapter', nav: pageNav(id, undefined, ci), ci });
       ch.subchapters?.forEach((sub, si) => {
-        entries.push({ ...base, text: sub, type: 'subchapter', nav: pageNav(id, undefined, ci, si) });
+        entries.push({ ...base, text: sub, type: 'subchapter', nav: pageNav(id, undefined, ci, si), ci });
       });
     });
   }
@@ -55,24 +55,60 @@ function pageNav(id, topicIndex, chIndex, subIndex) {
 
 const INDEX = buildIndex();
 
+// ── Map a search hit to the diagram bubbles it belongs to ────────────────────
+const NODE_BY_TARGET = new Map(nodes.filter(n => n.clickTarget).map(n => [n.clickTarget, n.id]));
+const CENTER_PAGE_IDS = new Set(['toc', 'doc-control', 'intro', 'ecosystem']);
+
+function nodeIdsFor(item) {
+  const ids = [];
+  const add = target => { const n = NODE_BY_TARGET.get(target); if (n) ids.push(n); };
+  if (item.type === 'glossary') return ids;
+  if (CENTER_PAGE_IDS.has(item.id)) { add('/toc'); return ids; }
+  // Operating LAVA chapters (a1, b2, …) belong to the centre and its Part bubble
+  const part = /^([a-g])\d$/.exec(item.id);
+  if (part) { add('/toc'); add(`/toc#part-${part[1]}`); return ids; }
+  add(`/detail/${item.id}`);
+  if (item.ti !== undefined) add(`/detail/${item.id}?slide=${item.ti}`);
+  if (item.ci !== undefined) add(`/detail/${item.id}?chapter=${item.ci}`);
+  return ids;
+}
+
 const TYPE_LABEL = { page: 'Page', topic: 'Topic', chapter: 'Chapter', subchapter: 'Sub-chapter', glossary: 'Glossary' };
 
 // ── Component ─────────────────────────────────────────────────────────────────
-export default function GlobalSearch({ open, onClose }) {
+// variant 'modal' = centred overlay; 'side' = docked panel next to the diagram,
+// reporting matching bubbles through onHighlight({ all, active }).
+export default function GlobalSearch({ open, onClose, variant = 'modal', onHighlight }) {
   const navigate = useNavigate();
   const [query,   setQuery]   = useState('');
   const [cursor,  setCursor]  = useState(0);
   const inputRef  = useRef(null);
   const listRef   = useRef(null);
 
-  const results = useMemo(() => {
+  const matches = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return [];
     return INDEX.filter(e =>
       e.text.toLowerCase().includes(q) ||
       e.pageTitle.toLowerCase().includes(q)
-    ).slice(0, 40);
+    );
   }, [query]);
+  const results = useMemo(() => matches.slice(0, 40), [matches]);
+
+  const highlightAll = useMemo(
+    () => (query.trim() ? new Set(matches.flatMap(nodeIdsFor)) : null),
+    [matches, query]
+  );
+
+  useEffect(() => {
+    if (!onHighlight) return;
+    onHighlight(highlightAll && {
+      all: highlightAll,
+      active: new Set(results[cursor] ? nodeIdsFor(results[cursor]) : []),
+    });
+  }, [onHighlight, highlightAll, results, cursor]);
+
+  useEffect(() => () => onHighlight?.(null), [onHighlight]);
 
   // Focus input when opened
   useEffect(() => {
@@ -106,10 +142,8 @@ export default function GlobalSearch({ open, onClose }) {
 
   if (!open) return null;
 
-  return (
-    <div className="gs-backdrop" onClick={onClose}>
-      <div className="gs-modal" onClick={e => e.stopPropagation()}>
-
+  const content = (
+    <>
         {/* Search input */}
         <div className="gs-inputrow">
           <svg className="gs-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -180,8 +214,19 @@ export default function GlobalSearch({ open, onClose }) {
           <span><kbd>↑↓</kbd> navigate</span>
           <span><kbd>↵</kbd> open</span>
           <span><kbd>Esc</kbd> close</span>
-          <span style={{ marginLeft: 'auto' }}>{results.length > 0 && `${results.length} result${results.length !== 1 ? 's' : ''}`}</span>
+          <span style={{ marginLeft: 'auto' }}>{matches.length > 0 && `${matches.length} result${matches.length !== 1 ? 's' : ''}`}</span>
         </div>
+    </>
+  );
+
+  if (variant === 'side') {
+    return <aside className="gs-side">{content}</aside>;
+  }
+
+  return (
+    <div className="gs-backdrop" onClick={onClose}>
+      <div className="gs-modal" onClick={e => e.stopPropagation()}>
+        {content}
       </div>
     </div>
   );

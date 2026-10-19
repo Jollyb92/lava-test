@@ -3933,3 +3933,36 @@ a { color: inherit; text-decoration: none; }
 .sppdf-msg--err {
   color: #EF4444;
 }
+
+/* ── Search docked beside the diagram ── */
+.diagram-body {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  position: relative;
+}
+.diagram-body .diagram-canvas-wrap { min-width: 0; }
+.gs-side {
+  width: min(400px, 40vw);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-left: 1px solid #eee;
+  box-shadow: -8px 0 24px rgba(0,0,0,0.06);
+  animation: gsSlideIn 0.18s ease-out both;
+}
+.gs-side .gs-list { flex: 1; }
+.gs-side .gs-empty { flex: 1; }
+@keyframes gsSlideIn {
+  from { transform: translateX(24px); opacity: 0; }
+  to   { transform: none;             opacity: 1; }
+}
+@media (max-width: 760px) {
+  .gs-side {
+    position: absolute;
+    inset: 0;
+    width: auto;
+    z-index: 20;
+  }
+}
