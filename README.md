@@ -1,5 +1,4 @@
-# lava-test
-test for the manual and checklists
+OPERATING LAVA app Compilation and libriary of all manuals and admin data as well as ISO integration. Runs locally , updates manualy
 
 
 
@@ -22,7 +21,7 @@ git restore
 
 
 
-http://10.1.0.138:5173/
+http://10.1.0.135:5173/
 
 
 
