@@ -52,67 +52,7 @@ function CoverPanel({ pdfPath }) {
 
 const CHECKLIST_TRIGGER = 'Digital Onboarding Checklist';
 
-const MANUAL_IDS = new Set([
-  'cultural', 'design', 'bidding', 'communication',
-  'qems', 'ppm', 'worksafety', 'guides', 'live', 'project', 'lavazero', 'lavai',
-]);
-
 const FRONT_MATTER_IDS = new Set(['doc-control', 'intro']);
-
-const CHAPTER_IDS = new Set([
-  'toc', 'doc-control', 'intro', 'ecosystem',
-  'a1', 'a2',
-  'b1', 'b2', 'b3', 'b4', 'b5', 'b6',
-  'c1', 'c2', 'c3',
-  'd1', 'd2', 'd3',
-  'e1', 'e2', 'e3', 'e4', 'e5', 'e6', 'e7', 'e8',
-  'f1', 'g1',
-]);
-
-function linkCategory(id) {
-  if (MANUAL_IDS.has(id)) return 'manuals';
-  if (CHAPTER_IDS.has(id)) return 'chapters';
-  return 'others';
-}
-
-function LinkedNav({ links, navigate }) {
-  const manuals  = links.filter(l => linkCategory(l.id) === 'manuals');
-  const chapters = links.filter(l => linkCategory(l.id) === 'chapters');
-  const others   = links.filter(l => linkCategory(l.id) === 'others');
-
-  const groups = [
-    { key: 'manuals',  label: 'Manuals',  items: manuals },
-    { key: 'chapters', label: 'Chapters', items: chapters },
-    { key: 'others',   label: 'Others',   items: others },
-  ].filter(g => g.items.length > 0);
-
-  if (groups.length === 0) return null;
-
-  return (
-    <div className="linked-nav">
-      <span className="linked-nav-label">See also</span>
-      {groups.map(group => (
-        <div key={group.key} className="linked-nav-group">
-          <span className="linked-nav-group-label">{group.label}</span>
-          <div className="linked-nav-chips">
-            {group.items.map(link => (
-              <button
-                key={link.id}
-                className="linked-nav-chip"
-                onClick={() => navigate(`/detail/${link.id}`)}
-              >
-                {link.label}
-                <svg width="9" height="9" viewBox="0 0 9 9" fill="none">
-                  <path d="M2 7L7 2M7 2H3.5M7 2V5.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
 
 function TopicLabel({ text }) {
   const sep = text.indexOf(' — ');
@@ -187,11 +127,21 @@ function ServerLinks({ links }) {
   );
 }
 
-function ChaptersView({ chapters, accentColor, onLinksChange, selectedSubch, onSubchapterSelect, openIndex, onOpenChange }) {
-  function toggle(i, ch) {
+function FilesIndicator() {
+  return (
+    <span className="files-indicator" title="Server folder available">
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
+        <path d="M1.5 4.5C1.5 3.4 2.4 2.5 3.5 2.5H6.5L8 4H13C14.1 4 15 4.9 15 6V12C15 13.1 14.1 14 13 14H3C1.9 14 1 13.1 1 12V4.5Z"
+          stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" fill="currentColor" fillOpacity="0.12"/>
+      </svg>
+    </span>
+  );
+}
+
+function ChaptersView({ chapters, accentColor, selectedSubch, onSubchapterSelect, openIndex, onOpenChange }) {
+  function toggle(i) {
     const next = openIndex === i ? null : i;
     onOpenChange(next);
-    onLinksChange(next !== null && ch.links?.length ? ch.links : null);
   }
 
   return (
@@ -203,7 +153,7 @@ function ChaptersView({ chapters, accentColor, onLinksChange, selectedSubch, onS
             style={isOpen ? { borderColor: accentColor } : {}}>
             <button
               className="chapter-bubble-btn"
-              onClick={() => toggle(i, ch)}
+              onClick={() => toggle(i)}
               style={isOpen ? { background: accentColor, color: accentColor === '#B3F400' ? '#1a1a1a' : '#fff' } : {}}
             >
               <span className="chapter-bubble-num"
@@ -228,6 +178,7 @@ function ChaptersView({ chapters, accentColor, onLinksChange, selectedSubch, onS
                         onClick={() => onSubchapterSelect(i, j)}
                       >
                         <SubchapterLabel text={sub} />
+                        {ch.serverLinks?.[sub]?.length > 0 && <FilesIndicator />}
                         <span className="subch-pill-view" style={isActive ? { color: accentColor } : {}}>
                           {isActive ? 'Close' : 'View'}
                           <svg width="9" height="9" viewBox="0 0 9 9" fill="none">
@@ -344,13 +295,11 @@ export default function DetailPage({ onSearchOpen }) {
   const [checklistOpen, setChecklistOpen] = useState(false);
   const [selectedSlide, setSelectedSlide] = useState(null);
   const [selectedSubch, setSelectedSubch] = useState(null);
-  const [chapterLinks, setChapterLinks] = useState(null);
   const [chapterOpen, setChapterOpen] = useState(null);
   const scrollRef = useScrollRestore();
 
   // Reset state on navigation; handle ?slide=, ?chapter=, ?sub= from search
   useEffect(() => {
-    setChapterLinks(null);
     setChecklistOpen(false);
     const slide   = searchParams.get('slide');
     const chapter = searchParams.get('chapter');
@@ -409,10 +358,6 @@ export default function DetailPage({ onSearchOpen }) {
   const subchOpen   = selectedSubch !== null;
   const panelOpen   = checklistOpen || slideOpen || subchOpen;
 
-  // Active links: per-topic > subchapter chapter > per-chapter > page-level
-  const topicSpecific = selectedSlide !== null ? (page.topicLinks?.[selectedSlide] ?? null) : null;
-  const subchLinks = subchOpen ? (page.chapters?.[selectedSubch.ch]?.links ?? null) : null;
-  const activeLinks = (topicSpecific?.length ? topicSpecific : null) || subchLinks || chapterLinks || page.links || null;
   const topicServerLinksList = selectedSlide !== null ? (page.topicServerLinks?.[selectedSlide] ?? null) : null;
 
   const bodyClass = [
@@ -463,7 +408,6 @@ export default function DetailPage({ onSearchOpen }) {
             <ChaptersView
               chapters={page.chapters}
               accentColor={accentColor}
-              onLinksChange={setChapterLinks}
               selectedSubch={selectedSubch}
               openIndex={chapterOpen}
               onOpenChange={setChapterOpen}
@@ -509,10 +453,10 @@ export default function DetailPage({ onSearchOpen }) {
                       onClick={() => {
                         setSelectedSlide(prev => prev === i ? null : i);
                         setChecklistOpen(false);
-                        setChapterLinks(null);
                       }}
                     >
                       <span className="topic-text"><TopicLabel text={topic} /></span>
+                      {page.topicServerLinks?.[i]?.length > 0 && <FilesIndicator />}
                       <span
                         className="topic-slide-badge"
                         style={selectedSlide === i ? { background: accentColor, color: accentColor === '#B3F400' ? '#1a1a1a' : '#fff' } : {}}
@@ -540,10 +484,6 @@ export default function DetailPage({ onSearchOpen }) {
 
           {topicServerLinksList?.length > 0 && (
             <ServerLinks links={topicServerLinksList} />
-          )}
-
-          {activeLinks && activeLinks.length > 0 && (
-            <LinkedNav links={activeLinks} navigate={navigate} />
           )}
         </div>
 

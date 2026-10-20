@@ -589,63 +589,6 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.3;
 }
 
-/* ── Linked navigation chips ── */
-.linked-nav {
-  margin-bottom: 16px;
-}
-
-.linked-nav-label {
-  display: block;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #aaa;
-  margin-bottom: 6px;
-}
-
-.linked-nav-group {
-  margin-bottom: 6px;
-}
-
-.linked-nav-group-label {
-  display: block;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #ccc;
-  margin-bottom: 4px;
-}
-
-.linked-nav-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-
-.linked-nav-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 4px 10px;
-  border: 1px solid var(--linked-green);
-  border-radius: 20px;
-  background: none;
-  color: var(--linked-green);
-  font-size: 11px;
-  font-weight: 600;
-  font-family: var(--font);
-  cursor: pointer;
-  transition: background 0.12s, color 0.12s;
-  white-space: nowrap;
-}
-
-.linked-nav-chip:hover {
-  background: var(--linked-green);
-  color: #fff;
-}
-
 /* ── Chapter bubbles (Work Safety & chapter-based pages) ── */
 .chapters-list {
   list-style: none;
@@ -782,6 +725,21 @@ a { color: inherit; text-decoration: none; }
   color: #999;
   white-space: nowrap;
   margin-left: auto;
+}
+
+.files-indicator {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: #999;
+}
+
+.subch-pill-btn .files-indicator {
+  margin-left: auto;
+}
+
+.subch-pill-btn .files-indicator + .subch-pill-view {
+  margin-left: 0;
 }
 
 .subch-title {
