@@ -3,11 +3,12 @@ import react from '@vitejs/plugin-react'
 import { viteSingleFile } from 'vite-plugin-singlefile'
 import { fileURLToPath } from 'url'
 import os from 'os'
+import presencePlugin from './presence-plugin.js'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, fileURLToPath(new URL('.', import.meta.url)), '')
   return {
-    plugins: [react(), viteSingleFile()],
+    plugins: [react(), viteSingleFile(), presencePlugin()],
     base: './',
     server: {
       host: true,

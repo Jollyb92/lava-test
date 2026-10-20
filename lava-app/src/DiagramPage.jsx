@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { nodes, connections, COLORS } from './data.js';
 import GlobalSearch, { SearchButton } from './GlobalSearch.jsx';
 import StatusTable from './StatusTable.jsx';
+import ActiveUsers from './ActiveUsers.jsx';
 
 const VW = 1200;
 const VH = 780;
@@ -366,6 +367,8 @@ export default function DiagramPage({ searchOpen, onSearchOpen, onSearchClose })
             </svg>
             Status Overview
           </button>
+
+          <ActiveUsers />
         </div>
 
         {searchOpen && (
