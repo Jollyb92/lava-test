@@ -21,7 +21,7 @@ git restore
 
 
 
-http://10.1.0.135:5173/
+http://10.1.0.135:5173/](http://nb-beverly23:5173/ (backup if the name does not work: http://10.1.0.135:5173/ - IP can change))
 
 
 
