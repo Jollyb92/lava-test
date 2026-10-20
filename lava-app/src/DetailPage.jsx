@@ -91,7 +91,7 @@ function copyToClipboard(text) {
   return Promise.resolve();
 }
 
-function ServerLinks({ links }) {
+function ServerLinks({ links, className = '' }) {
   const [copied, setCopied] = useState(null);
   if (!links?.length) return null;
 
@@ -103,7 +103,7 @@ function ServerLinks({ links }) {
   }
 
   return (
-    <div className="server-links">
+    <div className={`server-links ${className}`.trim()}>
       <span className="server-links-label">Server Links</span>
       <div className="server-links-btns">
         {links.map((link, i) => (
@@ -403,6 +403,7 @@ export default function DetailPage({ onSearchOpen }) {
 
           <div className="detail-title">{page.title}</div>
           {page.subtitle && <div className="detail-subtitle">{page.subtitle}</div>}
+          <ServerLinks links={page.pageServerLinks} className="server-links--page" />
 
           {page.chapters ? (
             <ChaptersView

@@ -18,6 +18,12 @@
     "title": "Design Manual",
     "isoTag": "ISO 9001 §8.3 — Design Development",
     "breadcrumb": "Design Manual",
+    "pageServerLinks": [
+      {
+        "label": "Design Manual",
+        "path": "K:\\6_MANUALS_TEST\\2_DESIGN MANUAL"
+      }
+    ],
     "coverPdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf",
     "chapters": [
       {
@@ -108,6 +114,12 @@
     "subtitle": "Corporate Identity & Communications",
     "isoTag": "ISO 9001 §7.4 — Communication",
     "breadcrumb": "CI + Communications Manual",
+    "pageServerLinks": [
+      {
+        "label": "Communication Manual",
+        "path": "K:\\6_MANUALS_TEST\\6_COMMUNICATION MANUAL"
+      }
+    ],
     "coverPdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
     "chapters": [
       {
@@ -372,6 +384,12 @@
     "subtitle": "PPM",
     "isoTag": "ISO 9001 §7.5 / §8.1",
     "breadcrumb": "Project Management Manual (PPM)",
+    "pageServerLinks": [
+      {
+        "label": "Project Management Manual",
+        "path": "K:\\6_MANUALS_TEST\\3_PROJECT MANAGEMENT MANUAL"
+      }
+    ],
     "coverPdfPath": "/MANUALS/PROJECT%20MANAGEMENT%20MANUAL/250919_Project%20Processes%20Manual_v0.1.pdf",
     "chapters": [
       {
@@ -665,6 +683,12 @@
     "title": "Work Safety Manual",
     "isoTag": "ISO 9001 §7.1.4 / 14001 §8.2 — Emergency Preparedness",
     "breadcrumb": "Work Safety Manual",
+    "pageServerLinks": [
+      {
+        "label": "Work Safety Manual",
+        "path": "K:\\6_MANUALS_TEST\\5_SAFETY MANUAL"
+      }
+    ],
     "coverPdfPath": "/MANUALS/SAFETY%20MANUAL/SAFETY%20MANUAL.pdf",
     "chapters": [
       {
@@ -806,6 +830,12 @@
     "subtitle": "Environmental Sustainability",
     "isoTag": "ISO 14001 §6.2 — Environmental Objectives",
     "breadcrumb": "LAVA Zero",
+    "pageServerLinks": [
+      {
+        "label": "LAVA Zero",
+        "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO"
+      }
+    ],
     "chapters": [
       {
         "title": "Learning Sessions",
