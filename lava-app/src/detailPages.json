@@ -775,6 +775,10 @@
       {
         "label": "Work Safety Manual",
         "path": "K:\\6_MANUALS_TEST\\5_SAFETY MANUAL"
+      },
+      {
+        "label": "Work Space Laws",
+        "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
       }
     ],
     "coverPdfPath": "/MANUALS/SAFETY%20MANUAL/SAFETY%20MANUAL.pdf",
@@ -906,6 +910,317 @@
           {
             "type": "pdf-page",
             "page": 20
+          }
+        ]
+      },
+      {
+        "title": "Work Space Laws",
+        "subchapters": [
+          "Allgemeines Gleichbehandlungsgesetz (AGG)",
+          "Arbeitsgerichtsgesetz (ArbGG)",
+          "Arbeitsschutzgesetz (ArbSchG)",
+          "Arbeitssicherheitsgesetz (ASiG)",
+          "Arbeitsstättenverordnung (ArbStättV)",
+          "Arbeitszeitgesetz (ArbZG)",
+          "Baustellenverordnung (BaustellV)",
+          "Bundeselterngeld- und Elternzeitgesetz (BEEG)",
+          "Bundesurlaubsgesetz (BUrlG)",
+          "Bürgerliches Gesetzbuch (BGB) §§611-630",
+          "DGUV-Vorschriften",
+          "Heimarbeitsgesetz (HAG)",
+          "Jugendarbeitsschutzgesetz (JArbSchG)",
+          "Kündigungsschutzgesetz (KSchG)",
+          "Mutterschutzgesetz (MuSchG)",
+          "Verordnung über Sicherheit und Gesundheitsschutz bei der Verwendung von Arbeitsmitteln"
+        ],
+        "slideData": [
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "Allgemeines Gleichbehandlungsgesetz (AGG)"
+              },
+              {
+                "t": "para",
+                "text": "General Equal Treatment Act"
+              },
+              {
+                "t": "server-link",
+                "label": "5_WORKSPACE LAWS folder",
+                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "Arbeitsgerichtsgesetz (ArbGG)"
+              },
+              {
+                "t": "para",
+                "text": "Labour Courts Act"
+              },
+              {
+                "t": "server-link",
+                "label": "5_WORKSPACE LAWS folder",
+                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "Arbeitsschutzgesetz (ArbSchG)"
+              },
+              {
+                "t": "para",
+                "text": "Occupational Health and Safety Act"
+              },
+              {
+                "t": "server-link",
+                "label": "5_WORKSPACE LAWS folder",
+                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "Arbeitssicherheitsgesetz (ASiG)"
+              },
+              {
+                "t": "para",
+                "text": "Occupational Safety Act"
+              },
+              {
+                "t": "server-link",
+                "label": "5_WORKSPACE LAWS folder",
+                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "Arbeitsstättenverordnung (ArbStättV)"
+              },
+              {
+                "t": "para",
+                "text": "Workplace Ordinance"
+              },
+              {
+                "t": "server-link",
+                "label": "5_WORKSPACE LAWS folder",
+                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "Arbeitszeitgesetz (ArbZG)"
+              },
+              {
+                "t": "para",
+                "text": "Working Hours Act"
+              },
+              {
+                "t": "server-link",
+                "label": "5_WORKSPACE LAWS folder",
+                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "Baustellenverordnung (BaustellV)"
+              },
+              {
+                "t": "para",
+                "text": "Construction Site Ordinance"
+              },
+              {
+                "t": "server-link",
+                "label": "5_WORKSPACE LAWS folder",
+                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "Bundeselterngeld- und Elternzeitgesetz (BEEG)"
+              },
+              {
+                "t": "para",
+                "text": "Parental Allowance and Parental Leave Act"
+              },
+              {
+                "t": "server-link",
+                "label": "5_WORKSPACE LAWS folder",
+                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "Bundesurlaubsgesetz (BUrlG)"
+              },
+              {
+                "t": "para",
+                "text": "Federal Leave Act"
+              },
+              {
+                "t": "server-link",
+                "label": "5_WORKSPACE LAWS folder",
+                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "Bürgerliches Gesetzbuch (BGB) §§611-630"
+              },
+              {
+                "t": "para",
+                "text": "Civil Code — Employment Contracts"
+              },
+              {
+                "t": "server-link",
+                "label": "5_WORKSPACE LAWS folder",
+                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "DGUV-Vorschriften"
+              },
+              {
+                "t": "para",
+                "text": "Statutory Accident Insurance Regulations"
+              },
+              {
+                "t": "server-link",
+                "label": "5_WORKSPACE LAWS folder",
+                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "Heimarbeitsgesetz (HAG)"
+              },
+              {
+                "t": "para",
+                "text": "Home Work Act"
+              },
+              {
+                "t": "server-link",
+                "label": "5_WORKSPACE LAWS folder",
+                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "Jugendarbeitsschutzgesetz (JArbSchG)"
+              },
+              {
+                "t": "para",
+                "text": "Protection of Young Workers Act"
+              },
+              {
+                "t": "server-link",
+                "label": "5_WORKSPACE LAWS folder",
+                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "Kündigungsschutzgesetz (KSchG)"
+              },
+              {
+                "t": "para",
+                "text": "Protection Against Dismissal Act"
+              },
+              {
+                "t": "server-link",
+                "label": "5_WORKSPACE LAWS folder",
+                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "Mutterschutzgesetz (MuSchG)"
+              },
+              {
+                "t": "para",
+                "text": "Maternity Protection Act"
+              },
+              {
+                "t": "server-link",
+                "label": "5_WORKSPACE LAWS folder",
+                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "h",
+                "text": "Verordnung über Sicherheit und Gesundheitsschutz bei der Verwendung von Arbeitsmitteln"
+              },
+              {
+                "t": "para",
+                "text": "Industrial Safety Ordinance (BetrSichV)"
+              },
+              {
+                "t": "server-link",
+                "label": "5_WORKSPACE LAWS folder",
+                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+              }
+            ]
           }
         ]
       }
