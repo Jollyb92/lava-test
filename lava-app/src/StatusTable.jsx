@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import * as XLSX from 'xlsx-js-style';
 import { COLORS, READINESS, detailPages, tocData } from './data.js';
+import { UPDATE_LOG } from './updateLog.js';
 
 const LS_KEY = 'lava_status_comments';
 
@@ -64,6 +65,12 @@ const SECTION_READINESS = {
   lavazero:      [90, 90, 90, 90],
   lavai:         [10, 10, 10, 10, 10],
 };
+
+const LOG_GREY = '#9CA3AF';
+
+function logManual(id) {
+  return MANUALS.find(m => m.id === id) ?? null;
+}
 
 function loadComments() {
   try {
@@ -151,6 +158,7 @@ function cell(v, s) {
 export default function StatusTable({ open, onClose }) {
   const [expanded, setExpanded] = useState(() => new Set(MANUALS.map(m => m.id)));
   const [comments, setComments] = useState(loadComments);
+  const [tab, setTab] = useState('status');
   const commentsRef = useRef(comments);
   const saveTimer = useRef(null);
 
@@ -244,8 +252,26 @@ export default function StatusTable({ open, onClose }) {
     ws['!cols'] = [{ wch: 36 }, { wch: 42 }, { wch: 36 }, { wch: 14 }, { wch: 12 }, { wch: 10 }, { wch: 50 }];
     ws['!rows'] = Array.from({ length: row }, () => ({ hpt: 18 }));
 
+    const log = {};
+    ['Date', 'Manual', 'Update', 'Source Document', 'Document Date'].forEach((v, c) => {
+      log[XLSX.utils.encode_cell({ r: 0, c })] = cell(v, HDR);
+    });
+    const LOG = {
+      font: { color: { rgb: argb('#374151') }, sz: 10 },
+      alignment: { vertical: 'top', wrapText: true },
+    };
+    UPDATE_LOG.forEach((entry, i) => {
+      const manual = logManual(entry.manual);
+      [entry.date, manual?.label ?? 'Several manuals', entry.update, entry.source ?? '', entry.docDate ?? ''].forEach((v, c) => {
+        log[XLSX.utils.encode_cell({ r: i + 1, c })] = cell(v, LOG);
+      });
+    });
+    log['!ref']  = XLSX.utils.encode_range({ s: { r: 0, c: 0 }, e: { r: UPDATE_LOG.length, c: 4 } });
+    log['!cols'] = [{ wch: 12 }, { wch: 28 }, { wch: 80 }, { wch: 46 }, { wch: 14 }];
+
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, 'Manual Status');
+    XLSX.utils.book_append_sheet(wb, log, 'Update Log');
     XLSX.writeFile(wb, 'LAVA_Manual_Status.xlsx');
   }
 
@@ -267,7 +293,15 @@ export default function StatusTable({ open, onClose }) {
 
         <div className="st-header">
           <span className="st-title">Manual Status Overview</span>
-          <span className="st-subtitle">{MANUALS.length} manuals · {totalSections} sections</span>
+          <div className="st-tabs">
+            <button className={`st-tab${tab === 'status' ? ' st-tab--active' : ''}`} onClick={() => setTab('status')}>Status</button>
+            <button className={`st-tab${tab === 'log' ? ' st-tab--active' : ''}`} onClick={() => setTab('log')}>Update Log</button>
+          </div>
+          <span className="st-subtitle">
+            {tab === 'status'
+              ? `${MANUALS.length} manuals · ${totalSections} sections`
+              : `${UPDATE_LOG.length} updates`}
+          </span>
           <button className="st-export-btn" onClick={exportToXlsx}>
             <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
               <path d="M6.5 1v7M6.5 8L4 5.5M6.5 8L9 5.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
@@ -283,6 +317,41 @@ export default function StatusTable({ open, onClose }) {
         </div>
 
         <div className="st-scroll">
+          {tab === 'log' ? (
+          <table className="st-table st-log">
+            <thead>
+              <tr>
+                <th className="st-th-logdate">Date</th>
+                <th className="st-th-logmanual">Manual</th>
+                <th className="st-th-logupdate">Update</th>
+                <th className="st-th-logsource">Source Document</th>
+              </tr>
+            </thead>
+            <tbody>
+              {UPDATE_LOG.map((entry, i) => {
+                const manual = logManual(entry.manual);
+                return (
+                  <tr key={i} className="st-row-log">
+                    <td className="st-cell-date">{entry.date}</td>
+                    <td className="st-cell-logmanual">
+                      <span className="st-swatch" style={{ background: manual ? COLORS[manual.colorKey] : LOG_GREY }} />
+                      {manual?.label ?? 'Several manuals'}
+                    </td>
+                    <td className="st-cell-logupdate">{entry.update}</td>
+                    <td className="st-cell-logsource">
+                      {entry.source
+                        ? <>
+                            <span className="st-log-file">{entry.source}</span>
+                            {entry.docDate && <span className="st-log-docdate">dated {entry.docDate}</span>}
+                          </>
+                        : <span className="st-dim">—</span>}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          ) : (
           <table className="st-table">
             <thead>
               <tr>
@@ -347,6 +416,7 @@ export default function StatusTable({ open, onClose }) {
               })}
             </tbody>
           </table>
+          )}
         </div>
 
         <div className="st-footer">

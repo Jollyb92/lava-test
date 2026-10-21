@@ -1,0 +1,38 @@
+// Content update log shown in the Status Overview "Update Log" tab, oldest first.
+// date    — when the update was added to the app (from the git history)
+// manual  — MANUALS id in StatusTable.jsx, or null for updates across several manuals
+// source  — document the content comes from; docDate is read from its file name
+export const UPDATE_LOG = [
+  { date: '09.06.2026', manual: 'office',        update: 'First version of the app: diagram of all manuals, a page for every section, Table of Contents, Glossary and Involved Parties.' },
+  { date: '12.06.2026', manual: 'office',        update: 'Restructured to Final Structure v5: Front Matter added, Part E expanded to E.1–E.8, B1/B3/B4/B5/F1/G1 content updated.', source: 'Office Manual Final Structure v5', docDate: '11.06.2026' },
+  { date: '15.06.2026', manual: null,            update: 'Design and Communication Manual pages added; Cultural, Bidding, PPM, Work Safety and Guides topics aligned with the diagram bubbles.' },
+  { date: '15.06.2026', manual: 'worksafety',    update: 'Five chapters added: Safety Roles, Emergency Procedures, Hazard Register, Incident Reporting, FabLab Authorisation.' },
+  { date: '15.06.2026', manual: 'ppm',           update: 'Renamed from Project Processes Manual to Project Management Manual.' },
+  { date: '17.06.2026', manual: 'office',        update: 'B3 Time Off forms (vacation, compensation days, sick leave, overtime) with PDF export; C1 enter/exit checklist; B1 onboarding checklist translated to English; E3 SOP responsibility table.' },
+  { date: '17.06.2026', manual: 'office',        update: 'C1: office floor plan, locker map and checkout system; library (29), equipment (22) and materials (40) items.' },
+  { date: '19.06.2026', manual: 'worksafety',    update: 'Manual PDF linked to all chapters.', source: 'SAFETY MANUAL.pdf' },
+  { date: '19.06.2026', manual: 'ppm',           update: 'Manual PDF linked to all 4 chapters.', source: '250919_Project Processes Manual_v0.1.pdf', docDate: '19.09.2025' },
+  { date: '22.06.2026', manual: 'office',        update: 'Parts A–G added as bubbles on the diagram.' },
+  { date: '22.06.2026', manual: 'ppm',           update: 'Diagram bubbles renamed to the chapters: Introduction, Before / During / After the Project.' },
+  { date: '23.06.2026', manual: 'communication', update: 'Manual added with chapters and page links; merged into 6 chapters: Logo, Font & Color, LAVA Narrative, Themes, LAVA Locations, Style & Hub.', source: 'LAVA_CommunicationsManual_unapproved.pdf' },
+  { date: '23.06.2026', manual: 'ppm',           update: 'Server folder link added to 3.1.2 Folder Structure.' },
+  { date: '23.06.2026', manual: 'lavazero',      update: 'Added to the diagram and status overview; Office Manual D.2 renamed Environmental Practice and linked to LAVA Zero.' },
+  { date: '24.06.2026', manual: 'lavazero',      update: '04 EPD Databases: how-to guide and an editable database with 36 EPD entries.' },
+  { date: '24.06.2026', manual: 'lavazero',      update: '03 Recommended Materials: Regenerative Design and Development PDF added.', source: '2ndEditionRegenerative_Design_and_Development.pdf' },
+  { date: '24.06.2026', manual: 'lavazero',      update: '01 Learning Sessions: Materiality and Embodied Carbon PDF added.', source: '02_260610_L0_MaterialityAndEmbodiedCarbon.pdf', docDate: '10.06.2026' },
+  { date: '24.06.2026', manual: 'office',        update: 'Location tabs (Berlin SA24, Berlin S161, Stuttgart) for C1–C3 and D1–D3; C.1 renamed Office Rules; C1 reimbursement topic with expense form.' },
+  { date: '24.06.2026', manual: 'office',        update: 'B6 Quitting topic added; Administrative Forms server links in B1 pre-boarding and B3 requesting leave.' },
+  { date: '24.06.2026', manual: 'communication', update: 'Server folder links added to Logo and Font & Color.' },
+  { date: '25.06.2026', manual: null,            update: 'Version unified to V1.01; Berlin removed from titles. Safety and PPM PDFs now load from the K: server.' },
+  { date: '25.06.2026', manual: 'design',        update: 'Graphic Approach chapter added with 10 subchapters.', source: '260205_GRAPHIC GUIDELINES.pdf', docDate: '05.02.2026' },
+  { date: '25.06.2026', manual: 'design',        update: 'Competition Guidelines chapter added with 6 subchapters.', source: '260205_COMPETITION GUIDELINES.pdf', docDate: '05.02.2026' },
+  { date: '25.06.2026', manual: 'lavazero',      update: 'Learning Sessions expanded to the 7-session series (Materiality & Embodied Carbon live, others placeholders).' },
+  { date: '26.06.2026', manual: 'lavazero',      update: 'Office Guidelines linked to Office Manual D.2: Waste separation, Heating and Energy, Bio waste bokashi.', source: 'LAVAzero_Office Guidelines.pdf' },
+  { date: '19.10.2026', manual: 'lavai',         update: 'LAVai added to the diagram with a placeholder page.' },
+  { date: '19.10.2026', manual: 'office',        update: 'Renamed Operating LAVA 1.01; Live Systems & Tools renamed IT Manual; responsible people updated.' },
+  { date: '20.10.2026', manual: null,            update: '"See also" links removed; server folder buttons on Design, PPM, Work Safety, Communication and LAVA Zero main pages.' },
+  { date: '20.10.2026', manual: 'ppm',           update: 'Server folder buttons added to 3.2.2, 3.2.4, 3.2.6, 3.3.4 and 3.3.5.' },
+  { date: '21.10.2026', manual: 'design',        update: 'Competition Guidelines restructured to the full table of contents (Cover to 4.2.3), each linked to its pages.', source: '260205_COMPETITION GUIDELINES.pdf', docDate: '05.02.2026' },
+  { date: '21.10.2026', manual: 'design',        update: 'Graphic Approach renamed Graphic Guidelines and restructured to the full table of contents (Cover to 4 Detail Catalogue).', source: '260205_GRAPHIC GUIDELINES.pdf', docDate: '05.02.2026' },
+  { date: '21.10.2026', manual: 'design',        update: 'Design Workflow renamed Design Development; PDF linked with 14 chapters and subchapters.', source: '260224_Design development PPT.pdf', docDate: '24.02.2026' },
+];

@@ -3958,3 +3958,74 @@ a { color: inherit; text-decoration: none; }
     z-index: 20;
   }
 }
+
+/* Status Overview tabs + Update Log */
+.st-tabs {
+  display: flex;
+  gap: 2px;
+  padding: 2px;
+  background: #f3f4f6;
+  border-radius: 7px;
+}
+.st-tab {
+  padding: 5px 12px;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.st-tab:hover { color: #1a1a1a; }
+.st-tab--active {
+  background: #fff;
+  color: #1a1a1a;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+.st-th-logdate   { width: 12%; }
+.st-th-logmanual { width: 20%; }
+.st-th-logupdate { width: 42%; }
+.st-th-logsource { width: 26%; }
+
+.st-row-log {
+  border-top: 1px solid #f3f4f6;
+}
+.st-row-log:hover { background: #fafafa; }
+.st-row-log td { vertical-align: top; }
+.st-row-log .st-cell-date { padding: 10px 20px; }
+
+.st-cell-logmanual {
+  padding: 10px 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.st-cell-logmanual .st-swatch {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: 1px;
+}
+.st-cell-logupdate {
+  padding: 10px 20px;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: #374151;
+}
+.st-cell-logsource {
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+.st-log-file {
+  display: block;
+  color: #374151;
+  overflow-wrap: anywhere;
+}
+.st-log-docdate {
+  display: block;
+  color: #9CA3AF;
+  font-size: 11px;
+}
