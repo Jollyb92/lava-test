@@ -14,3 +14,5 @@ export const PDF_COMPETITION_DES    = '/MANUALS/DESIGN%20MANUAL/260205_COMPETITI
 export const PDF_COMPETITION_DES_FALLBACK = '/pdf-server/6_MANUALS_TEST/2_DESIGN%20MANUAL/260205_COMPETITION%20GUIDELINES.pdf';
 export const PDF_OFFICE_GUIDELINES          = '/MANUALS/LAVA%20ZERO/07_Office%20Guidelines/LAVAzero_Office%20Guidelines.pdf';
 export const PDF_OFFICE_GUIDELINES_FALLBACK = '/pdf-server/6_MANUALS_TEST/7_LAVA%20ZERO/07_Office%20Guidelines/LAVAzero_Office%20Guidelines.pdf';
+export const PDF_DESIGN_DEV          = '/MANUALS/DESIGN%20MANUAL/260224_Design%20development%20PPT.pdf';
+export const PDF_DESIGN_DEV_FALLBACK = '/pdf-server/6_MANUALS_TEST/2_DESIGN%20MANUAL/260224_Design%20development%20PPT.pdf';

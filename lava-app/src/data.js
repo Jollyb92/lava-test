@@ -129,7 +129,7 @@ export const nodes = [
   { id: 'cult-studio',    label: 'Studio\nCulture\n& Rituals',   color: COLORS.culturalSub, textColor: COLORS.dark, radius: 28, x: 378, y: 155, layer: 2, parent: 'cultural', clickTarget: '/detail/cultural?slide=3', connectionType: 'dotted' },
 
   // ── Design sub-nodes — r=110, angles 214°→346° ───────────────────────────
-  { id: 'des-workflow',    label: 'Design\nWorkflow',               color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 509, y: 133, layer: 2, parent: 'design', clickTarget: '/detail/design?chapter=0', connectionType: 'dotted' },
+  { id: 'des-workflow',    label: 'Design\nDevelopment',            color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 509, y: 133, layer: 2, parent: 'design', clickTarget: '/detail/design?chapter=0', connectionType: 'dotted' },
   { id: 'des-philosophy',  label: 'Design\nPhilosophy\nin Practice',color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 557, y: 94,  layer: 2, parent: 'design', clickTarget: '/detail/design?chapter=1', connectionType: 'dotted' },
   { id: 'des-templates',   label: 'Templates\n& Standards',        color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 619, y: 87,  layer: 2, parent: 'design', clickTarget: '/detail/design?chapter=2', connectionType: 'dotted' },
   { id: 'des-graphic',     label: 'Graphic\nGuidelines',             color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 675, y: 115, layer: 2, parent: 'design', clickTarget: '/detail/design?chapter=3', connectionType: 'dotted' },

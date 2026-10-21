@@ -27,10 +27,40 @@
     "coverPdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf",
     "chapters": [
       {
-        "title": "Design Workflow",
+        "title": "Design Development",
         "num": "01",
-        "subchapters": [],
-        "slideData": []
+        "subchapters": [
+          "0 Overview",
+          "0.1 Design & Development Process Map (Inputs / Outputs)",
+          "0.2 Process",
+          "0.3 Stages & Levels of Change",
+          "1 Process Stages",
+          "1.1 Project Kick Off",
+          "1.2 Design Refinement Loop",
+          "1.3 Formal Internal Decision",
+          "1.4 Formal Issue",
+          "2 Authority & Levels of Change",
+          "2.1 Stages & Authority Assignment",
+          "2.2 Stages & Levels of Change",
+          "2.3 Level of Changes Definitions",
+          "3 Definition and Purpose (Summary Table)"
+        ],
+        "slideData": [
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260224_Design%20development%20PPT.pdf", "startPage": 1, "endPage": 3 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260224_Design%20development%20PPT.pdf", "startPage": 1, "endPage": 1 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260224_Design%20development%20PPT.pdf", "startPage": 2, "endPage": 2 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260224_Design%20development%20PPT.pdf", "startPage": 3, "endPage": 3 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260224_Design%20development%20PPT.pdf", "startPage": 4, "endPage": 20 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260224_Design%20development%20PPT.pdf", "startPage": 4, "endPage": 7 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260224_Design%20development%20PPT.pdf", "startPage": 8, "endPage": 11 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260224_Design%20development%20PPT.pdf", "startPage": 12, "endPage": 15 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260224_Design%20development%20PPT.pdf", "startPage": 16, "endPage": 20 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260224_Design%20development%20PPT.pdf", "startPage": 21, "endPage": 25 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260224_Design%20development%20PPT.pdf", "startPage": 21, "endPage": 21 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260224_Design%20development%20PPT.pdf", "startPage": 22, "endPage": 22 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260224_Design%20development%20PPT.pdf", "startPage": 23, "endPage": 25 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260224_Design%20development%20PPT.pdf", "startPage": 26, "endPage": 26 }
+        ]
       },
       {
         "title": "Design Philosophy in Practice",
