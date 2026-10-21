@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
-import { resolvePdfPath, resolveFallbackPath } from './pdfResolver.js';
+import { resolvePdfPath, resolveFallbackPath, PDF_OPTIONS } from './pdfResolver.js';
 import EPDDatabase from './EPDDatabase.jsx';
 
 pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
@@ -1254,6 +1254,7 @@ function PdfScrollSlide({ data }) {
       >
         <Document
           file={src}
+          options={PDF_OPTIONS}
           onLoadSuccess={({ numPages: n }) => setNumPages(n)}
           onLoadError={() => {
             if (!useFallback && resolveFallbackPath(data.pdfPath)) setUseFallback(true);
@@ -1377,6 +1378,7 @@ function PdfPageSlide({ data, allSlideData, topicIndex, onSelect, pdfPath, pages
       <div ref={wrapRef} className="sp-pdf-outer">
         <Document
           file={pdfSrc}
+          options={PDF_OPTIONS}
           loading={<div className="sp-pdf-loading">Loading PDF…</div>}
           error={<div className="sp-pdf-loading">Failed to load PDF.</div>}
           onLoadSuccess={() => setPdfLoaded(true)}

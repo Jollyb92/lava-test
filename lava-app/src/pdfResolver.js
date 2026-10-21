@@ -31,3 +31,11 @@ export function resolveFallbackPath(path) {
   if (!path) return null;
   return FALLBACK_MAP[path] ?? null;
 }
+
+// pdf.js needs these to decode JPEG 2000 images and ICC colour profiles;
+// without them such images are silently skipped. Keep as one shared object
+// so react-pdf doesn't reload the document on every render.
+export const PDF_OPTIONS = {
+  wasmUrl: '/pdfjs/wasm/',
+  iccUrl: '/pdfjs/iccs/',
+};

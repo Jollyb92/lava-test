@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { Document, Page, pdfjs } from 'react-pdf';
-import { resolvePdfPath, resolveFallbackPath } from './pdfResolver.js';
+import { resolvePdfPath, resolveFallbackPath, PDF_OPTIONS } from './pdfResolver.js';
 import { useScrollRestore } from './useScrollRestore.js';
 import { detailPages, COLORS } from './data.js';
 import OnboardingChecklist from './OnboardingChecklist.jsx';
@@ -31,6 +31,7 @@ function CoverPanel({ pdfPath }) {
     <div ref={wrapRef} className="cover-panel">
       <Document
         file={src}
+        options={PDF_OPTIONS}
         loading={null}
         error={null}
         onLoadError={() => {
