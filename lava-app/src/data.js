@@ -132,7 +132,7 @@ export const nodes = [
   { id: 'des-workflow',    label: 'Design\nWorkflow',               color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 509, y: 133, layer: 2, parent: 'design', clickTarget: '/detail/design?chapter=0', connectionType: 'dotted' },
   { id: 'des-philosophy',  label: 'Design\nPhilosophy\nin Practice',color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 557, y: 94,  layer: 2, parent: 'design', clickTarget: '/detail/design?chapter=1', connectionType: 'dotted' },
   { id: 'des-templates',   label: 'Templates\n& Standards',        color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 619, y: 87,  layer: 2, parent: 'design', clickTarget: '/detail/design?chapter=2', connectionType: 'dotted' },
-  { id: 'des-graphic',     label: 'Graphic\nApproach',             color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 675, y: 115, layer: 2, parent: 'design', clickTarget: '/detail/design?chapter=3', connectionType: 'dotted' },
+  { id: 'des-graphic',     label: 'Graphic\nGuidelines',             color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 675, y: 115, layer: 2, parent: 'design', clickTarget: '/detail/design?chapter=3', connectionType: 'dotted' },
   { id: 'des-competition', label: 'Competition\nGuidelines',       color: COLORS.designSub, textColor: COLORS.dark, radius: 28, x: 707, y: 168, layer: 2, parent: 'design', clickTarget: '/detail/design?chapter=4', connectionType: 'dotted' },
 
   // ── Bidding sub-nodes — r=110, angles 350°→86° ───────────────────────────

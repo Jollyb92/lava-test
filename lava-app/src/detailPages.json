@@ -45,22 +45,30 @@
         "slideData": []
       },
       {
-        "title": "Graphic Approach",
+        "title": "Graphic Guidelines",
         "num": "04",
         "subchapters": [
+          "Cover",
           "Intention",
-          "Diagram Catalogue",
-          "1. Information Diagrams",
-          "2. Mood Diagrams",
-          "3. Instrumental Diagrams",
-          "4. Conceptual Narrative Diagrams",
-          "5. Representation Diagrams",
-          "Intent-Driven Drawings",
-          "Drawings by Scale",
-          "Detail Catalogue"
+          "1 Diagram Catalogue",
+          "1.0 Introduction & Types of Diagrams",
+          "1.1 Information Diagrams",
+          "1.2 Mood Diagrams",
+          "1.3 Instrumental Diagrams",
+          "1.4 Conceptual Narrative Diagrams",
+          "1.5 Representation Diagrams",
+          "2 Intent-Driven Drawings Representation",
+          "3 Drawings Representation by Scales",
+          "3.0 Overview",
+          "3.1 1:500 / 1:1000",
+          "3.2 1:200 / 1:100",
+          "3.3 1:50",
+          "4 Detail Catalogue"
         ],
         "slideData": [
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 1, "endPage": 1 },
           { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 2, "endPage": 2 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 3, "endPage": 39 },
           { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 3, "endPage": 5 },
           { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 6, "endPage": 12 },
           { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 13, "endPage": 16 },
@@ -69,6 +77,10 @@
           { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 33, "endPage": 39 },
           { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 40, "endPage": 49 },
           { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 50, "endPage": 71 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 50, "endPage": 51 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 52, "endPage": 55 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 56, "endPage": 67 },
+          { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 68, "endPage": 71 },
           { "type": "pdf-scroll", "pdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf", "startPage": 72, "endPage": 76 }
         ]
       },
