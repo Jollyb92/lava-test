@@ -21,7 +21,7 @@
     "pageServerLinks": [
       {
         "label": "Design Manual",
-        "path": "K:\\6_MANUALS_TEST\\2_DESIGN MANUAL"
+        "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\2_DESIGN MANUAL"
       }
     ],
     "coverPdfPath": "/MANUALS/DESIGN%20MANUAL/260205_GRAPHIC%20GUIDELINES.pdf",
@@ -205,7 +205,7 @@
     "pageServerLinks": [
       {
         "label": "Communication Manual",
-        "path": "K:\\6_MANUALS_TEST\\6_COMMUNICATION MANUAL"
+        "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\6_COMMUNICATION MANUAL"
       }
     ],
     "coverPdfPath": "/MANUALS/COMMUNICATION%20MANUAL/LAVA_CommunicationsManual_unapproved.pdf",
@@ -249,12 +249,12 @@
           }
         ],
         "serverLinks": {
-          "Logo Design & The Slash": [{ "label": "01_Logo folder", "path": "L:\\4_GENERAL OFFICE\\01_Logo" }],
-          "Main Logo Green": [{ "label": "01_Logo folder", "path": "L:\\4_GENERAL OFFICE\\01_Logo" }],
-          "Logo Variants — Presentations & Monochrome": [{ "label": "01_Logo folder", "path": "L:\\4_GENERAL OFFICE\\01_Logo" }],
-          "Email Signature & Long Logo": [{ "label": "01_Logo folder", "path": "L:\\4_GENERAL OFFICE\\01_Logo" }],
-          "Clearspace — Width of Letter L": [{ "label": "01_Logo folder", "path": "L:\\4_GENERAL OFFICE\\01_Logo" }],
-          "Clearspace — Width of Letters LAB": [{ "label": "01_Logo folder", "path": "L:\\4_GENERAL OFFICE\\01_Logo" }]
+          "Logo Design & The Slash": [{ "label": "01_Logo folder", "path": "\\\\lava-b-stor01\\LIBRARY\\4_GENERAL OFFICE\\01_Logo" }],
+          "Main Logo Green": [{ "label": "01_Logo folder", "path": "\\\\lava-b-stor01\\LIBRARY\\4_GENERAL OFFICE\\01_Logo" }],
+          "Logo Variants — Presentations & Monochrome": [{ "label": "01_Logo folder", "path": "\\\\lava-b-stor01\\LIBRARY\\4_GENERAL OFFICE\\01_Logo" }],
+          "Email Signature & Long Logo": [{ "label": "01_Logo folder", "path": "\\\\lava-b-stor01\\LIBRARY\\4_GENERAL OFFICE\\01_Logo" }],
+          "Clearspace — Width of Letter L": [{ "label": "01_Logo folder", "path": "\\\\lava-b-stor01\\LIBRARY\\4_GENERAL OFFICE\\01_Logo" }],
+          "Clearspace — Width of Letters LAB": [{ "label": "01_Logo folder", "path": "\\\\lava-b-stor01\\LIBRARY\\4_GENERAL OFFICE\\01_Logo" }]
         }
       },
       {
@@ -286,10 +286,10 @@
           }
         ],
         "serverLinks": {
-          "ABC Walter Neue (Mittel)": [{ "label": "02_Font folder", "path": "L:\\4_GENERAL OFFICE\\02_Font" }],
-          "Primary Colors — Green, Black, White": [{ "label": "02_Font folder", "path": "L:\\4_GENERAL OFFICE\\02_Font" }],
-          "Theme Color Accents — 8 Themes": [{ "label": "02_Font folder", "path": "L:\\4_GENERAL OFFICE\\02_Font" }],
-          "Additional Color Accents": [{ "label": "02_Font folder", "path": "L:\\4_GENERAL OFFICE\\02_Font" }]
+          "ABC Walter Neue (Mittel)": [{ "label": "02_Font folder", "path": "\\\\lava-b-stor01\\LIBRARY\\4_GENERAL OFFICE\\02_Font" }],
+          "Primary Colors — Green, Black, White": [{ "label": "02_Font folder", "path": "\\\\lava-b-stor01\\LIBRARY\\4_GENERAL OFFICE\\02_Font" }],
+          "Theme Color Accents — 8 Themes": [{ "label": "02_Font folder", "path": "\\\\lava-b-stor01\\LIBRARY\\4_GENERAL OFFICE\\02_Font" }],
+          "Additional Color Accents": [{ "label": "02_Font folder", "path": "\\\\lava-b-stor01\\LIBRARY\\4_GENERAL OFFICE\\02_Font" }]
         }
       },
       {
@@ -475,7 +475,7 @@
     "pageServerLinks": [
       {
         "label": "Project Management Manual",
-        "path": "K:\\6_MANUALS_TEST\\3_PROJECT MANAGEMENT MANUAL"
+        "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\3_PROJECT MANAGEMENT MANUAL"
       }
     ],
     "coverPdfPath": "/MANUALS/PROJECT%20MANAGEMENT%20MANUAL/250919_Project%20Processes%20Manual_v0.1.pdf",
@@ -594,7 +594,7 @@
           "2.2 Project Checklist": [
             {
               "label": "Project Checklist",
-              "path": "L:\\4_PROJECT MANAGEMENT\\02_Templates\\01_Project Checklist"
+              "path": "\\\\lava-b-stor01\\LIBRARY\\4_PROJECT MANAGEMENT\\02_Templates\\01_Project Checklist"
             }
           ]
         }
@@ -705,37 +705,37 @@
           "3.1.2 Folder Structure": [
             {
               "label": "Folder Structure",
-              "path": "L:\\4_PROJECT MANAGEMENT\\02_Templates\\02_Folder Structure"
+              "path": "\\\\lava-b-stor01\\LIBRARY\\4_PROJECT MANAGEMENT\\02_Templates\\02_Folder Structure"
             }
           ],
           "3.2.2 Timeline": [
             {
               "label": "Timeline",
-              "path": "L:\\4_PROJECT MANAGEMENT\\02_Templates\\03_Planning\\01_Timeline"
+              "path": "\\\\lava-b-stor01\\LIBRARY\\4_PROJECT MANAGEMENT\\02_Templates\\03_Planning\\01_Timeline"
             }
           ],
           "3.2.4 Deliverables List": [
             {
               "label": "Deliverables",
-              "path": "L:\\4_PROJECT MANAGEMENT\\02_Templates\\03_Planning\\02_Deliverables"
+              "path": "\\\\lava-b-stor01\\LIBRARY\\4_PROJECT MANAGEMENT\\02_Templates\\03_Planning\\02_Deliverables"
             }
           ],
           "3.2.6 Project Directory": [
             {
               "label": "Project Directory",
-              "path": "L:\\4_PROJECT MANAGEMENT\\02_Templates\\03_Planning\\03_Project Directory"
+              "path": "\\\\lava-b-stor01\\LIBRARY\\4_PROJECT MANAGEMENT\\02_Templates\\03_Planning\\03_Project Directory"
             }
           ],
           "3.3.4 Coordination": [
             {
               "label": "Coordination",
-              "path": "L:\\4_PROJECT MANAGEMENT\\02_Templates\\04_Execution\\02_Coordination"
+              "path": "\\\\lava-b-stor01\\LIBRARY\\4_PROJECT MANAGEMENT\\02_Templates\\04_Execution\\02_Coordination"
             }
           ],
           "3.3.5 Reporting": [
             {
               "label": "Reports & Presentations",
-              "path": "L:\\4_PROJECT MANAGEMENT\\02_Templates\\04_Execution\\01_Reports & Presentations"
+              "path": "\\\\lava-b-stor01\\LIBRARY\\4_PROJECT MANAGEMENT\\02_Templates\\04_Execution\\01_Reports & Presentations"
             }
           ]
         }
@@ -774,7 +774,7 @@
     "pageServerLinks": [
       {
         "label": "Work Safety Manual",
-        "path": "K:\\6_MANUALS_TEST\\5_SAFETY MANUAL"
+        "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\5_SAFETY MANUAL"
       },
       {
         "label": "Work Space Laws",
@@ -869,7 +869,7 @@
     "pageServerLinks": [
       {
         "label": "LAVA Zero",
-        "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO"
+        "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO"
       }
     ],
     "chapters": [
@@ -901,43 +901,43 @@
           "Session 1 — Regenerative Design": [
             {
               "label": "Learning Sessions folder",
-              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
             }
           ],
           "Session 2 — Materiality & Embodied Carbon": [
             {
               "label": "Learning Sessions folder",
-              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
             }
           ],
           "Session 3 — Operational Carbon": [
             {
               "label": "Learning Sessions folder",
-              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
             }
           ],
           "Session 4 — Water Management": [
             {
               "label": "Learning Sessions folder",
-              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
             }
           ],
           "Session 5 — Biophilic, Biomimicry & Biodiversity": [
             {
               "label": "Learning Sessions folder",
-              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
             }
           ],
           "Session 6 — Microclimate & Ecology": [
             {
               "label": "Learning Sessions folder",
-              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
             }
           ],
           "Session 7 — Building Evolution": [
             {
               "label": "Learning Sessions folder",
-              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
             }
           ]
         }
@@ -964,7 +964,7 @@
           "Regenerative Design and Development": [
             {
               "label": "Recommended Materials folder",
-              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\03_Recommended materials"
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\03_Recommended materials"
             }
           ]
         }
@@ -1076,13 +1076,13 @@
           "How to Use This EPD Tracker": [
             {
               "label": "EPD Databases folder",
-              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\04_EPD_Databases"
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\04_EPD_Databases"
             }
           ],
           "EPD Database": [
             {
               "label": "EPD Databases folder",
-              "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\04_EPD_Databases"
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\04_EPD_Databases"
             }
           ]
         }
@@ -1114,7 +1114,7 @@
       "IT Wiki — Teams > BER > Office Management > IT Wiki",
       "Poolarserver — timesheets, Poolarmail, project database",
       "Office Calendar — room bookings, team schedule",
-      "Server L:\\ — BER Projects, Library, Temp, _SCANS",
+      "Server \\\\lava-b-stor01 — BER Projects, Library, Temp, _SCANS",
       "Software licenses — M365, Adobe CC, Rhino, Autodesk, Enscape"
     ]
   },
@@ -1461,7 +1461,7 @@
       }
     ],
     "topicServerLinks": [
-      [{ "label": "Administrative Forms", "path": "L:\\4_GENERAL OFFICE\\91_BER\\Administrative Forms" }],
+      [{ "label": "Administrative Forms", "path": "\\\\lava-b-stor01\\LIBRARY\\4_GENERAL OFFICE\\91_BER\\Administrative Forms" }],
       null,
       null,
       null,
@@ -1867,7 +1867,7 @@
     ],
     "topicServerLinks": [
       null,
-      [{ "label": "Administrative Forms", "path": "L:\\4_GENERAL OFFICE\\91_BER\\Administrative Forms" }],
+      [{ "label": "Administrative Forms", "path": "\\\\lava-b-stor01\\LIBRARY\\4_GENERAL OFFICE\\91_BER\\Administrative Forms" }],
       null,
       null,
       null,
@@ -2063,7 +2063,7 @@
       null
     ],
     "topicServerLinks": [
-      [{ "label": "Application for Leave", "path": "K:\\4_GENERAL OFFICE\\Application for leave" }],
+      [{ "label": "Application for Leave", "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\4_GENERAL OFFICE\\Application for leave" }],
       null,
       null,
       null,
@@ -2984,19 +2984,19 @@
       [
         {
           "label": "Office Guidelines folder",
-          "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\07_Office Guidelines"
+          "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\07_Office Guidelines"
         }
       ],
       [
         {
           "label": "Office Guidelines folder",
-          "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\07_Office Guidelines"
+          "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\07_Office Guidelines"
         }
       ],
       [
         {
           "label": "Office Guidelines folder",
-          "path": "K:\\6_MANUALS_TEST\\7_LAVA ZERO\\07_Office Guidelines"
+          "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\07_Office Guidelines"
         }
       ],
       null,
@@ -3155,7 +3155,7 @@
             "items": [
               {
                 "k": "Guide location",
-                "v": "L:\\1_LAVA\\LAVA STANDARDS\\FOLDER STRUCTURE"
+                "v": "\\\\lava-b-stor01\\LIBRARY\\1_LAVA\\LAVA STANDARDS\\FOLDER STRUCTURE"
               }
             ]
           },
@@ -3170,7 +3170,7 @@
         "blocks": [
           {
             "t": "para",
-            "text": "The Berlin server (L:\\) is divided into the following main zones:"
+            "text": "The Berlin server (\\\\lava-b-stor01) is divided into the following main zones:"
           },
           {
             "t": "kv",
@@ -3188,7 +3188,7 @@
                 "v": "Temporary files only — emptied regularly. Do not store anything important here."
               },
               {
-                "k": "T:\\_SCANS",
+                "k": "\\\\lava-b-stor01\\BER_TEMP\\_SCANS",
                 "v": "Scanned documents from the printer. Delete your scans from this folder after use."
               }
             ]
@@ -3402,7 +3402,7 @@
             "items": [
               "Select 'Workflow Scanning' on the printer",
               "Select the 'Scan_2020' option",
-              "Your scans will appear at T:\\_SCANS",
+              "Your scans will appear at \\\\lava-b-stor01\\BER_TEMP\\_SCANS",
               "Delete your scans from the folder after you are done"
             ]
           }
@@ -3446,7 +3446,7 @@
       "Sibling manuals: Cultural · Design · Bidding · Communication (with links)",
       "Systems: QEMS · Project Management Manual · Work Safety Manual",
       "Guides & Registers: Appendices A–M",
-      "Live locations: IT Wiki · Server L:\\ · Poolarserver · Office Calendar"
+      "Live locations: IT Wiki · Server \\\\lava-b-stor01 · Poolarserver · Office Calendar"
     ]
   },
   "g1": {

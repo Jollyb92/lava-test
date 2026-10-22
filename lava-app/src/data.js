@@ -435,7 +435,7 @@ export const glossaryData = {
     { term: 'IT Wiki', def: "LAVA's internal knowledge base via Teams > BER > Office Management" },
   ],
   locations: [
-    { term: 'L:\\', def: 'Berlin server drive' },
+    { term: '\\\\lava-b-stor01', def: 'Berlin server (drive letters like K:\\ or L:\\ differ per PC)' },
     { term: 'BER PROJECTS', def: 'Server folder for ongoing Berlin projects' },
     { term: 'BER LIBRARY', def: 'Server folder for reference materials and standards' },
     { term: 'BER TEMP', def: 'Server folder for temporary files' },

@@ -1,8 +1,8 @@
 @echo off
 echo Starting LAVA Office Manual (offline)...
 
-:: Start PDF server serving K:\6_MANUALS_TEST on port 4000
-start "PDF Server" cmd /c "npx http-server "K:\6_MANUALS_TEST" -p 4000 --cors -c-1 -s"
+:: Start PDF server serving 6_MANUALS_TEST on port 4000
+start "PDF Server" cmd /c "npx http-server "\\lava-b-stor01\LIBRARY_WORKSPACE\6_MANUALS_TEST" -p 4000 --cors -c-1 -s"
 
 :: Wait a moment for the server to start
 timeout /t 2 /nobreak >nul

@@ -4,11 +4,11 @@ title LAVA App (dev)
 cd /d "%~dp0"
 
 :: Folder that contains 6_MANUALS_TEST (served as /pdf-server/... by the Vite proxy)
-set "PDF_ROOT=K:\"
+set "PDF_ROOT=\\lava-b-stor01\LIBRARY_WORKSPACE\"
 set "PDF_PORT=3000"
 
 if not exist "%PDF_ROOT%6_MANUALS_TEST" (
-  echo WARNING: %PDF_ROOT%6_MANUALS_TEST not found - is the K: drive connected?
+  echo WARNING: %PDF_ROOT%6_MANUALS_TEST not found - is the office network reachable?
   echo The app will start, but PDFs from the file server will not load.
   echo.
 )

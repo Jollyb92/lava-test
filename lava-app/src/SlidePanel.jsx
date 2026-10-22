@@ -1468,8 +1468,8 @@ export default function SlidePanel({
   onClose,
 }) {
   const [officeTab, setOfficeTab] = useState('berlin-sa24');
-  const folderPath = `file:///L:/BER%20PROJECTS/Office%20Manual/${pageId.toUpperCase()}/`;
-  const folderLabel = `L:\\BER PROJECTS\\Office Manual\\${pageId.toUpperCase()}\\`;
+  const folderPath = 'file://lava-b-stor01/LIBRARY_WORKSPACE/6_MANUALS_TEST/1_OFFICE%20MANUAL/';
+  const folderLabel = '\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\1_OFFICE MANUAL';
 
   function handleFolderClick(e) {
     e.preventDefault();
