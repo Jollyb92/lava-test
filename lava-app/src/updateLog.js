@@ -46,4 +46,5 @@ export const UPDATE_LOG = [
   { date: '22.10.2026', manual: 'lavazero',      update: 'Main page shows the first page of the Regenerative Design — Theoretical Foundations session as its cover.' },
   { date: '22.10.2026', manual: 'worksafety',    update: 'Work Space Laws page now lists all 16 laws as links to their official texts, each with a short English description.' },
   { date: '22.10.2026', manual: null,            update: '"Open folder" button removed from the bottom of all content pages; all server links now sit in the Server Links area on the left.' },
+  { date: '22.10.2026', manual: 'office',        update: 'Table of Contents redesigned like the other manuals: each Part is a chapter bubble in the Operating LAVA green, opening to its sections.' },
 ];

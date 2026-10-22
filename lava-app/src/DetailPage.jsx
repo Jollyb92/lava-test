@@ -66,7 +66,7 @@ function TopicLabel({ text }) {
   );
 }
 
-function SubchapterLabel({ text }) {
+export function SubchapterLabel({ text }) {
   const sep = text.indexOf(' — ');
   if (sep === -1) return <span className="subch-title">{text}</span>;
   return (
