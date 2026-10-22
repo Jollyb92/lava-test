@@ -37,4 +37,5 @@ export const UPDATE_LOG = [
   { date: '21.10.2026', manual: 'design',        update: 'Design Workflow renamed Design Development; PDF linked with 14 chapters and subchapters.', source: '260224_Design development PPT.pdf', docDate: '24.02.2026' },
   { date: '21.10.2026', manual: 'worksafety',    update: 'Chapter 6 Work Space Laws added: 16 employment and workplace laws, each with a button to the 5_WORKSPACE LAWS server folder.' },
   { date: '22.10.2026', manual: 'worksafety',    update: 'Restructured to two chapters: the full Work Safety Manual PDF and a Work Space Laws overview page with the server folder button. Work Safety sub-bubbles removed from the map.', source: 'SAFETY MANUAL.pdf' },
+  { date: '22.10.2026', manual: 'worksafety',    update: 'Work Space Laws bubble added to the map below the Work Safety Manual, opening the Work Space Laws chapter.' },
 ];

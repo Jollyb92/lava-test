@@ -249,6 +249,9 @@ export const nodes = [
     readiness: READINESS.lavai,
     connectionType: 'dashed',
   },
+
+  // ── Work Safety sub-node — directly below WorkSafety(600,585) ────────────
+  { id: 'ws-laws', label: 'Work Space\nLaws', color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 600, y: 695, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety?chapter=1', connectionType: 'dotted' },
 ];
 
 // Connections: [fromId, toId]
@@ -302,6 +305,8 @@ export const connections = [
   ['ppm', 'ppm-before'],
   ['ppm', 'ppm-during'],
   ['ppm', 'ppm-after'],
+  // Work Safety sub-node (dotted)
+  ['worksafety', 'ws-laws'],
 ];
 
 // Detail page content — source of truth is detailPages.json; edit that file to update content
