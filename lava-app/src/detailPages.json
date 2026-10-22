@@ -1226,20 +1226,496 @@
     "isoTag": "ISO 9001 §4.4 — Quality Management System",
     "breadcrumb": "Introduction",
     "topics": [
+      "How the App Works — the map, manuals, search and server links",
       "Operating LAVA — daily life, all staff, always",
       "Cultural Manual — values & identity, onboarding & reference",
       "Design Manual — design delivery, designers & project managers",
-      "Bidding Manual is optional for interns & junior architects — available to all for transparency",
       "Project Management Manual — project execution, project managers & leads",
-      "Work Safety Manual — hazards, emergency procedures, wellbeing"
+      "Bidding Manual — proposals, fees and client engagement",
+      "CI + Communications Manual — logo, fonts, colours and the LAVA story",
+      "Work Safety Manual — health, safety and workplace law",
+      "IT Manual — platforms, server and software",
+      "LAVA Zero — sustainability, carbon and regenerative design",
+      "LAVai — AI at LAVA",
+      "QEMS — quality and environmental management, ISO 9001 / 14001",
+      "Guides & Registers — appendices, registers and tracking"
     ],
     "topicColors": [
       "#B3F400",
+      "#B3F400",
       "#1D9E75",
       "#5B3A8A",
-      "#D4652F",
       "#8B3F1C",
-      "#8B2D2D"
+      "#D4652F",
+      "#1B4080",
+      "#8B2D2D",
+      "#1B3B6B",
+      "#3A7D44",
+      "#7A1F5C",
+      "#1A5A4A",
+      "#3D3D3D"
+    ],
+    "slideData": [
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "Operating LAVA brings all of LAVA's manuals and office information together in one place, linked to our ISO 9001 / 14001 management system. It runs on an office PC and opens in your browser — there is nothing to install. Content is updated by hand; every change is listed in the Update Log."
+          },
+          {
+            "t": "h",
+            "text": "The map"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "The green bubble in the centre is Operating LAVA itself — click it to open this Table of Contents.",
+              "The small green bubbles around it open Parts A–G of Operating LAVA directly.",
+              "The large coloured bubbles are the manuals. Solid lines connect the core manuals, dashed lines the supporting systems (QEMS, IT Manual, LAVA Zero, LAVai, Guides & Registers).",
+              "The small bubbles around a manual jump straight to one of its chapters. Hover over a bubble to highlight its connections."
+            ]
+          },
+          {
+            "t": "h",
+            "text": "Inside a manual"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Chapters are shown as numbered bubbles — open one to see its subchapters.",
+              "Click a subchapter to open its content in the panel on the right: PDF pages, text, forms, checklists or maps. The arrows at the top step through the topics.",
+              "Server Links on the left copy a server path (\\\\lava-b-stor01\\…) to your clipboard — paste it into Windows Explorer to open the folder with the templates and source files.",
+              "The tag under each title shows which ISO 9001 / 14001 clause the content supports."
+            ]
+          },
+          {
+            "t": "h",
+            "text": "Finding things"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Search (Ctrl K) works on every page and covers titles, chapters, subchapters, topics and the Glossary. On the map, matching bubbles light up.",
+              "Table of Contents, Glossary and Involved Parties are in the header of the map.",
+              "Status Overview on the map shows how far each manual is, who is responsible and the Update Log, and exports to Excel."
+            ]
+          },
+          {
+            "t": "note",
+            "text": "New here? Start with Operating LAVA Part B — Working Here, then the Cultural Manual. The other manuals are reference: open them when your work needs them."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "The office manual: how daily life at LAVA works, from your first day to your last. It is the entry point to the whole manual family and links to the other manuals wherever they go deeper."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Who it is for",
+                "v": "All staff, always."
+              }
+            ]
+          },
+          {
+            "t": "h",
+            "text": "What is inside"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Part A — Who We Are: LAVA World, values and general rules.",
+              "Part B — Working Here: onboarding, a standard day, time off and leave forms, mentoring and buddy system, performance and growth, offboarding.",
+              "Part C — The Office Environment: office rules, housekeeping, spaces and facilities, library and equipment checkout, office maps.",
+              "Part D — Safety & Environment: work safety, environmental practice (LAVA Zero), environmental preparedness.",
+              "Part E — How We Work: the Design and Project Management Manuals at a glance, SOPs, project folder structure, templates, IT and Poolarserver, document control, graphic identity.",
+              "Parts F and G — cross-references to linked documents, and Knowledge & Growth (Friday Academy)."
+            ]
+          },
+          {
+            "t": "note",
+            "text": "Parts C and D have tabs for each office: Berlin SA24, Berlin S161 and Stuttgart."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "Who LAVA is and how we work together: our story, our values and the rituals that shape studio life."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Who it is for",
+                "v": "Everyone — read it during onboarding, then keep it as a reference."
+              }
+            ]
+          },
+          {
+            "t": "h",
+            "text": "What is inside"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "LAVA Story & History — founded in 2007, our studios and the vision.",
+              "Knowledge Sharing — an open culture: ask questions, share freely.",
+              "Team Ethics & Ground Rules — equality, respect, collaboration over competition.",
+              "Studio Culture & Rituals — Monday Meeting, Friday Academy, team events."
+            ]
+          },
+          {
+            "t": "note",
+            "text": "In preparation — content is being collected."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "How we develop, decide on and present design at LAVA — from the first kick-off to formal issue, and how our drawings and diagrams should look."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Who it is for",
+                "v": "Designers and project managers."
+              }
+            ]
+          },
+          {
+            "t": "h",
+            "text": "What is inside"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "01 Design Development — the design process stage by stage (kick-off, refinement loop, formal internal decision, formal issue) and who may approve which level of change.",
+              "02 Design Philosophy in Practice — in preparation.",
+              "03 Templates & Standards — in preparation.",
+              "04 Graphic Guidelines — the diagram catalogue, drawings by intent and by scale (1:1000 to 1:50) and the detail catalogue.",
+              "05 Competition Guidelines — LAVA's methodology for competitions: project and concept initiation, project data and timeline, key constraints and graphic quality."
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "The processes and templates for running a project at LAVA, from bid to archive. Most chapters link to ready-to-use templates on the server."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Who it is for",
+                "v": "Project managers and project leads; useful for every team member on a project."
+              }
+            ]
+          },
+          {
+            "t": "h",
+            "text": "What is inside"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "01 Introduction — types of projects, core processes, process groups, competencies and the templates register.",
+              "02 Before the Project — bidding code, technical proposal, CVs and portfolio, NDAs, project and document checklists.",
+              "03 During the Project — project code, folder structure and file naming; roles, timeline, resourcing, deliverables and project directory; kick-off, coordination, reporting and quality control.",
+              "04 After the Project — archiving, PR content and the project fact sheet."
+            ]
+          },
+          {
+            "t": "note",
+            "text": "Templates for checklists, timelines, deliverables, coordination and reporting open from the Server Links of each subchapter."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "How LAVA wins work: preparing proposals, setting scope and fee, and engaging with clients."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Who it is for",
+                "v": "Optional for interns and junior architects — available to all for transparency."
+              }
+            ]
+          },
+          {
+            "t": "h",
+            "text": "What is inside"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Proposal Process — brief review, team assembly, timeline.",
+              "Templates & Components — bid deck, cover letter, project sheets.",
+              "Scope & Fee — fee calculation, scope writing, negotiation.",
+              "Client Engagement — communication style, presentation, follow-up."
+            ]
+          },
+          {
+            "t": "note",
+            "text": "Until this manual is complete, the bidding process is described in the Project Management Manual, chapter 02 Before the Project."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "LAVA's corporate identity and how we present ourselves: the brand elements and the words we use to describe our work."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Who it is for",
+                "v": "Everyone who makes presentations, documents, emails or publications."
+              }
+            ]
+          },
+          {
+            "t": "h",
+            "text": "What is inside"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Logo — the slash, the green main logo, variants, email signature and clearspace rules.",
+              "Font & Color — ABC Walter Neue, the primary green, black and white, and the theme accents.",
+              "LAVA Narrative — mission, vision, the five narrative pillars, \"Inquire. Imagine. Invent.\", the What if book and LAB.",
+              "Themes — the eight themes, from Future Cities to Conceptual Explorations.",
+              "LAVA Locations — studios in Berlin, Ho Chi Minh City, Stuttgart and Sydney, satellites and global reach.",
+              "Style & Hub — writing style and the CI + visual assets hub."
+            ]
+          },
+          {
+            "t": "note",
+            "text": "Logo and font files open from the Server Links. The source document is a draft that is not yet approved."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "How to stay healthy and safe in the office, what to do in an emergency, and the laws behind it."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Who it is for",
+                "v": "All staff."
+              }
+            ]
+          },
+          {
+            "t": "h",
+            "text": "What is inside"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Work Safety Manual — your workspace (desk, light, air, noise), trip hazards and electrical devices, safety plans, first aid, fire extinguishers and escape routes, breaks and stress prevention, pregnancy and breastfeeding, and who the safety representatives, first aiders and fire safety helpers are.",
+              "Work Space Laws — the 16 German employment and workplace laws that apply to us, each with a short English description and a link to the official text."
+            ]
+          },
+          {
+            "t": "note",
+            "text": "In an emergency call 112. The first aid kit is above the printer."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "The tools and platforms we use every day and where to find them."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Who it is for",
+                "v": "All staff."
+              }
+            ]
+          },
+          {
+            "t": "h",
+            "text": "What is inside"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "IT Wiki — in Teams > BER > Office Management.",
+              "Poolarserver — timesheets, Poolarmail for large files, the project database.",
+              "Office Calendar — room bookings and team schedule.",
+              "Server \\\\lava-b-stor01 — BER PROJECTS, LIBRARY, TEMP and _SCANS.",
+              "Software licences — M365, Adobe CC, Rhino, Autodesk, Enscape."
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "LAVA's environmental sustainability initiative: learning material and tools for lower-carbon, regenerative design, and guidelines for a greener office."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Who it is for",
+                "v": "Designers who want to measure and reduce the impact of their projects — and everyone in the office."
+              }
+            ]
+          },
+          {
+            "t": "h",
+            "text": "What is inside"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "01 Learning Sessions — Regenerative Design and Materiality & Embodied Carbon.",
+              "02 LCA Tools — what a Life Cycle Assessment measures and when we use one.",
+              "03 Recommended Materials — five publications on regenerative design and embodied carbon.",
+              "04 EPD Databases — what Environmental Product Declarations are and where to find them.",
+              "05 Office Guidelines — waste separation, heating and energy, bio waste (bokashi)."
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "How we use artificial intelligence at LAVA."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Who it is for",
+                "v": "All staff."
+              }
+            ]
+          },
+          {
+            "t": "h",
+            "text": "What it will cover"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "What LAVai is and how to get started.",
+              "Use cases at LAVA.",
+              "Guidelines and data privacy.",
+              "Tools and access."
+            ]
+          },
+          {
+            "t": "note",
+            "text": "In preparation — the chapters are placeholders for now."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "LAVA's Quality & Environmental Management System: the ISO 9001 (quality) and ISO 14001 (environment) framework behind all of the manuals."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Who it is for",
+                "v": "Directors, management and the people responsible for each manual."
+              }
+            ]
+          },
+          {
+            "t": "h",
+            "text": "What is inside"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Organisation structure and processes.",
+              "KPI tracking and reporting.",
+              "Compliance and training.",
+              "Quality Management System (ISO 9001) and Environmental Management System (ISO 14001).",
+              "Document control (ISO 9001 §7.5)."
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "blocks": [
+          {
+            "t": "para",
+            "text": "The supporting documents of the management system, collected as Appendices A–M."
+          },
+          {
+            "t": "kv",
+            "items": [
+              {
+                "k": "Who it is for",
+                "v": "The LAVA Zero team, Admin and anyone who needs a register."
+              }
+            ]
+          },
+          {
+            "t": "h",
+            "text": "What is inside"
+          },
+          {
+            "t": "bullets",
+            "items": [
+              "Legal and environmental registers.",
+              "KPIs and incidents.",
+              "Energy and waste tracking."
+            ]
+          },
+          {
+            "t": "note",
+            "text": "In preparation — the documents are being collected and combined."
+          }
+        ]
+      }
     ]
   },
   "a1": {

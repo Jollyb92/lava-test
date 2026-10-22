@@ -53,4 +53,5 @@ export const UPDATE_LOG = [
   { date: '22.10.2026', manual: null,            update: 'Search cleaned up: old Table of Contents and unused Project Manual pages removed; Operating LAVA results, Glossary and Involved Parties open in the Table of Contents; the old standalone Glossary, Involved Parties and section pages redirect there.' },
   { date: '22.10.2026', manual: 'office',        update: 'Search shows Operating LAVA results in its green; Supporting Systems removed from the Table of Contents.' },
   { date: '22.10.2026', manual: 'office',        update: 'B.3 Requesting leave: topic name now includes "Vacation form" so it can be found in search.' },
+  { date: '22.10.2026', manual: 'office',        update: 'Front Matter Introduction: a page explaining how the app works, and a short page for each manual (what it covers, who it is for, its chapters).' },
 ];
