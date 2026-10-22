@@ -1065,116 +1065,70 @@
         "title": "EPD Databases",
         "num": "04",
         "subchapters": [
-          "How to Use This EPD Tracker",
-          "EPD Database"
+          "EPD Databases — Environmental Product Declarations"
         ],
         "slideData": [
           {
             "type": "text",
             "blocks": [
               {
+                "t": "para",
+                "text": "An Environmental Product Declaration (EPD) is an independently verified document that reports the environmental impact of a building product over its life cycle, following EN 15804. It is the manufacturer's data sheet for sustainability: it states the Global Warming Potential (GWP) and other indicators per declared unit, such as one m³ of concrete or one m² of insulation, split into the life cycle modules A1–A3, A4–A5, B, C and D."
+              },
+              {
                 "t": "h",
-                "text": "Getting Started"
+                "text": "Why we collect them"
+              },
+              {
+                "t": "para",
+                "text": "EPDs are the input data for every Life Cycle Assessment. The more product-specific EPDs we have, the more accurate our embodied carbon figures are compared with generic datasets, and the easier it is to compare materials and products while designing. EPD databases bring these declarations together so they can be searched by category, manufacturer and impact."
+              },
+              {
+                "t": "h",
+                "text": "Things to check"
               },
               {
                 "t": "bullets",
                 "items": [
-                  "Step 1 — Go to the EPD Database sub-chapter. Each row represents one EPD / product.",
-                  "Step 2 — Minimum fields for early-stage use: Product Name, Category, Manufacturer, EPD Reg. No., Issue & Expiry Dates, LCA Scope, and GWP A1–A3 Total.",
-                  "Step 3 — For LP3+ detailed assessments, fill in module columns A1–A3, A4, A5, B, C1–C4 and D individually."
-                ]
-              },
-              {
-                "t": "h",
-                "text": "Column Guide"
-              },
-              {
-                "t": "kv",
-                "items": [
-                  {
-                    "k": "GWP A1–A3",
-                    "v": "Global Warming Potential for manufacturing stages — the primary carbon figure per declared unit."
-                  },
-                  {
-                    "k": "A4 Transport",
-                    "v": "Carbon from transporting the product to the construction site."
-                  },
-                  {
-                    "k": "A5 Installation",
-                    "v": "Carbon from the installation / construction process."
-                  },
-                  {
-                    "k": "B1–B7 Use Stage",
-                    "v": "Emissions during the product's in-use life (often zero for passive materials)."
-                  },
-                  {
-                    "k": "C1–C4 End of Life",
-                    "v": "Demolition, transport, waste processing and disposal."
-                  },
-                  {
-                    "k": "D Beyond Boundary",
-                    "v": "Benefits from reuse, recovery or recycling (reported separately, not added to totals)."
-                  },
-                  {
-                    "k": "Δ A1–C4 Total",
-                    "v": "Sum of modules A1 through C4 — the cradle-to-grave figure without Module D."
-                  }
-                ]
-              },
-              {
-                "t": "h",
-                "text": "Data Quality Tips"
-              },
-              {
-                "t": "kv",
-                "items": [
-                  {
-                    "k": "Declared unit",
-                    "v": "Always record values per the EPD's declared unit. Note the unit and quantity in the product fields."
-                  },
-                  {
-                    "k": "Expiry dates",
-                    "v": "EPDs expire after 5 years. Review quarterly — entries flagged in orange expire within 6 months; red entries are expired."
-                  },
-                  {
-                    "k": "Document link",
-                    "v": "Paste the server path or URL to the EPD PDF in the Document Link field so it can be retrieved later."
-                  },
-                  {
-                    "k": "New versions",
-                    "v": "When an EPD is updated, add a new row. Do not overwrite the existing entry — add a note referencing the old one."
-                  },
-                  {
-                    "k": "GWP for timber",
-                    "v": "Timber products often show a negative A1–A3 GWP due to biogenic carbon storage. This is released in C3 at end of life."
-                  },
-                  {
-                    "k": "Cement EPDs",
-                    "v": "CEM I and CEM II entries are raw material ingredients — do not assign them to geometry in LCA models."
-                  }
+                  "Declared unit — always compare products per the same unit and quantity.",
+                  "Validity — EPDs are valid for five years; check the expiry date before using one.",
+                  "Scope — note which modules are declared; many EPDs cover only A1–A3.",
+                  "Module D — benefits from reuse and recycling are reported separately and not added to the totals."
                 ]
               },
               {
                 "t": "note",
-                "text": "All changes to the database are saved automatically to your browser's local storage and will be available the next time you open the app."
+                "text": "Our EPD databases are kept in the LAVA Zero SharePoint. Open them with the EPD Databases OneDrive button."
               }
             ]
-          },
-          {
-            "type": "epd-database"
           }
         ],
         "serverLinks": {
-          "How to Use This EPD Tracker": [
+          "EPD Databases — Environmental Product Declarations": [
             {
-              "label": "EPD Databases folder",
-              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\04_EPD_Databases"
+              "label": "EPD Databases OneDrive",
+              "url": "https://lavagmbhcom.sharepoint.com/:f:/s/lavazero/IgDM1gGmToMSQZ_n0dzfCz0qAZ76CEq6WjM6Xdr7ZSVNwpQ?e=Ok2lau"
             }
-          ],
-          "EPD Database": [
+          ]
+        }
+      },
+      {
+        "title": "Office Guidelines",
+        "num": "05",
+        "subchapters": [
+          "LAVAzero Office Guidelines"
+        ],
+        "slideData": [
+          {
+            "type": "pdf-scroll",
+            "pdfPath": "/MANUALS/LAVA%20ZERO/07_Office%20Guidelines/LAVAzero_Office%20Guidelines.pdf"
+          }
+        ],
+        "serverLinks": {
+          "LAVAzero Office Guidelines": [
             {
-              "label": "EPD Databases folder",
-              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\04_EPD_Databases"
+              "label": "Office Guidelines folder",
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\07_Office Guidelines"
             }
           ]
         }

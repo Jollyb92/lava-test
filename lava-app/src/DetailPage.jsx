@@ -107,7 +107,15 @@ function ServerLinks({ links, className = '' }) {
     <div className={`server-links ${className}`.trim()}>
       <span className="server-links-label">Server Links</span>
       <div className="server-links-btns">
-        {links.map((link, i) => (
+        {links.map((link, i) => link.url ? (
+          <a key={i} className="server-link-btn" href={link.url} target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M1.5 4.5C1.5 3.4 2.4 2.5 3.5 2.5H6.5L8 4H13C14.1 4 15 4.9 15 6V12C15 13.1 14.1 14 13 14H3C1.9 14 1 13.1 1 12V4.5Z"
+                stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" fill="currentColor" fillOpacity="0.12"/>
+            </svg>
+            <span className="server-link-btn-label">{link.label}</span>
+          </a>
+        ) : (
           <button
             key={i}
             className={`server-link-btn${copied === i ? ' server-link-btn--copied' : ''}`}

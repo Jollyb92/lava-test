@@ -41,4 +41,6 @@ export const UPDATE_LOG = [
   { date: '22.10.2026', manual: 'lavazero',      update: 'Learning Sessions now list the three session PDFs by name with their dates; placeholder sessions removed.' },
   { date: '22.10.2026', manual: 'lavazero',      update: '02 LCA Tools: explanation of Life Cycle Assessment tools and a button to the 02_LCA tools server folder.' },
   { date: '22.10.2026', manual: 'lavazero',      update: '03 Recommended Materials: all five PDFs from the server folder linked.' },
+  { date: '22.10.2026', manual: 'lavazero',      update: '04 EPD Databases: how-to guide and editable database removed; replaced by one page explaining EPDs with a link to the EPD Databases OneDrive.' },
+  { date: '22.10.2026', manual: 'lavazero',      update: '05 Office Guidelines chapter added with the full PDF and a button to the 07_Office Guidelines server folder.', source: 'LAVAzero_Office Guidelines.pdf' },
 ];
