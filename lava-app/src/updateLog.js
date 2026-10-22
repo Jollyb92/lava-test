@@ -43,4 +43,6 @@ export const UPDATE_LOG = [
   { date: '22.10.2026', manual: 'lavazero',      update: '03 Recommended Materials: all five PDFs from the server folder linked.' },
   { date: '22.10.2026', manual: 'lavazero',      update: '04 EPD Databases: how-to guide and editable database removed; replaced by one page explaining EPDs with a link to the EPD Databases OneDrive.' },
   { date: '22.10.2026', manual: 'lavazero',      update: '05 Office Guidelines chapter added with the full PDF and a button to the 07_Office Guidelines server folder.', source: 'LAVAzero_Office Guidelines.pdf' },
+  { date: '22.10.2026', manual: 'lavazero',      update: 'Main page shows the first page of the Regenerative Design — Theoretical Foundations session as its cover.' },
+  { date: '22.10.2026', manual: 'worksafety',    update: 'Work Space Laws page now lists all 16 laws as links to their official texts, each with a short English description.' },
 ];

@@ -1157,6 +1157,20 @@ function TextSlide({ data, accentColor }) {
               <span className="sptx-cta-arrow">↗</span>
             </a>
           );
+        if (block.t === 'links')
+          return (
+            <ul key={i} className="sptx-links">
+              {block.items.map((item, j) => (
+                <li key={j} className="sptx-links-item">
+                  <a href={item.url} target="_blank" rel="noopener noreferrer" className="sptx-links-label" style={{ color: accentColor }}>
+                    {item.label}
+                    <span className="sptx-links-arrow">↗</span>
+                  </a>
+                  {item.desc && <p className="sptx-links-desc">{item.desc}</p>}
+                </li>
+              ))}
+            </ul>
+          );
         if (block.t === 'server-link')
           return <ServerLinkBlock key={i} label={block.label} path={block.path} accentColor={accentColor} />;
         return null;

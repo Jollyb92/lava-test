@@ -806,43 +806,92 @@
             "blocks": [
               {
                 "t": "para",
-                "text": "Our everyday work at LAVA rests on a framework of German employment and workplace law. It protects our health at the desk, in the FabLab and on site, sets the limits of working time and leave, supports us as parents and young colleagues, and guarantees fair treatment for everyone. This page gives an overview of the laws that shape that framework; the full legal texts are kept in the 5_WORKSPACE LAWS folder on the server."
+                "text": "Our everyday work at LAVA rests on a framework of German employment and workplace law. It protects our health at the desk, in the FabLab and on site, sets the limits of working time and leave, supports us as parents and young colleagues, and guarantees fair treatment for everyone. Click a law to open its official text; copies are also kept in the 5_WORKSPACE LAWS folder on the server."
               },
               {
-                "t": "h",
-                "text": "Health and safety at work"
-              },
-              {
-                "t": "para",
-                "text": "The Arbeitsschutzgesetz (ArbSchG, Occupational Health and Safety Act) is the foundation: it obliges the employer to assess the risks of every workplace and to take measures that keep employees safe and healthy. The Arbeitssicherheitsgesetz (ASiG, Occupational Safety Act) adds the people who support this, requiring an occupational safety specialist (Sicherheitsfachkraft) and a company doctor (Betriebsarzt)."
-              },
-              {
-                "t": "para",
-                "text": "How the workplace itself must look is set out in the Arbeitsstättenverordnung (ArbStättV, Workplace Ordinance), from lighting, ventilation and room temperature to screen work and escape routes. Whenever we use machines and tools, as in the FabLab, the Verordnung über Sicherheit und Gesundheitsschutz bei der Verwendung von Arbeitsmitteln (BetrSichV, Industrial Safety Ordinance) applies. The DGUV-Vorschriften (Statutory Accident Insurance Regulations) turn these principles into binding accident prevention rules, including the appointment of first aiders and fire safety helpers. On construction sites, the Baustellenverordnung (BaustellV, Construction Site Ordinance) governs how health and safety are planned and coordinated."
-              },
-              {
-                "t": "h",
-                "text": "Working time and leave"
-              },
-              {
-                "t": "para",
-                "text": "The Arbeitszeitgesetz (ArbZG, Working Hours Act) protects our time: it limits the working day, guarantees rest breaks and requires a rest period between two working days. The Bundesurlaubsgesetz (BUrlG, Federal Leave Act) sets the statutory minimum of paid annual leave. For people who carry out commissioned work from their own premises, the Heimarbeitsgesetz (HAG, Home Work Act) provides comparable protection."
-              },
-              {
-                "t": "h",
-                "text": "Family and young colleagues"
-              },
-              {
-                "t": "para",
-                "text": "The Mutterschutzgesetz (MuSchG, Maternity Protection Act) protects pregnant and breastfeeding employees, with protection periods before and after birth, adapted working conditions and protection against dismissal; the Wellbeing at Work section of the manual explains how LAVA supports this. The Bundeselterngeld- und Elternzeitgesetz (BEEG, Parental Allowance and Parental Leave Act) gives parents the right to parental leave and financial support while they care for their children. For colleagues under 18, such as interns and apprentices, the Jugendarbeitsschutzgesetz (JArbSchG, Protection of Young Workers Act) sets stricter limits on working hours and tasks."
-              },
-              {
-                "t": "h",
-                "text": "The employment relationship and fair treatment"
-              },
-              {
-                "t": "para",
-                "text": "Every employment contract is based on the Bürgerliches Gesetzbuch (BGB, Civil Code), whose §§611–630 define the rights and duties of employer and employee. The Kündigungsschutzgesetz (KSchG, Protection Against Dismissal Act) protects employees against unfair dismissal, and the Allgemeines Gleichbehandlungsgesetz (AGG, General Equal Treatment Act) protects everyone against discrimination on the grounds of ethnic origin, gender, religion or belief, disability, age or sexual identity. Should a dispute ever arise, the Arbeitsgerichtsgesetz (ArbGG, Labour Courts Act) sets out how it is resolved before the labour courts."
+                "t": "links",
+                "items": [
+                  {
+                    "label": "Allgemeines Gleichbehandlungsgesetz (AGG)",
+                    "url": "https://www.gesetze-im-internet.de/agg/",
+                    "desc": "General Equal Treatment Act — protects against discrimination on the grounds of ethnic origin, gender, religion or belief, disability, age or sexual identity."
+                  },
+                  {
+                    "label": "Arbeitszeitgesetz (ArbZG)",
+                    "url": "https://www.gesetze-im-internet.de/arbzg/",
+                    "desc": "Working Hours Act — limits daily working time and sets minimum rest breaks and rest periods between working days."
+                  },
+                  {
+                    "label": "Arbeitsgerichtsgesetz (ArbGG)",
+                    "url": "https://www.gesetze-im-internet.de/arbgg/",
+                    "desc": "Labour Courts Act — sets out how employment disputes are resolved before the labour courts."
+                  },
+                  {
+                    "label": "Arbeitsschutzgesetz (ArbSchG)",
+                    "url": "https://www.gesetze-im-internet.de/arbschg/",
+                    "desc": "Occupational Health and Safety Act — obliges the employer to assess the risks of every workplace and take measures to keep employees safe and healthy."
+                  },
+                  {
+                    "label": "Arbeitssicherheitsgesetz (ASiG)",
+                    "url": "https://www.gesetze-im-internet.de/asig/",
+                    "desc": "Occupational Safety Act — requires an occupational safety specialist and a company doctor to advise the employer."
+                  },
+                  {
+                    "label": "Arbeitsstättenverordnung (ArbStättV)",
+                    "url": "https://www.gesetze-im-internet.de/arbst_ttv_2004/",
+                    "desc": "Workplace Ordinance — requirements for the workplace itself: lighting, ventilation, room temperature, screen work and escape routes."
+                  },
+                  {
+                    "label": "Baustellenverordnung (BaustellV)",
+                    "url": "https://www.gesetze-im-internet.de/baustellv/",
+                    "desc": "Construction Site Ordinance — how health and safety are planned and coordinated on construction sites."
+                  },
+                  {
+                    "label": "Bundeselterngeld- und Elternzeitgesetz (BEEG)",
+                    "url": "https://www.gesetze-im-internet.de/beeg/",
+                    "desc": "Parental Allowance and Parental Leave Act — the right to parental leave and financial support while caring for a child."
+                  },
+                  {
+                    "label": "Bundesurlaubsgesetz (BUrlG)",
+                    "url": "https://www.gesetze-im-internet.de/burlg/",
+                    "desc": "Federal Leave Act — the statutory minimum of paid annual leave."
+                  },
+                  {
+                    "label": "Bürgerliches Gesetzbuch (BGB) §§611–630",
+                    "url": "https://www.gesetze-im-internet.de/bgb/",
+                    "desc": "Civil Code — §§611–630 define the employment contract and the rights and duties of employer and employee."
+                  },
+                  {
+                    "label": "DGUV-Vorschriften",
+                    "url": "https://publikationen.dguv.de/regelwerk/dguv-vorschriften/",
+                    "desc": "Statutory Accident Insurance Regulations — binding accident prevention rules, including the appointment of first aiders and fire safety helpers."
+                  },
+                  {
+                    "label": "Heimarbeitsgesetz (HAG)",
+                    "url": "https://www.gesetze-im-internet.de/hag/",
+                    "desc": "Home Work Act — protection for people who carry out commissioned work from their own premises."
+                  },
+                  {
+                    "label": "Jugendarbeitsschutzgesetz (JArbSchG)",
+                    "url": "https://www.gesetze-im-internet.de/jarbschg/",
+                    "desc": "Protection of Young Workers Act — stricter limits on working hours and tasks for employees under 18, such as interns and apprentices."
+                  },
+                  {
+                    "label": "Kündigungsschutzgesetz (KSchG)",
+                    "url": "https://www.gesetze-im-internet.de/kschg/",
+                    "desc": "Protection Against Dismissal Act — protects employees against socially unjustified dismissal."
+                  },
+                  {
+                    "label": "Mutterschutzgesetz (MuSchG)",
+                    "url": "https://www.gesetze-im-internet.de/muschg_2018/",
+                    "desc": "Maternity Protection Act — protection periods before and after birth, adapted working conditions and protection against dismissal for pregnant and breastfeeding employees."
+                  },
+                  {
+                    "label": "Verordnung über Sicherheit und Gesundheitsschutz bei der Verwendung von Arbeitsmitteln (BetrSichV)",
+                    "url": "https://www.gesetze-im-internet.de/betrsichv_2015/",
+                    "desc": "Industrial Safety Ordinance — safe use of machines, tools and equipment, as in the FabLab."
+                  }
+                ]
               },
               {
                 "t": "note",
@@ -872,6 +921,7 @@
         "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO"
       }
     ],
+    "coverPdfPath": "/MANUALS/LAVA%20ZERO/01_260416_L0_regenerative-design_theoretical%20foundations.pdf",
     "chapters": [
       {
         "title": "Learning Sessions",
