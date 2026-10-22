@@ -249,13 +249,6 @@ export const nodes = [
     readiness: READINESS.lavai,
     connectionType: 'dashed',
   },
-
-  // ── Work Safety sub-nodes — r=110, fan below WorkSafety(600,585) ─────────
-  { id: 'ws-roles',     label: 'Contacts\n& Roles',         color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 703, y: 623, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety?chapter=4', connectionType: 'dotted' },
-  { id: 'ws-emergency', label: 'Emergency\nProcedures',     color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 663, y: 675, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety?chapter=2', connectionType: 'dotted' },
-  { id: 'ws-hazard',    label: 'Hazards &\nPrevention',     color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 600, y: 695, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety?chapter=1', connectionType: 'dotted' },
-  { id: 'ws-incident',  label: 'Wellbeing\nat Work',        color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 537, y: 675, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety?chapter=3', connectionType: 'dotted' },
-  { id: 'ws-fablab',    label: 'Your\nWorkspace',           color: COLORS.safetySub, textColor: COLORS.dark, radius: 28, x: 497, y: 623, layer: 2, parent: 'worksafety', clickTarget: '/detail/worksafety?chapter=0', connectionType: 'dotted' },
 ];
 
 // Connections: [fromId, toId]
@@ -309,12 +302,6 @@ export const connections = [
   ['ppm', 'ppm-before'],
   ['ppm', 'ppm-during'],
   ['ppm', 'ppm-after'],
-  // Work Safety sub-nodes (dotted)
-  ['worksafety', 'ws-roles'],
-  ['worksafety', 'ws-emergency'],
-  ['worksafety', 'ws-hazard'],
-  ['worksafety', 'ws-incident'],
-  ['worksafety', 'ws-fablab'],
 ];
 
 // Detail page content — source of truth is detailPages.json; edit that file to update content

@@ -784,436 +784,69 @@
     "coverPdfPath": "/MANUALS/SAFETY%20MANUAL/SAFETY%20MANUAL.pdf",
     "chapters": [
       {
-        "title": "Your Workspace",
-        "pdfPath": "/MANUALS/SAFETY%20MANUAL/SAFETY%20MANUAL.pdf",
+        "title": "Work Safety Manual",
         "subchapters": [
-          "YOUR SPACE — Set Up Your Environment",
-          "LIGHT — Ideal Sight Conditions",
-          "AIR — Ventilate",
-          "NOISE — Be Considerate"
+          "Work Safety Manual — Full document"
         ],
         "slideData": [
           {
-            "type": "pdf-page",
-            "page": 3
-          },
-          {
-            "type": "pdf-page",
-            "page": 4
-          },
-          {
-            "type": "pdf-page",
-            "page": 5
-          },
-          {
-            "type": "pdf-page",
-            "page": 6
-          }
-        ]
-      },
-      {
-        "title": "Hazards & Prevention",
-        "pdfPath": "/MANUALS/SAFETY%20MANUAL/SAFETY%20MANUAL.pdf",
-        "subchapters": [
-          "TRIP HAZARDS — Stay Safe, Keep the Environment Safe",
-          "ELECTRICITY — Electrical Devices"
-        ],
-        "slideData": [
-          {
-            "type": "pdf-page",
-            "page": 7
-          },
-          {
-            "type": "pdf-page",
-            "page": 8
-          }
-        ]
-      },
-      {
-        "title": "Emergency Procedures",
-        "pdfPath": "/MANUALS/SAFETY%20MANUAL/SAFETY%20MANUAL.pdf",
-        "subchapters": [
-          "SAFETY PLANS — Fluchtweg / Escape Route",
-          "FIRST AID — Help and Assist",
-          "FIRE EXTINGUISHER — Help and Assist",
-          "ESCAPE ROUTES — Help and Assist"
-        ],
-        "slideData": [
-          {
-            "type": "pdf-page",
-            "page": 9
-          },
-          {
-            "type": "pdf-page",
-            "page": 10
-          },
-          {
-            "type": "pdf-page",
-            "page": 11
-          },
-          {
-            "type": "pdf-page",
-            "page": 12
-          }
-        ]
-      },
-      {
-        "title": "Wellbeing at Work",
-        "pdfPath": "/MANUALS/SAFETY%20MANUAL/SAFETY%20MANUAL.pdf",
-        "subchapters": [
-          "YOUR HANDS — Care is Important",
-          "TAKING BREAKS — Self Care is Important",
-          "TALK ABOUT ISSUES — Stress Prevention",
-          "PREGNANT? BREASTFEEDING? — Protection & Support"
-        ],
-        "slideData": [
-          {
-            "type": "pdf-page",
-            "page": 13
-          },
-          {
-            "type": "pdf-page",
-            "page": 14
-          },
-          {
-            "type": "pdf-page",
-            "page": 15
-          },
-          {
-            "type": "pdf-page",
-            "page": 16
-          }
-        ]
-      },
-      {
-        "title": "Contacts & Roles",
-        "pdfPath": "/MANUALS/SAFETY%20MANUAL/SAFETY%20MANUAL.pdf",
-        "subchapters": [
-          "SAFETY REPRESENTATIVE — Sicherheitsbeauftragte",
-          "FIRST AID — Ersthelfer",
-          "FIRE PREVENTION — Brandhelfer",
-          "PROFESSIONAL SUPPORT — Sicherheitsfachkraft / Betriebsarzt"
-        ],
-        "slideData": [
-          {
-            "type": "pdf-page",
-            "page": 17
-          },
-          {
-            "type": "pdf-page",
-            "page": 18
-          },
-          {
-            "type": "pdf-page",
-            "page": 19
-          },
-          {
-            "type": "pdf-page",
-            "page": 20
+            "type": "pdf-scroll",
+            "pdfPath": "/MANUALS/SAFETY%20MANUAL/SAFETY%20MANUAL.pdf"
           }
         ]
       },
       {
         "title": "Work Space Laws",
         "subchapters": [
-          "Allgemeines Gleichbehandlungsgesetz (AGG)",
-          "Arbeitsgerichtsgesetz (ArbGG)",
-          "Arbeitsschutzgesetz (ArbSchG)",
-          "Arbeitssicherheitsgesetz (ASiG)",
-          "Arbeitsstättenverordnung (ArbStättV)",
-          "Arbeitszeitgesetz (ArbZG)",
-          "Baustellenverordnung (BaustellV)",
-          "Bundeselterngeld- und Elternzeitgesetz (BEEG)",
-          "Bundesurlaubsgesetz (BUrlG)",
-          "Bürgerliches Gesetzbuch (BGB) §§611-630",
-          "DGUV-Vorschriften",
-          "Heimarbeitsgesetz (HAG)",
-          "Jugendarbeitsschutzgesetz (JArbSchG)",
-          "Kündigungsschutzgesetz (KSchG)",
-          "Mutterschutzgesetz (MuSchG)",
-          "Verordnung über Sicherheit und Gesundheitsschutz bei der Verwendung von Arbeitsmitteln"
+          "Work Space Laws — German employment and workplace law"
         ],
         "slideData": [
           {
             "type": "text",
             "blocks": [
               {
+                "t": "para",
+                "text": "Our everyday work at LAVA rests on a framework of German employment and workplace law. It protects our health at the desk, in the FabLab and on site, sets the limits of working time and leave, supports us as parents and young colleagues, and guarantees fair treatment for everyone. This page gives an overview of the laws that shape that framework; the full legal texts are kept in the 5_WORKSPACE LAWS folder on the server."
+              },
+              {
                 "t": "h",
-                "text": "Allgemeines Gleichbehandlungsgesetz (AGG)"
+                "text": "Health and safety at work"
               },
               {
                 "t": "para",
-                "text": "General Equal Treatment Act"
-              },
-              {
-                "t": "server-link",
-                "label": "5_WORKSPACE LAWS folder",
-                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "blocks": [
-              {
-                "t": "h",
-                "text": "Arbeitsgerichtsgesetz (ArbGG)"
+                "text": "The Arbeitsschutzgesetz (ArbSchG, Occupational Health and Safety Act) is the foundation: it obliges the employer to assess the risks of every workplace and to take measures that keep employees safe and healthy. The Arbeitssicherheitsgesetz (ASiG, Occupational Safety Act) adds the people who support this, requiring an occupational safety specialist (Sicherheitsfachkraft) and a company doctor (Betriebsarzt)."
               },
               {
                 "t": "para",
-                "text": "Labour Courts Act"
+                "text": "How the workplace itself must look is set out in the Arbeitsstättenverordnung (ArbStättV, Workplace Ordinance), from lighting, ventilation and room temperature to screen work and escape routes. Whenever we use machines and tools, as in the FabLab, the Verordnung über Sicherheit und Gesundheitsschutz bei der Verwendung von Arbeitsmitteln (BetrSichV, Industrial Safety Ordinance) applies. The DGUV-Vorschriften (Statutory Accident Insurance Regulations) turn these principles into binding accident prevention rules, including the appointment of first aiders and fire safety helpers. On construction sites, the Baustellenverordnung (BaustellV, Construction Site Ordinance) governs how health and safety are planned and coordinated."
               },
               {
-                "t": "server-link",
-                "label": "5_WORKSPACE LAWS folder",
-                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "blocks": [
-              {
                 "t": "h",
-                "text": "Arbeitsschutzgesetz (ArbSchG)"
+                "text": "Working time and leave"
               },
               {
                 "t": "para",
-                "text": "Occupational Health and Safety Act"
+                "text": "The Arbeitszeitgesetz (ArbZG, Working Hours Act) protects our time: it limits the working day, guarantees rest breaks and requires a rest period between two working days. The Bundesurlaubsgesetz (BUrlG, Federal Leave Act) sets the statutory minimum of paid annual leave. For people who carry out commissioned work from their own premises, the Heimarbeitsgesetz (HAG, Home Work Act) provides comparable protection."
               },
               {
-                "t": "server-link",
-                "label": "5_WORKSPACE LAWS folder",
-                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "blocks": [
-              {
                 "t": "h",
-                "text": "Arbeitssicherheitsgesetz (ASiG)"
+                "text": "Family and young colleagues"
               },
               {
                 "t": "para",
-                "text": "Occupational Safety Act"
+                "text": "The Mutterschutzgesetz (MuSchG, Maternity Protection Act) protects pregnant and breastfeeding employees, with protection periods before and after birth, adapted working conditions and protection against dismissal; the Wellbeing at Work section of the manual explains how LAVA supports this. The Bundeselterngeld- und Elternzeitgesetz (BEEG, Parental Allowance and Parental Leave Act) gives parents the right to parental leave and financial support while they care for their children. For colleagues under 18, such as interns and apprentices, the Jugendarbeitsschutzgesetz (JArbSchG, Protection of Young Workers Act) sets stricter limits on working hours and tasks."
               },
               {
-                "t": "server-link",
-                "label": "5_WORKSPACE LAWS folder",
-                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "blocks": [
-              {
                 "t": "h",
-                "text": "Arbeitsstättenverordnung (ArbStättV)"
+                "text": "The employment relationship and fair treatment"
               },
               {
                 "t": "para",
-                "text": "Workplace Ordinance"
+                "text": "Every employment contract is based on the Bürgerliches Gesetzbuch (BGB, Civil Code), whose §§611–630 define the rights and duties of employer and employee. The Kündigungsschutzgesetz (KSchG, Protection Against Dismissal Act) protects employees against unfair dismissal, and the Allgemeines Gleichbehandlungsgesetz (AGG, General Equal Treatment Act) protects everyone against discrimination on the grounds of ethnic origin, gender, religion or belief, disability, age or sexual identity. Should a dispute ever arise, the Arbeitsgerichtsgesetz (ArbGG, Labour Courts Act) sets out how it is resolved before the labour courts."
               },
               {
-                "t": "server-link",
-                "label": "5_WORKSPACE LAWS folder",
-                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "blocks": [
-              {
-                "t": "h",
-                "text": "Arbeitszeitgesetz (ArbZG)"
-              },
-              {
-                "t": "para",
-                "text": "Working Hours Act"
-              },
-              {
-                "t": "server-link",
-                "label": "5_WORKSPACE LAWS folder",
-                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "blocks": [
-              {
-                "t": "h",
-                "text": "Baustellenverordnung (BaustellV)"
-              },
-              {
-                "t": "para",
-                "text": "Construction Site Ordinance"
-              },
-              {
-                "t": "server-link",
-                "label": "5_WORKSPACE LAWS folder",
-                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "blocks": [
-              {
-                "t": "h",
-                "text": "Bundeselterngeld- und Elternzeitgesetz (BEEG)"
-              },
-              {
-                "t": "para",
-                "text": "Parental Allowance and Parental Leave Act"
-              },
-              {
-                "t": "server-link",
-                "label": "5_WORKSPACE LAWS folder",
-                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "blocks": [
-              {
-                "t": "h",
-                "text": "Bundesurlaubsgesetz (BUrlG)"
-              },
-              {
-                "t": "para",
-                "text": "Federal Leave Act"
-              },
-              {
-                "t": "server-link",
-                "label": "5_WORKSPACE LAWS folder",
-                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "blocks": [
-              {
-                "t": "h",
-                "text": "Bürgerliches Gesetzbuch (BGB) §§611-630"
-              },
-              {
-                "t": "para",
-                "text": "Civil Code — Employment Contracts"
-              },
-              {
-                "t": "server-link",
-                "label": "5_WORKSPACE LAWS folder",
-                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "blocks": [
-              {
-                "t": "h",
-                "text": "DGUV-Vorschriften"
-              },
-              {
-                "t": "para",
-                "text": "Statutory Accident Insurance Regulations"
-              },
-              {
-                "t": "server-link",
-                "label": "5_WORKSPACE LAWS folder",
-                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "blocks": [
-              {
-                "t": "h",
-                "text": "Heimarbeitsgesetz (HAG)"
-              },
-              {
-                "t": "para",
-                "text": "Home Work Act"
-              },
-              {
-                "t": "server-link",
-                "label": "5_WORKSPACE LAWS folder",
-                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "blocks": [
-              {
-                "t": "h",
-                "text": "Jugendarbeitsschutzgesetz (JArbSchG)"
-              },
-              {
-                "t": "para",
-                "text": "Protection of Young Workers Act"
-              },
-              {
-                "t": "server-link",
-                "label": "5_WORKSPACE LAWS folder",
-                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "blocks": [
-              {
-                "t": "h",
-                "text": "Kündigungsschutzgesetz (KSchG)"
-              },
-              {
-                "t": "para",
-                "text": "Protection Against Dismissal Act"
-              },
-              {
-                "t": "server-link",
-                "label": "5_WORKSPACE LAWS folder",
-                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "blocks": [
-              {
-                "t": "h",
-                "text": "Mutterschutzgesetz (MuSchG)"
-              },
-              {
-                "t": "para",
-                "text": "Maternity Protection Act"
-              },
-              {
-                "t": "server-link",
-                "label": "5_WORKSPACE LAWS folder",
-                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "blocks": [
-              {
-                "t": "h",
-                "text": "Verordnung über Sicherheit und Gesundheitsschutz bei der Verwendung von Arbeitsmitteln"
-              },
-              {
-                "t": "para",
-                "text": "Industrial Safety Ordinance (BetrSichV)"
+                "t": "note",
+                "text": "This overview is for orientation only and does not replace the legal texts. If you have questions about your rights or obligations, please contact Office Management."
               },
               {
                 "t": "server-link",
