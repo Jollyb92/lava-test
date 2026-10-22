@@ -1682,6 +1682,8 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
   gap: 0;
 }
+/* Blocks keep their full height so the panel scrolls instead of clipping them */
+.sptx-wrap > * { flex-shrink: 0; }
 .sptx-h {
   font-size: 12px;
   font-weight: 700;
@@ -1758,48 +1760,6 @@ a { color: inherit; text-decoration: none; }
   color: #333;
   margin: 4px 0 10px;
   font-style: italic;
-}
-
-.sptx-server-link-wrap {
-  margin: 12px 0 6px;
-}
-.sptx-server-link-label {
-  display: block;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: #9ca3af;
-  margin-bottom: 5px;
-}
-.sptx-server-link-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 8px 14px;
-  border: 1.5px solid;
-  border-radius: 6px;
-  background: transparent;
-  font-size: 12px;
-  font-weight: 600;
-  color: #374151;
-  cursor: pointer;
-  position: relative;
-  transition: background 0.12s;
-}
-.sptx-server-link-btn:hover { background: #f3f4f6; }
-.sptx-server-link-copied {
-  position: absolute;
-  right: -4px;
-  top: -22px;
-  background: #1a1a1a;
-  color: #B3F400;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 2px 7px;
-  border-radius: 4px;
-  white-space: nowrap;
-  pointer-events: none;
 }
 
 .sptx-cta {
@@ -2457,24 +2417,6 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.04em;
 }
 .sp-brand strong { color: #888; font-weight: 800; }
-.sp-folder-btn {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 10px;
-  color: #666;
-  background: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 4px 9px;
-  text-decoration: none;
-  cursor: pointer;
-  flex-shrink: 0;
-  font-family: inherit;
-  transition: background 0.12s, color 0.12s;
-}
-.sp-folder-btn:hover { background: #e4e4e4; color: #111; }
-
 /* ── Locker map slide ── */
 .splm-wrap {
   overflow-y: auto;

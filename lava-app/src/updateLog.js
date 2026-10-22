@@ -45,4 +45,5 @@ export const UPDATE_LOG = [
   { date: '22.10.2026', manual: 'lavazero',      update: '05 Office Guidelines chapter added with the full PDF and a button to the 07_Office Guidelines server folder.', source: 'LAVAzero_Office Guidelines.pdf' },
   { date: '22.10.2026', manual: 'lavazero',      update: 'Main page shows the first page of the Regenerative Design — Theoretical Foundations session as its cover.' },
   { date: '22.10.2026', manual: 'worksafety',    update: 'Work Space Laws page now lists all 16 laws as links to their official texts, each with a short English description.' },
+  { date: '22.10.2026', manual: null,            update: '"Open folder" button removed from the bottom of all content pages; all server links now sit in the Server Links area on the left.' },
 ];

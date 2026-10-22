@@ -15,15 +15,6 @@ function ChevronIcon({ dir }) {
   );
 }
 
-function FolderIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-      <path d="M1 3.5C1 2.67 1.67 2 2.5 2H5.5L7 3.5H11.5C12.33 3.5 13 4.17 13 5V10.5C13 11.33 12.33 12 11.5 12H2.5C1.67 12 1 11.33 1 10.5V3.5Z"
-        stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/>
-    </svg>
-  );
-}
-
 const LINK_ICONS = {
   calendar: (
     <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -1076,44 +1067,6 @@ function EvalMatrixSlide({ data }) {
   );
 }
 
-function copyToClipboard(text) {
-  if (navigator.clipboard?.writeText) {
-    return navigator.clipboard.writeText(text);
-  }
-  const ta = document.createElement('textarea');
-  ta.value = text;
-  ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none';
-  document.body.appendChild(ta);
-  ta.focus();
-  ta.select();
-  document.execCommand('copy');
-  document.body.removeChild(ta);
-  return Promise.resolve();
-}
-
-function ServerLinkBlock({ label, path, accentColor }) {
-  const [copied, setCopied] = useState(false);
-  function handleCopy() {
-    copyToClipboard(path).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1500);
-    });
-  }
-  return (
-    <div className="sptx-server-link-wrap">
-      <span className="sptx-server-link-label">Server Link</span>
-      <button className="sptx-server-link-btn" onClick={handleCopy} style={{ borderColor: accentColor }}>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M1.5 4.5C1.5 3.4 2.4 2.5 3.5 2.5H6.5L8 4H13C14.1 4 15 4.9 15 6V12C15 13.1 14.1 14 13 14H3C1.9 14 1 13.1 1 12V4.5Z"
-            stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" fill="currentColor" fillOpacity="0.08"/>
-        </svg>
-        {label}
-        {copied && <span className="sptx-server-link-copied">Path copied!</span>}
-      </button>
-    </div>
-  );
-}
-
 function TextSlide({ data, accentColor }) {
   return (
     <div className="sptx-wrap">
@@ -1171,8 +1124,6 @@ function TextSlide({ data, accentColor }) {
               ))}
             </ul>
           );
-        if (block.t === 'server-link')
-          return <ServerLinkBlock key={i} label={block.label} path={block.path} accentColor={accentColor} />;
         return null;
       })}
     </div>
@@ -1481,18 +1432,6 @@ export default function SlidePanel({
   onClose,
 }) {
   const [officeTab, setOfficeTab] = useState('berlin-sa24');
-  const folderPath = 'file://lava-b-stor01/LIBRARY_WORKSPACE/6_MANUALS_TEST/1_OFFICE%20MANUAL/';
-  const folderLabel = '\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\1_OFFICE MANUAL';
-
-  function handleFolderClick(e) {
-    e.preventDefault();
-    const opened = window.open(folderPath, '_blank');
-    if (!opened) {
-      navigator.clipboard?.writeText(folderLabel).catch(() => {});
-      alert(`Server path:\n${folderLabel}\n\n(Path copied to clipboard)`);
-    }
-  }
-
   return (
     <div className="sp-panel">
       {/* Top bar: nav + close */}
@@ -1591,20 +1530,11 @@ export default function SlidePanel({
           </div>
         )}
 
-        {/* Footer: branding + folder link */}
+        {/* Footer: branding */}
         <div className="sp-footer">
           <span className="sp-brand">
             <strong>Operating</strong> LAVA
           </span>
-          <a
-            className="sp-folder-btn"
-            href={folderPath}
-            onClick={handleFolderClick}
-            title={folderLabel}
-          >
-            <FolderIcon />
-            Open folder
-          </a>
         </div>
       </div>
     </div>

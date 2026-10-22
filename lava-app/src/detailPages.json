@@ -896,15 +896,18 @@
               {
                 "t": "note",
                 "text": "This overview is for orientation only and does not replace the legal texts. If you have questions about your rights or obligations, please contact Office Management."
-              },
-              {
-                "t": "server-link",
-                "label": "5_WORKSPACE LAWS folder",
-                "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
               }
             ]
           }
-        ]
+        ],
+        "serverLinks": {
+          "Work Space Laws — German employment and workplace law": [
+            {
+              "label": "5_WORKSPACE LAWS folder",
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\5_WORKSPACE LAWS"
+            }
+          ]
+        }
       }
     ]
   },
