@@ -47,4 +47,10 @@ export const UPDATE_LOG = [
   { date: '22.10.2026', manual: 'worksafety',    update: 'Work Space Laws page now lists all 16 laws as links to their official texts, each with a short English description.' },
   { date: '22.10.2026', manual: null,            update: '"Open folder" button removed from the bottom of all content pages; all server links now sit in the Server Links area on the left.' },
   { date: '22.10.2026', manual: 'office',        update: 'Table of Contents redesigned like the other manuals: each Part is a chapter bubble in the Operating LAVA green, opening to its sections.' },
+  { date: '22.10.2026', manual: 'office',        update: 'Table of Contents: clicking a section opens its content in the panel on the right, with arrows through its topics, instead of leaving the page.' },
+  { date: '22.10.2026', manual: 'office',        update: 'Table of Contents: Glossary and Involved Parties open in the side panel; Table of Contents entry removed from Front Matter; the open section lists its topics (forms, check-in/check-out, maps) for direct access.' },
+  { date: '22.10.2026', manual: 'office',        update: 'Involved Parties: each manual shown in its bubble colour. B.1 forms: Vacation and Compensation Request copy the Administrative Forms server path.' },
+  { date: '22.10.2026', manual: null,            update: 'Search cleaned up: old Table of Contents and unused Project Manual pages removed; Operating LAVA results, Glossary and Involved Parties open in the Table of Contents; the old standalone Glossary, Involved Parties and section pages redirect there.' },
+  { date: '22.10.2026', manual: 'office',        update: 'Search shows Operating LAVA results in its green; Supporting Systems removed from the Table of Contents.' },
+  { date: '22.10.2026', manual: 'office',        update: 'B.3 Requesting leave: the vacation form is replaced by the Urlaubsantrag PDF (searchable as "Vacation form"), with the Administrative Forms server button.', source: '140101_LAVA_Urlaubsantrag_v1.0.pdf' },
 ];

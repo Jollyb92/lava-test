@@ -23,6 +23,12 @@ export default defineConfig(({ mode }) => {
           changeOrigin: true,
           rewrite: path => path.replace(/^\/pdf-server/, ''),
         },
+        // \\lava-b-stor01\LIBRARY\4_GENERAL OFFICE\91_BER\Administrative Forms
+        '/pdf-forms': {
+          target: env.PDF_FORMS_SERVER || 'http://127.0.0.1:3001',
+          changeOrigin: true,
+          rewrite: path => path.replace(/^\/pdf-forms/, ''),
+        },
       },
     },
     resolve: {

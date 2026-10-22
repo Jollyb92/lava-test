@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback, useMemo, memo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { nodes, connections, COLORS } from './data.js';
+import { nodes, connections, COLORS, tocLink } from './data.js';
 import GlobalSearch, { SearchButton } from './GlobalSearch.jsx';
 import StatusTable from './StatusTable.jsx';
 import ActiveUsers from './ActiveUsers.jsx';
@@ -289,8 +289,8 @@ export default function DiagramPage({ searchOpen, onSearchOpen, onSearchClose })
         </div>
         <div className="header-btns">
           <button className="hbtn" onClick={() => navigate('/toc')}>Table of Contents</button>
-          <button className="hbtn" onClick={() => navigate('/glossary')}>Glossary</button>
-          <button className="hbtn" onClick={() => navigate('/involved')}>Involved Parties</button>
+          <button className="hbtn" onClick={() => navigate(tocLink('glossary'))}>Glossary</button>
+          <button className="hbtn" onClick={() => navigate(tocLink('involved'))}>Involved Parties</button>
         </div>
       </div>
 

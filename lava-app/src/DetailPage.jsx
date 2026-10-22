@@ -7,6 +7,7 @@ import { detailPages, COLORS } from './data.js';
 import OnboardingChecklist from './OnboardingChecklist.jsx';
 import SlidePanel from './SlidePanel.jsx';
 import { SearchButton } from './GlobalSearch.jsx';
+import { copyToClipboard } from './clipboard.js';
 
 pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
 
@@ -51,9 +52,7 @@ function CoverPanel({ pdfPath }) {
   );
 }
 
-const CHECKLIST_TRIGGER = 'Digital Onboarding Checklist';
-
-const FRONT_MATTER_IDS = new Set(['doc-control', 'intro']);
+export const CHECKLIST_TRIGGER = 'Digital Onboarding Checklist';
 
 function TopicLabel({ text }) {
   const sep = text.indexOf(' — ');
@@ -77,22 +76,7 @@ export function SubchapterLabel({ text }) {
   );
 }
 
-function copyToClipboard(text) {
-  if (navigator.clipboard?.writeText) {
-    return navigator.clipboard.writeText(text);
-  }
-  const ta = document.createElement('textarea');
-  ta.value = text;
-  ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none';
-  document.body.appendChild(ta);
-  ta.focus();
-  ta.select();
-  document.execCommand('copy');
-  document.body.removeChild(ta);
-  return Promise.resolve();
-}
-
-function ServerLinks({ links, className = '' }) {
+export function ServerLinks({ links, className = '' }) {
   const [copied, setCopied] = useState(null);
   if (!links?.length) return null;
 
@@ -380,7 +364,7 @@ export default function DetailPage({ onSearchOpen }) {
     <div className="detail-page fade-in">
       {/* Top bar */}
       <div className="detail-top-bar">
-        <button className="back-btn" onClick={() => FRONT_MATTER_IDS.has(id) ? navigate('/toc') : navigate(-1)}>
+        <button className="back-btn" onClick={() => navigate(-1)}>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M9 2L4 7L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>

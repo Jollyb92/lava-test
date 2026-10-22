@@ -1,14 +1,16 @@
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { detailPages, glossaryData, COLORS, nodes } from './data.js';
+import { detailPages, glossaryData, involvedPartiesData, COLORS, nodes, OFFICE_SECTION_IDS, tocLink } from './data.js';
 
 // ── Build search index once ───────────────────────────────────────────────────
 function buildIndex() {
   const entries = [];
 
   for (const [id, page] of Object.entries(detailPages)) {
-    const color  = page.color  || COLORS.center;
-    const tColor = page.textColor === '#1a1a1a' ? '#1a1a1a' : '#fff';
+    // Operating LAVA sections take the Operating LAVA bubble green
+    const office = OFFICE_SECTION_IDS.has(id);
+    const color  = office ? COLORS.center : page.color || COLORS.center;
+    const tColor = office || page.textColor === '#1a1a1a' ? '#1a1a1a' : '#fff';
     const base   = { id, pageTitle: page.title, breadcrumb: page.breadcrumb, color, tColor };
 
     // Page title itself
@@ -35,7 +37,19 @@ function buildIndex() {
     entries.push({
       id: 'glossary', pageTitle: 'Glossary', breadcrumb: 'Front Matter > Glossary',
       color: COLORS.center, tColor: '#1a1a1a',
-      text: `${term} — ${def}`, type: 'glossary', nav: '/glossary',
+      text: `${term} — ${def}`, type: 'glossary', nav: tocLink('glossary'),
+    });
+  });
+
+  // Involved Parties
+  entries.push({
+    id: 'involved', pageTitle: 'Involved Parties', breadcrumb: 'Front Matter > Involved Parties',
+    color: COLORS.center, tColor: '#1a1a1a', text: 'Involved Parties', type: 'page', nav: tocLink('involved'),
+  });
+  involvedPartiesData.forEach(({ manual, role }) => {
+    entries.push({
+      id: 'involved', pageTitle: 'Involved Parties', breadcrumb: 'Front Matter > Involved Parties',
+      color: COLORS.center, tColor: '#1a1a1a', text: `${manual} — ${role}`, type: 'topic', nav: tocLink('involved'),
     });
   });
 
@@ -43,9 +57,7 @@ function buildIndex() {
 }
 
 function pageNav(id, topicIndex, chIndex, subIndex) {
-  if (id === 'toc')      return '/toc';
-  if (id === 'glossary') return '/glossary';
-  if (id === 'involved') return '/involved';
+  if (OFFICE_SECTION_IDS.has(id)) return tocLink(id, topicIndex);
   const base = `/detail/${id}`;
   if (topicIndex !== undefined) return `${base}?slide=${topicIndex}`;
   if (chIndex !== undefined && subIndex !== undefined) return `${base}?chapter=${chIndex}&sub=${subIndex}`;
@@ -57,16 +69,18 @@ const INDEX = buildIndex();
 
 // ── Map a search hit to the diagram bubbles it belongs to ────────────────────
 const NODE_BY_TARGET = new Map(nodes.filter(n => n.clickTarget).map(n => [n.clickTarget, n.id]));
-const CENTER_PAGE_IDS = new Set(['toc', 'doc-control', 'intro', 'ecosystem']);
 
 function nodeIdsFor(item) {
   const ids = [];
   const add = target => { const n = NODE_BY_TARGET.get(target); if (n) ids.push(n); };
   if (item.type === 'glossary') return ids;
-  if (CENTER_PAGE_IDS.has(item.id)) { add('/toc'); return ids; }
-  // Operating LAVA chapters (a1, b2, …) belong to the centre and its Part bubble
-  const part = /^([a-g])\d$/.exec(item.id);
-  if (part) { add('/toc'); add(`/toc#part-${part[1]}`); return ids; }
+  // Operating LAVA sections belong to the centre and, for a1, b2, …, their Part bubble
+  if (OFFICE_SECTION_IDS.has(item.id)) {
+    add('/toc');
+    const part = /^([a-g])\d$/.exec(item.id);
+    if (part) add(`/toc#part-${part[1]}`);
+    return ids;
+  }
   add(`/detail/${item.id}`);
   if (item.ti !== undefined) add(`/detail/${item.id}?slide=${item.ti}`);
   if (item.ci !== undefined) add(`/detail/${item.id}?chapter=${item.ci}`);

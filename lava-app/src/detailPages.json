@@ -435,21 +435,7 @@
       }
     ]
   },
-  "project": {
-    "id": "project",
-    "colorKey": "project",
-    "title": "Project Manual",
-    "isoTag": "ISO 9001 §8.3 / §8.1 — Design, Development & Control",
-    "breadcrumb": "Project Manual",
-    "topics": [
-      "Project Phases",
-      "Quality Standards",
-      "Deliverables & Archive",
-      "File Management",
-      "Lessons Learned"
-    ]
-  },
-  "qems": {
+"qems": {
     "id": "qems",
     "colorKey": "qems",
     "title": "QEMS",
@@ -1217,25 +1203,7 @@
       "Software licenses — M365, Adobe CC, Rhino, Autodesk, Enscape"
     ]
   },
-  "toc": {
-    "id": "toc",
-    "colorKey": "center",
-    "textColorKey": "dark",
-    "title": "Table of Contents",
-    "isoTag": "ISO 9001 §7.5 — Documented Information",
-    "breadcrumb": "Front Matter > Table of Contents",
-    "topics": [
-      "Front Matter — Document Control, Involved Parties, Glossary, Introduction",
-      "Part A — Who We Are",
-      "Part B — Working Here",
-      "Part C — The Office Environment",
-      "Part D — Safety & Environment",
-      "Part E — How We Work",
-      "Part F — Connections",
-      "Part G — Knowledge & Growth"
-    ]
-  },
-  "doc-control": {
+"doc-control": {
     "id": "doc-control",
     "colorKey": "center",
     "textColorKey": "dark",
@@ -1534,13 +1502,13 @@
           {
             "label": "Vacation Request",
             "desc": "Submit annual leave and holiday requests to HR",
-            "url": "#",
+            "path": "\\\\lava-b-stor01\\LIBRARY\\4_GENERAL OFFICE\\91_BER\\Administrative Forms",
             "icon": "calendar"
           },
           {
             "label": "Compensation Request",
             "desc": "Overtime compensation and time-off-in-lieu forms",
-            "url": "#",
+            "path": "\\\\lava-b-stor01\\LIBRARY\\4_GENERAL OFFICE\\91_BER\\Administrative Forms",
             "icon": "coins"
           },
           {
@@ -1722,7 +1690,7 @@
     "breadcrumb": "Part B — Working Here > B.3 Time Off & Absence",
     "topics": [
       "Holiday year & entitlement",
-      "Requesting leave — Urlaubsantrag, notice periods, link for forms",
+      "Requesting leave — Urlaubsantrag (Vacation form), notice periods, link for forms",
       "Compensation days",
       "Public holidays — Berlin",
       "Sickness & doctor's notes",
@@ -1752,56 +1720,8 @@
         ]
       },
       {
-        "type": "form",
-        "title": "Vacation Request",
-        "subtitle": "Submit annual or special leave to HR",
-        "icon": "calendar",
-        "fields": [
-          {
-            "id": "name",
-            "label": "Full Name",
-            "type": "text",
-            "placeholder": "Your full name",
-            "required": true
-          },
-          {
-            "id": "position",
-            "label": "Position",
-            "type": "text",
-            "placeholder": "Your job title"
-          },
-          {
-            "id": "from",
-            "label": "From",
-            "type": "date",
-            "required": true
-          },
-          {
-            "id": "to",
-            "label": "To",
-            "type": "date",
-            "required": true
-          },
-          {
-            "id": "type",
-            "label": "Leave Type",
-            "type": "select",
-            "options": [
-              "Annual Leave",
-              "Special Leave (Sonderurlaub)",
-              "Unpaid Leave"
-            ],
-            "required": true
-          },
-          {
-            "id": "notes",
-            "label": "Notes",
-            "type": "textarea",
-            "placeholder": "Any additional context for HR"
-          }
-        ],
-        "submitLabel": "Submit Vacation Request",
-        "confirmMessage": "Your vacation request has been submitted. HR will confirm within 2 business days."
+        "type": "pdf-scroll",
+        "pdfPath": "/MANUALS/OFFICE%20MANUAL/140101_LAVA_Urlaubsantrag_v1.0.pdf"
       },
       {
         "type": "form",

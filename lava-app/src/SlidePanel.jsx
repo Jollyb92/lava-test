@@ -3,6 +3,7 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 import { resolvePdfPath, resolveFallbackPath, PDF_OPTIONS } from './pdfResolver.js';
+import { copyToClipboard } from './clipboard.js';
 
 pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
 
@@ -49,7 +50,18 @@ const LINK_ICONS = {
 };
 
 function LinksSlide({ data, accentColor }) {
-  function handleClick(item, e) {
+  const [copied, setCopied] = useState(null);
+
+  function handleClick(item, e, i) {
+    // Server folders can't be opened from the browser, so copy the path
+    if (item.path) {
+      e.preventDefault();
+      copyToClipboard(item.path).then(() => {
+        setCopied(i);
+        setTimeout(() => setCopied(null), 1500);
+      });
+      return;
+    }
     if (!item.url || item.url === '#') {
       e.preventDefault();
       alert(`Link for "${item.label}" is not yet configured.\nPlease contact HR or IT to get the correct URL.`);
@@ -68,21 +80,27 @@ function LinksSlide({ data, accentColor }) {
         {data.items.map((item, i) => (
           <a
             key={i}
-            className={`sp-link-card${!item.url || item.url === '#' ? ' sp-link-card--placeholder' : ''}`}
+            className={`sp-link-card${!item.path && (!item.url || item.url === '#') ? ' sp-link-card--placeholder' : ''}`}
             href={item.url || '#'}
+            title={item.path}
             target={item.external ? '_blank' : undefined}
             rel={item.external ? 'noopener noreferrer' : undefined}
-            onClick={(e) => handleClick(item, e)}
+            onClick={(e) => handleClick(item, e, i)}
           >
             <div className="sp-link-icon" style={{ color: accentColor, background: `${accentColor}18` }}>
               {LINK_ICONS[item.icon]}
             </div>
             <div className="sp-link-body">
               <div className="sp-link-label">{item.label}</div>
-              <div className="sp-link-desc">{item.desc}</div>
+              <div className="sp-link-desc">{copied === i ? 'Server path copied — paste it into File Explorer' : item.desc}</div>
             </div>
             <div className="sp-link-arrow">
-              {!item.url || item.url === '#' ? (
+              {item.path ? (
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                  <path d="M1.5 4.5C1.5 3.4 2.4 2.5 3.5 2.5H6.5L8 4H13C14.1 4 15 4.9 15 6V12C15 13.1 14.1 14 13 14H3C1.9 14 1 13.1 1 12V4.5Z"
+                    stroke={accentColor} strokeWidth="1.6" strokeLinejoin="round" fill={accentColor} fillOpacity="0.12"/>
+                </svg>
+              ) : !item.url || item.url === '#' ? (
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                   <circle cx="6" cy="6" r="5" stroke="#D1D5DB" strokeWidth="1.3"/>
                   <path d="M6 4V6.5M6 8V8.2" stroke="#9CA3AF" strokeWidth="1.4" strokeLinecap="round"/>
@@ -1091,7 +1109,9 @@ function TextSlide({ data, accentColor }) {
             <dl key={i} className="sptx-kv">
               {block.items.map((item, j) => (
                 <div key={j} className="sptx-kv-row">
-                  <dt className="sptx-kv-key" style={{ color: accentColor }}>{item.k}</dt>
+                  <dt className="sptx-kv-key" style={item.color
+                    ? { background: item.color, color: item.color === '#B3F400' ? '#1a1a1a' : '#fff' }
+                    : { color: accentColor }}>{item.k}</dt>
                   <dd className="sptx-kv-val">{item.v}</dd>
                 </div>
               ))}
@@ -1457,7 +1477,7 @@ export default function SlidePanel({
       <div className="sp-body">
 
         {/* Slide header band */}
-        <div className="sp-header" style={{ background: accentColor }}>
+        <div className={`sp-header${accentColor === '#B3F400' ? ' sp-header--light' : ''}`} style={{ background: accentColor }}>
           <span className="sp-header-section">{pageTitle}</span>
           <span className="sp-header-sep">›</span>
           <span className="sp-header-topic">{topic}</span>

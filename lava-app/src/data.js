@@ -333,7 +333,6 @@ export const tocData = {
         { id: 'involved', label: 'Involved Parties' },
         { id: 'glossary', label: 'Glossary' },
         { id: 'intro', label: 'Introduction — How to Use This Manual Family' },
-        { id: 'toc', label: 'Table of Contents' },
       ],
     },
     {
@@ -395,19 +394,18 @@ export const tocData = {
         { id: 'g1', label: 'G.1 Knowledge & Growth' },
       ],
     },
-    {
-      label: 'Supporting Systems',
-      sections: [
-        { id: 'qems', label: 'QEMS' },
-        { id: 'ppm', label: 'Project Management Manual (PPM)' },
-        { id: 'worksafety', label: 'Work Safety Manual' },
-        { id: 'guides', label: 'Guides & Registers (Appendices A–M)' },
-        { id: 'live', label: 'IT Manual' },
-        { id: 'lavai', label: 'LAVai' },
-      ],
-    },
   ],
 };
+
+// Operating LAVA's own sections (Front Matter, Parts A–G); they open inside the
+// Table of Contents rather than on a page of their own
+export const OFFICE_SECTION_IDS = new Set(
+  tocData.parts.flatMap(p => p.sections.map(s => s.id))
+);
+
+export function tocLink(id, topic) {
+  return `/toc?sec=${id}${topic ? `&topic=${topic}` : ''}`;
+}
 
 export const glossaryData = {
   manualFamily: [
@@ -453,16 +451,16 @@ export const glossaryData = {
 };
 
 export const involvedPartiesData = [
-  { manual: 'Operating LAVA', role: 'Office Manager drafts, Directors review' },
-  { manual: 'Cultural Manual', role: 'Thili' },
-  { manual: 'Design Manual', role: 'Albert' },
-  { manual: 'Bidding Manual', role: 'Lukas K and Su' },
-  { manual: 'Project Manual / Project Management Manual', role: 'Jalal' },
-  { manual: 'Communication Manual', role: 'Roxane and Durant' },
-  { manual: 'Work Safety Manual', role: 'Daniel' },
-  { manual: 'IT Manual', role: 'Mohammad' },
-  { manual: 'LAVA Zero', role: 'Daniel' },
-  { manual: 'LAVai', role: 'Jan' },
-  { manual: 'QEMS', role: 'Existing owners stay' },
-  { manual: 'Guides & Registers', role: 'LAVA Zero team + Admin' },
+  { manual: 'Operating LAVA', colorKey: 'center', role: 'Office Manager drafts, Directors review' },
+  { manual: 'Cultural Manual', colorKey: 'cultural', role: 'Thili' },
+  { manual: 'Design Manual', colorKey: 'design', role: 'Albert' },
+  { manual: 'Bidding Manual', colorKey: 'bidding', role: 'Lukas K and Su' },
+  { manual: 'Project Manual / Project Management Manual', colorKey: 'ppm', role: 'Jalal' },
+  { manual: 'Communication Manual', colorKey: 'communication', role: 'Roxane and Durant' },
+  { manual: 'Work Safety Manual', colorKey: 'safety', role: 'Daniel' },
+  { manual: 'IT Manual', colorKey: 'live', role: 'Mohammad' },
+  { manual: 'LAVA Zero', colorKey: 'lavaZero', role: 'Daniel' },
+  { manual: 'LAVai', colorKey: 'lavai', role: 'Jan' },
+  { manual: 'QEMS', colorKey: 'qems', role: 'Existing owners stay' },
+  { manual: 'Guides & Registers', colorKey: 'guides', role: 'LAVA Zero team + Admin' },
 ];

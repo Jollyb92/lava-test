@@ -1,11 +1,18 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation, useParams, useSearchParams } from 'react-router-dom';
 import DiagramPage from './DiagramPage.jsx';
 import DetailPage from './DetailPage.jsx';
 import TocPage from './TocPage.jsx';
-import GlossaryPage from './GlossaryPage.jsx';
-import InvolvedPage from './InvolvedPage.jsx';
 import GlobalSearch from './GlobalSearch.jsx';
+import { OFFICE_SECTION_IDS, tocLink } from './data.js';
+
+// Operating LAVA sections live in the Table of Contents; old links redirect there
+function DetailRoute({ onSearchOpen }) {
+  const { id } = useParams();
+  const [params] = useSearchParams();
+  if (OFFICE_SECTION_IDS.has(id)) return <Navigate to={tocLink(id, params.get('slide'))} replace />;
+  return <DetailPage onSearchOpen={onSearchOpen} />;
+}
 
 export default function App() {
   const { pathname } = useLocation();
@@ -37,9 +44,9 @@ export default function App() {
       <Routes>
         <Route path="/"           element={<DiagramPage searchOpen={searchOpen} onSearchOpen={() => setSearchOpen(true)} onSearchClose={() => setSearchOpen(false)} />} />
         <Route path="/toc"        element={<TocPage     onSearchOpen={() => setSearchOpen(true)} />} />
-        <Route path="/glossary"   element={<GlossaryPage onSearchOpen={() => setSearchOpen(true)} />} />
-        <Route path="/involved"   element={<InvolvedPage onSearchOpen={() => setSearchOpen(true)} />} />
-        <Route path="/detail/:id" element={<DetailPage  onSearchOpen={() => setSearchOpen(true)} />} />
+        <Route path="/glossary"   element={<Navigate to={tocLink('glossary')} replace />} />
+        <Route path="/involved"   element={<Navigate to={tocLink('involved')} replace />} />
+        <Route path="/detail/:id" element={<DetailRoute onSearchOpen={() => setSearchOpen(true)} />} />
       </Routes>
       {/* On the diagram, search is docked beside the bubbles (rendered by DiagramPage) */}
       {!onDiagram && <GlobalSearch open={searchOpen} onClose={() => setSearchOpen(false)} />}
