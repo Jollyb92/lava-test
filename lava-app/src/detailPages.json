@@ -1720,8 +1720,56 @@
         ]
       },
       {
-        "type": "pdf-scroll",
-        "pdfPath": "/MANUALS/OFFICE%20MANUAL/140101_LAVA_Urlaubsantrag_v1.0.pdf"
+        "type": "form",
+        "title": "Vacation Request",
+        "subtitle": "Submit annual or special leave to HR",
+        "icon": "calendar",
+        "fields": [
+          {
+            "id": "name",
+            "label": "Full Name",
+            "type": "text",
+            "placeholder": "Your full name",
+            "required": true
+          },
+          {
+            "id": "position",
+            "label": "Position",
+            "type": "text",
+            "placeholder": "Your job title"
+          },
+          {
+            "id": "from",
+            "label": "From",
+            "type": "date",
+            "required": true
+          },
+          {
+            "id": "to",
+            "label": "To",
+            "type": "date",
+            "required": true
+          },
+          {
+            "id": "type",
+            "label": "Leave Type",
+            "type": "select",
+            "options": [
+              "Annual Leave",
+              "Special Leave (Sonderurlaub)",
+              "Unpaid Leave"
+            ],
+            "required": true
+          },
+          {
+            "id": "notes",
+            "label": "Notes",
+            "type": "textarea",
+            "placeholder": "Any additional context for HR"
+          }
+        ],
+        "submitLabel": "Submit Vacation Request",
+        "confirmMessage": "Your vacation request has been submitted. HR will confirm within 2 business days."
       },
       {
         "type": "form",

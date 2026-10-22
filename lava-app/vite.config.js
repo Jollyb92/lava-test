@@ -4,14 +4,11 @@ import { viteSingleFile } from 'vite-plugin-singlefile'
 import { fileURLToPath } from 'url'
 import os from 'os'
 import presencePlugin from './presence-plugin.js'
-import folderPlugin from './folder-plugin.js'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, fileURLToPath(new URL('.', import.meta.url)), '')
-  // Administrative Forms, read directly by the dev server as /pdf-forms/...
-  const formsDir = env.PDF_FORMS_DIR || '\\\\lava-b-stor01\\LIBRARY\\4_GENERAL OFFICE\\91_BER\\Administrative Forms'
   return {
-    plugins: [react(), viteSingleFile(), presencePlugin(), folderPlugin('/pdf-forms', formsDir)],
+    plugins: [react(), viteSingleFile(), presencePlugin()],
     base: './',
     server: {
       host: true,

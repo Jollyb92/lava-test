@@ -52,5 +52,5 @@ export const UPDATE_LOG = [
   { date: '22.10.2026', manual: 'office',        update: 'Involved Parties: each manual shown in its bubble colour. B.1 forms: Vacation and Compensation Request copy the Administrative Forms server path.' },
   { date: '22.10.2026', manual: null,            update: 'Search cleaned up: old Table of Contents and unused Project Manual pages removed; Operating LAVA results, Glossary and Involved Parties open in the Table of Contents; the old standalone Glossary, Involved Parties and section pages redirect there.' },
   { date: '22.10.2026', manual: 'office',        update: 'Search shows Operating LAVA results in its green; Supporting Systems removed from the Table of Contents.' },
-  { date: '22.10.2026', manual: 'office',        update: 'B.3 Requesting leave: the vacation form is replaced by the Urlaubsantrag PDF (searchable as "Vacation form"), with the Administrative Forms server button.', source: '140101_LAVA_Urlaubsantrag_v1.0.pdf' },
+  { date: '22.10.2026', manual: 'office',        update: 'B.3 Requesting leave: topic name now includes "Vacation form" so it can be found in search.' },
 ];

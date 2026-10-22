@@ -38,5 +38,3 @@ export const PDF_CARBON_PRIMER            = null;
 export const PDF_CARBON_PRIMER_FALLBACK   = null;
 export const PDF_BYGGERI                  = null;
 export const PDF_BYGGERI_FALLBACK         = null;
-export const PDF_URLAUBSANTRAG             = null;
-export const PDF_URLAUBSANTRAG_FALLBACK    = null;

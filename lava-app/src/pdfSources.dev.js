@@ -28,5 +28,3 @@ export const PDF_CARBON_PRIMER            = '/MANUALS/LAVA%20ZERO/Rck-et-al_2023
 export const PDF_CARBON_PRIMER_FALLBACK   = '/pdf-server/6_MANUALS_TEST/7_LAVA%20ZERO/03_Recommended%20materials/Rck-et-al_2023_PrimerEmbodiedCarbon_AcceptedManuscript.pdf';
 export const PDF_BYGGERI                  = '/MANUALS/LAVA%20ZERO/Regenerativt%20Byggeri_Publication%20layout_v.7.0_Online%20reading%20version.pdf';
 export const PDF_BYGGERI_FALLBACK         = '/pdf-server/6_MANUALS_TEST/7_LAVA%20ZERO/03_Recommended%20materials/Regenerativt%20Byggeri_Publication%20layout_v.7.0_Online%20reading%20version.pdf';
-export const PDF_URLAUBSANTRAG             = '/MANUALS/OFFICE%20MANUAL/140101_LAVA_Urlaubsantrag_v1.0.pdf';
-export const PDF_URLAUBSANTRAG_FALLBACK    = '/pdf-forms/140101_LAVA_Urlaubsantrag_v1.0.pdf';
