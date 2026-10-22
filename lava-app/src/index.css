@@ -742,6 +742,19 @@ a { color: inherit; text-decoration: none; }
   margin-left: 0;
 }
 
+.subch-pill-date {
+  margin-left: auto;
+  font-size: 10px;
+  color: #999;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.subch-pill-btn .subch-pill-date ~ .files-indicator,
+.subch-pill-btn .subch-pill-date ~ .subch-pill-view {
+  margin-left: 0;
+}
+
 .subch-title {
   font-weight: 600;
 }

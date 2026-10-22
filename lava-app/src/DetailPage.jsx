@@ -179,6 +179,7 @@ function ChaptersView({ chapters, accentColor, selectedSubch, onSubchapterSelect
                         onClick={() => onSubchapterSelect(i, j)}
                       >
                         <SubchapterLabel text={sub} />
+                        {ch.subchapterDates?.[sub] && <span className="subch-pill-date">{ch.subchapterDates[sub]}</span>}
                         {ch.serverLinks?.[sub]?.length > 0 && <FilesIndicator />}
                         <span className="subch-pill-view" style={isActive ? { color: accentColor } : {}}>
                           {isActive ? 'Close' : 'View'}

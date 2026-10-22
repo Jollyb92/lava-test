@@ -877,64 +877,43 @@
         "title": "Learning Sessions",
         "num": "01",
         "subchapters": [
-          "Session 1 — Regenerative Design",
-          "Session 2 — Materiality & Embodied Carbon",
-          "Session 3 — Operational Carbon",
-          "Session 4 — Water Management",
-          "Session 5 — Biophilic, Biomimicry & Biodiversity",
-          "Session 6 — Microclimate & Ecology",
-          "Session 7 — Building Evolution"
+          "Regenerative Design — Theoretical Foundations",
+          "Regenerative Design",
+          "Materiality and Embodied Carbon"
         ],
+        "subchapterDates": {
+          "Regenerative Design — Theoretical Foundations": "16.04.2026",
+          "Regenerative Design": "16.04.2026",
+          "Materiality and Embodied Carbon": "10.06.2026"
+        },
         "slideData": [
-          null,
+          {
+            "type": "pdf-scroll",
+            "pdfPath": "/MANUALS/LAVA%20ZERO/01_260416_L0_regenerative-design_theoretical%20foundations.pdf"
+          },
+          {
+            "type": "pdf-scroll",
+            "pdfPath": "/MANUALS/LAVA%20ZERO/260416_L0_RegenerativeDesign.pdf"
+          },
           {
             "type": "pdf-scroll",
             "pdfPath": "/MANUALS/LAVA%20ZERO/02_260610_L0_MaterialityAndEmbodiedCarbon.pdf"
-          },
-          null,
-          null,
-          null,
-          null,
-          null
+          }
         ],
         "serverLinks": {
-          "Session 1 — Regenerative Design": [
+          "Regenerative Design — Theoretical Foundations": [
             {
               "label": "Learning Sessions folder",
               "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
             }
           ],
-          "Session 2 — Materiality & Embodied Carbon": [
+          "Regenerative Design": [
             {
               "label": "Learning Sessions folder",
               "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
             }
           ],
-          "Session 3 — Operational Carbon": [
-            {
-              "label": "Learning Sessions folder",
-              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
-            }
-          ],
-          "Session 4 — Water Management": [
-            {
-              "label": "Learning Sessions folder",
-              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
-            }
-          ],
-          "Session 5 — Biophilic, Biomimicry & Biodiversity": [
-            {
-              "label": "Learning Sessions folder",
-              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
-            }
-          ],
-          "Session 6 — Microclimate & Ecology": [
-            {
-              "label": "Learning Sessions folder",
-              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
-            }
-          ],
-          "Session 7 — Building Evolution": [
+          "Materiality and Embodied Carbon": [
             {
               "label": "Learning Sessions folder",
               "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\01_Learning sessions"
@@ -943,25 +922,138 @@
         }
       },
       {
-        "title": "Tools",
+        "title": "LCA Tools",
         "num": "02",
-        "subchapters": [],
-        "slideData": []
+        "subchapters": [
+          "LCA Tools — Life Cycle Assessment software"
+        ],
+        "slideData": [
+          {
+            "type": "text",
+            "blocks": [
+              {
+                "t": "para",
+                "text": "A Life Cycle Assessment (LCA) measures the environmental impact of a building over its whole life: from extracting and manufacturing the materials, through transport and construction, the years of use and maintenance, to demolition, waste processing and disposal. The main result is the Global Warming Potential (GWP) in kg CO₂-equivalent, which shows how much embodied carbon a design carries."
+              },
+              {
+                "t": "h",
+                "text": "What an LCA tool does"
+              },
+              {
+                "t": "para",
+                "text": "LCA tools are the software that does this calculation. They take the quantities of a design, from the 3D model or a bill of quantities, and combine them with environmental data for each material, from product-specific EPDs or generic datasets such as ÖKOBAUDAT. The result is broken down by life cycle module following EN 15978, so you can see which elements and materials cause the most impact."
+              },
+              {
+                "t": "kv",
+                "items": [
+                  {
+                    "k": "A1–A3 Product",
+                    "v": "Raw material supply, transport to the factory and manufacturing."
+                  },
+                  {
+                    "k": "A4–A5 Construction",
+                    "v": "Transport to site and the construction and installation process."
+                  },
+                  {
+                    "k": "B1–B7 Use",
+                    "v": "Use, maintenance, repair, replacement and the building's operational energy and water."
+                  },
+                  {
+                    "k": "C1–C4 End of life",
+                    "v": "Demolition, transport, waste processing and disposal."
+                  },
+                  {
+                    "k": "D Beyond the system",
+                    "v": "Benefits from reuse, recovery and recycling, reported separately."
+                  }
+                ]
+              },
+              {
+                "t": "h",
+                "text": "When we use them"
+              },
+              {
+                "t": "bullets",
+                "items": [
+                  "Early design — compare structural systems, materials and massing options while changes are still cheap.",
+                  "Design development — check that the chosen materials and products keep the project within its carbon target.",
+                  "Certification and funding — DGNB, QNG and similar schemes require a whole-building LCA."
+                ]
+              },
+              {
+                "t": "note",
+                "text": "The tools, licences and guides we use are kept in the 02_LCA tools folder on the server. For the material data that goes into an LCA, see the EPD Databases chapter."
+              }
+            ]
+          }
+        ],
+        "serverLinks": {
+          "LCA Tools — Life Cycle Assessment software": [
+            {
+              "label": "LCA Tools folder",
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\02_LCA tools"
+            }
+          ]
+        }
       },
       {
         "title": "Recommended Materials",
         "num": "03",
         "subchapters": [
-          "Regenerative Design and Development"
+          "Regenerative Design and Development",
+          "LAVA Manifesto & Other Offices' Examples",
+          "NEXT Climate Carbon Guidelines Poster",
+          "A Primer on Embodied Carbon — Accepted Manuscript, 2023",
+          "Regenerativt Byggeri — Online Reading Version"
         ],
         "slideData": [
           {
             "type": "pdf-scroll",
             "pdfPath": "/MANUALS/LAVA%20ZERO/2ndEditionRegenerative_Design_and_Development.pdf"
+          },
+          {
+            "type": "pdf-scroll",
+            "pdfPath": "/MANUALS/LAVA%20ZERO/LAVA%20manifesto%20%26%20other%20offices%20examples.pdf"
+          },
+          {
+            "type": "pdf-scroll",
+            "pdfPath": "/MANUALS/LAVA%20ZERO/NEXT%20Climate%20Carbon%20Guidelines%20Poster%20A2%20New.pdf"
+          },
+          {
+            "type": "pdf-scroll",
+            "pdfPath": "/MANUALS/LAVA%20ZERO/Rck-et-al_2023_PrimerEmbodiedCarbon_AcceptedManuscript.pdf"
+          },
+          {
+            "type": "pdf-scroll",
+            "pdfPath": "/MANUALS/LAVA%20ZERO/Regenerativt%20Byggeri_Publication%20layout_v.7.0_Online%20reading%20version.pdf"
           }
         ],
         "serverLinks": {
           "Regenerative Design and Development": [
+            {
+              "label": "Recommended Materials folder",
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\03_Recommended materials"
+            }
+          ],
+          "LAVA Manifesto & Other Offices' Examples": [
+            {
+              "label": "Recommended Materials folder",
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\03_Recommended materials"
+            }
+          ],
+          "NEXT Climate Carbon Guidelines Poster": [
+            {
+              "label": "Recommended Materials folder",
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\03_Recommended materials"
+            }
+          ],
+          "A Primer on Embodied Carbon — Accepted Manuscript, 2023": [
+            {
+              "label": "Recommended Materials folder",
+              "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\03_Recommended materials"
+            }
+          ],
+          "Regenerativt Byggeri — Online Reading Version": [
             {
               "label": "Recommended Materials folder",
               "path": "\\\\lava-b-stor01\\LIBRARY_WORKSPACE\\6_MANUALS_TEST\\7_LAVA ZERO\\03_Recommended materials"
