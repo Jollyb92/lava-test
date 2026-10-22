@@ -54,4 +54,5 @@ export const UPDATE_LOG = [
   { date: '22.10.2026', manual: 'office',        update: 'Search shows Operating LAVA results in its green; Supporting Systems removed from the Table of Contents.' },
   { date: '22.10.2026', manual: 'office',        update: 'B.3 Requesting leave: topic name now includes "Vacation form" so it can be found in search.' },
   { date: '22.10.2026', manual: 'office',        update: 'Front Matter Introduction: a page explaining how the app works, and a short page for each manual (what it covers, who it is for, its chapters).' },
+  { date: '22.10.2026', manual: null,            update: 'Empty content pages show "Coming soon" with the topic line instead of the logo placeholder image.' },
 ];

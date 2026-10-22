@@ -1503,12 +1503,9 @@ export default function SlidePanel({
         {OFFICE_VARIANT_PAGES.has(pageId) && officeTab !== 'berlin-sa24' ? (
           <div className="sp-placeholder">
             <div className="sp-placeholder-inner">
-              <img src="/lava-logo.svg" alt="LAVA" className="sp-logo-img" />
-              <div className="sp-placeholder-label">
-                {OFFICE_TABS.find(t => t.id === officeTab)?.label} — content coming soon
-              </div>
+              <div className="sp-placeholder-label">Coming soon</div>
               <div className="sp-placeholder-hint">
-                <em>{topic}</em> rules for this office will be placed here
+                <em>{topic}</em> rules for {OFFICE_TABS.find(t => t.id === officeTab)?.label} will be placed here
               </div>
             </div>
           </div>
@@ -1537,12 +1534,7 @@ export default function SlidePanel({
         ) : (
           <div className="sp-placeholder">
             <div className="sp-placeholder-inner">
-              <img
-                src="/lava-logo.svg"
-                alt="LAVA"
-                className="sp-logo-img"
-              />
-              <div className="sp-placeholder-label">Placeholder — image or diagram</div>
+              <div className="sp-placeholder-label">Coming soon</div>
               <div className="sp-placeholder-hint">
                 Content for <em>{topic}</em> will be placed here
               </div>
