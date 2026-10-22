@@ -7,9 +7,6 @@ import EPDDatabase from './EPDDatabase.jsx';
 
 pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
 
-// Zoom every PDF opens at (and resets to), relative to fitting the panel
-const DEFAULT_PDF_ZOOM = 0.75;
-
 function ChevronIcon({ dir }) {
   return (
     <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -1199,7 +1196,7 @@ function TableSlide({ data, accentColor }) {
 function PdfScrollSlide({ data }) {
   const [numPages, setNumPages] = useState(null);
   const [baseWidth, setBaseWidth] = useState(0);
-  const [zoom, setZoom] = useState(DEFAULT_PDF_ZOOM);
+  const [zoom, setZoom] = useState(1);
   const [useFallback, setUseFallback] = useState(false);
   const outerRef = useRef(null);
   const wrapRef = useRef(null);
@@ -1288,7 +1285,7 @@ function PdfScrollSlide({ data }) {
         <button className="sp-zoom-btn" onClick={() => setZoom(z => clampZoom(z - 0.15))} title="Zoom out">−</button>
         <span className="sp-zoom-label">{Math.round(zoom * 100)}%</span>
         <button className="sp-zoom-btn" onClick={() => setZoom(z => clampZoom(z + 0.15))} title="Zoom in">+</button>
-        <button className="sp-zoom-btn sp-zoom-reset" onClick={() => setZoom(DEFAULT_PDF_ZOOM)} title="Reset zoom">⟳</button>
+        <button className="sp-zoom-btn sp-zoom-reset" onClick={() => setZoom(1)} title="Reset zoom">⟳</button>
         {numPages && (
           <span className="sppdf-page-count">
             {data.startPage
@@ -1305,7 +1302,7 @@ function PdfPageSlide({ data, allSlideData, topicIndex, onSelect, pdfPath, pages
   const scrollRef = useRef(null);
   const progScroll = useRef(false);
   const [pageSize, setPageSize] = useState({ w: 0, h: 0 });
-  const [zoom, setZoom] = useState(DEFAULT_PDF_ZOOM);
+  const [zoom, setZoom] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [useFallback, setUseFallback] = useState(false);
   const [pdfLoaded, setPdfLoaded] = useState(false);
@@ -1360,7 +1357,7 @@ function PdfPageSlide({ data, allSlideData, topicIndex, onSelect, pdfPath, pages
 
   function zoomIn()  { setZoom(z => Math.min(4, +(z + 0.25).toFixed(2))); }
   function zoomOut() { setZoom(z => { const next = Math.max(0.5, +(z - 0.25).toFixed(2)); if (next <= 1) setPan({ x: 0, y: 0 }); return next; }); }
-  function zoomReset() { setZoom(DEFAULT_PDF_ZOOM); setPan({ x: 0, y: 0 }); }
+  function zoomReset() { setZoom(1); setPan({ x: 0, y: 0 }); }
 
   // Measure the wrap container so PDF page fills it without scrolling
   const wrapRef = useRef(null);
@@ -1421,7 +1418,7 @@ function PdfPageSlide({ data, allSlideData, topicIndex, onSelect, pdfPath, pages
           <button className="sp-zoom-btn" onClick={zoomOut}>−</button>
           <span className="sp-zoom-label">{Math.round(zoom * 100)}%</span>
           <button className="sp-zoom-btn" onClick={zoomIn}>+</button>
-          {zoom !== DEFAULT_PDF_ZOOM && (
+          {zoom !== 1 && (
             <button className="sp-zoom-btn sp-zoom-reset" onClick={zoomReset} title="Reset">↺</button>
           )}
         </div>
